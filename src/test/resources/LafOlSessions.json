@@ -1,0 +1,72 @@
+[
+  {
+    "uid": 0,
+    "hostname": "Melitta",
+    "session": "0",
+    "timestamp": 0,
+    "sid": "5bbcb68d-a2fb-4472-b16b-c0c9ea3297d3"
+  },
+  {
+    "uid": 1,
+    "hostname": "Winna",
+    "session": "1",
+    "timestamp": 1,
+    "sid": "3ac5f3ab-76ac-4cd4-af90-2fb00b003755"
+  },
+  {
+    "uid": 2,
+    "hostname": "Kiersten",
+    "session": "2",
+    "timestamp": 2,
+    "sid": "1949be5e-3ae6-4dcf-beb2-722d8b60fc1e"
+  },
+  {
+    "uid": 3,
+    "hostname": "Lissy",
+    "session": "3",
+    "timestamp": 3,
+    "sid": "dc3d52a1-72ae-4781-aaef-81823c9b89fc"
+  },
+  {
+    "uid": 4,
+    "hostname": "Tiena",
+    "session": "4",
+    "timestamp": 4,
+    "sid": "72b236e2-f726-47a8-831c-cfa193237cea"
+  },
+  {
+    "uid": 5,
+    "hostname": "Jo-Ann",
+    "session": "5",
+    "timestamp": 5,
+    "sid": "1c92ab5d-8d88-4923-89e3-a1896b3019e2"
+  },
+  {
+    "uid": 6,
+    "hostname": "Ruth",
+    "session": "6",
+    "timestamp": 6,
+    "sid": "e4d4e2a4-c014-447a-8919-eb213aff2a1c"
+  },
+  {
+    "uid": 7,
+    "hostname": "Legra",
+    "session": "7",
+    "timestamp": 7,
+    "sid": "bb89dbdd-f939-48ce-bb99-561c053fc6a8"
+  },
+  {
+    "uid": 8,
+    "hostname": "Vivienne",
+    "session": "8",
+    "timestamp": 8,
+    "sid": "0a9c4d02-eebf-49c8-92f1-25570d0ead2b"
+  },
+  {
+    "uid": 9,
+    "hostname": "Jessalyn",
+    "session": "9",
+    "timestamp": 9,
+    "sid": "4ac70551-ea65-4a19-926f-7a286fb22595"
+  }
+]

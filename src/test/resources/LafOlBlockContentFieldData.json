@@ -1,0 +1,122 @@
+[
+  {
+    "revisionId": 0,
+    "revisionTranslationAffected": 0,
+    "type": "Lorem ipsum dolor si0",
+    "status": 0,
+    "info": "Lorem ipsum dolor si0",
+    "changed": 0,
+    "reusable": 0,
+    "defaultLangcode": 0,
+    "langcode": "e8d80c41-70f9-43d9-b1be-383cbb75b8a0",
+    "id": 774391485
+  },
+  {
+    "revisionId": 1,
+    "revisionTranslationAffected": 1,
+    "type": "Lorem ipsum dolor si1",
+    "status": 1,
+    "info": "Lorem ipsum dolor si1",
+    "changed": 1,
+    "reusable": 1,
+    "defaultLangcode": 1,
+    "langcode": "60b3d383-d400-4375-aa64-812ecfdcec12",
+    "id": 151541801
+  },
+  {
+    "revisionId": 2,
+    "revisionTranslationAffected": 2,
+    "type": "Lorem ipsum dolor si2",
+    "status": 2,
+    "info": "Lorem ipsum dolor si2",
+    "changed": 2,
+    "reusable": 2,
+    "defaultLangcode": 2,
+    "langcode": "6edf12dd-e9b4-4891-a8a6-664d3cccd063",
+    "id": 1577360143
+  },
+  {
+    "revisionId": 3,
+    "revisionTranslationAffected": 3,
+    "type": "Lorem ipsum dolor si3",
+    "status": 3,
+    "info": "Lorem ipsum dolor si3",
+    "changed": 3,
+    "reusable": 3,
+    "defaultLangcode": 3,
+    "langcode": "0cd7223b-ee8f-44ee-b64e-e81645970f0b",
+    "id": 3092541
+  },
+  {
+    "revisionId": 4,
+    "revisionTranslationAffected": 4,
+    "type": "Lorem ipsum dolor si4",
+    "status": 4,
+    "info": "Lorem ipsum dolor si4",
+    "changed": 4,
+    "reusable": 4,
+    "defaultLangcode": 4,
+    "langcode": "63675cfe-707f-4097-b20b-afa722c742f3",
+    "id": 766467923
+  },
+  {
+    "revisionId": 5,
+    "revisionTranslationAffected": 5,
+    "type": "Lorem ipsum dolor si5",
+    "status": 5,
+    "info": "Lorem ipsum dolor si5",
+    "changed": 5,
+    "reusable": 5,
+    "defaultLangcode": 5,
+    "langcode": "37b25f37-cf26-4864-b038-733aa4860284",
+    "id": 1930847277
+  },
+  {
+    "revisionId": 6,
+    "revisionTranslationAffected": 6,
+    "type": "Lorem ipsum dolor si6",
+    "status": 6,
+    "info": "Lorem ipsum dolor si6",
+    "changed": 6,
+    "reusable": 6,
+    "defaultLangcode": 6,
+    "langcode": "84bac3e0-5efe-4acb-89bc-20b8f3f2d1fb",
+    "id": 1297402087
+  },
+  {
+    "revisionId": 7,
+    "revisionTranslationAffected": 7,
+    "type": "Lorem ipsum dolor si7",
+    "status": 7,
+    "info": "Lorem ipsum dolor si7",
+    "changed": 7,
+    "reusable": 7,
+    "defaultLangcode": 7,
+    "langcode": "07fb1995-ed64-4f7a-901e-025fa96dabcd",
+    "id": 1822467540
+  },
+  {
+    "revisionId": 8,
+    "revisionTranslationAffected": 8,
+    "type": "Lorem ipsum dolor si8",
+    "status": 8,
+    "info": "Lorem ipsum dolor si8",
+    "changed": 8,
+    "reusable": 8,
+    "defaultLangcode": 8,
+    "langcode": "03023308-53dc-4285-b8a0-d627252a7910",
+    "id": 227140881
+  },
+  {
+    "revisionId": 9,
+    "revisionTranslationAffected": 9,
+    "type": "Lorem ipsum dolor si9",
+    "status": 9,
+    "info": "Lorem ipsum dolor si9",
+    "changed": 9,
+    "reusable": 9,
+    "defaultLangcode": 9,
+    "langcode": "1766b13a-1b0f-4fb7-b42d-34b3a9f69002",
+    "id": 1514294396
+  }
+]

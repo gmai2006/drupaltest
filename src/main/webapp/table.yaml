@@ -1,0 +1,6751 @@
+---
+openapi: "3.0.0"
+info:
+  description: "This is a generated REST API from a given sqlgeneration database schema."
+  version: "1.0.0"
+  title: "REST API schema generator"
+  termsOfService: "http://datascience9/terms"
+  contact:
+    name: "API Support"
+    url: "http://datascience9/contact"
+    email: "paul.mai@datascience9.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+servers:
+- url: "http://datascience9.com/schema"
+  description: "Open API for schema"
+paths:
+  /LafOlBatch/{LafOlBatch}:
+    put:
+      tags:
+      - "LafOlBatch"
+      operationId: "88ffb9dd-e5ea-4dfb-8f35-fc880a395917"
+      parameters:
+      - name: "LafOlBatch"
+        in: "path"
+        description: "LafOlBatch"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBatch"
+      responses:
+        200:
+          description: "LafOlBatch response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBatch"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlBatch"
+      operationId: "2aaf07c1-4d38-4030-956f-0bb8762b15f1"
+      parameters:
+      - name: "LafOlBatch"
+        in: "path"
+        description: "LafOlBatch"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBatch"
+      responses:
+        200:
+          description: "LafOlBatch response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBatch"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlBlockContent/{LafOlBlockContent}:
+    put:
+      tags:
+      - "LafOlBlockContent"
+      operationId: "f29dd29d-ebb3-4855-a559-4ec298737818"
+      parameters:
+      - name: "LafOlBlockContent"
+        in: "path"
+        description: "LafOlBlockContent"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBlockContent"
+      responses:
+        200:
+          description: "LafOlBlockContent response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBlockContent"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlBlockContent"
+      operationId: "160af69c-ccce-491b-9a95-85be52230af2"
+      parameters:
+      - name: "LafOlBlockContent"
+        in: "path"
+        description: "LafOlBlockContent"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBlockContent"
+      responses:
+        200:
+          description: "LafOlBlockContent response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBlockContent"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlBlockContentBody/{LafOlBlockContentBody}:
+    put:
+      tags:
+      - "LafOlBlockContentBody"
+      operationId: "201e87f5-aac8-4a0e-bfc3-0ba0138f208d"
+      parameters:
+      - name: "LafOlBlockContentBody"
+        in: "path"
+        description: "LafOlBlockContentBody"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBlockContentBody"
+      responses:
+        200:
+          description: "LafOlBlockContentBody response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBlockContentBody"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlBlockContentBody"
+      operationId: "4eccde01-c92a-4849-a7b1-3a1398706363"
+      parameters:
+      - name: "LafOlBlockContentBody"
+        in: "path"
+        description: "LafOlBlockContentBody"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBlockContentBody"
+      responses:
+        200:
+          description: "LafOlBlockContentBody response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBlockContentBody"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlBlockContentFieldData/{LafOlBlockContentFieldData}:
+    put:
+      tags:
+      - "LafOlBlockContentFieldData"
+      operationId: "de6955ae-d590-4a8e-bd93-081fa5114692"
+      parameters:
+      - name: "LafOlBlockContentFieldData"
+        in: "path"
+        description: "LafOlBlockContentFieldData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBlockContentFieldData"
+      responses:
+        200:
+          description: "LafOlBlockContentFieldData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBlockContentFieldData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlBlockContentFieldData"
+      operationId: "5923d8fe-148a-41c8-87a7-79b6680dd439"
+      parameters:
+      - name: "LafOlBlockContentFieldData"
+        in: "path"
+        description: "LafOlBlockContentFieldData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBlockContentFieldData"
+      responses:
+        200:
+          description: "LafOlBlockContentFieldData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBlockContentFieldData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlBlockContentFieldRevision/{LafOlBlockContentFieldRevision}:
+    put:
+      tags:
+      - "LafOlBlockContentFieldRevision"
+      operationId: "655b3540-d0d5-488e-aca8-ddf3094209e7"
+      parameters:
+      - name: "LafOlBlockContentFieldRevision"
+        in: "path"
+        description: "LafOlBlockContentFieldRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBlockContentFieldRevision"
+      responses:
+        200:
+          description: "LafOlBlockContentFieldRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBlockContentFieldRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlBlockContentFieldRevision"
+      operationId: "66145045-d0d1-471a-860e-c193936eb9be"
+      parameters:
+      - name: "LafOlBlockContentFieldRevision"
+        in: "path"
+        description: "LafOlBlockContentFieldRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBlockContentFieldRevision"
+      responses:
+        200:
+          description: "LafOlBlockContentFieldRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBlockContentFieldRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlBlockContentRevision/{LafOlBlockContentRevision}:
+    put:
+      tags:
+      - "LafOlBlockContentRevision"
+      operationId: "e724fbe8-fc20-4579-9a44-2d2f28bae308"
+      parameters:
+      - name: "LafOlBlockContentRevision"
+        in: "path"
+        description: "LafOlBlockContentRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBlockContentRevision"
+      responses:
+        200:
+          description: "LafOlBlockContentRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBlockContentRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlBlockContentRevision"
+      operationId: "4a21a351-d436-4ad1-8d31-d5fb1300a6f0"
+      parameters:
+      - name: "LafOlBlockContentRevision"
+        in: "path"
+        description: "LafOlBlockContentRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBlockContentRevision"
+      responses:
+        200:
+          description: "LafOlBlockContentRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBlockContentRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlBlockContentRevisionBody/{LafOlBlockContentRevisionBody}:
+    put:
+      tags:
+      - "LafOlBlockContentRevisionBody"
+      operationId: "b7f37b9b-74a6-4a5c-b4cb-92c840da1942"
+      parameters:
+      - name: "LafOlBlockContentRevisionBody"
+        in: "path"
+        description: "LafOlBlockContentRevisionBody"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBlockContentRevisionBody"
+      responses:
+        200:
+          description: "LafOlBlockContentRevisionBody response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBlockContentRevisionBody"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlBlockContentRevisionBody"
+      operationId: "b23d0294-8c8f-4ea9-abad-184b73313ea4"
+      parameters:
+      - name: "LafOlBlockContentRevisionBody"
+        in: "path"
+        description: "LafOlBlockContentRevisionBody"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlBlockContentRevisionBody"
+      responses:
+        200:
+          description: "LafOlBlockContentRevisionBody response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlBlockContentRevisionBody"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCacheBootstrap/{LafOlCacheBootstrap}:
+    put:
+      tags:
+      - "LafOlCacheBootstrap"
+      operationId: "46b6e8ca-f9ef-4815-9f81-dce388b4ae72"
+      parameters:
+      - name: "LafOlCacheBootstrap"
+        in: "path"
+        description: "LafOlCacheBootstrap"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheBootstrap"
+      responses:
+        200:
+          description: "LafOlCacheBootstrap response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheBootstrap"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCacheBootstrap"
+      operationId: "5da73ffe-d664-47f6-ba27-4be5e1fa5c66"
+      parameters:
+      - name: "LafOlCacheBootstrap"
+        in: "path"
+        description: "LafOlCacheBootstrap"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheBootstrap"
+      responses:
+        200:
+          description: "LafOlCacheBootstrap response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheBootstrap"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCacheConfig/{LafOlCacheConfig}:
+    put:
+      tags:
+      - "LafOlCacheConfig"
+      operationId: "88657153-1554-46c6-9162-3df2a977866e"
+      parameters:
+      - name: "LafOlCacheConfig"
+        in: "path"
+        description: "LafOlCacheConfig"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheConfig"
+      responses:
+        200:
+          description: "LafOlCacheConfig response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheConfig"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCacheConfig"
+      operationId: "1d583fba-c228-4687-8182-52f1fddaf292"
+      parameters:
+      - name: "LafOlCacheConfig"
+        in: "path"
+        description: "LafOlCacheConfig"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheConfig"
+      responses:
+        200:
+          description: "LafOlCacheConfig response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheConfig"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCacheContainer/{LafOlCacheContainer}:
+    put:
+      tags:
+      - "LafOlCacheContainer"
+      operationId: "5453c440-4f51-4790-b71f-961bac6f34a6"
+      parameters:
+      - name: "LafOlCacheContainer"
+        in: "path"
+        description: "LafOlCacheContainer"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheContainer"
+      responses:
+        200:
+          description: "LafOlCacheContainer response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheContainer"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCacheContainer"
+      operationId: "db6fb8af-4fbd-4382-81eb-4209ded90f58"
+      parameters:
+      - name: "LafOlCacheContainer"
+        in: "path"
+        description: "LafOlCacheContainer"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheContainer"
+      responses:
+        200:
+          description: "LafOlCacheContainer response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheContainer"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCacheData/{LafOlCacheData}:
+    put:
+      tags:
+      - "LafOlCacheData"
+      operationId: "1aeb371b-cef6-4499-8916-c0bb586aaa5e"
+      parameters:
+      - name: "LafOlCacheData"
+        in: "path"
+        description: "LafOlCacheData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheData"
+      responses:
+        200:
+          description: "LafOlCacheData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCacheData"
+      operationId: "aa6ec8d8-6d13-4215-aa2a-66a1204e9263"
+      parameters:
+      - name: "LafOlCacheData"
+        in: "path"
+        description: "LafOlCacheData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheData"
+      responses:
+        200:
+          description: "LafOlCacheData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCacheDefault/{LafOlCacheDefault}:
+    put:
+      tags:
+      - "LafOlCacheDefault"
+      operationId: "f1c61dd3-dd72-433e-8371-95f3ee37e686"
+      parameters:
+      - name: "LafOlCacheDefault"
+        in: "path"
+        description: "LafOlCacheDefault"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheDefault"
+      responses:
+        200:
+          description: "LafOlCacheDefault response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheDefault"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCacheDefault"
+      operationId: "c6dae43c-0df4-461b-ac63-e6bbc6b5ef46"
+      parameters:
+      - name: "LafOlCacheDefault"
+        in: "path"
+        description: "LafOlCacheDefault"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheDefault"
+      responses:
+        200:
+          description: "LafOlCacheDefault response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheDefault"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCacheDiscovery/{LafOlCacheDiscovery}:
+    put:
+      tags:
+      - "LafOlCacheDiscovery"
+      operationId: "acf4aea6-37b8-4af7-9634-dd99abc7b5ec"
+      parameters:
+      - name: "LafOlCacheDiscovery"
+        in: "path"
+        description: "LafOlCacheDiscovery"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheDiscovery"
+      responses:
+        200:
+          description: "LafOlCacheDiscovery response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheDiscovery"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCacheDiscovery"
+      operationId: "4088655e-e9e8-454d-8d30-f39bcb2721e6"
+      parameters:
+      - name: "LafOlCacheDiscovery"
+        in: "path"
+        description: "LafOlCacheDiscovery"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheDiscovery"
+      responses:
+        200:
+          description: "LafOlCacheDiscovery response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheDiscovery"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCacheDynamicPageCache/{LafOlCacheDynamicPageCache}:
+    put:
+      tags:
+      - "LafOlCacheDynamicPageCache"
+      operationId: "cd57c206-5fc2-43b0-8c90-a00305c843d7"
+      parameters:
+      - name: "LafOlCacheDynamicPageCache"
+        in: "path"
+        description: "LafOlCacheDynamicPageCache"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheDynamicPageCache"
+      responses:
+        200:
+          description: "LafOlCacheDynamicPageCache response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheDynamicPageCache"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCacheDynamicPageCache"
+      operationId: "7a1d8e2f-c0eb-4796-b0d7-ba135b0fded9"
+      parameters:
+      - name: "LafOlCacheDynamicPageCache"
+        in: "path"
+        description: "LafOlCacheDynamicPageCache"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheDynamicPageCache"
+      responses:
+        200:
+          description: "LafOlCacheDynamicPageCache response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheDynamicPageCache"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCacheEntity/{LafOlCacheEntity}:
+    put:
+      tags:
+      - "LafOlCacheEntity"
+      operationId: "3e575471-fc9c-4add-bca2-bc2a537636a9"
+      parameters:
+      - name: "LafOlCacheEntity"
+        in: "path"
+        description: "LafOlCacheEntity"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheEntity"
+      responses:
+        200:
+          description: "LafOlCacheEntity response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheEntity"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCacheEntity"
+      operationId: "f3252ace-c62b-4437-9497-a3ca68779208"
+      parameters:
+      - name: "LafOlCacheEntity"
+        in: "path"
+        description: "LafOlCacheEntity"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheEntity"
+      responses:
+        200:
+          description: "LafOlCacheEntity response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheEntity"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCacheMenu/{LafOlCacheMenu}:
+    put:
+      tags:
+      - "LafOlCacheMenu"
+      operationId: "add93981-2aae-4620-8dbb-4a04fea53a7d"
+      parameters:
+      - name: "LafOlCacheMenu"
+        in: "path"
+        description: "LafOlCacheMenu"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheMenu"
+      responses:
+        200:
+          description: "LafOlCacheMenu response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheMenu"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCacheMenu"
+      operationId: "e3a5da82-5cc5-4c28-9ac7-b3ff1057470b"
+      parameters:
+      - name: "LafOlCacheMenu"
+        in: "path"
+        description: "LafOlCacheMenu"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheMenu"
+      responses:
+        200:
+          description: "LafOlCacheMenu response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheMenu"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCachePage/{LafOlCachePage}:
+    put:
+      tags:
+      - "LafOlCachePage"
+      operationId: "b157e3a3-921b-4872-9566-6f2d1475bc1b"
+      parameters:
+      - name: "LafOlCachePage"
+        in: "path"
+        description: "LafOlCachePage"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCachePage"
+      responses:
+        200:
+          description: "LafOlCachePage response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCachePage"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCachePage"
+      operationId: "6bf86ad2-639f-4b43-9473-cec9c5b0ca26"
+      parameters:
+      - name: "LafOlCachePage"
+        in: "path"
+        description: "LafOlCachePage"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCachePage"
+      responses:
+        200:
+          description: "LafOlCachePage response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCachePage"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCacheRender/{LafOlCacheRender}:
+    put:
+      tags:
+      - "LafOlCacheRender"
+      operationId: "dc2da49c-bb2c-40cb-b496-3e6359df576b"
+      parameters:
+      - name: "LafOlCacheRender"
+        in: "path"
+        description: "LafOlCacheRender"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheRender"
+      responses:
+        200:
+          description: "LafOlCacheRender response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheRender"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCacheRender"
+      operationId: "a4a463e0-a0a8-429b-85bc-8816cb2b800b"
+      parameters:
+      - name: "LafOlCacheRender"
+        in: "path"
+        description: "LafOlCacheRender"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCacheRender"
+      responses:
+        200:
+          description: "LafOlCacheRender response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCacheRender"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCachetags/{LafOlCachetags}:
+    put:
+      tags:
+      - "LafOlCachetags"
+      operationId: "018502c7-192b-42f9-9767-d1ac97449c55"
+      parameters:
+      - name: "LafOlCachetags"
+        in: "path"
+        description: "LafOlCachetags"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCachetags"
+      responses:
+        200:
+          description: "LafOlCachetags response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCachetags"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCachetags"
+      operationId: "f585b46d-c788-42a6-9515-a802e5aba778"
+      parameters:
+      - name: "LafOlCachetags"
+        in: "path"
+        description: "LafOlCachetags"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCachetags"
+      responses:
+        200:
+          description: "LafOlCachetags response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCachetags"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlComment/{LafOlComment}:
+    put:
+      tags:
+      - "LafOlComment"
+      operationId: "7944f308-1e0b-4ab3-9782-78df301c8f21"
+      parameters:
+      - name: "LafOlComment"
+        in: "path"
+        description: "LafOlComment"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlComment"
+      responses:
+        200:
+          description: "LafOlComment response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlComment"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlComment"
+      operationId: "c24cc353-78b6-4e00-adb3-68aa0b18ca37"
+      parameters:
+      - name: "LafOlComment"
+        in: "path"
+        description: "LafOlComment"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlComment"
+      responses:
+        200:
+          description: "LafOlComment response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlComment"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCommentCommentBody/{LafOlCommentCommentBody}:
+    put:
+      tags:
+      - "LafOlCommentCommentBody"
+      operationId: "abf76169-86d2-4f8e-b79d-d29e1317cd1f"
+      parameters:
+      - name: "LafOlCommentCommentBody"
+        in: "path"
+        description: "LafOlCommentCommentBody"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCommentCommentBody"
+      responses:
+        200:
+          description: "LafOlCommentCommentBody response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCommentCommentBody"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCommentCommentBody"
+      operationId: "98af0de4-07bf-48b1-82d2-83d0b27420ba"
+      parameters:
+      - name: "LafOlCommentCommentBody"
+        in: "path"
+        description: "LafOlCommentCommentBody"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCommentCommentBody"
+      responses:
+        200:
+          description: "LafOlCommentCommentBody response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCommentCommentBody"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCommentEntityStatistics/{LafOlCommentEntityStatistics}:
+    put:
+      tags:
+      - "LafOlCommentEntityStatistics"
+      operationId: "40b80b7e-78d9-4485-9a2e-76dda58973f2"
+      parameters:
+      - name: "LafOlCommentEntityStatistics"
+        in: "path"
+        description: "LafOlCommentEntityStatistics"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCommentEntityStatistics"
+      responses:
+        200:
+          description: "LafOlCommentEntityStatistics response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCommentEntityStatistics"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCommentEntityStatistics"
+      operationId: "8de0cb77-8cac-4929-892c-25d2372e5e36"
+      parameters:
+      - name: "LafOlCommentEntityStatistics"
+        in: "path"
+        description: "LafOlCommentEntityStatistics"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCommentEntityStatistics"
+      responses:
+        200:
+          description: "LafOlCommentEntityStatistics response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCommentEntityStatistics"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlCommentFieldData/{LafOlCommentFieldData}:
+    put:
+      tags:
+      - "LafOlCommentFieldData"
+      operationId: "ffb6bd9a-548a-4f84-ae5b-556b5e831ffb"
+      parameters:
+      - name: "LafOlCommentFieldData"
+        in: "path"
+        description: "LafOlCommentFieldData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCommentFieldData"
+      responses:
+        200:
+          description: "LafOlCommentFieldData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCommentFieldData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlCommentFieldData"
+      operationId: "339489f4-40cf-413a-87be-bc4f13977ff8"
+      parameters:
+      - name: "LafOlCommentFieldData"
+        in: "path"
+        description: "LafOlCommentFieldData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlCommentFieldData"
+      responses:
+        200:
+          description: "LafOlCommentFieldData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlCommentFieldData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlConfig/{LafOlConfig}:
+    put:
+      tags:
+      - "LafOlConfig"
+      operationId: "5185cdf1-f0a8-4517-b5ff-43cbfd5248a7"
+      parameters:
+      - name: "LafOlConfig"
+        in: "path"
+        description: "LafOlConfig"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlConfig"
+      responses:
+        200:
+          description: "LafOlConfig response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlConfig"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlConfig"
+      operationId: "fa995ec2-95fe-439c-a512-9ae92a2784a8"
+      parameters:
+      - name: "LafOlConfig"
+        in: "path"
+        description: "LafOlConfig"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlConfig"
+      responses:
+        200:
+          description: "LafOlConfig response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlConfig"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlFileManaged/{LafOlFileManaged}:
+    put:
+      tags:
+      - "LafOlFileManaged"
+      operationId: "ecdde6f5-87a9-41ed-8127-398769d4c432"
+      parameters:
+      - name: "LafOlFileManaged"
+        in: "path"
+        description: "LafOlFileManaged"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlFileManaged"
+      responses:
+        200:
+          description: "LafOlFileManaged response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlFileManaged"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlFileManaged"
+      operationId: "87f9cdc9-903f-4f7a-8d92-46163299eef6"
+      parameters:
+      - name: "LafOlFileManaged"
+        in: "path"
+        description: "LafOlFileManaged"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlFileManaged"
+      responses:
+        200:
+          description: "LafOlFileManaged response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlFileManaged"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlFileUsage/{LafOlFileUsage}:
+    put:
+      tags:
+      - "LafOlFileUsage"
+      operationId: "afe17a4e-383c-4671-b432-12d4c7f76515"
+      parameters:
+      - name: "LafOlFileUsage"
+        in: "path"
+        description: "LafOlFileUsage"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlFileUsage"
+      responses:
+        200:
+          description: "LafOlFileUsage response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlFileUsage"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlFileUsage"
+      operationId: "839650e1-70ac-4b0a-8dac-5f16ceab505c"
+      parameters:
+      - name: "LafOlFileUsage"
+        in: "path"
+        description: "LafOlFileUsage"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlFileUsage"
+      responses:
+        200:
+          description: "LafOlFileUsage response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlFileUsage"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlHistory/{LafOlHistory}:
+    put:
+      tags:
+      - "LafOlHistory"
+      operationId: "35201a45-aea1-44af-86e4-8a2f54ca3f2c"
+      parameters:
+      - name: "LafOlHistory"
+        in: "path"
+        description: "LafOlHistory"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlHistory"
+      responses:
+        200:
+          description: "LafOlHistory response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlHistory"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlHistory"
+      operationId: "d575c592-ef5c-43b9-9075-52d6abb6fff0"
+      parameters:
+      - name: "LafOlHistory"
+        in: "path"
+        description: "LafOlHistory"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlHistory"
+      responses:
+        200:
+          description: "LafOlHistory response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlHistory"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlKeyValue/{LafOlKeyValue}:
+    put:
+      tags:
+      - "LafOlKeyValue"
+      operationId: "921bd6f9-370b-4130-84f0-def61ad0a720"
+      parameters:
+      - name: "LafOlKeyValue"
+        in: "path"
+        description: "LafOlKeyValue"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlKeyValue"
+      responses:
+        200:
+          description: "LafOlKeyValue response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlKeyValue"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlKeyValue"
+      operationId: "e7a5517c-56c6-4e74-9895-d735ad3706f1"
+      parameters:
+      - name: "LafOlKeyValue"
+        in: "path"
+        description: "LafOlKeyValue"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlKeyValue"
+      responses:
+        200:
+          description: "LafOlKeyValue response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlKeyValue"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlKeyValueExpire/{LafOlKeyValueExpire}:
+    put:
+      tags:
+      - "LafOlKeyValueExpire"
+      operationId: "69886f2c-12a9-4ec6-955d-ece1ef9783b2"
+      parameters:
+      - name: "LafOlKeyValueExpire"
+        in: "path"
+        description: "LafOlKeyValueExpire"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlKeyValueExpire"
+      responses:
+        200:
+          description: "LafOlKeyValueExpire response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlKeyValueExpire"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlKeyValueExpire"
+      operationId: "f502d2ea-677e-4603-bd54-ed95e8eb54bf"
+      parameters:
+      - name: "LafOlKeyValueExpire"
+        in: "path"
+        description: "LafOlKeyValueExpire"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlKeyValueExpire"
+      responses:
+        200:
+          description: "LafOlKeyValueExpire response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlKeyValueExpire"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlLocaleFile/{LafOlLocaleFile}:
+    put:
+      tags:
+      - "LafOlLocaleFile"
+      operationId: "d75f9eca-1325-412d-a0ba-aeb096ecb26e"
+      parameters:
+      - name: "LafOlLocaleFile"
+        in: "path"
+        description: "LafOlLocaleFile"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlLocaleFile"
+      responses:
+        200:
+          description: "LafOlLocaleFile response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlLocaleFile"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlLocaleFile"
+      operationId: "76dfe193-ef7f-4a14-b121-950beddae958"
+      parameters:
+      - name: "LafOlLocaleFile"
+        in: "path"
+        description: "LafOlLocaleFile"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlLocaleFile"
+      responses:
+        200:
+          description: "LafOlLocaleFile response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlLocaleFile"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlLocalesLocation/{LafOlLocalesLocation}:
+    put:
+      tags:
+      - "LafOlLocalesLocation"
+      operationId: "b0d82144-2bd1-40b8-bf95-7689b81ee93d"
+      parameters:
+      - name: "LafOlLocalesLocation"
+        in: "path"
+        description: "LafOlLocalesLocation"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlLocalesLocation"
+      responses:
+        200:
+          description: "LafOlLocalesLocation response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlLocalesLocation"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlLocalesLocation"
+      operationId: "7effb650-2139-43ca-9706-dc98927efecd"
+      parameters:
+      - name: "LafOlLocalesLocation"
+        in: "path"
+        description: "LafOlLocalesLocation"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlLocalesLocation"
+      responses:
+        200:
+          description: "LafOlLocalesLocation response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlLocalesLocation"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlLocalesSource/{LafOlLocalesSource}:
+    put:
+      tags:
+      - "LafOlLocalesSource"
+      operationId: "f5e4f990-210c-481b-b694-dfd8b1f1a791"
+      parameters:
+      - name: "LafOlLocalesSource"
+        in: "path"
+        description: "LafOlLocalesSource"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlLocalesSource"
+      responses:
+        200:
+          description: "LafOlLocalesSource response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlLocalesSource"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlLocalesSource"
+      operationId: "5531871a-7eca-44ee-9c86-4f0f858cf549"
+      parameters:
+      - name: "LafOlLocalesSource"
+        in: "path"
+        description: "LafOlLocalesSource"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlLocalesSource"
+      responses:
+        200:
+          description: "LafOlLocalesSource response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlLocalesSource"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlLocalesTarget/{LafOlLocalesTarget}:
+    put:
+      tags:
+      - "LafOlLocalesTarget"
+      operationId: "937ee034-65b6-4f1d-8c7a-60c76497c71b"
+      parameters:
+      - name: "LafOlLocalesTarget"
+        in: "path"
+        description: "LafOlLocalesTarget"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlLocalesTarget"
+      responses:
+        200:
+          description: "LafOlLocalesTarget response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlLocalesTarget"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlLocalesTarget"
+      operationId: "7af36376-2ce1-4bdf-9c50-9bb949711e98"
+      parameters:
+      - name: "LafOlLocalesTarget"
+        in: "path"
+        description: "LafOlLocalesTarget"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlLocalesTarget"
+      responses:
+        200:
+          description: "LafOlLocalesTarget response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlLocalesTarget"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlMenuLinkContent/{LafOlMenuLinkContent}:
+    put:
+      tags:
+      - "LafOlMenuLinkContent"
+      operationId: "ed60d53a-07f1-4e27-8ee0-c40c403412e5"
+      parameters:
+      - name: "LafOlMenuLinkContent"
+        in: "path"
+        description: "LafOlMenuLinkContent"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlMenuLinkContent"
+      responses:
+        200:
+          description: "LafOlMenuLinkContent response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlMenuLinkContent"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlMenuLinkContent"
+      operationId: "5709defa-ad0c-4554-9d60-e0fe548535bb"
+      parameters:
+      - name: "LafOlMenuLinkContent"
+        in: "path"
+        description: "LafOlMenuLinkContent"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlMenuLinkContent"
+      responses:
+        200:
+          description: "LafOlMenuLinkContent response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlMenuLinkContent"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlMenuLinkContentData/{LafOlMenuLinkContentData}:
+    put:
+      tags:
+      - "LafOlMenuLinkContentData"
+      operationId: "bc63bf55-9f98-4edb-b153-2b21480c4711"
+      parameters:
+      - name: "LafOlMenuLinkContentData"
+        in: "path"
+        description: "LafOlMenuLinkContentData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlMenuLinkContentData"
+      responses:
+        200:
+          description: "LafOlMenuLinkContentData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlMenuLinkContentData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlMenuLinkContentData"
+      operationId: "9b7594b0-b714-4ed0-9916-a3414ac010c0"
+      parameters:
+      - name: "LafOlMenuLinkContentData"
+        in: "path"
+        description: "LafOlMenuLinkContentData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlMenuLinkContentData"
+      responses:
+        200:
+          description: "LafOlMenuLinkContentData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlMenuLinkContentData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlMenuLinkContentFieldRevision/{LafOlMenuLinkContentFieldRevision}:
+    put:
+      tags:
+      - "LafOlMenuLinkContentFieldRevision"
+      operationId: "59bd3cdc-10b4-4582-9adf-37fb14b41525"
+      parameters:
+      - name: "LafOlMenuLinkContentFieldRevision"
+        in: "path"
+        description: "LafOlMenuLinkContentFieldRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlMenuLinkContentFieldRevision"
+      responses:
+        200:
+          description: "LafOlMenuLinkContentFieldRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlMenuLinkContentFieldRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlMenuLinkContentFieldRevision"
+      operationId: "dd018bf7-e9c2-421e-a243-865cc6290519"
+      parameters:
+      - name: "LafOlMenuLinkContentFieldRevision"
+        in: "path"
+        description: "LafOlMenuLinkContentFieldRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlMenuLinkContentFieldRevision"
+      responses:
+        200:
+          description: "LafOlMenuLinkContentFieldRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlMenuLinkContentFieldRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlMenuLinkContentRevision/{LafOlMenuLinkContentRevision}:
+    put:
+      tags:
+      - "LafOlMenuLinkContentRevision"
+      operationId: "e2833a0a-23c3-4040-9f21-4b5df09491e1"
+      parameters:
+      - name: "LafOlMenuLinkContentRevision"
+        in: "path"
+        description: "LafOlMenuLinkContentRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlMenuLinkContentRevision"
+      responses:
+        200:
+          description: "LafOlMenuLinkContentRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlMenuLinkContentRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlMenuLinkContentRevision"
+      operationId: "d5f401b1-8a94-4c0a-a8d5-e6bd254d7d32"
+      parameters:
+      - name: "LafOlMenuLinkContentRevision"
+        in: "path"
+        description: "LafOlMenuLinkContentRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlMenuLinkContentRevision"
+      responses:
+        200:
+          description: "LafOlMenuLinkContentRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlMenuLinkContentRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlMenuTree/{LafOlMenuTree}:
+    put:
+      tags:
+      - "LafOlMenuTree"
+      operationId: "a1cf3ef7-66c8-4004-a7f0-84d31581be42"
+      parameters:
+      - name: "LafOlMenuTree"
+        in: "path"
+        description: "LafOlMenuTree"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlMenuTree"
+      responses:
+        200:
+          description: "LafOlMenuTree response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlMenuTree"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlMenuTree"
+      operationId: "d578db51-efd7-4017-a0e2-0206ff8264d5"
+      parameters:
+      - name: "LafOlMenuTree"
+        in: "path"
+        description: "LafOlMenuTree"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlMenuTree"
+      responses:
+        200:
+          description: "LafOlMenuTree response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlMenuTree"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNode/{LafOlNode}:
+    put:
+      tags:
+      - "LafOlNode"
+      operationId: "1f365a50-0a17-4ead-a750-6b6677010478"
+      parameters:
+      - name: "LafOlNode"
+        in: "path"
+        description: "LafOlNode"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNode"
+      responses:
+        200:
+          description: "LafOlNode response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNode"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNode"
+      operationId: "1b3b94dd-1781-4d41-bbd0-d3c0500a2424"
+      parameters:
+      - name: "LafOlNode"
+        in: "path"
+        description: "LafOlNode"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNode"
+      responses:
+        200:
+          description: "LafOlNode response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNode"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNodeBody/{LafOlNodeBody}:
+    put:
+      tags:
+      - "LafOlNodeBody"
+      operationId: "827802a9-e0b4-4153-82b3-6d8cb53f9ae3"
+      parameters:
+      - name: "LafOlNodeBody"
+        in: "path"
+        description: "LafOlNodeBody"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeBody"
+      responses:
+        200:
+          description: "LafOlNodeBody response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeBody"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNodeBody"
+      operationId: "0c8ca1e6-aec4-471b-8b90-307ee05b1be0"
+      parameters:
+      - name: "LafOlNodeBody"
+        in: "path"
+        description: "LafOlNodeBody"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeBody"
+      responses:
+        200:
+          description: "LafOlNodeBody response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeBody"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNodeComment/{LafOlNodeComment}:
+    put:
+      tags:
+      - "LafOlNodeComment"
+      operationId: "889340f5-72d7-4783-8230-72ef79784573"
+      parameters:
+      - name: "LafOlNodeComment"
+        in: "path"
+        description: "LafOlNodeComment"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeComment"
+      responses:
+        200:
+          description: "LafOlNodeComment response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeComment"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNodeComment"
+      operationId: "40a48083-14f0-4995-a924-f54ee96e235a"
+      parameters:
+      - name: "LafOlNodeComment"
+        in: "path"
+        description: "LafOlNodeComment"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeComment"
+      responses:
+        200:
+          description: "LafOlNodeComment response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeComment"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNodeFieldImage/{LafOlNodeFieldImage}:
+    put:
+      tags:
+      - "LafOlNodeFieldImage"
+      operationId: "ca27f5d4-8772-4b40-a123-b9c5f5d98b0f"
+      parameters:
+      - name: "LafOlNodeFieldImage"
+        in: "path"
+        description: "LafOlNodeFieldImage"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeFieldImage"
+      responses:
+        200:
+          description: "LafOlNodeFieldImage response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeFieldImage"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNodeFieldImage"
+      operationId: "cceae148-d610-44ec-b768-2e862c426824"
+      parameters:
+      - name: "LafOlNodeFieldImage"
+        in: "path"
+        description: "LafOlNodeFieldImage"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeFieldImage"
+      responses:
+        200:
+          description: "LafOlNodeFieldImage response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeFieldImage"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNodeFieldTags/{LafOlNodeFieldTags}:
+    put:
+      tags:
+      - "LafOlNodeFieldTags"
+      operationId: "a175ce18-6072-4b6c-869c-69ab34bdb72c"
+      parameters:
+      - name: "LafOlNodeFieldTags"
+        in: "path"
+        description: "LafOlNodeFieldTags"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeFieldTags"
+      responses:
+        200:
+          description: "LafOlNodeFieldTags response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeFieldTags"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNodeFieldTags"
+      operationId: "6a16eddd-0809-4598-b200-e9670021a3c9"
+      parameters:
+      - name: "LafOlNodeFieldTags"
+        in: "path"
+        description: "LafOlNodeFieldTags"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeFieldTags"
+      responses:
+        200:
+          description: "LafOlNodeFieldTags response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeFieldTags"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNodeAccess/{LafOlNodeAccess}:
+    put:
+      tags:
+      - "LafOlNodeAccess"
+      operationId: "2e077c22-e704-4a19-9474-5838f8c89365"
+      parameters:
+      - name: "LafOlNodeAccess"
+        in: "path"
+        description: "LafOlNodeAccess"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeAccess"
+      responses:
+        200:
+          description: "LafOlNodeAccess response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeAccess"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNodeAccess"
+      operationId: "b1f3bd6e-077f-4615-94ea-110728e4f58c"
+      parameters:
+      - name: "LafOlNodeAccess"
+        in: "path"
+        description: "LafOlNodeAccess"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeAccess"
+      responses:
+        200:
+          description: "LafOlNodeAccess response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeAccess"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNodeFieldData/{LafOlNodeFieldData}:
+    put:
+      tags:
+      - "LafOlNodeFieldData"
+      operationId: "3ab3906f-ee32-4426-af80-eb53b635b2dc"
+      parameters:
+      - name: "LafOlNodeFieldData"
+        in: "path"
+        description: "LafOlNodeFieldData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeFieldData"
+      responses:
+        200:
+          description: "LafOlNodeFieldData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeFieldData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNodeFieldData"
+      operationId: "f12fb918-93df-4a4a-8d09-907cd2b1acd8"
+      parameters:
+      - name: "LafOlNodeFieldData"
+        in: "path"
+        description: "LafOlNodeFieldData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeFieldData"
+      responses:
+        200:
+          description: "LafOlNodeFieldData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeFieldData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNodeFieldRevision/{LafOlNodeFieldRevision}:
+    put:
+      tags:
+      - "LafOlNodeFieldRevision"
+      operationId: "8a5bd5f8-7f2e-4c72-976b-5ec2fe5a050d"
+      parameters:
+      - name: "LafOlNodeFieldRevision"
+        in: "path"
+        description: "LafOlNodeFieldRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeFieldRevision"
+      responses:
+        200:
+          description: "LafOlNodeFieldRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeFieldRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNodeFieldRevision"
+      operationId: "324187b1-5286-4317-8f7f-5ac5850b5cbc"
+      parameters:
+      - name: "LafOlNodeFieldRevision"
+        in: "path"
+        description: "LafOlNodeFieldRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeFieldRevision"
+      responses:
+        200:
+          description: "LafOlNodeFieldRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeFieldRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNodeRevision/{LafOlNodeRevision}:
+    put:
+      tags:
+      - "LafOlNodeRevision"
+      operationId: "c2151899-7ca8-4b1e-a195-ebb1ec384447"
+      parameters:
+      - name: "LafOlNodeRevision"
+        in: "path"
+        description: "LafOlNodeRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeRevision"
+      responses:
+        200:
+          description: "LafOlNodeRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNodeRevision"
+      operationId: "f491b9d2-1fae-4c5f-92ae-76224a441848"
+      parameters:
+      - name: "LafOlNodeRevision"
+        in: "path"
+        description: "LafOlNodeRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeRevision"
+      responses:
+        200:
+          description: "LafOlNodeRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNodeRevisionBody/{LafOlNodeRevisionBody}:
+    put:
+      tags:
+      - "LafOlNodeRevisionBody"
+      operationId: "afd65900-8a35-42f4-8f9f-d9e6f2ba4940"
+      parameters:
+      - name: "LafOlNodeRevisionBody"
+        in: "path"
+        description: "LafOlNodeRevisionBody"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeRevisionBody"
+      responses:
+        200:
+          description: "LafOlNodeRevisionBody response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeRevisionBody"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNodeRevisionBody"
+      operationId: "5bf23679-1101-4fa1-a2d0-d54ff49ade6d"
+      parameters:
+      - name: "LafOlNodeRevisionBody"
+        in: "path"
+        description: "LafOlNodeRevisionBody"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeRevisionBody"
+      responses:
+        200:
+          description: "LafOlNodeRevisionBody response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeRevisionBody"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNodeRevisionComment/{LafOlNodeRevisionComment}:
+    put:
+      tags:
+      - "LafOlNodeRevisionComment"
+      operationId: "d287bf25-63fb-4596-a582-9ae12591d784"
+      parameters:
+      - name: "LafOlNodeRevisionComment"
+        in: "path"
+        description: "LafOlNodeRevisionComment"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeRevisionComment"
+      responses:
+        200:
+          description: "LafOlNodeRevisionComment response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeRevisionComment"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNodeRevisionComment"
+      operationId: "feb62aed-821a-4d11-9f52-3425f510d2ff"
+      parameters:
+      - name: "LafOlNodeRevisionComment"
+        in: "path"
+        description: "LafOlNodeRevisionComment"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeRevisionComment"
+      responses:
+        200:
+          description: "LafOlNodeRevisionComment response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeRevisionComment"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNodeRevisionFieldImage/{LafOlNodeRevisionFieldImage}:
+    put:
+      tags:
+      - "LafOlNodeRevisionFieldImage"
+      operationId: "95fe8b0b-df69-4a89-9eb9-0f89c015c9b2"
+      parameters:
+      - name: "LafOlNodeRevisionFieldImage"
+        in: "path"
+        description: "LafOlNodeRevisionFieldImage"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeRevisionFieldImage"
+      responses:
+        200:
+          description: "LafOlNodeRevisionFieldImage response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeRevisionFieldImage"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNodeRevisionFieldImage"
+      operationId: "7e854246-a274-4d25-bd29-567cd546050e"
+      parameters:
+      - name: "LafOlNodeRevisionFieldImage"
+        in: "path"
+        description: "LafOlNodeRevisionFieldImage"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeRevisionFieldImage"
+      responses:
+        200:
+          description: "LafOlNodeRevisionFieldImage response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeRevisionFieldImage"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlNodeRevisionFieldTags/{LafOlNodeRevisionFieldTags}:
+    put:
+      tags:
+      - "LafOlNodeRevisionFieldTags"
+      operationId: "26d0e4a8-0872-471a-96e1-a2dedbadf685"
+      parameters:
+      - name: "LafOlNodeRevisionFieldTags"
+        in: "path"
+        description: "LafOlNodeRevisionFieldTags"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeRevisionFieldTags"
+      responses:
+        200:
+          description: "LafOlNodeRevisionFieldTags response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeRevisionFieldTags"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlNodeRevisionFieldTags"
+      operationId: "efe2af8b-8287-4bf2-a6da-eae7e8998e88"
+      parameters:
+      - name: "LafOlNodeRevisionFieldTags"
+        in: "path"
+        description: "LafOlNodeRevisionFieldTags"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlNodeRevisionFieldTags"
+      responses:
+        200:
+          description: "LafOlNodeRevisionFieldTags response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlNodeRevisionFieldTags"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlQueue/{LafOlQueue}:
+    put:
+      tags:
+      - "LafOlQueue"
+      operationId: "85865e04-4075-4de5-9bd8-b2a4632b2645"
+      parameters:
+      - name: "LafOlQueue"
+        in: "path"
+        description: "LafOlQueue"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlQueue"
+      responses:
+        200:
+          description: "LafOlQueue response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlQueue"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlQueue"
+      operationId: "14b1763e-f380-4bdf-9dd1-9cfe1e1648d2"
+      parameters:
+      - name: "LafOlQueue"
+        in: "path"
+        description: "LafOlQueue"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlQueue"
+      responses:
+        200:
+          description: "LafOlQueue response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlQueue"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlRouter/{LafOlRouter}:
+    put:
+      tags:
+      - "LafOlRouter"
+      operationId: "e74be7af-12c4-447f-9531-c096cc9e74ce"
+      parameters:
+      - name: "LafOlRouter"
+        in: "path"
+        description: "LafOlRouter"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlRouter"
+      responses:
+        200:
+          description: "LafOlRouter response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlRouter"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlRouter"
+      operationId: "c709e400-7479-445e-9f3c-116e2372bc7a"
+      parameters:
+      - name: "LafOlRouter"
+        in: "path"
+        description: "LafOlRouter"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlRouter"
+      responses:
+        200:
+          description: "LafOlRouter response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlRouter"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlSearchDataset/{LafOlSearchDataset}:
+    put:
+      tags:
+      - "LafOlSearchDataset"
+      operationId: "c93ad1f6-abf4-482d-a9f4-544fdc41bd4a"
+      parameters:
+      - name: "LafOlSearchDataset"
+        in: "path"
+        description: "LafOlSearchDataset"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlSearchDataset"
+      responses:
+        200:
+          description: "LafOlSearchDataset response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlSearchDataset"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlSearchDataset"
+      operationId: "4ac2935a-51eb-4b6c-9743-986c24e89297"
+      parameters:
+      - name: "LafOlSearchDataset"
+        in: "path"
+        description: "LafOlSearchDataset"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlSearchDataset"
+      responses:
+        200:
+          description: "LafOlSearchDataset response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlSearchDataset"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlSearchIndex/{LafOlSearchIndex}:
+    put:
+      tags:
+      - "LafOlSearchIndex"
+      operationId: "6250e048-1825-4578-a8a6-f981a5cbb331"
+      parameters:
+      - name: "LafOlSearchIndex"
+        in: "path"
+        description: "LafOlSearchIndex"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlSearchIndex"
+      responses:
+        200:
+          description: "LafOlSearchIndex response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlSearchIndex"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlSearchIndex"
+      operationId: "6c926a7d-2b46-4980-a023-6f41f453daa0"
+      parameters:
+      - name: "LafOlSearchIndex"
+        in: "path"
+        description: "LafOlSearchIndex"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlSearchIndex"
+      responses:
+        200:
+          description: "LafOlSearchIndex response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlSearchIndex"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlSearchTotal/{LafOlSearchTotal}:
+    put:
+      tags:
+      - "LafOlSearchTotal"
+      operationId: "05a8298f-cb41-4e95-b0a7-c7edf62d3c3d"
+      parameters:
+      - name: "LafOlSearchTotal"
+        in: "path"
+        description: "LafOlSearchTotal"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlSearchTotal"
+      responses:
+        200:
+          description: "LafOlSearchTotal response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlSearchTotal"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlSearchTotal"
+      operationId: "91ba5fec-9ce7-4c07-adfe-92a391684fb8"
+      parameters:
+      - name: "LafOlSearchTotal"
+        in: "path"
+        description: "LafOlSearchTotal"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlSearchTotal"
+      responses:
+        200:
+          description: "LafOlSearchTotal response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlSearchTotal"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlSemaphore/{LafOlSemaphore}:
+    put:
+      tags:
+      - "LafOlSemaphore"
+      operationId: "a80ea8a4-4a4c-4d7d-857f-db4e5fa938ca"
+      parameters:
+      - name: "LafOlSemaphore"
+        in: "path"
+        description: "LafOlSemaphore"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlSemaphore"
+      responses:
+        200:
+          description: "LafOlSemaphore response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlSemaphore"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlSemaphore"
+      operationId: "9cd243b9-7708-430d-a34d-91a98ea68f30"
+      parameters:
+      - name: "LafOlSemaphore"
+        in: "path"
+        description: "LafOlSemaphore"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlSemaphore"
+      responses:
+        200:
+          description: "LafOlSemaphore response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlSemaphore"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlSequences/{LafOlSequences}:
+    put:
+      tags:
+      - "LafOlSequences"
+      operationId: "609a952e-5bf4-4b40-a267-e4ffa668afca"
+      parameters:
+      - name: "LafOlSequences"
+        in: "path"
+        description: "LafOlSequences"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlSequences"
+      responses:
+        200:
+          description: "LafOlSequences response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlSequences"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlSequences"
+      operationId: "c9dac899-e21e-419e-afc3-2bdf27e19d42"
+      parameters:
+      - name: "LafOlSequences"
+        in: "path"
+        description: "LafOlSequences"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlSequences"
+      responses:
+        200:
+          description: "LafOlSequences response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlSequences"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlSessions/{LafOlSessions}:
+    put:
+      tags:
+      - "LafOlSessions"
+      operationId: "02d07e5d-c766-49ec-94ab-6fe23ddce22a"
+      parameters:
+      - name: "LafOlSessions"
+        in: "path"
+        description: "LafOlSessions"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlSessions"
+      responses:
+        200:
+          description: "LafOlSessions response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlSessions"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlSessions"
+      operationId: "3c6c6b7d-c718-4a98-9639-0a250ec2068b"
+      parameters:
+      - name: "LafOlSessions"
+        in: "path"
+        description: "LafOlSessions"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlSessions"
+      responses:
+        200:
+          description: "LafOlSessions response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlSessions"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlShortcut/{LafOlShortcut}:
+    put:
+      tags:
+      - "LafOlShortcut"
+      operationId: "9f76e33b-bdf6-47ea-bdce-c4ffdd7ac1d3"
+      parameters:
+      - name: "LafOlShortcut"
+        in: "path"
+        description: "LafOlShortcut"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlShortcut"
+      responses:
+        200:
+          description: "LafOlShortcut response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlShortcut"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlShortcut"
+      operationId: "459fec60-e87e-47f7-8684-08d2d47386cb"
+      parameters:
+      - name: "LafOlShortcut"
+        in: "path"
+        description: "LafOlShortcut"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlShortcut"
+      responses:
+        200:
+          description: "LafOlShortcut response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlShortcut"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlShortcutFieldData/{LafOlShortcutFieldData}:
+    put:
+      tags:
+      - "LafOlShortcutFieldData"
+      operationId: "c1f2c550-b2b4-44a6-b9df-d0cb790ddf0b"
+      parameters:
+      - name: "LafOlShortcutFieldData"
+        in: "path"
+        description: "LafOlShortcutFieldData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlShortcutFieldData"
+      responses:
+        200:
+          description: "LafOlShortcutFieldData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlShortcutFieldData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlShortcutFieldData"
+      operationId: "c93c93bf-7690-4825-be4b-285f925d524c"
+      parameters:
+      - name: "LafOlShortcutFieldData"
+        in: "path"
+        description: "LafOlShortcutFieldData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlShortcutFieldData"
+      responses:
+        200:
+          description: "LafOlShortcutFieldData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlShortcutFieldData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlShortcutSetUsers/{LafOlShortcutSetUsers}:
+    put:
+      tags:
+      - "LafOlShortcutSetUsers"
+      operationId: "21a87267-da15-499f-a368-7c2c8163826e"
+      parameters:
+      - name: "LafOlShortcutSetUsers"
+        in: "path"
+        description: "LafOlShortcutSetUsers"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlShortcutSetUsers"
+      responses:
+        200:
+          description: "LafOlShortcutSetUsers response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlShortcutSetUsers"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlShortcutSetUsers"
+      operationId: "873e63cd-b1c7-41a6-9eea-5c366b3ab2a1"
+      parameters:
+      - name: "LafOlShortcutSetUsers"
+        in: "path"
+        description: "LafOlShortcutSetUsers"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlShortcutSetUsers"
+      responses:
+        200:
+          description: "LafOlShortcutSetUsers response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlShortcutSetUsers"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlTaxonomyIndex/{LafOlTaxonomyIndex}:
+    put:
+      tags:
+      - "LafOlTaxonomyIndex"
+      operationId: "83af8bb2-f73f-4bfc-bf74-791ef06f7ea9"
+      parameters:
+      - name: "LafOlTaxonomyIndex"
+        in: "path"
+        description: "LafOlTaxonomyIndex"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyIndex"
+      responses:
+        200:
+          description: "LafOlTaxonomyIndex response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyIndex"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlTaxonomyIndex"
+      operationId: "64084344-9902-4d14-b613-c442b98f8d66"
+      parameters:
+      - name: "LafOlTaxonomyIndex"
+        in: "path"
+        description: "LafOlTaxonomyIndex"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyIndex"
+      responses:
+        200:
+          description: "LafOlTaxonomyIndex response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyIndex"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlTaxonomyTermParent/{LafOlTaxonomyTermParent}:
+    put:
+      tags:
+      - "LafOlTaxonomyTermParent"
+      operationId: "745b85c2-8e82-44d9-be01-d67392e1391e"
+      parameters:
+      - name: "LafOlTaxonomyTermParent"
+        in: "path"
+        description: "LafOlTaxonomyTermParent"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyTermParent"
+      responses:
+        200:
+          description: "LafOlTaxonomyTermParent response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyTermParent"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlTaxonomyTermParent"
+      operationId: "1f50f413-2848-4bfe-9ce5-141adc3152b1"
+      parameters:
+      - name: "LafOlTaxonomyTermParent"
+        in: "path"
+        description: "LafOlTaxonomyTermParent"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyTermParent"
+      responses:
+        200:
+          description: "LafOlTaxonomyTermParent response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyTermParent"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlTaxonomyTermData/{LafOlTaxonomyTermData}:
+    put:
+      tags:
+      - "LafOlTaxonomyTermData"
+      operationId: "9bf69d67-9ead-46c8-af3e-736c0d16850c"
+      parameters:
+      - name: "LafOlTaxonomyTermData"
+        in: "path"
+        description: "LafOlTaxonomyTermData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyTermData"
+      responses:
+        200:
+          description: "LafOlTaxonomyTermData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyTermData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlTaxonomyTermData"
+      operationId: "40b76f2c-0628-4f4b-acda-d80ac9f64255"
+      parameters:
+      - name: "LafOlTaxonomyTermData"
+        in: "path"
+        description: "LafOlTaxonomyTermData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyTermData"
+      responses:
+        200:
+          description: "LafOlTaxonomyTermData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyTermData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlTaxonomyTermFieldData/{LafOlTaxonomyTermFieldData}:
+    put:
+      tags:
+      - "LafOlTaxonomyTermFieldData"
+      operationId: "fe6b5205-7f93-4520-9b3e-2d63f71dbc47"
+      parameters:
+      - name: "LafOlTaxonomyTermFieldData"
+        in: "path"
+        description: "LafOlTaxonomyTermFieldData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyTermFieldData"
+      responses:
+        200:
+          description: "LafOlTaxonomyTermFieldData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyTermFieldData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlTaxonomyTermFieldData"
+      operationId: "d4fd6bfc-ce3a-48c3-ba91-516903494937"
+      parameters:
+      - name: "LafOlTaxonomyTermFieldData"
+        in: "path"
+        description: "LafOlTaxonomyTermFieldData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyTermFieldData"
+      responses:
+        200:
+          description: "LafOlTaxonomyTermFieldData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyTermFieldData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlTaxonomyTermFieldRevision/{LafOlTaxonomyTermFieldRevision}:
+    put:
+      tags:
+      - "LafOlTaxonomyTermFieldRevision"
+      operationId: "64c276f0-4ec2-4ee9-be85-977d862a0d37"
+      parameters:
+      - name: "LafOlTaxonomyTermFieldRevision"
+        in: "path"
+        description: "LafOlTaxonomyTermFieldRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyTermFieldRevision"
+      responses:
+        200:
+          description: "LafOlTaxonomyTermFieldRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyTermFieldRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlTaxonomyTermFieldRevision"
+      operationId: "a927cded-6d9b-4686-88dc-0a22625f0d6c"
+      parameters:
+      - name: "LafOlTaxonomyTermFieldRevision"
+        in: "path"
+        description: "LafOlTaxonomyTermFieldRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyTermFieldRevision"
+      responses:
+        200:
+          description: "LafOlTaxonomyTermFieldRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyTermFieldRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlTaxonomyTermRevision/{LafOlTaxonomyTermRevision}:
+    put:
+      tags:
+      - "LafOlTaxonomyTermRevision"
+      operationId: "ab5aa41e-de96-43af-b71f-464fe233eafb"
+      parameters:
+      - name: "LafOlTaxonomyTermRevision"
+        in: "path"
+        description: "LafOlTaxonomyTermRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyTermRevision"
+      responses:
+        200:
+          description: "LafOlTaxonomyTermRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyTermRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlTaxonomyTermRevision"
+      operationId: "2b11b588-6935-400c-9267-653dda409e7e"
+      parameters:
+      - name: "LafOlTaxonomyTermRevision"
+        in: "path"
+        description: "LafOlTaxonomyTermRevision"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyTermRevision"
+      responses:
+        200:
+          description: "LafOlTaxonomyTermRevision response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyTermRevision"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlTaxonomyTermRevisionParent/{LafOlTaxonomyTermRevisionParent}:
+    put:
+      tags:
+      - "LafOlTaxonomyTermRevisionParent"
+      operationId: "e7f76567-06d1-430d-948d-cd15fc512585"
+      parameters:
+      - name: "LafOlTaxonomyTermRevisionParent"
+        in: "path"
+        description: "LafOlTaxonomyTermRevisionParent"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyTermRevisionParent"
+      responses:
+        200:
+          description: "LafOlTaxonomyTermRevisionParent response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyTermRevisionParent"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlTaxonomyTermRevisionParent"
+      operationId: "f360f75f-d5f1-4afc-9118-6271bd3cb1fb"
+      parameters:
+      - name: "LafOlTaxonomyTermRevisionParent"
+        in: "path"
+        description: "LafOlTaxonomyTermRevisionParent"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlTaxonomyTermRevisionParent"
+      responses:
+        200:
+          description: "LafOlTaxonomyTermRevisionParent response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlTaxonomyTermRevisionParent"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlUrlAlias/{LafOlUrlAlias}:
+    put:
+      tags:
+      - "LafOlUrlAlias"
+      operationId: "2e2475a7-3836-4e7e-9327-992cd3bc5647"
+      parameters:
+      - name: "LafOlUrlAlias"
+        in: "path"
+        description: "LafOlUrlAlias"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlUrlAlias"
+      responses:
+        200:
+          description: "LafOlUrlAlias response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlUrlAlias"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlUrlAlias"
+      operationId: "674f0726-8fa6-4519-b85a-2c86b889824e"
+      parameters:
+      - name: "LafOlUrlAlias"
+        in: "path"
+        description: "LafOlUrlAlias"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlUrlAlias"
+      responses:
+        200:
+          description: "LafOlUrlAlias response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlUrlAlias"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlUserRoles/{LafOlUserRoles}:
+    put:
+      tags:
+      - "LafOlUserRoles"
+      operationId: "57b7a5bc-91a1-4fa5-8893-db71098a7db0"
+      parameters:
+      - name: "LafOlUserRoles"
+        in: "path"
+        description: "LafOlUserRoles"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlUserRoles"
+      responses:
+        200:
+          description: "LafOlUserRoles response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlUserRoles"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlUserRoles"
+      operationId: "4cdba3fe-479e-4adb-b641-54290a630636"
+      parameters:
+      - name: "LafOlUserRoles"
+        in: "path"
+        description: "LafOlUserRoles"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlUserRoles"
+      responses:
+        200:
+          description: "LafOlUserRoles response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlUserRoles"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlUserUserPicture/{LafOlUserUserPicture}:
+    put:
+      tags:
+      - "LafOlUserUserPicture"
+      operationId: "6aa120b9-6dad-4472-9d64-7d7ae63d9113"
+      parameters:
+      - name: "LafOlUserUserPicture"
+        in: "path"
+        description: "LafOlUserUserPicture"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlUserUserPicture"
+      responses:
+        200:
+          description: "LafOlUserUserPicture response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlUserUserPicture"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlUserUserPicture"
+      operationId: "8c0a34b3-d635-4a32-a69a-02a16c5478bf"
+      parameters:
+      - name: "LafOlUserUserPicture"
+        in: "path"
+        description: "LafOlUserUserPicture"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlUserUserPicture"
+      responses:
+        200:
+          description: "LafOlUserUserPicture response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlUserUserPicture"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlUsers/{LafOlUsers}:
+    put:
+      tags:
+      - "LafOlUsers"
+      operationId: "e87f4c8b-60ed-454b-95fd-9477607f3c09"
+      parameters:
+      - name: "LafOlUsers"
+        in: "path"
+        description: "LafOlUsers"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlUsers"
+      responses:
+        200:
+          description: "LafOlUsers response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlUsers"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlUsers"
+      operationId: "2b6cb918-7556-4ffa-8673-e2a4fccb81b5"
+      parameters:
+      - name: "LafOlUsers"
+        in: "path"
+        description: "LafOlUsers"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlUsers"
+      responses:
+        200:
+          description: "LafOlUsers response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlUsers"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlUsersData/{LafOlUsersData}:
+    put:
+      tags:
+      - "LafOlUsersData"
+      operationId: "6b78e5f5-7f79-4e6c-a71e-bed71749d7a5"
+      parameters:
+      - name: "LafOlUsersData"
+        in: "path"
+        description: "LafOlUsersData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlUsersData"
+      responses:
+        200:
+          description: "LafOlUsersData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlUsersData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlUsersData"
+      operationId: "cc0af604-13f2-4c16-b134-70786c424e79"
+      parameters:
+      - name: "LafOlUsersData"
+        in: "path"
+        description: "LafOlUsersData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlUsersData"
+      responses:
+        200:
+          description: "LafOlUsersData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlUsersData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlUsersFieldData/{LafOlUsersFieldData}:
+    put:
+      tags:
+      - "LafOlUsersFieldData"
+      operationId: "b3ab9864-304d-43f0-85c8-24bf9783438d"
+      parameters:
+      - name: "LafOlUsersFieldData"
+        in: "path"
+        description: "LafOlUsersFieldData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlUsersFieldData"
+      responses:
+        200:
+          description: "LafOlUsersFieldData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlUsersFieldData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlUsersFieldData"
+      operationId: "cb73a806-bd81-441a-8545-31568661c2f9"
+      parameters:
+      - name: "LafOlUsersFieldData"
+        in: "path"
+        description: "LafOlUsersFieldData"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlUsersFieldData"
+      responses:
+        200:
+          description: "LafOlUsersFieldData response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlUsersFieldData"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /LafOlWatchdog/{LafOlWatchdog}:
+    put:
+      tags:
+      - "LafOlWatchdog"
+      operationId: "1d7e9b87-8610-462c-98fd-37ae7a14422a"
+      parameters:
+      - name: "LafOlWatchdog"
+        in: "path"
+        description: "LafOlWatchdog"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlWatchdog"
+      responses:
+        200:
+          description: "LafOlWatchdog response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlWatchdog"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+    post:
+      tags:
+      - "LafOlWatchdog"
+      operationId: "4156ea8a-682b-4185-92b7-c3c9ac1a2c10"
+      parameters:
+      - name: "LafOlWatchdog"
+        in: "path"
+        description: "LafOlWatchdog"
+        required: true
+        schema:
+          $ref: "#/components/schemas/LafOlWatchdog"
+      responses:
+        200:
+          description: "LafOlWatchdog response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                items:
+                  $ref: "#/components/schemas/LafOlWatchdog"
+              examples:
+                test1:
+                  value:
+                    batch: "0"
+                    token: "Lorem ipsum dolor si0"
+                    timestamp: 0
+                    bid: 2132079999
+        default:
+          description: "error payload"
+          content:
+            application/json:
+              schema:
+                type: "string"
+components:
+  schemas:
+    LafOlBatch:
+      required:
+      - "bid"
+      properties:
+        token:
+          type: "string"
+        timestamp:
+          type: "integer"
+        batch:
+          type: "string"
+      example:
+        batch: "0"
+        token: "Lorem ipsum dolor si0"
+        timestamp: 0
+    LafOlBlockContent:
+      required:
+      - "id"
+      - "uuid"
+      - "revision_id"
+      properties:
+        type:
+          type: "string"
+        langcode:
+          type: "string"
+      example:
+        langcode: "Lorem ipsum0"
+        type: "Lorem ipsum dolor si0"
+    LafOlBlockContentBody:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      properties:
+        bundle:
+          type: "string"
+        revision_id:
+          type: "integer"
+        body_value:
+          type: "string"
+        body_summary:
+          type: "string"
+        body_format:
+          type: "string"
+      example:
+        revision_id: 0
+        body_value: "0"
+        body_summary: "0"
+        body_format: "Lorem ipsum dolor si0"
+        bundle: "Lorem ipsum dolor si0"
+    LafOlBlockContentFieldData:
+      required:
+      - "langcode"
+      - "id"
+      properties:
+        revision_id:
+          type: "integer"
+        type:
+          type: "string"
+        status:
+          type: "integer"
+        info:
+          type: "string"
+        changed:
+          type: "integer"
+        reusable:
+          type: "integer"
+        default_langcode:
+          type: "integer"
+        revision_translation_affected:
+          type: "integer"
+      example:
+        revision_id: 0
+        revision_translation_affected: "0"
+        type: "Lorem ipsum dolor si0"
+        status: "0"
+        info: "Lorem ipsum dolor si0"
+        changed: 0
+        reusable: "0"
+        default_langcode: "0"
+    LafOlBlockContentFieldRevision:
+      required:
+      - "langcode"
+      - "revision_id"
+      properties:
+        id:
+          type: "integer"
+        status:
+          type: "integer"
+        info:
+          type: "string"
+        changed:
+          type: "integer"
+        default_langcode:
+          type: "integer"
+        revision_translation_affected:
+          type: "integer"
+      example:
+        revision_translation_affected: "0"
+        id: 0
+        status: "0"
+        info: "Lorem ipsum dolor si0"
+        changed: 0
+        default_langcode: "0"
+    LafOlBlockContentRevision:
+      required:
+      - "revision_id"
+      properties:
+        id:
+          type: "integer"
+        langcode:
+          type: "string"
+        revision_user:
+          type: "integer"
+        revision_created:
+          type: "integer"
+        revision_log:
+          type: "string"
+        revision_default:
+          type: "integer"
+      example:
+        langcode: "Lorem ipsum0"
+        revision_user: 0
+        revision_log: "0"
+        revision_created: 0
+        id: 0
+        revision_default: "0"
+    LafOlBlockContentRevisionBody:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      - "revision_id"
+      properties:
+        bundle:
+          type: "string"
+        body_value:
+          type: "string"
+        body_summary:
+          type: "string"
+        body_format:
+          type: "string"
+      example:
+        body_value: "0"
+        body_summary: "0"
+        body_format: "Lorem ipsum dolor si0"
+        bundle: "Lorem ipsum dolor si0"
+    LafOlCacheBootstrap:
+      required:
+      - "cid"
+      properties:
+        data:
+          type: "string"
+        expire:
+          type: "integer"
+        created:
+          type: "number"
+        serialized:
+          type: "integer"
+        tags:
+          type: "string"
+        checksum:
+          type: "string"
+      example:
+        data: "0"
+        created: "0"
+        expire: 0
+        checksum: "Lorem ipsum dolor si0"
+        serialized: "0"
+        tags: "0"
+    LafOlCacheConfig:
+      required:
+      - "cid"
+      properties:
+        data:
+          type: "string"
+        expire:
+          type: "integer"
+        created:
+          type: "number"
+        serialized:
+          type: "integer"
+        tags:
+          type: "string"
+        checksum:
+          type: "string"
+      example:
+        data: "0"
+        created: "0"
+        expire: 0
+        checksum: "Lorem ipsum dolor si0"
+        serialized: "0"
+        tags: "0"
+    LafOlCacheContainer:
+      required:
+      - "cid"
+      properties:
+        data:
+          type: "string"
+        expire:
+          type: "integer"
+        created:
+          type: "number"
+        serialized:
+          type: "integer"
+        tags:
+          type: "string"
+        checksum:
+          type: "string"
+      example:
+        data: "0"
+        created: "0"
+        expire: 0
+        checksum: "Lorem ipsum dolor si0"
+        serialized: "0"
+        tags: "0"
+    LafOlCacheData:
+      required:
+      - "cid"
+      properties:
+        data:
+          type: "string"
+        expire:
+          type: "integer"
+        created:
+          type: "number"
+        serialized:
+          type: "integer"
+        tags:
+          type: "string"
+        checksum:
+          type: "string"
+      example:
+        data: "0"
+        created: "0"
+        expire: 0
+        checksum: "Lorem ipsum dolor si0"
+        serialized: "0"
+        tags: "0"
+    LafOlCacheDefault:
+      required:
+      - "cid"
+      properties:
+        data:
+          type: "string"
+        expire:
+          type: "integer"
+        created:
+          type: "number"
+        serialized:
+          type: "integer"
+        tags:
+          type: "string"
+        checksum:
+          type: "string"
+      example:
+        data: "0"
+        created: "0"
+        expire: 0
+        checksum: "Lorem ipsum dolor si0"
+        serialized: "0"
+        tags: "0"
+    LafOlCacheDiscovery:
+      required:
+      - "cid"
+      properties:
+        data:
+          type: "string"
+        expire:
+          type: "integer"
+        created:
+          type: "number"
+        serialized:
+          type: "integer"
+        tags:
+          type: "string"
+        checksum:
+          type: "string"
+      example:
+        data: "0"
+        created: "0"
+        expire: 0
+        checksum: "Lorem ipsum dolor si0"
+        serialized: "0"
+        tags: "0"
+    LafOlCacheDynamicPageCache:
+      required:
+      - "cid"
+      properties:
+        data:
+          type: "string"
+        expire:
+          type: "integer"
+        created:
+          type: "number"
+        serialized:
+          type: "integer"
+        tags:
+          type: "string"
+        checksum:
+          type: "string"
+      example:
+        data: "0"
+        created: "0"
+        expire: 0
+        checksum: "Lorem ipsum dolor si0"
+        serialized: "0"
+        tags: "0"
+    LafOlCacheEntity:
+      required:
+      - "cid"
+      properties:
+        data:
+          type: "string"
+        expire:
+          type: "integer"
+        created:
+          type: "number"
+        serialized:
+          type: "integer"
+        tags:
+          type: "string"
+        checksum:
+          type: "string"
+      example:
+        data: "0"
+        created: "0"
+        expire: 0
+        checksum: "Lorem ipsum dolor si0"
+        serialized: "0"
+        tags: "0"
+    LafOlCacheMenu:
+      required:
+      - "cid"
+      properties:
+        data:
+          type: "string"
+        expire:
+          type: "integer"
+        created:
+          type: "number"
+        serialized:
+          type: "integer"
+        tags:
+          type: "string"
+        checksum:
+          type: "string"
+      example:
+        data: "0"
+        created: "0"
+        expire: 0
+        checksum: "Lorem ipsum dolor si0"
+        serialized: "0"
+        tags: "0"
+    LafOlCachePage:
+      required:
+      - "cid"
+      properties:
+        data:
+          type: "string"
+        expire:
+          type: "integer"
+        created:
+          type: "number"
+        serialized:
+          type: "integer"
+        tags:
+          type: "string"
+        checksum:
+          type: "string"
+      example:
+        data: "0"
+        created: "0"
+        expire: 0
+        checksum: "Lorem ipsum dolor si0"
+        serialized: "0"
+        tags: "0"
+    LafOlCacheRender:
+      required:
+      - "cid"
+      properties:
+        data:
+          type: "string"
+        expire:
+          type: "integer"
+        created:
+          type: "number"
+        serialized:
+          type: "integer"
+        tags:
+          type: "string"
+        checksum:
+          type: "string"
+      example:
+        data: "0"
+        created: "0"
+        expire: 0
+        checksum: "Lorem ipsum dolor si0"
+        serialized: "0"
+        tags: "0"
+    LafOlCachetags:
+      required:
+      - "tag"
+      properties:
+        invalidations:
+          type: "integer"
+      example:
+        invalidations: 0
+    LafOlComment:
+      required:
+      - "uuid"
+      - "cid"
+      properties:
+        comment_type:
+          type: "string"
+        langcode:
+          type: "string"
+      example:
+        langcode: "Lorem ipsum0"
+        comment_type: "Lorem ipsum dolor si0"
+    LafOlCommentCommentBody:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      properties:
+        bundle:
+          type: "string"
+        revision_id:
+          type: "integer"
+        comment_body_value:
+          type: "string"
+        comment_body_format:
+          type: "string"
+      example:
+        revision_id: 0
+        comment_body_value: "0"
+        comment_body_format: "Lorem ipsum dolor si0"
+        bundle: "Lorem ipsum dolor si0"
+    LafOlCommentEntityStatistics:
+      required:
+      - "entity_type"
+      - "entity_id"
+      - "field_name"
+      properties:
+        cid:
+          type: "integer"
+        last_comment_timestamp:
+          type: "integer"
+        last_comment_name:
+          type: "string"
+        last_comment_uid:
+          type: "integer"
+        comment_count:
+          type: "integer"
+      example:
+        last_comment_timestamp: 0
+        last_comment_name: "Rheba"
+        last_comment_uid: 0
+        cid: 0
+        comment_count: 0
+    LafOlCommentFieldData:
+      required:
+      - "langcode"
+      - "cid"
+      properties:
+        comment_type:
+          type: "string"
+        status:
+          type: "integer"
+        uid:
+          type: "integer"
+        pid:
+          type: "integer"
+        entity_id:
+          type: "integer"
+        subject:
+          type: "string"
+        name:
+          type: "string"
+        mail:
+          type: "string"
+        homepage:
+          type: "string"
+        hostname:
+          type: "string"
+        created:
+          type: "integer"
+        changed:
+          type: "integer"
+        thread:
+          type: "string"
+        entity_type:
+          type: "string"
+        field_name:
+          type: "string"
+        default_langcode:
+          type: "integer"
+      example:
+        field_name: "Sam"
+        mail: "Lorem ipsum dolor si0"
+        subject: "Lorem ipsum dolor si0"
+        created: 0
+        entity_type: "Lorem ipsum dolor si0"
+        pid: 0
+        entity_id: 0
+        thread: "Lorem ipsum dolor si0"
+        uid: 0
+        hostname: "Alys"
+        comment_type: "Lorem ipsum dolor si0"
+        name: "Clarisse"
+        status: "0"
+        homepage: "97"
+        changed: 0
+        default_langcode: "0"
+    LafOlConfig:
+      required:
+      - "name"
+      - "collection"
+      properties:
+        data:
+          type: "string"
+      example:
+        data: "0"
+    LafOlFileManaged:
+      required:
+      - "fid"
+      - "uuid"
+      properties:
+        langcode:
+          type: "string"
+        uid:
+          type: "integer"
+        filename:
+          type: "string"
+        uri:
+          type: "string"
+        filemime:
+          type: "string"
+        filesize:
+          type: "integer"
+        status:
+          type: "integer"
+        created:
+          type: "integer"
+        changed:
+          type: "integer"
+      example:
+        langcode: "Lorem ipsum0"
+        uid: 0
+        filename: "Coralie"
+        filemime: "Lorem ipsum dolor si0"
+        created: 0
+        filesize: "0"
+        uri: "Lorem ipsum dolor si0"
+        status: "0"
+        changed: 0
+    LafOlFileUsage:
+      required:
+      - "fid"
+      - "module"
+      - "id"
+      - "type"
+      properties:
+        count:
+          type: "integer"
+      example:
+        count: 0
+    LafOlHistory:
+      required:
+      - "uid"
+      - "nid"
+      properties:
+        timestamp:
+          type: "integer"
+      example:
+        timestamp: 0
+    LafOlKeyValue:
+      required:
+      - "name"
+      - "collection"
+      properties:
+        value:
+          type: "string"
+      example:
+        value: "0"
+    LafOlKeyValueExpire:
+      required:
+      - "name"
+      - "collection"
+      properties:
+        value:
+          type: "string"
+        expire:
+          type: "integer"
+      example:
+        expire: 0
+        value: "0"
+    LafOlLocaleFile:
+      required:
+      - "langcode"
+      - "project"
+      properties:
+        filename:
+          type: "string"
+        version:
+          type: "string"
+        uri:
+          type: "string"
+        timestamp:
+          type: "integer"
+        last_checked:
+          type: "integer"
+      example:
+        filename: "Kesley"
+        version: "Lorem ipsum dolor si0"
+        uri: "Lorem ipsum dolor si0"
+        last_checked: 0
+        timestamp: 0
+    LafOlLocalesLocation:
+      required:
+      - "lid"
+      properties:
+        sid:
+          type: "integer"
+        type:
+          type: "string"
+        name:
+          type: "string"
+        version:
+          type: "string"
+      example:
+        name: "Deb"
+        type: "Lorem ipsum dolor si0"
+        version: "Lorem ipsum dolor s0"
+        sid: 0
+    LafOlLocalesSource:
+      required:
+      - "lid"
+      properties:
+        source:
+          type: "string"
+        context:
+          type: "string"
+        version:
+          type: "string"
+      example:
+        context: "Lorem ipsum dolor si0"
+        source: "null"
+        version: "Lorem ipsum dolor s0"
+    LafOlLocalesTarget:
+      required:
+      - "lid"
+      - "language"
+      properties:
+        translation:
+          type: "string"
+        customized:
+          type: "integer"
+      example:
+        customized: 0
+        translation: "null"
+    LafOlMenuLinkContent:
+      required:
+      - "id"
+      - "uuid"
+      - "revision_id"
+      properties:
+        bundle:
+          type: "string"
+        langcode:
+          type: "string"
+      example:
+        langcode: "Lorem ipsum0"
+        bundle: "Lorem ipsum dolor si0"
+    LafOlMenuLinkContentData:
+      required:
+      - "langcode"
+      - "id"
+      properties:
+        revision_id:
+          type: "integer"
+        bundle:
+          type: "string"
+        enabled:
+          type: "integer"
+        title:
+          type: "string"
+        description:
+          type: "string"
+        menu_name:
+          type: "string"
+        link__uri:
+          type: "string"
+        link__title:
+          type: "string"
+        link__options:
+          type: "string"
+        external:
+          type: "integer"
+        rediscover:
+          type: "integer"
+        weight:
+          type: "integer"
+        expanded:
+          type: "integer"
+        parent:
+          type: "string"
+        changed:
+          type: "integer"
+        default_langcode:
+          type: "integer"
+        revision_translation_affected:
+          type: "integer"
+      example:
+        rediscover: "0"
+        parent: "Lorem ipsum dolor si0"
+        revision_translation_affected: "0"
+        description: "Lorem ipsum dolor si0"
+        weight: 0
+        menu_name: "Evita"
+        title: "Lorem ipsum dolor si0"
+        enabled: "0"
+        revision_id: 0
+        link__title: "Lorem ipsum dolor si0"
+        external: "0"
+        expanded: "0"
+        link__options: "0"
+        bundle: "Lorem ipsum dolor si0"
+        link__uri: "Lorem ipsum dolor si0"
+        changed: 0
+        default_langcode: "0"
+    LafOlMenuLinkContentFieldRevision:
+      required:
+      - "langcode"
+      - "revision_id"
+      properties:
+        id:
+          type: "integer"
+        enabled:
+          type: "integer"
+        title:
+          type: "string"
+        description:
+          type: "string"
+        link__uri:
+          type: "string"
+        link__title:
+          type: "string"
+        link__options:
+          type: "string"
+        external:
+          type: "integer"
+        changed:
+          type: "integer"
+        default_langcode:
+          type: "integer"
+        revision_translation_affected:
+          type: "integer"
+      example:
+        link__title: "Lorem ipsum dolor si0"
+        external: "0"
+        revision_translation_affected: "0"
+        description: "Lorem ipsum dolor si0"
+        id: 0
+        link__options: "0"
+        title: "Lorem ipsum dolor si0"
+        enabled: "0"
+        link__uri: "Lorem ipsum dolor si0"
+        changed: 0
+        default_langcode: "0"
+    LafOlMenuLinkContentRevision:
+      required:
+      - "revision_id"
+      properties:
+        id:
+          type: "integer"
+        langcode:
+          type: "string"
+        revision_user:
+          type: "integer"
+        revision_created:
+          type: "integer"
+        revision_log_message:
+          type: "string"
+        revision_default:
+          type: "integer"
+      example:
+        langcode: "Lorem ipsum0"
+        revision_user: 0
+        revision_log_message: "92"
+        revision_created: 0
+        id: 0
+        revision_default: "0"
+    LafOlMenuTree:
+      required:
+      - "mlid"
+      - "id"
+      properties:
+        menu_name:
+          type: "string"
+        parent:
+          type: "string"
+        route_name:
+          type: "string"
+        route_param_key:
+          type: "string"
+        route_parameters:
+          type: "string"
+        url:
+          type: "string"
+        title:
+          type: "string"
+        description:
+          type: "string"
+        class:
+          type: "string"
+        options:
+          type: "string"
+        provider:
+          type: "string"
+        enabled:
+          type: "integer"
+        discovered:
+          type: "integer"
+        expanded:
+          type: "integer"
+        weight:
+          type: "integer"
+        metadata:
+          type: "string"
+        has_children:
+          type: "integer"
+        depth:
+          type: "integer"
+        p1:
+          type: "integer"
+        p2:
+          type: "integer"
+        p3:
+          type: "integer"
+        p4:
+          type: "integer"
+        p5:
+          type: "integer"
+        p6:
+          type: "integer"
+        p7:
+          type: "integer"
+        p8:
+          type: "integer"
+        p9:
+          type: "integer"
+        form_class:
+          type: "string"
+      example:
+        parent: "Lorem ipsum dolor si0"
+        p1: 0
+        discovered: "0"
+        metadata: "0"
+        p2: 0
+        p3: 0
+        p4: 0
+        form_class: "Lorem ipsum dolor si0"
+        p5: 0
+        has_children: "0"
+        p6: 0
+        p7: 0
+        p8: 0
+        description: "0"
+        p9: 0
+        menu_name: "Catharine"
+        title: "0"
+        enabled: "0"
+        route_name: "Arielle"
+        expanded: "0"
+        provider: "Lorem ipsum dolor si0"
+        options: "0"
+        route_param_key: "Lorem ipsum dolor si0"
+        weight: 0
+        url: "Lorem ipsum dolor si0"
+        depth: "0"
+        class: "0"
+        route_parameters: "0"
+    LafOlNode:
+      required:
+      - "vid"
+      - "nid"
+      - "uuid"
+      properties:
+        type:
+          type: "string"
+        langcode:
+          type: "string"
+      example:
+        langcode: "Lorem ipsum0"
+        type: "Lorem ipsum dolor si0"
+    LafOlNodeBody:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      properties:
+        bundle:
+          type: "string"
+        revision_id:
+          type: "integer"
+        body_value:
+          type: "string"
+        body_summary:
+          type: "string"
+        body_format:
+          type: "string"
+      example:
+        revision_id: 0
+        body_value: "0"
+        body_summary: "0"
+        body_format: "Lorem ipsum dolor si0"
+        bundle: "Lorem ipsum dolor si0"
+    LafOlNodeComment:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      properties:
+        bundle:
+          type: "string"
+        revision_id:
+          type: "integer"
+        comment_status:
+          type: "integer"
+      example:
+        revision_id: 0
+        bundle: "Lorem ipsum dolor si0"
+        comment_status: 0
+    LafOlNodeFieldImage:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      properties:
+        bundle:
+          type: "string"
+        revision_id:
+          type: "integer"
+        field_image_target_id:
+          type: "integer"
+        field_image_alt:
+          type: "string"
+        field_image_title:
+          type: "string"
+        field_image_width:
+          type: "integer"
+        field_image_height:
+          type: "integer"
+      example:
+        revision_id: 0
+        field_image_height: 0
+        field_image_title: "27"
+        field_image_alt: "44"
+        bundle: "Lorem ipsum dolor si0"
+        field_image_target_id: 0
+        field_image_width: 0
+    LafOlNodeFieldTags:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      properties:
+        bundle:
+          type: "string"
+        revision_id:
+          type: "integer"
+        field_tags_target_id:
+          type: "integer"
+      example:
+        revision_id: 0
+        bundle: "Lorem ipsum dolor si0"
+        field_tags_target_id: 0
+    LafOlNodeAccess:
+      required:
+      - "langcode"
+      - "gid"
+      - "nid"
+      - "realm"
+      properties:
+        fallback:
+          type: "integer"
+        grant_view:
+          type: "integer"
+        grant_update:
+          type: "integer"
+        grant_delete:
+          type: "integer"
+      example:
+        grant_delete: "0"
+        grant_view: "0"
+        grant_update: "0"
+        fallback: "0"
+    LafOlNodeFieldData:
+      required:
+      - "langcode"
+      - "nid"
+      properties:
+        vid:
+          type: "integer"
+        type:
+          type: "string"
+        status:
+          type: "integer"
+        uid:
+          type: "integer"
+        title:
+          type: "string"
+        created:
+          type: "integer"
+        changed:
+          type: "integer"
+        promote:
+          type: "integer"
+        sticky:
+          type: "integer"
+        default_langcode:
+          type: "integer"
+        revision_translation_affected:
+          type: "integer"
+      example:
+        vid: 0
+        uid: 0
+        promote: "0"
+        created: 0
+        revision_translation_affected: "0"
+        sticky: "0"
+        type: "Lorem ipsum dolor si0"
+        title: "Lorem ipsum dolor si0"
+        status: "0"
+        changed: 0
+        default_langcode: "0"
+    LafOlNodeFieldRevision:
+      required:
+      - "vid"
+      - "langcode"
+      properties:
+        nid:
+          type: "integer"
+        status:
+          type: "integer"
+        uid:
+          type: "integer"
+        title:
+          type: "string"
+        created:
+          type: "integer"
+        changed:
+          type: "integer"
+        promote:
+          type: "integer"
+        sticky:
+          type: "integer"
+        default_langcode:
+          type: "integer"
+        revision_translation_affected:
+          type: "integer"
+      example:
+        uid: 0
+        promote: "0"
+        created: 0
+        revision_translation_affected: "0"
+        nid: 0
+        sticky: "0"
+        title: "Lorem ipsum dolor si0"
+        status: "0"
+        changed: 0
+        default_langcode: "0"
+    LafOlNodeRevision:
+      required:
+      - "vid"
+      properties:
+        nid:
+          type: "integer"
+        langcode:
+          type: "string"
+        revision_uid:
+          type: "integer"
+        revision_timestamp:
+          type: "integer"
+        revision_log:
+          type: "string"
+        revision_default:
+          type: "integer"
+      example:
+        langcode: "Lorem ipsum0"
+        revision_timestamp: 0
+        revision_uid: 0
+        nid: 0
+        revision_log: "0"
+        revision_default: "0"
+    LafOlNodeRevisionBody:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      - "revision_id"
+      properties:
+        bundle:
+          type: "string"
+        body_value:
+          type: "string"
+        body_summary:
+          type: "string"
+        body_format:
+          type: "string"
+      example:
+        body_value: "0"
+        body_summary: "0"
+        body_format: "Lorem ipsum dolor si0"
+        bundle: "Lorem ipsum dolor si0"
+    LafOlNodeRevisionComment:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      - "revision_id"
+      properties:
+        bundle:
+          type: "string"
+        comment_status:
+          type: "integer"
+      example:
+        bundle: "Lorem ipsum dolor si0"
+        comment_status: 0
+    LafOlNodeRevisionFieldImage:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      - "revision_id"
+      properties:
+        bundle:
+          type: "string"
+        field_image_target_id:
+          type: "integer"
+        field_image_alt:
+          type: "string"
+        field_image_title:
+          type: "string"
+        field_image_width:
+          type: "integer"
+        field_image_height:
+          type: "integer"
+      example:
+        field_image_height: 0
+        field_image_title: "64"
+        field_image_alt: "13"
+        bundle: "Lorem ipsum dolor si0"
+        field_image_target_id: 0
+        field_image_width: 0
+    LafOlNodeRevisionFieldTags:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      - "revision_id"
+      properties:
+        bundle:
+          type: "string"
+        field_tags_target_id:
+          type: "integer"
+      example:
+        bundle: "Lorem ipsum dolor si0"
+        field_tags_target_id: 0
+    LafOlQueue:
+      required:
+      - "item_id"
+      properties:
+        name:
+          type: "string"
+        data:
+          type: "string"
+        expire:
+          type: "integer"
+        created:
+          type: "integer"
+      example:
+        data: "0"
+        created: 0
+        expire: 0
+        name: "Koral"
+    LafOlRouter:
+      required:
+      - "name"
+      properties:
+        path:
+          type: "string"
+        pattern_outline:
+          type: "string"
+        fit:
+          type: "integer"
+        route:
+          type: "string"
+        number_parts:
+          type: "integer"
+      example:
+        fit: 0
+        path: "Lorem ipsum dolor si0"
+        route: "0"
+        pattern_outline: "Lorem ipsum dolor si0"
+        number_parts: "0"
+    LafOlSearchDataset:
+      required:
+      - "langcode"
+      - "type"
+      - "sid"
+      properties:
+        data:
+          type: "string"
+        reindex:
+          type: "integer"
+      example:
+        data: "0"
+        reindex: 0
+    LafOlSearchIndex:
+      required:
+      - "langcode"
+      - "type"
+      - "word"
+      - "sid"
+      properties:
+        score:
+          type: "number"
+      example:
+        score: 0
+    LafOlSearchTotal:
+      required:
+      - "word"
+      properties:
+        count:
+          type: "number"
+      example:
+        count: 0
+    LafOlSemaphore:
+      required:
+      - "name"
+      properties:
+        value:
+          type: "string"
+        expire:
+          type: "number"
+      example:
+        expire: "0"
+        value: "Lorem ipsum dolor si0"
+    LafOlSequences:
+      required:
+      - "value"
+      properties: {}
+      example: {}
+    LafOlSessions:
+      required:
+      - "sid"
+      properties:
+        uid:
+          type: "integer"
+        hostname:
+          type: "string"
+        timestamp:
+          type: "integer"
+        session:
+          type: "string"
+      example:
+        uid: 0
+        hostname: "Melitta"
+        session: "0"
+        timestamp: 0
+    LafOlShortcut:
+      required:
+      - "id"
+      - "uuid"
+      properties:
+        shortcut_set:
+          type: "string"
+        langcode:
+          type: "string"
+      example:
+        shortcut_set: "Lorem ipsum dolor si0"
+        langcode: "Lorem ipsum0"
+    LafOlShortcutFieldData:
+      required:
+      - "langcode"
+      - "id"
+      properties:
+        shortcut_set:
+          type: "string"
+        title:
+          type: "string"
+        weight:
+          type: "integer"
+        link__uri:
+          type: "string"
+        link__title:
+          type: "string"
+        link__options:
+          type: "string"
+        default_langcode:
+          type: "integer"
+      example:
+        shortcut_set: "Lorem ipsum dolor si0"
+        link__title: "Lorem ipsum dolor si0"
+        weight: 0
+        link__options: "0"
+        title: "Lorem ipsum dolor si0"
+        link__uri: "Lorem ipsum dolor si0"
+        default_langcode: "0"
+    LafOlShortcutSetUsers:
+      required:
+      - "uid"
+      properties:
+        set_name:
+          type: "string"
+      example:
+        set_name: "Ardra"
+    LafOlTaxonomyIndex:
+      required:
+      - "nid"
+      - "tid"
+      properties:
+        status:
+          type: "integer"
+        sticky:
+          type: "integer"
+        created:
+          type: "integer"
+      example:
+        created: 0
+        sticky: "0"
+        status: 0
+    LafOlTaxonomyTermParent:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      properties:
+        bundle:
+          type: "string"
+        revision_id:
+          type: "integer"
+        parent_target_id:
+          type: "integer"
+      example:
+        revision_id: 0
+        parent_target_id: 0
+        bundle: "Lorem ipsum dolor si0"
+    LafOlTaxonomyTermData:
+      required:
+      - "uuid"
+      - "tid"
+      - "revision_id"
+      properties:
+        vid:
+          type: "string"
+        langcode:
+          type: "string"
+      example:
+        vid: "Lorem ipsum dolor si0"
+        langcode: "Lorem ipsum0"
+    LafOlTaxonomyTermFieldData:
+      required:
+      - "langcode"
+      - "tid"
+      properties:
+        revision_id:
+          type: "integer"
+        vid:
+          type: "string"
+        status:
+          type: "integer"
+        name:
+          type: "string"
+        description__value:
+          type: "string"
+        description__format:
+          type: "string"
+        weight:
+          type: "integer"
+        changed:
+          type: "integer"
+        default_langcode:
+          type: "integer"
+        revision_translation_affected:
+          type: "integer"
+      example:
+        revision_id: 0
+        vid: "Lorem ipsum dolor si0"
+        description__value: "0"
+        revision_translation_affected: "0"
+        name: "Brynne"
+        weight: 0
+        description__format: "Lorem ipsum dolor si0"
+        status: "0"
+        changed: 0
+        default_langcode: "0"
+    LafOlTaxonomyTermFieldRevision:
+      required:
+      - "langcode"
+      - "revision_id"
+      properties:
+        tid:
+          type: "integer"
+        status:
+          type: "integer"
+        name:
+          type: "string"
+        description__value:
+          type: "string"
+        description__format:
+          type: "string"
+        changed:
+          type: "integer"
+        default_langcode:
+          type: "integer"
+        revision_translation_affected:
+          type: "integer"
+      example:
+        description__value: "0"
+        revision_translation_affected: "0"
+        name: "Marlee"
+        description__format: "Lorem ipsum dolor si0"
+        tid: 0
+        status: "0"
+        changed: 0
+        default_langcode: "0"
+    LafOlTaxonomyTermRevision:
+      required:
+      - "revision_id"
+      properties:
+        tid:
+          type: "integer"
+        langcode:
+          type: "string"
+        revision_user:
+          type: "integer"
+        revision_created:
+          type: "integer"
+        revision_log_message:
+          type: "string"
+        revision_default:
+          type: "integer"
+      example:
+        langcode: "Lorem ipsum0"
+        revision_user: 0
+        revision_log_message: "14"
+        revision_created: 0
+        revision_default: "0"
+        tid: 0
+    LafOlTaxonomyTermRevisionParent:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      - "revision_id"
+      properties:
+        bundle:
+          type: "string"
+        parent_target_id:
+          type: "integer"
+      example:
+        parent_target_id: 0
+        bundle: "Lorem ipsum dolor si0"
+    LafOlUrlAlias:
+      required:
+      - "pid"
+      properties:
+        source:
+          type: "string"
+        alias:
+          type: "string"
+        langcode:
+          type: "string"
+      example:
+        langcode: "Lorem ipsum0"
+        alias: "Lorem ipsum dolor si0"
+        source: "Lorem ipsum dolor si0"
+    LafOlUserRoles:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      properties:
+        bundle:
+          type: "string"
+        revision_id:
+          type: "integer"
+        roles_target_id:
+          type: "string"
+      example:
+        revision_id: 0
+        roles_target_id: "Lorem ipsum dolor si0"
+        bundle: "Lorem ipsum dolor si0"
+    LafOlUserUserPicture:
+      required:
+      - "langcode"
+      - "deleted"
+      - "delta"
+      - "entity_id"
+      properties:
+        bundle:
+          type: "string"
+        revision_id:
+          type: "integer"
+        user_picture_target_id:
+          type: "integer"
+        user_picture_alt:
+          type: "string"
+        user_picture_title:
+          type: "string"
+        user_picture_width:
+          type: "integer"
+        user_picture_height:
+          type: "integer"
+      example:
+        revision_id: 0
+        user_picture_width: 0
+        user_picture_alt: "Lorem ipsum dolor si0"
+        user_picture_title: "Lorem ipsum dolor si0"
+        bundle: "Lorem ipsum dolor si0"
+        user_picture_height: 0
+        user_picture_target_id: 0
+    LafOlUsers:
+      required:
+      - "uid"
+      - "uuid"
+      properties:
+        langcode:
+          type: "string"
+      example:
+        langcode: "Lorem ipsum0"
+    LafOlUsersData:
+      required:
+      - "uid"
+      - "module"
+      - "name"
+      properties:
+        value:
+          type: "string"
+        serialized:
+          type: "integer"
+      example:
+        value: "0"
+        serialized: "0"
+    LafOlUsersFieldData:
+      required:
+      - "uid"
+      - "langcode"
+      - "name"
+      properties:
+        preferred_langcode:
+          type: "string"
+        preferred_admin_langcode:
+          type: "string"
+        pass:
+          type: "string"
+        mail:
+          type: "string"
+        timezone:
+          type: "string"
+        status:
+          type: "integer"
+        created:
+          type: "integer"
+        changed:
+          type: "integer"
+        access:
+          type: "integer"
+        login:
+          type: "integer"
+        init:
+          type: "string"
+        default_langcode:
+          type: "integer"
+      example:
+        init: "Lorem ipsum dolor si0"
+        access: 0
+        mail: "Lorem ipsum dolor si0"
+        preferred_admin_langcode: "Lorem ipsum0"
+        pass: "Lorem ipsum dolor si0"
+        timezone: "Lorem ipsum dolor si0"
+        created: 0
+        login: 0
+        preferred_langcode: "Lorem ipsum0"
+        status: "0"
+        changed: 0
+        default_langcode: "0"
+    LafOlWatchdog:
+      required:
+      - "wid"
+      properties:
+        uid:
+          type: "integer"
+        type:
+          type: "string"
+        message:
+          type: "string"
+        variables:
+          type: "string"
+        severity:
+          type: "integer"
+        link:
+          type: "string"
+        location:
+          type: "string"
+        referer:
+          type: "string"
+        hostname:
+          type: "string"
+        timestamp:
+          type: "integer"
+      example:
+        severity: "0"
+        uid: 0
+        referer: "0"
+        variables: "0"
+        hostname: "Leoline"
+        link: "0"
+        location: "0"
+        type: "Lorem ipsum dolor si0"
+        message: "56"
+        timestamp: 0

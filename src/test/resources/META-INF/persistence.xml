@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                       http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+  <persistence-unit name="testpersistence" transaction-type="RESOURCE_LOCAL">
+  <!-- <provider>org.hibernate.ejb.HibernatePersistence</provider> -->
+  <!-- https://stackoverflow.com/questions/39410183/hibernate-5-2-2-no-persistence-provider-for-entitymanager -->
+  <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+  	<class>com.drupal.test.entity.LafOlBatch</class> 
+  	<class>com.drupal.test.entity.LafOlBlockContent</class> 
+  	<class>com.drupal.test.entity.LafOlBlockContentBody</class> 
+  	<class>com.drupal.test.entity.LafOlBlockContentFieldData</class> 
+  	<class>com.drupal.test.entity.LafOlBlockContentFieldRevision</class> 
+  	<class>com.drupal.test.entity.LafOlBlockContentRevision</class> 
+  	<class>com.drupal.test.entity.LafOlBlockContentRevisionBody</class> 
+  	<class>com.drupal.test.entity.LafOlCacheBootstrap</class> 
+  	<class>com.drupal.test.entity.LafOlCacheConfig</class> 
+  	<class>com.drupal.test.entity.LafOlCacheContainer</class> 
+  	<class>com.drupal.test.entity.LafOlCacheData</class> 
+  	<class>com.drupal.test.entity.LafOlCacheDefault</class> 
+  	<class>com.drupal.test.entity.LafOlCacheDiscovery</class> 
+  	<class>com.drupal.test.entity.LafOlCacheDynamicPageCache</class> 
+  	<class>com.drupal.test.entity.LafOlCacheEntity</class> 
+  	<class>com.drupal.test.entity.LafOlCacheMenu</class> 
+  	<class>com.drupal.test.entity.LafOlCachePage</class> 
+  	<class>com.drupal.test.entity.LafOlCacheRender</class> 
+  	<class>com.drupal.test.entity.LafOlCachetags</class> 
+  	<class>com.drupal.test.entity.LafOlComment</class> 
+  	<class>com.drupal.test.entity.LafOlCommentCommentBody</class> 
+  	<class>com.drupal.test.entity.LafOlCommentEntityStatistics</class> 
+  	<class>com.drupal.test.entity.LafOlCommentFieldData</class> 
+  	<class>com.drupal.test.entity.LafOlConfig</class> 
+  	<class>com.drupal.test.entity.LafOlFileManaged</class> 
+  	<class>com.drupal.test.entity.LafOlFileUsage</class> 
+  	<class>com.drupal.test.entity.LafOlHistory</class> 
+  	<class>com.drupal.test.entity.LafOlKeyValue</class> 
+  	<class>com.drupal.test.entity.LafOlKeyValueExpire</class> 
+  	<class>com.drupal.test.entity.LafOlLocaleFile</class> 
+  	<class>com.drupal.test.entity.LafOlLocalesLocation</class> 
+  	<class>com.drupal.test.entity.LafOlLocalesSource</class> 
+  	<class>com.drupal.test.entity.LafOlLocalesTarget</class> 
+  	<class>com.drupal.test.entity.LafOlMenuLinkContent</class> 
+  	<class>com.drupal.test.entity.LafOlMenuLinkContentData</class> 
+  	<class>com.drupal.test.entity.LafOlMenuLinkContentFieldRevision</class> 
+  	<class>com.drupal.test.entity.LafOlMenuLinkContentRevision</class> 
+  	<class>com.drupal.test.entity.LafOlMenuTree</class> 
+  	<class>com.drupal.test.entity.LafOlNode</class> 
+  	<class>com.drupal.test.entity.LafOlNodeBody</class> 
+  	<class>com.drupal.test.entity.LafOlNodeComment</class> 
+  	<class>com.drupal.test.entity.LafOlNodeFieldImage</class> 
+  	<class>com.drupal.test.entity.LafOlNodeFieldTags</class> 
+  	<class>com.drupal.test.entity.LafOlNodeAccess</class> 
+  	<class>com.drupal.test.entity.LafOlNodeFieldData</class> 
+  	<class>com.drupal.test.entity.LafOlNodeFieldRevision</class> 
+  	<class>com.drupal.test.entity.LafOlNodeRevision</class> 
+  	<class>com.drupal.test.entity.LafOlNodeRevisionBody</class> 
+  	<class>com.drupal.test.entity.LafOlNodeRevisionComment</class> 
+  	<class>com.drupal.test.entity.LafOlNodeRevisionFieldImage</class> 
+  	<class>com.drupal.test.entity.LafOlNodeRevisionFieldTags</class> 
+  	<class>com.drupal.test.entity.LafOlQueue</class> 
+  	<class>com.drupal.test.entity.LafOlRouter</class> 
+  	<class>com.drupal.test.entity.LafOlSearchDataset</class> 
+  	<class>com.drupal.test.entity.LafOlSearchIndex</class> 
+  	<class>com.drupal.test.entity.LafOlSearchTotal</class> 
+  	<class>com.drupal.test.entity.LafOlSemaphore</class> 
+  	<class>com.drupal.test.entity.LafOlSequences</class> 
+  	<class>com.drupal.test.entity.LafOlSessions</class> 
+  	<class>com.drupal.test.entity.LafOlShortcut</class> 
+  	<class>com.drupal.test.entity.LafOlShortcutFieldData</class> 
+  	<class>com.drupal.test.entity.LafOlShortcutSetUsers</class> 
+  	<class>com.drupal.test.entity.LafOlTaxonomyIndex</class> 
+  	<class>com.drupal.test.entity.LafOlTaxonomyTermParent</class> 
+  	<class>com.drupal.test.entity.LafOlTaxonomyTermData</class> 
+  	<class>com.drupal.test.entity.LafOlTaxonomyTermFieldData</class> 
+  	<class>com.drupal.test.entity.LafOlTaxonomyTermFieldRevision</class> 
+  	<class>com.drupal.test.entity.LafOlTaxonomyTermRevision</class> 
+  	<class>com.drupal.test.entity.LafOlTaxonomyTermRevisionParent</class> 
+  	<class>com.drupal.test.entity.LafOlUrlAlias</class> 
+  	<class>com.drupal.test.entity.LafOlUserRoles</class> 
+  	<class>com.drupal.test.entity.LafOlUserUserPicture</class> 
+  	<class>com.drupal.test.entity.LafOlUsers</class> 
+  	<class>com.drupal.test.entity.LafOlUsersData</class> 
+  	<class>com.drupal.test.entity.LafOlUsersFieldData</class> 
+  	<class>com.drupal.test.entity.LafOlWatchdog</class> 
+  	<class>com.drupal.test.entity.DataLoadingStatus</class> 
+      <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <!-- Configuring JDBC properties -->
+      <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test;"/>
+      <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+
+      <!-- Hibernate properties -->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+      <property name="hibernate.format_sql" value="false"/>
+      <property name="hibernate.show_sql" value="true"/>
+
+    </properties>
+    </persistence-unit>
+
+</persistence>

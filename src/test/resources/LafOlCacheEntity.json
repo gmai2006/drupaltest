@@ -1,0 +1,92 @@
+[
+  {
+    "data": "0",
+    "created": 0,
+    "expire": 0,
+    "checksum": "Lorem ipsum dolor si0",
+    "serialized": 0,
+    "tags": "0",
+    "cid": "83a1bf70-56c4-45d6-8696-c3b524975cb5"
+  },
+  {
+    "data": "1",
+    "created": 1,
+    "expire": 1,
+    "checksum": "Lorem ipsum dolor si1",
+    "serialized": 1,
+    "tags": "1",
+    "cid": "6ee2335c-7029-4bf5-9601-fa6597c50d9e"
+  },
+  {
+    "data": "2",
+    "created": 2,
+    "expire": 2,
+    "checksum": "Lorem ipsum dolor si2",
+    "serialized": 2,
+    "tags": "2",
+    "cid": "38a2fff8-7df4-4476-8a36-5d1edf500ee4"
+  },
+  {
+    "data": "3",
+    "created": 3,
+    "expire": 3,
+    "checksum": "Lorem ipsum dolor si3",
+    "serialized": 3,
+    "tags": "3",
+    "cid": "d0f7aa74-71d2-47ee-8a7a-43a68eff8dc4"
+  },
+  {
+    "data": "4",
+    "created": 4,
+    "expire": 4,
+    "checksum": "Lorem ipsum dolor si4",
+    "serialized": 4,
+    "tags": "4",
+    "cid": "e034e4aa-6cd5-4e51-9784-17a8d4a2717a"
+  },
+  {
+    "data": "5",
+    "created": 5,
+    "expire": 5,
+    "checksum": "Lorem ipsum dolor si5",
+    "serialized": 5,
+    "tags": "5",
+    "cid": "b318c2b7-ae5d-4677-b2e9-d1810316d470"
+  },
+  {
+    "data": "6",
+    "created": 6,
+    "expire": 6,
+    "checksum": "Lorem ipsum dolor si6",
+    "serialized": 6,
+    "tags": "6",
+    "cid": "9e354d54-0890-466c-b381-2d66f610380d"
+  },
+  {
+    "data": "7",
+    "created": 7,
+    "expire": 7,
+    "checksum": "Lorem ipsum dolor si7",
+    "serialized": 7,
+    "tags": "7",
+    "cid": "6c9c276c-2761-4d77-87ed-7432340df198"
+  },
+  {
+    "data": "8",
+    "created": 8,
+    "expire": 8,
+    "checksum": "Lorem ipsum dolor si8",
+    "serialized": 8,
+    "tags": "8",
+    "cid": "b378d140-cfb1-40f8-9e05-a7c9f74da363"
+  },
+  {
+    "data": "9",
+    "created": 9,
+    "expire": 9,
+    "checksum": "Lorem ipsum dolor si9",
+    "serialized": 9,
+    "tags": "9",
+    "cid": "a8365b7d-4485-4bba-9779-3041559fb7a5"
+  }
+]

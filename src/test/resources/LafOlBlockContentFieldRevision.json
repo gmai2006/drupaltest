@@ -1,0 +1,102 @@
+[
+  {
+    "revisionTranslationAffected": 0,
+    "id": 0,
+    "status": 0,
+    "info": "Lorem ipsum dolor si0",
+    "changed": 0,
+    "defaultLangcode": 0,
+    "revisionId": 607437318,
+    "langcode": "2369ad20-4e23-4e0f-be27-2c94d75d684f"
+  },
+  {
+    "revisionTranslationAffected": 1,
+    "id": 1,
+    "status": 1,
+    "info": "Lorem ipsum dolor si1",
+    "changed": 1,
+    "defaultLangcode": 1,
+    "revisionId": 1282394406,
+    "langcode": "9f2f3d05-2749-47a8-a8e5-862a547957db"
+  },
+  {
+    "revisionTranslationAffected": 2,
+    "id": 2,
+    "status": 2,
+    "info": "Lorem ipsum dolor si2",
+    "changed": 2,
+    "defaultLangcode": 2,
+    "revisionId": 987406763,
+    "langcode": "90d4727b-400e-4012-8855-19a123a91e79"
+  },
+  {
+    "revisionTranslationAffected": 3,
+    "id": 3,
+    "status": 3,
+    "info": "Lorem ipsum dolor si3",
+    "changed": 3,
+    "defaultLangcode": 3,
+    "revisionId": 337920571,
+    "langcode": "563f2f00-a57b-4f6b-8424-764bc4a241ac"
+  },
+  {
+    "revisionTranslationAffected": 4,
+    "id": 4,
+    "status": 4,
+    "info": "Lorem ipsum dolor si4",
+    "changed": 4,
+    "defaultLangcode": 4,
+    "revisionId": 1325032416,
+    "langcode": "e6cbb3c4-d9d9-43fc-86a9-93aa61e8d1d0"
+  },
+  {
+    "revisionTranslationAffected": 5,
+    "id": 5,
+    "status": 5,
+    "info": "Lorem ipsum dolor si5",
+    "changed": 5,
+    "defaultLangcode": 5,
+    "revisionId": 2114241124,
+    "langcode": "50c811d4-acc7-4f11-a81d-92691b1b9b93"
+  },
+  {
+    "revisionTranslationAffected": 6,
+    "id": 6,
+    "status": 6,
+    "info": "Lorem ipsum dolor si6",
+    "changed": 6,
+    "defaultLangcode": 6,
+    "revisionId": 243317022,
+    "langcode": "45957586-4a8d-4663-b390-2aeaafe3f363"
+  },
+  {
+    "revisionTranslationAffected": 7,
+    "id": 7,
+    "status": 7,
+    "info": "Lorem ipsum dolor si7",
+    "changed": 7,
+    "defaultLangcode": 7,
+    "revisionId": 1698957710,
+    "langcode": "05c925e4-863c-4c25-9147-cd28e1bbecd7"
+  },
+  {
+    "revisionTranslationAffected": 8,
+    "id": 8,
+    "status": 8,
+    "info": "Lorem ipsum dolor si8",
+    "changed": 8,
+    "defaultLangcode": 8,
+    "revisionId": 1610233811,
+    "langcode": "0de688f5-0141-4d6a-aa0a-31b93558cddf"
+  },
+  {
+    "revisionTranslationAffected": 9,
+    "id": 9,
+    "status": 9,
+    "info": "Lorem ipsum dolor si9",
+    "changed": 9,
+    "defaultLangcode": 9,
+    "revisionId": 334694448,
+    "langcode": "d66708b4-d719-4dea-9538-389d2d1317a5"
+  }
+]

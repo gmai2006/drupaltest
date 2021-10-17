@@ -1,0 +1,102 @@
+[
+  {
+    "grantDelete": 0,
+    "grantView": 0,
+    "grantUpdate": 0,
+    "fallback": 0,
+    "nid": 2138847207,
+    "langcode": "d89d74f5-546c-4a50-a8fd-2d168540633a",
+    "realm": "ec412ea7-4fee-4cfc-b354-e218df5a846d",
+    "gid": 658056071
+  },
+  {
+    "grantDelete": 1,
+    "grantView": 1,
+    "grantUpdate": 1,
+    "fallback": 1,
+    "nid": 469808280,
+    "langcode": "dd7f36d2-c4b3-4f87-97c9-8403eaabaa69",
+    "realm": "d4ba6f7c-723f-4de8-ac31-289fff7bed3c",
+    "gid": 1848505590
+  },
+  {
+    "grantDelete": 2,
+    "grantView": 2,
+    "grantUpdate": 2,
+    "fallback": 2,
+    "nid": 1547083946,
+    "langcode": "a545305b-12cb-427d-b90d-539decadfa3b",
+    "realm": "8672dd0b-9266-4d64-bbd8-6cb400d0a156",
+    "gid": 2082004286
+  },
+  {
+    "grantDelete": 3,
+    "grantView": 3,
+    "grantUpdate": 3,
+    "fallback": 3,
+    "nid": 1746565167,
+    "langcode": "3e612146-b925-472c-a591-7f6dfb1e8b2b",
+    "realm": "d9714863-fdde-47d1-980c-b8d865474e13",
+    "gid": 384203651
+  },
+  {
+    "grantDelete": 4,
+    "grantView": 4,
+    "grantUpdate": 4,
+    "fallback": 4,
+    "nid": 1813509851,
+    "langcode": "62c0052b-f943-43c1-b86d-73e4a8916f3b",
+    "realm": "006a7463-cc45-4901-bab7-81c5b795c74d",
+    "gid": 817873219
+  },
+  {
+    "grantDelete": 5,
+    "grantView": 5,
+    "grantUpdate": 5,
+    "fallback": 5,
+    "nid": 820584673,
+    "langcode": "30abcecd-83be-4321-9afe-12b8b3995f38",
+    "realm": "3ec2198b-c03b-44e5-abdd-734c07423ce0",
+    "gid": 1210879047
+  },
+  {
+    "grantDelete": 6,
+    "grantView": 6,
+    "grantUpdate": 6,
+    "fallback": 6,
+    "nid": 1231905668,
+    "langcode": "a17b1160-2396-4f50-94d4-531467740c2d",
+    "realm": "15fb9add-269b-438c-b099-8d977bfedd6b",
+    "gid": 502153881
+  },
+  {
+    "grantDelete": 7,
+    "grantView": 7,
+    "grantUpdate": 7,
+    "fallback": 7,
+    "nid": 68788997,
+    "langcode": "bc3fd827-0926-43ab-9223-a6c3a9e49a55",
+    "realm": "d210e813-49ef-46f0-8161-6efdbb54e0b0",
+    "gid": 161968504
+  },
+  {
+    "grantDelete": 8,
+    "grantView": 8,
+    "grantUpdate": 8,
+    "fallback": 8,
+    "nid": 471285890,
+    "langcode": "99ec40f3-b980-4ae7-bd68-e1c642ae2a74",
+    "realm": "13eda487-4b65-4602-ba89-d422eea9ebf3",
+    "gid": 69703600
+  },
+  {
+    "grantDelete": 9,
+    "grantView": 9,
+    "grantUpdate": 9,
+    "fallback": 9,
+    "nid": 1929787002,
+    "langcode": "9fa36c47-1bed-4101-b388-2d2d4ec17525",
+    "realm": "88dee70c-e5a5-4532-b778-fc03475b5b76",
+    "gid": 581866589
+  }
+]

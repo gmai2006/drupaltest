@@ -1,0 +1,92 @@
+[
+  {
+    "bundle": "Lorem ipsum dolor si0",
+    "fieldTagsTargetId": 0,
+    "revisionId": 1264480507,
+    "delta": 163877517,
+    "langcode": "31845dfc-c37d-4505-b75b-b3700f0725a0",
+    "entityId": 124833958,
+    "deleted": 1087942262
+  },
+  {
+    "bundle": "Lorem ipsum dolor si1",
+    "fieldTagsTargetId": 1,
+    "revisionId": 104969093,
+    "delta": 451738654,
+    "langcode": "bc6d2814-2e96-4143-95da-40730bbbc1b6",
+    "entityId": 299316797,
+    "deleted": 1021308958
+  },
+  {
+    "bundle": "Lorem ipsum dolor si2",
+    "fieldTagsTargetId": 2,
+    "revisionId": 1781809177,
+    "delta": 1340899866,
+    "langcode": "5d3ff1b7-c8bb-4a6b-93eb-732348cea863",
+    "entityId": 583177874,
+    "deleted": 2138011513
+  },
+  {
+    "bundle": "Lorem ipsum dolor si3",
+    "fieldTagsTargetId": 3,
+    "revisionId": 127306047,
+    "delta": 169381451,
+    "langcode": "84a33c58-0525-43e9-99f4-faffc8023e67",
+    "entityId": 802416547,
+    "deleted": 1115945957
+  },
+  {
+    "bundle": "Lorem ipsum dolor si4",
+    "fieldTagsTargetId": 4,
+    "revisionId": 156915521,
+    "delta": 543989851,
+    "langcode": "e9a7473b-0a91-4563-851c-513a0f5cefaa",
+    "entityId": 394485821,
+    "deleted": 776996233
+  },
+  {
+    "bundle": "Lorem ipsum dolor si5",
+    "fieldTagsTargetId": 5,
+    "revisionId": 1712078980,
+    "delta": 969573800,
+    "langcode": "9da30f5e-9806-43ac-8d51-bb0196db30ca",
+    "entityId": 1873109392,
+    "deleted": 1214304899
+  },
+  {
+    "bundle": "Lorem ipsum dolor si6",
+    "fieldTagsTargetId": 6,
+    "revisionId": 955247761,
+    "delta": 236691130,
+    "langcode": "db9063e0-e762-413c-af5c-90142edbcc39",
+    "entityId": 2105059356,
+    "deleted": 329567751
+  },
+  {
+    "bundle": "Lorem ipsum dolor si7",
+    "fieldTagsTargetId": 7,
+    "revisionId": 1434009025,
+    "delta": 960938589,
+    "langcode": "8a970359-e4b0-474b-b94a-d0bff575ee81",
+    "entityId": 1515805128,
+    "deleted": 1592203169
+  },
+  {
+    "bundle": "Lorem ipsum dolor si8",
+    "fieldTagsTargetId": 8,
+    "revisionId": 939928453,
+    "delta": 457373792,
+    "langcode": "8e73ffc4-dfa4-427b-8a60-f9248b503bb3",
+    "entityId": 519414545,
+    "deleted": 1066204310
+  },
+  {
+    "bundle": "Lorem ipsum dolor si9",
+    "fieldTagsTargetId": 9,
+    "revisionId": 1693431631,
+    "delta": 983098856,
+    "langcode": "b3d95411-517e-4406-a65d-e32b0044bcc5",
+    "entityId": 179942751,
+    "deleted": 1930323305
+  }
+]

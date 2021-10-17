@@ -1,0 +1,112 @@
+[
+  {
+    "shortcutSet": "Lorem ipsum dolor si0",
+    "linkTitle": "Lorem ipsum dolor si0",
+    "weight": 0,
+    "linkOptions": "0",
+    "title": "Lorem ipsum dolor si0",
+    "linkUri": "Lorem ipsum dolor si0",
+    "defaultLangcode": 0,
+    "langcode": "b2b090b2-6619-4081-8f25-b1b8a02f997c",
+    "id": 2011222909
+  },
+  {
+    "shortcutSet": "Lorem ipsum dolor si1",
+    "linkTitle": "Lorem ipsum dolor si1",
+    "weight": 1,
+    "linkOptions": "1",
+    "title": "Lorem ipsum dolor si1",
+    "linkUri": "Lorem ipsum dolor si1",
+    "defaultLangcode": 1,
+    "langcode": "32833f61-6919-4fb1-8f2b-9b39ee788fec",
+    "id": 220296163
+  },
+  {
+    "shortcutSet": "Lorem ipsum dolor si2",
+    "linkTitle": "Lorem ipsum dolor si2",
+    "weight": 2,
+    "linkOptions": "2",
+    "title": "Lorem ipsum dolor si2",
+    "linkUri": "Lorem ipsum dolor si2",
+    "defaultLangcode": 2,
+    "langcode": "024d6591-99a2-4951-af8e-7756199cca05",
+    "id": 1629640635
+  },
+  {
+    "shortcutSet": "Lorem ipsum dolor si3",
+    "linkTitle": "Lorem ipsum dolor si3",
+    "weight": 3,
+    "linkOptions": "3",
+    "title": "Lorem ipsum dolor si3",
+    "linkUri": "Lorem ipsum dolor si3",
+    "defaultLangcode": 3,
+    "langcode": "d0b358b3-6f0a-4b61-ace3-6a33dd7d21c0",
+    "id": 383957668
+  },
+  {
+    "shortcutSet": "Lorem ipsum dolor si4",
+    "linkTitle": "Lorem ipsum dolor si4",
+    "weight": 4,
+    "linkOptions": "4",
+    "title": "Lorem ipsum dolor si4",
+    "linkUri": "Lorem ipsum dolor si4",
+    "defaultLangcode": 4,
+    "langcode": "0207adf1-ab8e-437f-a6eb-dbc0ffef0018",
+    "id": 1283473719
+  },
+  {
+    "shortcutSet": "Lorem ipsum dolor si5",
+    "linkTitle": "Lorem ipsum dolor si5",
+    "weight": 5,
+    "linkOptions": "5",
+    "title": "Lorem ipsum dolor si5",
+    "linkUri": "Lorem ipsum dolor si5",
+    "defaultLangcode": 5,
+    "langcode": "29ca0f2a-be06-4675-8846-11aca252eb22",
+    "id": 331600300
+  },
+  {
+    "shortcutSet": "Lorem ipsum dolor si6",
+    "linkTitle": "Lorem ipsum dolor si6",
+    "weight": 6,
+    "linkOptions": "6",
+    "title": "Lorem ipsum dolor si6",
+    "linkUri": "Lorem ipsum dolor si6",
+    "defaultLangcode": 6,
+    "langcode": "a0efdaa6-f7fc-45f2-bfe6-05baf818e3e8",
+    "id": 60977567
+  },
+  {
+    "shortcutSet": "Lorem ipsum dolor si7",
+    "linkTitle": "Lorem ipsum dolor si7",
+    "weight": 7,
+    "linkOptions": "7",
+    "title": "Lorem ipsum dolor si7",
+    "linkUri": "Lorem ipsum dolor si7",
+    "defaultLangcode": 7,
+    "langcode": "71636376-3df3-4b8e-8ac9-c81c8b2728d9",
+    "id": 634816145
+  },
+  {
+    "shortcutSet": "Lorem ipsum dolor si8",
+    "linkTitle": "Lorem ipsum dolor si8",
+    "weight": 8,
+    "linkOptions": "8",
+    "title": "Lorem ipsum dolor si8",
+    "linkUri": "Lorem ipsum dolor si8",
+    "defaultLangcode": 8,
+    "langcode": "54842e14-d98f-4867-80c1-79a37cb912f7",
+    "id": 1650945176
+  },
+  {
+    "shortcutSet": "Lorem ipsum dolor si9",
+    "linkTitle": "Lorem ipsum dolor si9",
+    "weight": 9,
+    "linkOptions": "9",
+    "title": "Lorem ipsum dolor si9",
+    "linkUri": "Lorem ipsum dolor si9",
+    "defaultLangcode": 9,
+    "langcode": "226674d7-97ed-4c83-990c-315a54e3fa8a",
+    "id": 1226606910
+  }
+]
