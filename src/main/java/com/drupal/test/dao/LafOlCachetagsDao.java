@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCachetags;
 import java.util.List;
+import com.drupal.test.entity.LafOlCachetags;
 
 public interface LafOlCachetagsDao {
-    /**
-     * Retrieve all records LafOlCachetags.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCachetags
-     */
-    public List<LafOlCachetags> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCachetags.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCachetags
+   */
+  public List<LafOlCachetags> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCachetags.
-     *
-     * @return A list of LafOlCachetags
-     */
-    public List<LafOlCachetags> selectAll();
+  /**
+   * Retrieve all records LafOlCachetags.
+   *
+   * @return A list of LafOlCachetags
+   */
+  public List<LafOlCachetags> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCachetags id.
-     * @return The same LafOlCachetags.
-     */
-    public LafOlCachetags find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCachetags id.
+   * @return The same LafOlCachetags.
+   */
+  public LafOlCachetags find(java.lang.String id);
 
-    /**
-     * Create an LafOlCachetags.
-     *
-     * @param e the LafOlCachetags.
-     * @return The same LafOlCachetags.
-     */
-    public LafOlCachetags create(LafOlCachetags e);
+  /**
+   * Create an LafOlCachetags.
+   *
+   * @param e the LafOlCachetags.
+   * @return The same LafOlCachetags.
+   */
+  public LafOlCachetags create(LafOlCachetags e);
 
-    /**
-     * Update the LafOlCachetags.
-     *
-     * @param e the LafOlCachetags.
-     * @return The same LafOlCachetags.
-     */
-    public LafOlCachetags update(LafOlCachetags e);
+  /**
+   * Update the LafOlCachetags.
+   *
+   * @param e the LafOlCachetags.
+   * @return The same LafOlCachetags.
+   */
+  public LafOlCachetags update(LafOlCachetags e);
 }

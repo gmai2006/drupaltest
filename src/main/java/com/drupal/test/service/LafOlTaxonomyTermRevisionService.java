@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlTaxonomyTermRevision;
 import java.util.List;
+import com.drupal.test.entity.LafOlTaxonomyTermRevision;
 
 public interface LafOlTaxonomyTermRevisionService {
-    public LafOlTaxonomyTermRevision find(java.lang.Integer id);
+  public LafOlTaxonomyTermRevision find(java.lang.Integer id);
 
-    /**
-     * Select a list of LafOlTaxonomyTermRevision based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlTaxonomyTermRevision records.
-     */
-    public List<LafOlTaxonomyTermRevision> select(int maxResult);
+  /**
+   * Select a list of LafOlTaxonomyTermRevision based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlTaxonomyTermRevision records.
+   */
+  public List<LafOlTaxonomyTermRevision> select(int maxResult);
 
-    /**
-     * Select all LafOlTaxonomyTermRevision.
-     *
-     * @return all LafOlTaxonomyTermRevision records.
-     */
-    public List<LafOlTaxonomyTermRevision> selectAll();
+  /**
+   * Select all LafOlTaxonomyTermRevision.
+   *
+   * @return all LafOlTaxonomyTermRevision records.
+   */
+  public List<LafOlTaxonomyTermRevision> selectAll();
 
-    /**
-     * Create LafOlTaxonomyTermRevision.
-     *
-     * @param bean The LafOlTaxonomyTermRevision.
-     * @return The LafOlTaxonomyTermRevision.
-     */
-    public LafOlTaxonomyTermRevision create(LafOlTaxonomyTermRevision bean);
+  /**
+   * Create LafOlTaxonomyTermRevision.
+   *
+   * @param bean The LafOlTaxonomyTermRevision.
+   * @return The LafOlTaxonomyTermRevision.
+   */
+  public LafOlTaxonomyTermRevision create(LafOlTaxonomyTermRevision bean);
 
-    /**
-     * Update a LafOlTaxonomyTermRevision.
-     *
-     * @param bean - The LafOlTaxonomyTermRevision.
-     * @return LafOlTaxonomyTermRevision.
-     */
-    public LafOlTaxonomyTermRevision update(LafOlTaxonomyTermRevision bean);
+  /**
+   * Update a LafOlTaxonomyTermRevision.
+   *
+   * @param bean - The LafOlTaxonomyTermRevision.
+   * @return LafOlTaxonomyTermRevision.
+   */
+  public LafOlTaxonomyTermRevision update(LafOlTaxonomyTermRevision bean);
 }

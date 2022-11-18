@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCacheContainer;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheContainer;
 
 public interface LafOlCacheContainerDao {
-    /**
-     * Retrieve all records LafOlCacheContainer.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCacheContainer
-     */
-    public List<LafOlCacheContainer> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCacheContainer.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCacheContainer
+   */
+  public List<LafOlCacheContainer> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCacheContainer.
-     *
-     * @return A list of LafOlCacheContainer
-     */
-    public List<LafOlCacheContainer> selectAll();
+  /**
+   * Retrieve all records LafOlCacheContainer.
+   *
+   * @return A list of LafOlCacheContainer
+   */
+  public List<LafOlCacheContainer> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCacheContainer id.
-     * @return The same LafOlCacheContainer.
-     */
-    public LafOlCacheContainer find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCacheContainer id.
+   * @return The same LafOlCacheContainer.
+   */
+  public LafOlCacheContainer find(java.lang.String id);
 
-    /**
-     * Create an LafOlCacheContainer.
-     *
-     * @param e the LafOlCacheContainer.
-     * @return The same LafOlCacheContainer.
-     */
-    public LafOlCacheContainer create(LafOlCacheContainer e);
+  /**
+   * Create an LafOlCacheContainer.
+   *
+   * @param e the LafOlCacheContainer.
+   * @return The same LafOlCacheContainer.
+   */
+  public LafOlCacheContainer create(LafOlCacheContainer e);
 
-    /**
-     * Update the LafOlCacheContainer.
-     *
-     * @param e the LafOlCacheContainer.
-     * @return The same LafOlCacheContainer.
-     */
-    public LafOlCacheContainer update(LafOlCacheContainer e);
+  /**
+   * Update the LafOlCacheContainer.
+   *
+   * @param e the LafOlCacheContainer.
+   * @return The same LafOlCacheContainer.
+   */
+  public LafOlCacheContainer update(LafOlCacheContainer e);
 }

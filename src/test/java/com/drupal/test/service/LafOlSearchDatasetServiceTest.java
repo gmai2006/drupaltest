@@ -16,58 +16,62 @@
  */
 package com.drupal.test.service;
 
+import com.drupal.test.entity.LafOlSearchDataset;
+import com.drupal.test.entity.LafOlSearchDatasetId;
+
+import com.drupal.test.utils.FileUtils;
+import com.google.gson.JsonArray;
+import com.google.gson.GsonBuilder;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+import com.google.gson.Gson;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import com.drupal.test.entity.LafOlSearchDataset;
-import com.drupal.test.entity.LafOlSearchDatasetId;
 import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import org.junit.BeforeClass;
-import org.junit.Test;
 
 public class LafOlSearchDatasetServiceTest {
-    private static DefaultLafOlSearchDatasetService serviceMock;
-    private static LafOlSearchDataset[] records;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
+  private static DefaultLafOlSearchDatasetService serviceMock;
+  private static LafOlSearchDataset[] records;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void setUp() {
-        serviceMock = mock(DefaultLafOlSearchDatasetService.class);
-        String inputFile = "LafOlSearchDataset.json";
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlSearchDataset[].class);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
-        final LafOlSearchDatasetId id =
-                new LafOlSearchDatasetId(
-                        records[0].getLangcode(), records[0].getType(), records[0].getSid());
-        when(serviceMock.find(id)).thenReturn(records[0]);
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void setUp() {
+    serviceMock = mock(DefaultLafOlSearchDatasetService.class);
+    String inputFile = "LafOlSearchDataset.json";
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlSearchDataset[].class);
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
 
-    @Test
-    public void testFind_success() {
-        final LafOlSearchDatasetId id =
-                new LafOlSearchDatasetId(
-                        records[0].getLangcode(), records[0].getType(), records[0].getSid());
-        LafOlSearchDataset testResult = serviceMock.find(id);
-        org.junit.Assert.assertNotNull(testResult);
-        org.junit.Assert.assertEquals(
-                "expect equals data ", records[0].getData(), testResult.getData());
-        org.junit.Assert.assertTrue(
-                "expect equals reindex ", records[0].getReindex() == testResult.getReindex());
-    }
+    final LafOlSearchDatasetId id =
+        new LafOlSearchDatasetId(
+            records[0].getLangcode(), records[0].getType(), records[0].getSid());
+    when(serviceMock.find(id)).thenReturn(records[0]);
+  }
+
+  @Test
+  public void testFind_success() {
+    final LafOlSearchDatasetId id =
+        new LafOlSearchDatasetId(
+            records[0].getLangcode(), records[0].getType(), records[0].getSid());
+    LafOlSearchDataset testResult = serviceMock.find(id);
+    org.junit.Assert.assertNotNull(testResult);
+    org.junit.Assert.assertEquals(
+        "expect equals data ", records[0].getData(), testResult.getData());
+    org.junit.Assert.assertTrue(
+        "expect equals reindex ", records[0].getReindex() == testResult.getReindex());
+  }
 }

@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlLocalesLocation;
 import java.util.List;
+import com.drupal.test.entity.LafOlLocalesLocation;
 
 public interface LafOlLocalesLocationDao {
-    /**
-     * Retrieve all records LafOlLocalesLocation.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlLocalesLocation
-     */
-    public List<LafOlLocalesLocation> select(int maxResult);
+  /**
+   * Retrieve all records LafOlLocalesLocation.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlLocalesLocation
+   */
+  public List<LafOlLocalesLocation> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlLocalesLocation.
-     *
-     * @return A list of LafOlLocalesLocation
-     */
-    public List<LafOlLocalesLocation> selectAll();
+  /**
+   * Retrieve all records LafOlLocalesLocation.
+   *
+   * @return A list of LafOlLocalesLocation
+   */
+  public List<LafOlLocalesLocation> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlLocalesLocation id.
-     * @return The same LafOlLocalesLocation.
-     */
-    public LafOlLocalesLocation find(java.lang.Integer id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlLocalesLocation id.
+   * @return The same LafOlLocalesLocation.
+   */
+  public LafOlLocalesLocation find(java.lang.Integer id);
 
-    /**
-     * Create an LafOlLocalesLocation.
-     *
-     * @param e the LafOlLocalesLocation.
-     * @return The same LafOlLocalesLocation.
-     */
-    public LafOlLocalesLocation create(LafOlLocalesLocation e);
+  /**
+   * Create an LafOlLocalesLocation.
+   *
+   * @param e the LafOlLocalesLocation.
+   * @return The same LafOlLocalesLocation.
+   */
+  public LafOlLocalesLocation create(LafOlLocalesLocation e);
 
-    /**
-     * Update the LafOlLocalesLocation.
-     *
-     * @param e the LafOlLocalesLocation.
-     * @return The same LafOlLocalesLocation.
-     */
-    public LafOlLocalesLocation update(LafOlLocalesLocation e);
+  /**
+   * Update the LafOlLocalesLocation.
+   *
+   * @param e the LafOlLocalesLocation.
+   * @return The same LafOlLocalesLocation.
+   */
+  public LafOlLocalesLocation update(LafOlLocalesLocation e);
 }

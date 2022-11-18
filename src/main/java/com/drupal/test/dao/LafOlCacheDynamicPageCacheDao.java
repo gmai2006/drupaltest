@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCacheDynamicPageCache;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheDynamicPageCache;
 
 public interface LafOlCacheDynamicPageCacheDao {
-    /**
-     * Retrieve all records LafOlCacheDynamicPageCache.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCacheDynamicPageCache
-     */
-    public List<LafOlCacheDynamicPageCache> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCacheDynamicPageCache.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCacheDynamicPageCache
+   */
+  public List<LafOlCacheDynamicPageCache> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCacheDynamicPageCache.
-     *
-     * @return A list of LafOlCacheDynamicPageCache
-     */
-    public List<LafOlCacheDynamicPageCache> selectAll();
+  /**
+   * Retrieve all records LafOlCacheDynamicPageCache.
+   *
+   * @return A list of LafOlCacheDynamicPageCache
+   */
+  public List<LafOlCacheDynamicPageCache> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCacheDynamicPageCache id.
-     * @return The same LafOlCacheDynamicPageCache.
-     */
-    public LafOlCacheDynamicPageCache find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCacheDynamicPageCache id.
+   * @return The same LafOlCacheDynamicPageCache.
+   */
+  public LafOlCacheDynamicPageCache find(java.lang.String id);
 
-    /**
-     * Create an LafOlCacheDynamicPageCache.
-     *
-     * @param e the LafOlCacheDynamicPageCache.
-     * @return The same LafOlCacheDynamicPageCache.
-     */
-    public LafOlCacheDynamicPageCache create(LafOlCacheDynamicPageCache e);
+  /**
+   * Create an LafOlCacheDynamicPageCache.
+   *
+   * @param e the LafOlCacheDynamicPageCache.
+   * @return The same LafOlCacheDynamicPageCache.
+   */
+  public LafOlCacheDynamicPageCache create(LafOlCacheDynamicPageCache e);
 
-    /**
-     * Update the LafOlCacheDynamicPageCache.
-     *
-     * @param e the LafOlCacheDynamicPageCache.
-     * @return The same LafOlCacheDynamicPageCache.
-     */
-    public LafOlCacheDynamicPageCache update(LafOlCacheDynamicPageCache e);
+  /**
+   * Update the LafOlCacheDynamicPageCache.
+   *
+   * @param e the LafOlCacheDynamicPageCache.
+   * @return The same LafOlCacheDynamicPageCache.
+   */
+  public LafOlCacheDynamicPageCache update(LafOlCacheDynamicPageCache e);
 }

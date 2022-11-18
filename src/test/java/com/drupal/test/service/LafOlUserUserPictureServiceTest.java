@@ -16,82 +16,85 @@
  */
 package com.drupal.test.service;
 
+import com.drupal.test.entity.LafOlUserUserPicture;
+import com.drupal.test.entity.LafOlUserUserPictureId;
+
+import com.drupal.test.utils.FileUtils;
+import com.google.gson.JsonArray;
+import com.google.gson.GsonBuilder;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+import com.google.gson.Gson;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import com.drupal.test.entity.LafOlUserUserPicture;
-import com.drupal.test.entity.LafOlUserUserPictureId;
 import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import org.junit.BeforeClass;
-import org.junit.Test;
 
 public class LafOlUserUserPictureServiceTest {
-    private static DefaultLafOlUserUserPictureService serviceMock;
-    private static LafOlUserUserPicture[] records;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
+  private static DefaultLafOlUserUserPictureService serviceMock;
+  private static LafOlUserUserPicture[] records;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void setUp() {
-        serviceMock = mock(DefaultLafOlUserUserPictureService.class);
-        String inputFile = "LafOlUserUserPicture.json";
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlUserUserPicture[].class);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
-        final LafOlUserUserPictureId id =
-                new LafOlUserUserPictureId(
-                        records[0].getLangcode(),
-                        records[0].getDeleted(),
-                        records[0].getDelta(),
-                        records[0].getEntityId());
-        when(serviceMock.find(id)).thenReturn(records[0]);
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void setUp() {
+    serviceMock = mock(DefaultLafOlUserUserPictureService.class);
+    String inputFile = "LafOlUserUserPicture.json";
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlUserUserPicture[].class);
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
 
-    @Test
-    public void testFind_success() {
-        final LafOlUserUserPictureId id =
-                new LafOlUserUserPictureId(
-                        records[0].getLangcode(),
-                        records[0].getDeleted(),
-                        records[0].getDelta(),
-                        records[0].getEntityId());
-        LafOlUserUserPicture testResult = serviceMock.find(id);
-        org.junit.Assert.assertNotNull(testResult);
-        org.junit.Assert.assertEquals(
-                "expect equals bundle ", records[0].getBundle(), testResult.getBundle());
-        org.junit.Assert.assertTrue(
-                "expect equals revisionId ",
-                records[0].getRevisionId() == testResult.getRevisionId());
-        org.junit.Assert.assertTrue(
-                "expect equals userPictureTargetId ",
-                records[0].getUserPictureTargetId() == testResult.getUserPictureTargetId());
-        org.junit.Assert.assertEquals(
-                "expect equals userPictureAlt ",
-                records[0].getUserPictureAlt(),
-                testResult.getUserPictureAlt());
-        org.junit.Assert.assertEquals(
-                "expect equals userPictureTitle ",
-                records[0].getUserPictureTitle(),
-                testResult.getUserPictureTitle());
-        org.junit.Assert.assertTrue(
-                "expect equals userPictureWidth ",
-                records[0].getUserPictureWidth() == testResult.getUserPictureWidth());
-        org.junit.Assert.assertTrue(
-                "expect equals userPictureHeight ",
-                records[0].getUserPictureHeight() == testResult.getUserPictureHeight());
-    }
+    final LafOlUserUserPictureId id =
+        new LafOlUserUserPictureId(
+            records[0].getLangcode(),
+            records[0].getDeleted(),
+            records[0].getDelta(),
+            records[0].getEntityId());
+    when(serviceMock.find(id)).thenReturn(records[0]);
+  }
+
+  @Test
+  public void testFind_success() {
+    final LafOlUserUserPictureId id =
+        new LafOlUserUserPictureId(
+            records[0].getLangcode(),
+            records[0].getDeleted(),
+            records[0].getDelta(),
+            records[0].getEntityId());
+    LafOlUserUserPicture testResult = serviceMock.find(id);
+    org.junit.Assert.assertNotNull(testResult);
+    org.junit.Assert.assertEquals(
+        "expect equals bundle ", records[0].getBundle(), testResult.getBundle());
+    org.junit.Assert.assertTrue(
+        "expect equals revisionId ", records[0].getRevisionId() == testResult.getRevisionId());
+    org.junit.Assert.assertTrue(
+        "expect equals userPictureTargetId ",
+        records[0].getUserPictureTargetId() == testResult.getUserPictureTargetId());
+    org.junit.Assert.assertEquals(
+        "expect equals userPictureAlt ",
+        records[0].getUserPictureAlt(),
+        testResult.getUserPictureAlt());
+    org.junit.Assert.assertEquals(
+        "expect equals userPictureTitle ",
+        records[0].getUserPictureTitle(),
+        testResult.getUserPictureTitle());
+    org.junit.Assert.assertTrue(
+        "expect equals userPictureWidth ",
+        records[0].getUserPictureWidth() == testResult.getUserPictureWidth());
+    org.junit.Assert.assertTrue(
+        "expect equals userPictureHeight ",
+        records[0].getUserPictureHeight() == testResult.getUserPictureHeight());
+  }
 }

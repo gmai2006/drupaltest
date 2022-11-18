@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlCacheEntityDao;
-import com.drupal.test.entity.LafOlCacheEntity;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlCacheEntityDao;
+import com.drupal.test.entity.LafOlCacheEntity;
 
 @Stateless
 @Named("DefaultLafOlCacheEntityService")
 public class DefaultLafOlCacheEntityService implements LafOlCacheEntityService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlCacheEntityDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlCacheEntityDao dao;
 
-    @Inject
-    @Named("DefaultLafOlCacheEntityDao")
-    public DefaultLafOlCacheEntityService(final LafOlCacheEntityDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlCacheEntityDao")
+  public DefaultLafOlCacheEntityService(final LafOlCacheEntityDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheEntity find(java.lang.String id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheEntity find(java.lang.String id) {
 
-        final LafOlCacheEntity result = dao.find(id);
-        logger.info("find(LafOlCacheEntity) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlCacheEntity result = dao.find(id);
+    logger.info("find(LafOlCacheEntity) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCacheEntity> select(int maxResult) {
-        final List<LafOlCacheEntity> result = dao.select(maxResult);
-        logger.info("select(LafOlCacheEntity) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlCacheEntity> select(int maxResult) {
+    final List<LafOlCacheEntity> result = dao.select(maxResult);
+    logger.info("select(LafOlCacheEntity) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCacheEntity> selectAll() {
-        final List<LafOlCacheEntity> results = dao.selectAll();
-        logger.info("selectAll(LafOlCacheEntity) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlCacheEntity> selectAll() {
+    final List<LafOlCacheEntity> results = dao.selectAll();
+    logger.info("selectAll(LafOlCacheEntity) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheEntity create(LafOlCacheEntity bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlCacheEntity={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheEntity create(LafOlCacheEntity bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlCacheEntity={}) - entered bean ");
 
-        final LafOlCacheEntity result = dao.create(bean);
+    final LafOlCacheEntity result = dao.create(bean);
 
-        logger.info("create(LafOlCacheEntity) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlCacheEntity) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheEntity update(LafOlCacheEntity bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlCacheEntity={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheEntity update(LafOlCacheEntity bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlCacheEntity={}) - entered bean ");
 
-        final LafOlCacheEntity result = dao.update(bean);
+    final LafOlCacheEntity result = dao.update(bean);
 
-        logger.info("update(LafOlCacheEntity) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlCacheEntity) - exited - return value={} result ");
+    return result;
+  }
 }

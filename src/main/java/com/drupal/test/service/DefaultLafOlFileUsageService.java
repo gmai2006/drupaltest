@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlFileUsageDao;
 import com.drupal.test.entity.LafOlFileUsage;
 import com.drupal.test.entity.LafOlFileUsageId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlFileUsageService")
 public class DefaultLafOlFileUsageService implements LafOlFileUsageService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlFileUsageDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlFileUsageDao dao;
 
-    @Inject
-    @Named("DefaultLafOlFileUsageDao")
-    public DefaultLafOlFileUsageService(final LafOlFileUsageDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlFileUsageDao")
+  public DefaultLafOlFileUsageService(final LafOlFileUsageDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlFileUsage find(LafOlFileUsageId id) {
-        final LafOlFileUsage result = dao.find(id);
-        logger.info("find(LafOlFileUsage) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlFileUsage find(LafOlFileUsageId id) {
+    final LafOlFileUsage result = dao.find(id);
+    logger.info("find(LafOlFileUsage) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlFileUsage> select(int maxResult) {
-        final List<LafOlFileUsage> result = dao.select(maxResult);
-        logger.info("select(LafOlFileUsage) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlFileUsage> select(int maxResult) {
+    final List<LafOlFileUsage> result = dao.select(maxResult);
+    logger.info("select(LafOlFileUsage) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlFileUsage> selectAll() {
-        final List<LafOlFileUsage> results = dao.selectAll();
-        logger.info("selectAll(LafOlFileUsage) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlFileUsage> selectAll() {
+    final List<LafOlFileUsage> results = dao.selectAll();
+    logger.info("selectAll(LafOlFileUsage) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlFileUsage create(LafOlFileUsage bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlFileUsage={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlFileUsage create(LafOlFileUsage bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlFileUsage={}) - entered bean ");
 
-        final LafOlFileUsage result = dao.create(bean);
+    final LafOlFileUsage result = dao.create(bean);
 
-        logger.info("create(LafOlFileUsage) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlFileUsage) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlFileUsage update(LafOlFileUsage bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlFileUsage={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlFileUsage update(LafOlFileUsage bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlFileUsage={}) - entered bean ");
 
-        final LafOlFileUsage result = dao.update(bean);
+    final LafOlFileUsage result = dao.update(bean);
 
-        logger.info("update(LafOlFileUsage) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlFileUsage) - exited - return value={} result ");
+    return result;
+  }
 }

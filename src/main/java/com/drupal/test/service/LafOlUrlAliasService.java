@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlUrlAlias;
 import java.util.List;
+import com.drupal.test.entity.LafOlUrlAlias;
 
 public interface LafOlUrlAliasService {
-    public LafOlUrlAlias find(java.lang.Integer id);
+  public LafOlUrlAlias find(java.lang.Integer id);
 
-    /**
-     * Select a list of LafOlUrlAlias based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlUrlAlias records.
-     */
-    public List<LafOlUrlAlias> select(int maxResult);
+  /**
+   * Select a list of LafOlUrlAlias based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlUrlAlias records.
+   */
+  public List<LafOlUrlAlias> select(int maxResult);
 
-    /**
-     * Select all LafOlUrlAlias.
-     *
-     * @return all LafOlUrlAlias records.
-     */
-    public List<LafOlUrlAlias> selectAll();
+  /**
+   * Select all LafOlUrlAlias.
+   *
+   * @return all LafOlUrlAlias records.
+   */
+  public List<LafOlUrlAlias> selectAll();
 
-    /**
-     * Create LafOlUrlAlias.
-     *
-     * @param bean The LafOlUrlAlias.
-     * @return The LafOlUrlAlias.
-     */
-    public LafOlUrlAlias create(LafOlUrlAlias bean);
+  /**
+   * Create LafOlUrlAlias.
+   *
+   * @param bean The LafOlUrlAlias.
+   * @return The LafOlUrlAlias.
+   */
+  public LafOlUrlAlias create(LafOlUrlAlias bean);
 
-    /**
-     * Update a LafOlUrlAlias.
-     *
-     * @param bean - The LafOlUrlAlias.
-     * @return LafOlUrlAlias.
-     */
-    public LafOlUrlAlias update(LafOlUrlAlias bean);
+  /**
+   * Update a LafOlUrlAlias.
+   *
+   * @param bean - The LafOlUrlAlias.
+   * @return LafOlUrlAlias.
+   */
+  public LafOlUrlAlias update(LafOlUrlAlias bean);
 }

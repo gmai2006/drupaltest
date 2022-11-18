@@ -16,72 +16,72 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlLocalesTargetId.class)
 @Table(name = "lafol_locales_target")
 public class LafOlLocalesTarget implements Serializable {
-    private static final long serialVersionUID = 163445265041077980L;
+  private static final long serialVersionUID = 166875433026298197L;
 
-    /** Description: lid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "lid")
-    private java.lang.Integer lid;
-    /** Description: language. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "language")
-    private java.lang.String language;
+  /** Description: lid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "lid")
+  private java.lang.Integer lid;
+  /** Description: language. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "language")
+  private java.lang.String language;
 
-    /** Description: translation. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "translation")
-    private java.lang.String translation;
-    /** Description: customized. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "customized")
-    private java.lang.Integer customized;
+  /** Description: translation. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "translation")
+  private java.lang.String translation;
+  /** Description: customized. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "customized")
+  private java.lang.Integer customized;
 
-    public LafOlLocalesTarget() {}
+  public LafOlLocalesTarget() {}
 
-    public java.lang.Integer getLid() {
-        return this.lid;
-    }
+  public java.lang.Integer getLid() {
+    return this.lid;
+  }
 
-    public java.lang.String getLanguage() {
-        return this.language;
-    }
+  public java.lang.String getLanguage() {
+    return this.language;
+  }
 
-    public void setLid(java.lang.Integer lid) {
-        this.lid = lid;
-    }
+  public void setLid(java.lang.Integer lid) {
+    this.lid = lid;
+  }
 
-    public void setLanguage(java.lang.String language) {
-        this.language = language;
-    }
+  public void setLanguage(java.lang.String language) {
+    this.language = language;
+  }
 
-    public java.lang.String getTranslation() {
-        return this.translation;
-    }
+  public java.lang.String getTranslation() {
+    return this.translation;
+  }
 
-    public java.lang.Integer getCustomized() {
-        return this.customized;
-    }
+  public java.lang.Integer getCustomized() {
+    return this.customized;
+  }
 
-    public void setTranslation(java.lang.String translation) {
-        this.translation = translation;
-    }
+  public void setTranslation(java.lang.String translation) {
+    this.translation = translation;
+  }
 
-    public void setCustomized(java.lang.Integer customized) {
-        this.customized = customized;
-    }
+  public void setCustomized(java.lang.Integer customized) {
+    this.customized = customized;
+  }
 }

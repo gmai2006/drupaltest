@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlSemaphoreDao;
-import com.drupal.test.entity.LafOlSemaphore;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlSemaphoreDao;
+import com.drupal.test.entity.LafOlSemaphore;
 
 @Stateless
 @Named("DefaultLafOlSemaphoreService")
 public class DefaultLafOlSemaphoreService implements LafOlSemaphoreService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlSemaphoreDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlSemaphoreDao dao;
 
-    @Inject
-    @Named("DefaultLafOlSemaphoreDao")
-    public DefaultLafOlSemaphoreService(final LafOlSemaphoreDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlSemaphoreDao")
+  public DefaultLafOlSemaphoreService(final LafOlSemaphoreDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSemaphore find(java.lang.String id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSemaphore find(java.lang.String id) {
 
-        final LafOlSemaphore result = dao.find(id);
-        logger.info("find(LafOlSemaphore) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlSemaphore result = dao.find(id);
+    logger.info("find(LafOlSemaphore) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlSemaphore> select(int maxResult) {
-        final List<LafOlSemaphore> result = dao.select(maxResult);
-        logger.info("select(LafOlSemaphore) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlSemaphore> select(int maxResult) {
+    final List<LafOlSemaphore> result = dao.select(maxResult);
+    logger.info("select(LafOlSemaphore) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlSemaphore> selectAll() {
-        final List<LafOlSemaphore> results = dao.selectAll();
-        logger.info("selectAll(LafOlSemaphore) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlSemaphore> selectAll() {
+    final List<LafOlSemaphore> results = dao.selectAll();
+    logger.info("selectAll(LafOlSemaphore) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSemaphore create(LafOlSemaphore bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlSemaphore={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSemaphore create(LafOlSemaphore bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlSemaphore={}) - entered bean ");
 
-        final LafOlSemaphore result = dao.create(bean);
+    final LafOlSemaphore result = dao.create(bean);
 
-        logger.info("create(LafOlSemaphore) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlSemaphore) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSemaphore update(LafOlSemaphore bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlSemaphore={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSemaphore update(LafOlSemaphore bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlSemaphore={}) - entered bean ");
 
-        final LafOlSemaphore result = dao.update(bean);
+    final LafOlSemaphore result = dao.update(bean);
 
-        logger.info("update(LafOlSemaphore) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlSemaphore) - exited - return value={} result ");
+    return result;
+  }
 }

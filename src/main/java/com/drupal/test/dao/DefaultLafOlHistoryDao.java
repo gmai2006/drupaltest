@@ -16,58 +16,61 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlHistory;
-import com.drupal.test.entity.LafOlHistoryId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlHistory;
+import com.drupal.test.entity.LafOlHistoryId;
 
 @Stateless
 @Named("DefaultLafOlHistoryDao")
 public class DefaultLafOlHistoryDao implements LafOlHistoryDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlHistoryDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlHistoryDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlHistoryDao() {}
+  public DefaultLafOlHistoryDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlHistory find(LafOlHistoryId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlHistory.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlHistory find(LafOlHistoryId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlHistory.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlHistory> select(int max) {
-        return dao.select("select a from LafOlHistory a", LafOlHistory.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlHistory> select(int max) {
+    return dao.select("select a from LafOlHistory a", LafOlHistory.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlHistory> selectAll() {
-        return dao.selectAll("select a from LafOlHistory a", LafOlHistory.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlHistory> selectAll() {
+    return dao.selectAll("select a from LafOlHistory a", LafOlHistory.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlHistory create(LafOlHistory e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlHistory create(LafOlHistory e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlHistory update(LafOlHistory e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlHistory update(LafOlHistory e) {
+    return dao.update(e);
+  }
 }

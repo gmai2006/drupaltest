@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeFieldImage;
 import com.drupal.test.entity.LafOlNodeFieldImageId;
-import java.util.List;
 
 public interface LafOlNodeFieldImageService {
-    public LafOlNodeFieldImage find(LafOlNodeFieldImageId id);
-    /**
-     * Select a list of LafOlNodeFieldImage based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlNodeFieldImage records.
-     */
-    public List<LafOlNodeFieldImage> select(int maxResult);
+  public LafOlNodeFieldImage find(LafOlNodeFieldImageId id);
+  /**
+   * Select a list of LafOlNodeFieldImage based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlNodeFieldImage records.
+   */
+  public List<LafOlNodeFieldImage> select(int maxResult);
 
-    /**
-     * Select all LafOlNodeFieldImage.
-     *
-     * @return all LafOlNodeFieldImage records.
-     */
-    public List<LafOlNodeFieldImage> selectAll();
+  /**
+   * Select all LafOlNodeFieldImage.
+   *
+   * @return all LafOlNodeFieldImage records.
+   */
+  public List<LafOlNodeFieldImage> selectAll();
 
-    /**
-     * Create LafOlNodeFieldImage.
-     *
-     * @param bean The LafOlNodeFieldImage.
-     * @return The LafOlNodeFieldImage.
-     */
-    public LafOlNodeFieldImage create(LafOlNodeFieldImage bean);
+  /**
+   * Create LafOlNodeFieldImage.
+   *
+   * @param bean The LafOlNodeFieldImage.
+   * @return The LafOlNodeFieldImage.
+   */
+  public LafOlNodeFieldImage create(LafOlNodeFieldImage bean);
 
-    /**
-     * Update a LafOlNodeFieldImage.
-     *
-     * @param bean - The LafOlNodeFieldImage.
-     * @return LafOlNodeFieldImage.
-     */
-    public LafOlNodeFieldImage update(LafOlNodeFieldImage bean);
+  /**
+   * Update a LafOlNodeFieldImage.
+   *
+   * @param bean - The LafOlNodeFieldImage.
+   * @return LafOlNodeFieldImage.
+   */
+  public LafOlNodeFieldImage update(LafOlNodeFieldImage bean);
 }

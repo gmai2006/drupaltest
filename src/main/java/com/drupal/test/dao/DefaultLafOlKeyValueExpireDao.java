@@ -16,58 +16,61 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlKeyValueExpire;
-import com.drupal.test.entity.LafOlKeyValueExpireId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlKeyValueExpire;
+import com.drupal.test.entity.LafOlKeyValueExpireId;
 
 @Stateless
 @Named("DefaultLafOlKeyValueExpireDao")
 public class DefaultLafOlKeyValueExpireDao implements LafOlKeyValueExpireDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlKeyValueExpireDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlKeyValueExpireDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlKeyValueExpireDao() {}
+  public DefaultLafOlKeyValueExpireDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlKeyValueExpire find(LafOlKeyValueExpireId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlKeyValueExpire.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlKeyValueExpire find(LafOlKeyValueExpireId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlKeyValueExpire.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlKeyValueExpire> select(int max) {
-        return dao.select("select a from LafOlKeyValueExpire a", LafOlKeyValueExpire.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlKeyValueExpire> select(int max) {
+    return dao.select("select a from LafOlKeyValueExpire a", LafOlKeyValueExpire.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlKeyValueExpire> selectAll() {
-        return dao.selectAll("select a from LafOlKeyValueExpire a", LafOlKeyValueExpire.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlKeyValueExpire> selectAll() {
+    return dao.selectAll("select a from LafOlKeyValueExpire a", LafOlKeyValueExpire.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlKeyValueExpire create(LafOlKeyValueExpire e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlKeyValueExpire create(LafOlKeyValueExpire e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlKeyValueExpire update(LafOlKeyValueExpire e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlKeyValueExpire update(LafOlKeyValueExpire e) {
+    return dao.update(e);
+  }
 }

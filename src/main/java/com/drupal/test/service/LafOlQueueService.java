@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlQueue;
 import java.util.List;
+import com.drupal.test.entity.LafOlQueue;
 
 public interface LafOlQueueService {
-    public LafOlQueue find(java.lang.Integer id);
+  public LafOlQueue find(java.lang.Integer id);
 
-    /**
-     * Select a list of LafOlQueue based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlQueue records.
-     */
-    public List<LafOlQueue> select(int maxResult);
+  /**
+   * Select a list of LafOlQueue based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlQueue records.
+   */
+  public List<LafOlQueue> select(int maxResult);
 
-    /**
-     * Select all LafOlQueue.
-     *
-     * @return all LafOlQueue records.
-     */
-    public List<LafOlQueue> selectAll();
+  /**
+   * Select all LafOlQueue.
+   *
+   * @return all LafOlQueue records.
+   */
+  public List<LafOlQueue> selectAll();
 
-    /**
-     * Create LafOlQueue.
-     *
-     * @param bean The LafOlQueue.
-     * @return The LafOlQueue.
-     */
-    public LafOlQueue create(LafOlQueue bean);
+  /**
+   * Create LafOlQueue.
+   *
+   * @param bean The LafOlQueue.
+   * @return The LafOlQueue.
+   */
+  public LafOlQueue create(LafOlQueue bean);
 
-    /**
-     * Update a LafOlQueue.
-     *
-     * @param bean - The LafOlQueue.
-     * @return LafOlQueue.
-     */
-    public LafOlQueue update(LafOlQueue bean);
+  /**
+   * Update a LafOlQueue.
+   *
+   * @param bean - The LafOlQueue.
+   * @return LafOlQueue.
+   */
+  public LafOlQueue update(LafOlQueue bean);
 }

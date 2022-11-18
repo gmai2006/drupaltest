@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlMenuLinkContentData;
 import com.drupal.test.entity.LafOlMenuLinkContentDataId;
-import java.util.List;
 
 public interface LafOlMenuLinkContentDataDao {
-    /**
-     * Retrieve all records LafOlMenuLinkContentData.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlMenuLinkContentData
-     */
-    public List<LafOlMenuLinkContentData> select(int maxResult);
+  /**
+   * Retrieve all records LafOlMenuLinkContentData.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlMenuLinkContentData
+   */
+  public List<LafOlMenuLinkContentData> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlMenuLinkContentData.
-     *
-     * @return A list of LafOlMenuLinkContentData
-     */
-    public List<LafOlMenuLinkContentData> selectAll();
+  /**
+   * Retrieve all records LafOlMenuLinkContentData.
+   *
+   * @return A list of LafOlMenuLinkContentData
+   */
+  public List<LafOlMenuLinkContentData> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlMenuLinkContentData id.
-     * @return The same LafOlMenuLinkContentData.
-     */
-    public LafOlMenuLinkContentData find(LafOlMenuLinkContentDataId id);
-    /**
-     * Create an LafOlMenuLinkContentData.
-     *
-     * @param e the LafOlMenuLinkContentData.
-     * @return The same LafOlMenuLinkContentData.
-     */
-    public LafOlMenuLinkContentData create(LafOlMenuLinkContentData e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlMenuLinkContentData id.
+   * @return The same LafOlMenuLinkContentData.
+   */
+  public LafOlMenuLinkContentData find(LafOlMenuLinkContentDataId id);
+  /**
+   * Create an LafOlMenuLinkContentData.
+   *
+   * @param e the LafOlMenuLinkContentData.
+   * @return The same LafOlMenuLinkContentData.
+   */
+  public LafOlMenuLinkContentData create(LafOlMenuLinkContentData e);
 
-    /**
-     * Update the LafOlMenuLinkContentData.
-     *
-     * @param e the LafOlMenuLinkContentData.
-     * @return The same LafOlMenuLinkContentData.
-     */
-    public LafOlMenuLinkContentData update(LafOlMenuLinkContentData e);
+  /**
+   * Update the LafOlMenuLinkContentData.
+   *
+   * @param e the LafOlMenuLinkContentData.
+   * @return The same LafOlMenuLinkContentData.
+   */
+  public LafOlMenuLinkContentData update(LafOlMenuLinkContentData e);
 }

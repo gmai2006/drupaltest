@@ -16,39 +16,42 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlSearchTotal;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlSearchTotal;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlSearchTotalHandler")
 public class LafOlSearchTotalHandler extends DelimiterFileHandler<LafOlSearchTotal> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlSearchTotalHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlSearchTotalHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlSearchTotal parseLine(List<String> headers, List<String> tokens) {
+    LafOlSearchTotal record = new LafOlSearchTotal();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "word":
+          record.setWord(tokens.get(i));
+          break;
+
+        case "count":
+          record.setCount(java.lang.Float.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlSearchTotal parseLine(List<String> headers, List<String> tokens) {
-        LafOlSearchTotal record = new LafOlSearchTotal();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "word":
-                    record.setWord(tokens.get(i));
-                    break;
-
-                case "count":
-                    record.setCount(java.lang.Float.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

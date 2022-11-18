@@ -16,43 +16,46 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlKeyValue;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlKeyValue;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlKeyValueHandler")
 public class LafOlKeyValueHandler extends DelimiterFileHandler<LafOlKeyValue> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlKeyValueHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlKeyValueHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlKeyValue parseLine(List<String> headers, List<String> tokens) {
+    LafOlKeyValue record = new LafOlKeyValue();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "collection":
+          record.setCollection(tokens.get(i));
+          break;
+
+        case "name":
+          record.setName(tokens.get(i));
+          break;
+
+        case "value":
+          record.setValue(tokens.get(i));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlKeyValue parseLine(List<String> headers, List<String> tokens) {
-        LafOlKeyValue record = new LafOlKeyValue();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "collection":
-                    record.setCollection(tokens.get(i));
-                    break;
-
-                case "name":
-                    record.setName(tokens.get(i));
-                    break;
-
-                case "value":
-                    record.setValue(tokens.get(i));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

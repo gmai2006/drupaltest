@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlFileUsage;
 import com.drupal.test.entity.LafOlFileUsageId;
-import java.util.List;
 
 public interface LafOlFileUsageDao {
-    /**
-     * Retrieve all records LafOlFileUsage.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlFileUsage
-     */
-    public List<LafOlFileUsage> select(int maxResult);
+  /**
+   * Retrieve all records LafOlFileUsage.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlFileUsage
+   */
+  public List<LafOlFileUsage> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlFileUsage.
-     *
-     * @return A list of LafOlFileUsage
-     */
-    public List<LafOlFileUsage> selectAll();
+  /**
+   * Retrieve all records LafOlFileUsage.
+   *
+   * @return A list of LafOlFileUsage
+   */
+  public List<LafOlFileUsage> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlFileUsage id.
-     * @return The same LafOlFileUsage.
-     */
-    public LafOlFileUsage find(LafOlFileUsageId id);
-    /**
-     * Create an LafOlFileUsage.
-     *
-     * @param e the LafOlFileUsage.
-     * @return The same LafOlFileUsage.
-     */
-    public LafOlFileUsage create(LafOlFileUsage e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlFileUsage id.
+   * @return The same LafOlFileUsage.
+   */
+  public LafOlFileUsage find(LafOlFileUsageId id);
+  /**
+   * Create an LafOlFileUsage.
+   *
+   * @param e the LafOlFileUsage.
+   * @return The same LafOlFileUsage.
+   */
+  public LafOlFileUsage create(LafOlFileUsage e);
 
-    /**
-     * Update the LafOlFileUsage.
-     *
-     * @param e the LafOlFileUsage.
-     * @return The same LafOlFileUsage.
-     */
-    public LafOlFileUsage update(LafOlFileUsage e);
+  /**
+   * Update the LafOlFileUsage.
+   *
+   * @param e the LafOlFileUsage.
+   * @return The same LafOlFileUsage.
+   */
+  public LafOlFileUsage update(LafOlFileUsage e);
 }

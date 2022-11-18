@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlNodeRevision;
 import java.util.List;
+import com.drupal.test.entity.LafOlNodeRevision;
 
 public interface LafOlNodeRevisionService {
-    public LafOlNodeRevision find(java.lang.Integer id);
+  public LafOlNodeRevision find(java.lang.Integer id);
 
-    /**
-     * Select a list of LafOlNodeRevision based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlNodeRevision records.
-     */
-    public List<LafOlNodeRevision> select(int maxResult);
+  /**
+   * Select a list of LafOlNodeRevision based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlNodeRevision records.
+   */
+  public List<LafOlNodeRevision> select(int maxResult);
 
-    /**
-     * Select all LafOlNodeRevision.
-     *
-     * @return all LafOlNodeRevision records.
-     */
-    public List<LafOlNodeRevision> selectAll();
+  /**
+   * Select all LafOlNodeRevision.
+   *
+   * @return all LafOlNodeRevision records.
+   */
+  public List<LafOlNodeRevision> selectAll();
 
-    /**
-     * Create LafOlNodeRevision.
-     *
-     * @param bean The LafOlNodeRevision.
-     * @return The LafOlNodeRevision.
-     */
-    public LafOlNodeRevision create(LafOlNodeRevision bean);
+  /**
+   * Create LafOlNodeRevision.
+   *
+   * @param bean The LafOlNodeRevision.
+   * @return The LafOlNodeRevision.
+   */
+  public LafOlNodeRevision create(LafOlNodeRevision bean);
 
-    /**
-     * Update a LafOlNodeRevision.
-     *
-     * @param bean - The LafOlNodeRevision.
-     * @return LafOlNodeRevision.
-     */
-    public LafOlNodeRevision update(LafOlNodeRevision bean);
+  /**
+   * Update a LafOlNodeRevision.
+   *
+   * @param bean - The LafOlNodeRevision.
+   * @return LafOlNodeRevision.
+   */
+  public LafOlNodeRevision update(LafOlNodeRevision bean);
 }

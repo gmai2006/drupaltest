@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlNodeRevisionDao;
-import com.drupal.test.entity.LafOlNodeRevision;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlNodeRevisionDao;
+import com.drupal.test.entity.LafOlNodeRevision;
 
 @Stateless
 @Named("DefaultLafOlNodeRevisionService")
 public class DefaultLafOlNodeRevisionService implements LafOlNodeRevisionService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlNodeRevisionDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlNodeRevisionDao dao;
 
-    @Inject
-    @Named("DefaultLafOlNodeRevisionDao")
-    public DefaultLafOlNodeRevisionService(final LafOlNodeRevisionDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlNodeRevisionDao")
+  public DefaultLafOlNodeRevisionService(final LafOlNodeRevisionDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevision find(java.lang.Integer id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevision find(java.lang.Integer id) {
 
-        final LafOlNodeRevision result = dao.find(id);
-        logger.info("find(LafOlNodeRevision) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlNodeRevision result = dao.find(id);
+    logger.info("find(LafOlNodeRevision) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeRevision> select(int maxResult) {
-        final List<LafOlNodeRevision> result = dao.select(maxResult);
-        logger.info("select(LafOlNodeRevision) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlNodeRevision> select(int maxResult) {
+    final List<LafOlNodeRevision> result = dao.select(maxResult);
+    logger.info("select(LafOlNodeRevision) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeRevision> selectAll() {
-        final List<LafOlNodeRevision> results = dao.selectAll();
-        logger.info("selectAll(LafOlNodeRevision) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlNodeRevision> selectAll() {
+    final List<LafOlNodeRevision> results = dao.selectAll();
+    logger.info("selectAll(LafOlNodeRevision) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevision create(LafOlNodeRevision bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlNodeRevision={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevision create(LafOlNodeRevision bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlNodeRevision={}) - entered bean ");
 
-        final LafOlNodeRevision result = dao.create(bean);
+    final LafOlNodeRevision result = dao.create(bean);
 
-        logger.info("create(LafOlNodeRevision) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlNodeRevision) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevision update(LafOlNodeRevision bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlNodeRevision={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevision update(LafOlNodeRevision bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlNodeRevision={}) - entered bean ");
 
-        final LafOlNodeRevision result = dao.update(bean);
+    final LafOlNodeRevision result = dao.update(bean);
 
-        logger.info("update(LafOlNodeRevision) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlNodeRevision) - exited - return value={} result ");
+    return result;
+  }
 }

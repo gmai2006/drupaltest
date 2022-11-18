@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlKeyValueExpire;
 import com.drupal.test.entity.LafOlKeyValueExpireId;
-import java.util.List;
 
 public interface LafOlKeyValueExpireDao {
-    /**
-     * Retrieve all records LafOlKeyValueExpire.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlKeyValueExpire
-     */
-    public List<LafOlKeyValueExpire> select(int maxResult);
+  /**
+   * Retrieve all records LafOlKeyValueExpire.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlKeyValueExpire
+   */
+  public List<LafOlKeyValueExpire> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlKeyValueExpire.
-     *
-     * @return A list of LafOlKeyValueExpire
-     */
-    public List<LafOlKeyValueExpire> selectAll();
+  /**
+   * Retrieve all records LafOlKeyValueExpire.
+   *
+   * @return A list of LafOlKeyValueExpire
+   */
+  public List<LafOlKeyValueExpire> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlKeyValueExpire id.
-     * @return The same LafOlKeyValueExpire.
-     */
-    public LafOlKeyValueExpire find(LafOlKeyValueExpireId id);
-    /**
-     * Create an LafOlKeyValueExpire.
-     *
-     * @param e the LafOlKeyValueExpire.
-     * @return The same LafOlKeyValueExpire.
-     */
-    public LafOlKeyValueExpire create(LafOlKeyValueExpire e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlKeyValueExpire id.
+   * @return The same LafOlKeyValueExpire.
+   */
+  public LafOlKeyValueExpire find(LafOlKeyValueExpireId id);
+  /**
+   * Create an LafOlKeyValueExpire.
+   *
+   * @param e the LafOlKeyValueExpire.
+   * @return The same LafOlKeyValueExpire.
+   */
+  public LafOlKeyValueExpire create(LafOlKeyValueExpire e);
 
-    /**
-     * Update the LafOlKeyValueExpire.
-     *
-     * @param e the LafOlKeyValueExpire.
-     * @return The same LafOlKeyValueExpire.
-     */
-    public LafOlKeyValueExpire update(LafOlKeyValueExpire e);
+  /**
+   * Update the LafOlKeyValueExpire.
+   *
+   * @param e the LafOlKeyValueExpire.
+   * @return The same LafOlKeyValueExpire.
+   */
+  public LafOlKeyValueExpire update(LafOlKeyValueExpire e);
 }

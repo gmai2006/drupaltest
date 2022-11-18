@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlNodeFieldTagsDao;
 import com.drupal.test.entity.LafOlNodeFieldTags;
 import com.drupal.test.entity.LafOlNodeFieldTagsId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlNodeFieldTagsService")
 public class DefaultLafOlNodeFieldTagsService implements LafOlNodeFieldTagsService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlNodeFieldTagsDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlNodeFieldTagsDao dao;
 
-    @Inject
-    @Named("DefaultLafOlNodeFieldTagsDao")
-    public DefaultLafOlNodeFieldTagsService(final LafOlNodeFieldTagsDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlNodeFieldTagsDao")
+  public DefaultLafOlNodeFieldTagsService(final LafOlNodeFieldTagsDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeFieldTags find(LafOlNodeFieldTagsId id) {
-        final LafOlNodeFieldTags result = dao.find(id);
-        logger.info("find(LafOlNodeFieldTags) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeFieldTags find(LafOlNodeFieldTagsId id) {
+    final LafOlNodeFieldTags result = dao.find(id);
+    logger.info("find(LafOlNodeFieldTags) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeFieldTags> select(int maxResult) {
-        final List<LafOlNodeFieldTags> result = dao.select(maxResult);
-        logger.info("select(LafOlNodeFieldTags) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlNodeFieldTags> select(int maxResult) {
+    final List<LafOlNodeFieldTags> result = dao.select(maxResult);
+    logger.info("select(LafOlNodeFieldTags) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeFieldTags> selectAll() {
-        final List<LafOlNodeFieldTags> results = dao.selectAll();
-        logger.info("selectAll(LafOlNodeFieldTags) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlNodeFieldTags> selectAll() {
+    final List<LafOlNodeFieldTags> results = dao.selectAll();
+    logger.info("selectAll(LafOlNodeFieldTags) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeFieldTags create(LafOlNodeFieldTags bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlNodeFieldTags={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeFieldTags create(LafOlNodeFieldTags bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlNodeFieldTags={}) - entered bean ");
 
-        final LafOlNodeFieldTags result = dao.create(bean);
+    final LafOlNodeFieldTags result = dao.create(bean);
 
-        logger.info("create(LafOlNodeFieldTags) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlNodeFieldTags) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeFieldTags update(LafOlNodeFieldTags bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlNodeFieldTags={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeFieldTags update(LafOlNodeFieldTags bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlNodeFieldTags={}) - entered bean ");
 
-        final LafOlNodeFieldTags result = dao.update(bean);
+    final LafOlNodeFieldTags result = dao.update(bean);
 
-        logger.info("update(LafOlNodeFieldTags) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlNodeFieldTags) - exited - return value={} result ");
+    return result;
+  }
 }

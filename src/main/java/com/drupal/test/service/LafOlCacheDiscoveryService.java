@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlCacheDiscovery;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheDiscovery;
 
 public interface LafOlCacheDiscoveryService {
-    public LafOlCacheDiscovery find(java.lang.String id);
+  public LafOlCacheDiscovery find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlCacheDiscovery based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCacheDiscovery records.
-     */
-    public List<LafOlCacheDiscovery> select(int maxResult);
+  /**
+   * Select a list of LafOlCacheDiscovery based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCacheDiscovery records.
+   */
+  public List<LafOlCacheDiscovery> select(int maxResult);
 
-    /**
-     * Select all LafOlCacheDiscovery.
-     *
-     * @return all LafOlCacheDiscovery records.
-     */
-    public List<LafOlCacheDiscovery> selectAll();
+  /**
+   * Select all LafOlCacheDiscovery.
+   *
+   * @return all LafOlCacheDiscovery records.
+   */
+  public List<LafOlCacheDiscovery> selectAll();
 
-    /**
-     * Create LafOlCacheDiscovery.
-     *
-     * @param bean The LafOlCacheDiscovery.
-     * @return The LafOlCacheDiscovery.
-     */
-    public LafOlCacheDiscovery create(LafOlCacheDiscovery bean);
+  /**
+   * Create LafOlCacheDiscovery.
+   *
+   * @param bean The LafOlCacheDiscovery.
+   * @return The LafOlCacheDiscovery.
+   */
+  public LafOlCacheDiscovery create(LafOlCacheDiscovery bean);
 
-    /**
-     * Update a LafOlCacheDiscovery.
-     *
-     * @param bean - The LafOlCacheDiscovery.
-     * @return LafOlCacheDiscovery.
-     */
-    public LafOlCacheDiscovery update(LafOlCacheDiscovery bean);
+  /**
+   * Update a LafOlCacheDiscovery.
+   *
+   * @param bean - The LafOlCacheDiscovery.
+   * @return LafOlCacheDiscovery.
+   */
+  public LafOlCacheDiscovery update(LafOlCacheDiscovery bean);
 }

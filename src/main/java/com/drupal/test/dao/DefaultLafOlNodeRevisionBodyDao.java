@@ -16,59 +16,61 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlNodeRevisionBody;
-import com.drupal.test.entity.LafOlNodeRevisionBodyId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlNodeRevisionBody;
+import com.drupal.test.entity.LafOlNodeRevisionBodyId;
 
 @Stateless
 @Named("DefaultLafOlNodeRevisionBodyDao")
 public class DefaultLafOlNodeRevisionBodyDao implements LafOlNodeRevisionBodyDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlNodeRevisionBodyDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlNodeRevisionBodyDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlNodeRevisionBodyDao() {}
+  public DefaultLafOlNodeRevisionBodyDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionBody find(LafOlNodeRevisionBodyId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlNodeRevisionBody.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionBody find(LafOlNodeRevisionBodyId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlNodeRevisionBody.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlNodeRevisionBody> select(int max) {
-        return dao.select(
-                "select a from LafOlNodeRevisionBody a", LafOlNodeRevisionBody.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlNodeRevisionBody> select(int max) {
+    return dao.select("select a from LafOlNodeRevisionBody a", LafOlNodeRevisionBody.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlNodeRevisionBody> selectAll() {
-        return dao.selectAll("select a from LafOlNodeRevisionBody a", LafOlNodeRevisionBody.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlNodeRevisionBody> selectAll() {
+    return dao.selectAll("select a from LafOlNodeRevisionBody a", LafOlNodeRevisionBody.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionBody create(LafOlNodeRevisionBody e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionBody create(LafOlNodeRevisionBody e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionBody update(LafOlNodeRevisionBody e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionBody update(LafOlNodeRevisionBody e) {
+    return dao.update(e);
+  }
 }

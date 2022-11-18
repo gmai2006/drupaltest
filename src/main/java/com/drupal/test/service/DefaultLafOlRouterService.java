@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlRouterDao;
-import com.drupal.test.entity.LafOlRouter;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlRouterDao;
+import com.drupal.test.entity.LafOlRouter;
 
 @Stateless
 @Named("DefaultLafOlRouterService")
 public class DefaultLafOlRouterService implements LafOlRouterService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlRouterDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlRouterDao dao;
 
-    @Inject
-    @Named("DefaultLafOlRouterDao")
-    public DefaultLafOlRouterService(final LafOlRouterDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlRouterDao")
+  public DefaultLafOlRouterService(final LafOlRouterDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlRouter find(java.lang.String id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlRouter find(java.lang.String id) {
 
-        final LafOlRouter result = dao.find(id);
-        logger.info("find(LafOlRouter) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlRouter result = dao.find(id);
+    logger.info("find(LafOlRouter) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlRouter> select(int maxResult) {
-        final List<LafOlRouter> result = dao.select(maxResult);
-        logger.info("select(LafOlRouter) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlRouter> select(int maxResult) {
+    final List<LafOlRouter> result = dao.select(maxResult);
+    logger.info("select(LafOlRouter) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlRouter> selectAll() {
-        final List<LafOlRouter> results = dao.selectAll();
-        logger.info("selectAll(LafOlRouter) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlRouter> selectAll() {
+    final List<LafOlRouter> results = dao.selectAll();
+    logger.info("selectAll(LafOlRouter) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlRouter create(LafOlRouter bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlRouter={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlRouter create(LafOlRouter bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlRouter={}) - entered bean ");
 
-        final LafOlRouter result = dao.create(bean);
+    final LafOlRouter result = dao.create(bean);
 
-        logger.info("create(LafOlRouter) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlRouter) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlRouter update(LafOlRouter bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlRouter={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlRouter update(LafOlRouter bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlRouter={}) - entered bean ");
 
-        final LafOlRouter result = dao.update(bean);
+    final LafOlRouter result = dao.update(bean);
 
-        logger.info("update(LafOlRouter) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlRouter) - exited - return value={} result ");
+    return result;
+  }
 }

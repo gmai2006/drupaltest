@@ -16,60 +16,63 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlCommentEntityStatistics;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlCommentEntityStatistics;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlCommentEntityStatisticsHandler")
 public class LafOlCommentEntityStatisticsHandler
-        extends DelimiterFileHandler<LafOlCommentEntityStatistics> {
+    extends DelimiterFileHandler<LafOlCommentEntityStatistics> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlCommentEntityStatisticsHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlCommentEntityStatisticsHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlCommentEntityStatistics parseLine(List<String> headers, List<String> tokens) {
+    LafOlCommentEntityStatistics record = new LafOlCommentEntityStatistics();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "entityId":
+          record.setEntityId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "entityType":
+          record.setEntityType(tokens.get(i));
+          break;
+
+        case "fieldName":
+          record.setFieldName(tokens.get(i));
+          break;
+
+        case "cid":
+          record.setCid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "lastCommentTimestamp":
+          record.setLastCommentTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "lastCommentName":
+          record.setLastCommentName(tokens.get(i));
+          break;
+
+        case "lastCommentUid":
+          record.setLastCommentUid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "commentCount":
+          record.setCommentCount(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlCommentEntityStatistics parseLine(List<String> headers, List<String> tokens) {
-        LafOlCommentEntityStatistics record = new LafOlCommentEntityStatistics();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "entityId":
-                    record.setEntityId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "entityType":
-                    record.setEntityType(tokens.get(i));
-                    break;
-
-                case "fieldName":
-                    record.setFieldName(tokens.get(i));
-                    break;
-
-                case "cid":
-                    record.setCid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "lastCommentTimestamp":
-                    record.setLastCommentTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "lastCommentName":
-                    record.setLastCommentName(tokens.get(i));
-                    break;
-
-                case "lastCommentUid":
-                    record.setLastCommentUid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "commentCount":
-                    record.setCommentCount(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

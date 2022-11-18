@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlWatchdog;
 import java.util.List;
+import com.drupal.test.entity.LafOlWatchdog;
 
 public interface LafOlWatchdogService {
-    public LafOlWatchdog find(java.lang.Integer id);
+  public LafOlWatchdog find(java.lang.Integer id);
 
-    /**
-     * Select a list of LafOlWatchdog based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlWatchdog records.
-     */
-    public List<LafOlWatchdog> select(int maxResult);
+  /**
+   * Select a list of LafOlWatchdog based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlWatchdog records.
+   */
+  public List<LafOlWatchdog> select(int maxResult);
 
-    /**
-     * Select all LafOlWatchdog.
-     *
-     * @return all LafOlWatchdog records.
-     */
-    public List<LafOlWatchdog> selectAll();
+  /**
+   * Select all LafOlWatchdog.
+   *
+   * @return all LafOlWatchdog records.
+   */
+  public List<LafOlWatchdog> selectAll();
 
-    /**
-     * Create LafOlWatchdog.
-     *
-     * @param bean The LafOlWatchdog.
-     * @return The LafOlWatchdog.
-     */
-    public LafOlWatchdog create(LafOlWatchdog bean);
+  /**
+   * Create LafOlWatchdog.
+   *
+   * @param bean The LafOlWatchdog.
+   * @return The LafOlWatchdog.
+   */
+  public LafOlWatchdog create(LafOlWatchdog bean);
 
-    /**
-     * Update a LafOlWatchdog.
-     *
-     * @param bean - The LafOlWatchdog.
-     * @return LafOlWatchdog.
-     */
-    public LafOlWatchdog update(LafOlWatchdog bean);
+  /**
+   * Update a LafOlWatchdog.
+   *
+   * @param bean - The LafOlWatchdog.
+   * @return LafOlWatchdog.
+   */
+  public LafOlWatchdog update(LafOlWatchdog bean);
 }

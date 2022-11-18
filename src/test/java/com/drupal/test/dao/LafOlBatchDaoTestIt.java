@@ -16,11 +16,11 @@
  */
 package com.drupal.test.dao;
 
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.io.IOException;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
-import com.drupal.test.entity.LafOlBatch;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.IOException;
@@ -32,54 +32,55 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import com.drupal.test.entity.LafOlBatch;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
 
 public class LafOlBatchDaoTestIt {
-    static final String inputFile = "LafOlBatch.json";
-    static LafOlBatchDao dao;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlBatch[] records;
+  static final String inputFile = "LafOlBatch.json";
+  static LafOlBatchDao dao;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlBatch[] records;
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void beforeClass() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
-        JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
-        dao = new DefaultLafOlBatchDao(jpa);
-    }
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void beforeClass() {
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
+    dao = new DefaultLafOlBatchDao(jpa);
+  }
 
-    /** Run before the test. */
-    @Before
-    public void before() {
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlBatch[].class);
-            json = null;
-            Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+  /** Run before the test. */
+  @Before
+  public void before() {
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlBatch[].class);
+      json = null;
+      Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
+  }
 
-    @After
-    public void after() {
-        records = null;
-    }
+  @After
+  public void after() {
+    records = null;
+  }
 
-    @Test
-    public void testSelect() {
-        LafOlBatch testResult = dao.find(records[1].getBid());
-        assertNotNull("expect result", testResult);
-        org.junit.Assert.assertEquals(
-                "expect equals token ", this.records[1].getToken(), testResult.getToken());
-        org.junit.Assert.assertTrue(
-                "expect equals timestamp ",
-                this.records[1].getTimestamp() == testResult.getTimestamp());
-        org.junit.Assert.assertEquals(
-                "expect equals batch ", this.records[1].getBatch(), testResult.getBatch());
-    }
+  @Test
+  public void testSelect() {
+    LafOlBatch testResult = dao.find(records[1].getBid());
+    assertNotNull("expect result", testResult);
+    org.junit.Assert.assertEquals(
+        "expect equals token ", this.records[1].getToken(), testResult.getToken());
+    org.junit.Assert.assertTrue(
+        "expect equals timestamp ", this.records[1].getTimestamp() == testResult.getTimestamp());
+    org.junit.Assert.assertEquals(
+        "expect equals batch ", this.records[1].getBatch(), testResult.getBatch());
+  }
 }

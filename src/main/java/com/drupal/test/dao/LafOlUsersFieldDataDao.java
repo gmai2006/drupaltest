@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlUsersFieldData;
 import com.drupal.test.entity.LafOlUsersFieldDataId;
-import java.util.List;
 
 public interface LafOlUsersFieldDataDao {
-    /**
-     * Retrieve all records LafOlUsersFieldData.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlUsersFieldData
-     */
-    public List<LafOlUsersFieldData> select(int maxResult);
+  /**
+   * Retrieve all records LafOlUsersFieldData.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlUsersFieldData
+   */
+  public List<LafOlUsersFieldData> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlUsersFieldData.
-     *
-     * @return A list of LafOlUsersFieldData
-     */
-    public List<LafOlUsersFieldData> selectAll();
+  /**
+   * Retrieve all records LafOlUsersFieldData.
+   *
+   * @return A list of LafOlUsersFieldData
+   */
+  public List<LafOlUsersFieldData> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlUsersFieldData id.
-     * @return The same LafOlUsersFieldData.
-     */
-    public LafOlUsersFieldData find(LafOlUsersFieldDataId id);
-    /**
-     * Create an LafOlUsersFieldData.
-     *
-     * @param e the LafOlUsersFieldData.
-     * @return The same LafOlUsersFieldData.
-     */
-    public LafOlUsersFieldData create(LafOlUsersFieldData e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlUsersFieldData id.
+   * @return The same LafOlUsersFieldData.
+   */
+  public LafOlUsersFieldData find(LafOlUsersFieldDataId id);
+  /**
+   * Create an LafOlUsersFieldData.
+   *
+   * @param e the LafOlUsersFieldData.
+   * @return The same LafOlUsersFieldData.
+   */
+  public LafOlUsersFieldData create(LafOlUsersFieldData e);
 
-    /**
-     * Update the LafOlUsersFieldData.
-     *
-     * @param e the LafOlUsersFieldData.
-     * @return The same LafOlUsersFieldData.
-     */
-    public LafOlUsersFieldData update(LafOlUsersFieldData e);
+  /**
+   * Update the LafOlUsersFieldData.
+   *
+   * @param e the LafOlUsersFieldData.
+   * @return The same LafOlUsersFieldData.
+   */
+  public LafOlUsersFieldData update(LafOlUsersFieldData e);
 }

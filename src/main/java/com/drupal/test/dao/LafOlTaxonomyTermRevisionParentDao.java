@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlTaxonomyTermRevisionParent;
 import com.drupal.test.entity.LafOlTaxonomyTermRevisionParentId;
-import java.util.List;
 
 public interface LafOlTaxonomyTermRevisionParentDao {
-    /**
-     * Retrieve all records LafOlTaxonomyTermRevisionParent.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlTaxonomyTermRevisionParent
-     */
-    public List<LafOlTaxonomyTermRevisionParent> select(int maxResult);
+  /**
+   * Retrieve all records LafOlTaxonomyTermRevisionParent.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlTaxonomyTermRevisionParent
+   */
+  public List<LafOlTaxonomyTermRevisionParent> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlTaxonomyTermRevisionParent.
-     *
-     * @return A list of LafOlTaxonomyTermRevisionParent
-     */
-    public List<LafOlTaxonomyTermRevisionParent> selectAll();
+  /**
+   * Retrieve all records LafOlTaxonomyTermRevisionParent.
+   *
+   * @return A list of LafOlTaxonomyTermRevisionParent
+   */
+  public List<LafOlTaxonomyTermRevisionParent> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlTaxonomyTermRevisionParent id.
-     * @return The same LafOlTaxonomyTermRevisionParent.
-     */
-    public LafOlTaxonomyTermRevisionParent find(LafOlTaxonomyTermRevisionParentId id);
-    /**
-     * Create an LafOlTaxonomyTermRevisionParent.
-     *
-     * @param e the LafOlTaxonomyTermRevisionParent.
-     * @return The same LafOlTaxonomyTermRevisionParent.
-     */
-    public LafOlTaxonomyTermRevisionParent create(LafOlTaxonomyTermRevisionParent e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlTaxonomyTermRevisionParent id.
+   * @return The same LafOlTaxonomyTermRevisionParent.
+   */
+  public LafOlTaxonomyTermRevisionParent find(LafOlTaxonomyTermRevisionParentId id);
+  /**
+   * Create an LafOlTaxonomyTermRevisionParent.
+   *
+   * @param e the LafOlTaxonomyTermRevisionParent.
+   * @return The same LafOlTaxonomyTermRevisionParent.
+   */
+  public LafOlTaxonomyTermRevisionParent create(LafOlTaxonomyTermRevisionParent e);
 
-    /**
-     * Update the LafOlTaxonomyTermRevisionParent.
-     *
-     * @param e the LafOlTaxonomyTermRevisionParent.
-     * @return The same LafOlTaxonomyTermRevisionParent.
-     */
-    public LafOlTaxonomyTermRevisionParent update(LafOlTaxonomyTermRevisionParent e);
+  /**
+   * Update the LafOlTaxonomyTermRevisionParent.
+   *
+   * @param e the LafOlTaxonomyTermRevisionParent.
+   * @return The same LafOlTaxonomyTermRevisionParent.
+   */
+  public LafOlTaxonomyTermRevisionParent update(LafOlTaxonomyTermRevisionParent e);
 }

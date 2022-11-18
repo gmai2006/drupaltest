@@ -16,47 +16,50 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlTaxonomyIndex;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlTaxonomyIndex;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlTaxonomyIndexHandler")
 public class LafOlTaxonomyIndexHandler extends DelimiterFileHandler<LafOlTaxonomyIndex> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlTaxonomyIndexHandler(final JpaDao dao) {
-        super(dao);
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlTaxonomyIndexHandler(final JpaDao dao) {
+    super(dao);
+  }
 
-    @Override
-    protected LafOlTaxonomyIndex parseLine(List<String> headers, List<String> tokens) {
-        LafOlTaxonomyIndex record = new LafOlTaxonomyIndex();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "nid":
-                    record.setNid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "tid":
-                    record.setTid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "status":
-                    record.setStatus(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "sticky":
-                    record.setSticky(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "created":
-                    record.setCreated(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
+  @Override
+  protected LafOlTaxonomyIndex parseLine(List<String> headers, List<String> tokens) {
+    LafOlTaxonomyIndex record = new LafOlTaxonomyIndex();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "nid":
+          record.setNid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "tid":
+          record.setTid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "status":
+          record.setStatus(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "sticky":
+          record.setSticky(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "created":
+          record.setCreated(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
 
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
+    return record;
+  }
 }

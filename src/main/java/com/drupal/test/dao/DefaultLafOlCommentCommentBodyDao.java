@@ -16,60 +16,62 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCommentCommentBody;
-import com.drupal.test.entity.LafOlCommentCommentBodyId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlCommentCommentBody;
+import com.drupal.test.entity.LafOlCommentCommentBodyId;
 
 @Stateless
 @Named("DefaultLafOlCommentCommentBodyDao")
 public class DefaultLafOlCommentCommentBodyDao implements LafOlCommentCommentBodyDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlCommentCommentBodyDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlCommentCommentBodyDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlCommentCommentBodyDao() {}
+  public DefaultLafOlCommentCommentBodyDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCommentCommentBody find(LafOlCommentCommentBodyId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlCommentCommentBody.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCommentCommentBody find(LafOlCommentCommentBodyId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlCommentCommentBody.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlCommentCommentBody> select(int max) {
-        return dao.select(
-                "select a from LafOlCommentCommentBody a", LafOlCommentCommentBody.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlCommentCommentBody> select(int max) {
+    return dao.select(
+        "select a from LafOlCommentCommentBody a", LafOlCommentCommentBody.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlCommentCommentBody> selectAll() {
-        return dao.selectAll(
-                "select a from LafOlCommentCommentBody a", LafOlCommentCommentBody.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlCommentCommentBody> selectAll() {
+    return dao.selectAll("select a from LafOlCommentCommentBody a", LafOlCommentCommentBody.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCommentCommentBody create(LafOlCommentCommentBody e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCommentCommentBody create(LafOlCommentCommentBody e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCommentCommentBody update(LafOlCommentCommentBody e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCommentCommentBody update(LafOlCommentCommentBody e) {
+    return dao.update(e);
+  }
 }

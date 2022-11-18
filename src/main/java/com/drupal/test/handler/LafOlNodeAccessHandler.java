@@ -16,58 +16,61 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlNodeAccess;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlNodeAccess;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlNodeAccessHandler")
 public class LafOlNodeAccessHandler extends DelimiterFileHandler<LafOlNodeAccess> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlNodeAccessHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlNodeAccessHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlNodeAccess parseLine(List<String> headers, List<String> tokens) {
+    LafOlNodeAccess record = new LafOlNodeAccess();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "nid":
+          record.setNid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "fallback":
+          record.setFallback(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "gid":
+          record.setGid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "realm":
+          record.setRealm(tokens.get(i));
+          break;
+
+        case "grantView":
+          record.setGrantView(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "grantUpdate":
+          record.setGrantUpdate(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "grantDelete":
+          record.setGrantDelete(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlNodeAccess parseLine(List<String> headers, List<String> tokens) {
-        LafOlNodeAccess record = new LafOlNodeAccess();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "nid":
-                    record.setNid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "fallback":
-                    record.setFallback(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "gid":
-                    record.setGid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "realm":
-                    record.setRealm(tokens.get(i));
-                    break;
-
-                case "grantView":
-                    record.setGrantView(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "grantUpdate":
-                    record.setGrantUpdate(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "grantDelete":
-                    record.setGrantDelete(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

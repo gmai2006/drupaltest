@@ -16,67 +16,69 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlBlockContentFieldData;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlBlockContentFieldData;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlBlockContentFieldDataHandler")
 public class LafOlBlockContentFieldDataHandler
-        extends DelimiterFileHandler<LafOlBlockContentFieldData> {
+    extends DelimiterFileHandler<LafOlBlockContentFieldData> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlBlockContentFieldDataHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlBlockContentFieldDataHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlBlockContentFieldData parseLine(List<String> headers, List<String> tokens) {
+    LafOlBlockContentFieldData record = new LafOlBlockContentFieldData();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "id":
+          record.setId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionId":
+          record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "type":
+          record.setType(tokens.get(i));
+          break;
+
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "status":
+          record.setStatus(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "info":
+          record.setInfo(tokens.get(i));
+          break;
+
+        case "changed":
+          record.setChanged(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "reusable":
+          record.setReusable(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "defaultLangcode":
+          record.setDefaultLangcode(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionTranslationAffected":
+          record.setRevisionTranslationAffected(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlBlockContentFieldData parseLine(List<String> headers, List<String> tokens) {
-        LafOlBlockContentFieldData record = new LafOlBlockContentFieldData();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "id":
-                    record.setId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionId":
-                    record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "type":
-                    record.setType(tokens.get(i));
-                    break;
-
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "status":
-                    record.setStatus(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "info":
-                    record.setInfo(tokens.get(i));
-                    break;
-
-                case "changed":
-                    record.setChanged(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "reusable":
-                    record.setReusable(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "defaultLangcode":
-                    record.setDefaultLangcode(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionTranslationAffected":
-                    record.setRevisionTranslationAffected(
-                            java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

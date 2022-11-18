@@ -16,59 +16,62 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlCommentCommentBody;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlCommentCommentBody;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlCommentCommentBodyHandler")
 public class LafOlCommentCommentBodyHandler extends DelimiterFileHandler<LafOlCommentCommentBody> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlCommentCommentBodyHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlCommentCommentBodyHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlCommentCommentBody parseLine(List<String> headers, List<String> tokens) {
+    LafOlCommentCommentBody record = new LafOlCommentCommentBody();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "bundle":
+          record.setBundle(tokens.get(i));
+          break;
+
+        case "deleted":
+          record.setDeleted(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "entityId":
+          record.setEntityId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionId":
+          record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "delta":
+          record.setDelta(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "commentBodyValue":
+          record.setCommentBodyValue(tokens.get(i));
+          break;
+
+        case "commentBodyFormat":
+          record.setCommentBodyFormat(tokens.get(i));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlCommentCommentBody parseLine(List<String> headers, List<String> tokens) {
-        LafOlCommentCommentBody record = new LafOlCommentCommentBody();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "bundle":
-                    record.setBundle(tokens.get(i));
-                    break;
-
-                case "deleted":
-                    record.setDeleted(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "entityId":
-                    record.setEntityId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionId":
-                    record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "delta":
-                    record.setDelta(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "commentBodyValue":
-                    record.setCommentBodyValue(tokens.get(i));
-                    break;
-
-                case "commentBodyFormat":
-                    record.setCommentBodyFormat(tokens.get(i));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

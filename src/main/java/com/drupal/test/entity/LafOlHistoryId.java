@@ -18,72 +18,73 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlHistory. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlHistory. generated on 11/17/2022 from a schema. */
 public class LafOlHistoryId implements Serializable {
-    private static final long serialVersionUID = 163445265032910933L;
+  private static final long serialVersionUID = 16687543302065167L;
 
-    @Column(name = "uid")
-    private java.lang.Integer uid;
+  @Column(name = "uid")
+  private java.lang.Integer uid;
 
-    @Column(name = "nid")
-    private java.lang.Integer nid;
+  @Column(name = "nid")
+  private java.lang.Integer nid;
 
-    /** Constructor: LafOlHistoryId. */
-    public LafOlHistoryId() {}
+  /** Constructor: LafOlHistoryId. */
+  public LafOlHistoryId() {}
 
-    /**
-     * Constructor: LafOlHistoryId.
-     *
-     * @param uid - uid.
-     * @param nid - nid.
-     */
-    public LafOlHistoryId(java.lang.Integer uid, java.lang.Integer nid) {
-        this.uid = uid;
-        this.nid = nid;
-    }
+  /**
+   * Constructor: LafOlHistoryId.
+   *
+   * @param uid - uid.
+   * @param nid - nid.
+   */
+  public LafOlHistoryId(java.lang.Integer uid, java.lang.Integer nid) {
+    this.uid = uid;
+    this.nid = nid;
+  }
 
-    public java.lang.Integer getUid() {
-        return this.uid;
-    }
+  public java.lang.Integer getUid() {
+    return this.uid;
+  }
 
-    public java.lang.Integer getNid() {
-        return this.nid;
-    }
+  public java.lang.Integer getNid() {
+    return this.nid;
+  }
 
-    public void setUid(java.lang.Integer uid) {
-        this.uid = uid;
-    }
+  public void setUid(java.lang.Integer uid) {
+    this.uid = uid;
+  }
 
-    public void setNid(java.lang.Integer nid) {
-        this.nid = nid;
-    }
+  public void setNid(java.lang.Integer nid) {
+    this.nid = nid;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((uid == null) ? 0 : uid.hashCode());
-        result = prime * result + ((nid == null) ? 0 : nid.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((uid == null) ? 0 : uid.hashCode());
+    result = prime * result + ((nid == null) ? 0 : nid.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlHistoryId other = (LafOlHistoryId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlHistoryId other = (LafOlHistoryId) obj;
 
-        if (uid == null) {
-            if (other.uid != null) return false;
-        } else if (!uid.equals(other.uid)) return false;
+    if (uid == null) {
+      if (other.uid != null) return false;
+    } else if (!uid.equals(other.uid)) return false;
 
-        if (nid == null) {
-            if (other.nid != null) return false;
-        } else if (!nid.equals(other.nid)) return false;
+    if (nid == null) {
+      if (other.nid != null) return false;
+    } else if (!nid.equals(other.nid)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

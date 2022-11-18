@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlBlockContentRevisionBody;
 import com.drupal.test.entity.LafOlBlockContentRevisionBodyId;
-import java.util.List;
 
 public interface LafOlBlockContentRevisionBodyDao {
-    /**
-     * Retrieve all records LafOlBlockContentRevisionBody.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlBlockContentRevisionBody
-     */
-    public List<LafOlBlockContentRevisionBody> select(int maxResult);
+  /**
+   * Retrieve all records LafOlBlockContentRevisionBody.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlBlockContentRevisionBody
+   */
+  public List<LafOlBlockContentRevisionBody> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlBlockContentRevisionBody.
-     *
-     * @return A list of LafOlBlockContentRevisionBody
-     */
-    public List<LafOlBlockContentRevisionBody> selectAll();
+  /**
+   * Retrieve all records LafOlBlockContentRevisionBody.
+   *
+   * @return A list of LafOlBlockContentRevisionBody
+   */
+  public List<LafOlBlockContentRevisionBody> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlBlockContentRevisionBody id.
-     * @return The same LafOlBlockContentRevisionBody.
-     */
-    public LafOlBlockContentRevisionBody find(LafOlBlockContentRevisionBodyId id);
-    /**
-     * Create an LafOlBlockContentRevisionBody.
-     *
-     * @param e the LafOlBlockContentRevisionBody.
-     * @return The same LafOlBlockContentRevisionBody.
-     */
-    public LafOlBlockContentRevisionBody create(LafOlBlockContentRevisionBody e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlBlockContentRevisionBody id.
+   * @return The same LafOlBlockContentRevisionBody.
+   */
+  public LafOlBlockContentRevisionBody find(LafOlBlockContentRevisionBodyId id);
+  /**
+   * Create an LafOlBlockContentRevisionBody.
+   *
+   * @param e the LafOlBlockContentRevisionBody.
+   * @return The same LafOlBlockContentRevisionBody.
+   */
+  public LafOlBlockContentRevisionBody create(LafOlBlockContentRevisionBody e);
 
-    /**
-     * Update the LafOlBlockContentRevisionBody.
-     *
-     * @param e the LafOlBlockContentRevisionBody.
-     * @return The same LafOlBlockContentRevisionBody.
-     */
-    public LafOlBlockContentRevisionBody update(LafOlBlockContentRevisionBody e);
+  /**
+   * Update the LafOlBlockContentRevisionBody.
+   *
+   * @param e the LafOlBlockContentRevisionBody.
+   * @return The same LafOlBlockContentRevisionBody.
+   */
+  public LafOlBlockContentRevisionBody update(LafOlBlockContentRevisionBody e);
 }

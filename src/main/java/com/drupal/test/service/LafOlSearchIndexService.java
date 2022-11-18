@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlSearchIndex;
 import com.drupal.test.entity.LafOlSearchIndexId;
-import java.util.List;
 
 public interface LafOlSearchIndexService {
-    public LafOlSearchIndex find(LafOlSearchIndexId id);
-    /**
-     * Select a list of LafOlSearchIndex based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlSearchIndex records.
-     */
-    public List<LafOlSearchIndex> select(int maxResult);
+  public LafOlSearchIndex find(LafOlSearchIndexId id);
+  /**
+   * Select a list of LafOlSearchIndex based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlSearchIndex records.
+   */
+  public List<LafOlSearchIndex> select(int maxResult);
 
-    /**
-     * Select all LafOlSearchIndex.
-     *
-     * @return all LafOlSearchIndex records.
-     */
-    public List<LafOlSearchIndex> selectAll();
+  /**
+   * Select all LafOlSearchIndex.
+   *
+   * @return all LafOlSearchIndex records.
+   */
+  public List<LafOlSearchIndex> selectAll();
 
-    /**
-     * Create LafOlSearchIndex.
-     *
-     * @param bean The LafOlSearchIndex.
-     * @return The LafOlSearchIndex.
-     */
-    public LafOlSearchIndex create(LafOlSearchIndex bean);
+  /**
+   * Create LafOlSearchIndex.
+   *
+   * @param bean The LafOlSearchIndex.
+   * @return The LafOlSearchIndex.
+   */
+  public LafOlSearchIndex create(LafOlSearchIndex bean);
 
-    /**
-     * Update a LafOlSearchIndex.
-     *
-     * @param bean - The LafOlSearchIndex.
-     * @return LafOlSearchIndex.
-     */
-    public LafOlSearchIndex update(LafOlSearchIndex bean);
+  /**
+   * Update a LafOlSearchIndex.
+   *
+   * @param bean - The LafOlSearchIndex.
+   * @return LafOlSearchIndex.
+   */
+  public LafOlSearchIndex update(LafOlSearchIndex bean);
 }

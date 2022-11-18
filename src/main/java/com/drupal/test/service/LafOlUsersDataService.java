@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlUsersData;
 import com.drupal.test.entity.LafOlUsersDataId;
-import java.util.List;
 
 public interface LafOlUsersDataService {
-    public LafOlUsersData find(LafOlUsersDataId id);
-    /**
-     * Select a list of LafOlUsersData based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlUsersData records.
-     */
-    public List<LafOlUsersData> select(int maxResult);
+  public LafOlUsersData find(LafOlUsersDataId id);
+  /**
+   * Select a list of LafOlUsersData based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlUsersData records.
+   */
+  public List<LafOlUsersData> select(int maxResult);
 
-    /**
-     * Select all LafOlUsersData.
-     *
-     * @return all LafOlUsersData records.
-     */
-    public List<LafOlUsersData> selectAll();
+  /**
+   * Select all LafOlUsersData.
+   *
+   * @return all LafOlUsersData records.
+   */
+  public List<LafOlUsersData> selectAll();
 
-    /**
-     * Create LafOlUsersData.
-     *
-     * @param bean The LafOlUsersData.
-     * @return The LafOlUsersData.
-     */
-    public LafOlUsersData create(LafOlUsersData bean);
+  /**
+   * Create LafOlUsersData.
+   *
+   * @param bean The LafOlUsersData.
+   * @return The LafOlUsersData.
+   */
+  public LafOlUsersData create(LafOlUsersData bean);
 
-    /**
-     * Update a LafOlUsersData.
-     *
-     * @param bean - The LafOlUsersData.
-     * @return LafOlUsersData.
-     */
-    public LafOlUsersData update(LafOlUsersData bean);
+  /**
+   * Update a LafOlUsersData.
+   *
+   * @param bean - The LafOlUsersData.
+   * @return LafOlUsersData.
+   */
+  public LafOlUsersData update(LafOlUsersData bean);
 }

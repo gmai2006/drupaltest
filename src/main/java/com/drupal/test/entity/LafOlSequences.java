@@ -16,29 +16,30 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @Table(name = "lafol_sequences")
 public class LafOlSequences implements Serializable {
-    private static final long serialVersionUID = 163445265087195660L;
+  private static final long serialVersionUID = 16687543305317703L;
 
-    /** Description: value. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "value")
-    private java.lang.Integer value;
+  /** Description: value. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "value")
+  private java.lang.Integer value;
 
-    public LafOlSequences() {}
+  public LafOlSequences() {}
 
-    public java.lang.Integer getValue() {
-        return this.value;
-    }
+  public java.lang.Integer getValue() {
+    return this.value;
+  }
 
-    public void setValue(java.lang.Integer value) {
-        this.value = value;
-    }
+  public void setValue(java.lang.Integer value) {
+    this.value = value;
+  }
 }

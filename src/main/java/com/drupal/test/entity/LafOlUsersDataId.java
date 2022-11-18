@@ -18,90 +18,91 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlUsersData. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlUsersData. generated on 11/17/2022 from a schema. */
 public class LafOlUsersDataId implements Serializable {
-    private static final long serialVersionUID = 163445265110780069L;
+  private static final long serialVersionUID = 166875433070868749L;
 
-    @Column(name = "uid")
-    private java.lang.Integer uid;
+  @Column(name = "uid")
+  private java.lang.Integer uid;
 
-    @Column(name = "module")
-    private java.lang.String module;
+  @Column(name = "module")
+  private java.lang.String module;
 
-    @Column(name = "name")
-    private java.lang.String name;
+  @Column(name = "name")
+  private java.lang.String name;
 
-    /** Constructor: LafOlUsersDataId. */
-    public LafOlUsersDataId() {}
+  /** Constructor: LafOlUsersDataId. */
+  public LafOlUsersDataId() {}
 
-    /**
-     * Constructor: LafOlUsersDataId.
-     *
-     * @param uid - uid.
-     * @param module - module.
-     * @param name - name.
-     */
-    public LafOlUsersDataId(java.lang.Integer uid, java.lang.String module, java.lang.String name) {
-        this.uid = uid;
-        this.module = module;
-        this.name = name;
-    }
+  /**
+   * Constructor: LafOlUsersDataId.
+   *
+   * @param uid - uid.
+   * @param module - module.
+   * @param name - name.
+   */
+  public LafOlUsersDataId(java.lang.Integer uid, java.lang.String module, java.lang.String name) {
+    this.uid = uid;
+    this.module = module;
+    this.name = name;
+  }
 
-    public java.lang.Integer getUid() {
-        return this.uid;
-    }
+  public java.lang.Integer getUid() {
+    return this.uid;
+  }
 
-    public java.lang.String getModule() {
-        return this.module;
-    }
+  public java.lang.String getModule() {
+    return this.module;
+  }
 
-    public java.lang.String getName() {
-        return this.name;
-    }
+  public java.lang.String getName() {
+    return this.name;
+  }
 
-    public void setUid(java.lang.Integer uid) {
-        this.uid = uid;
-    }
+  public void setUid(java.lang.Integer uid) {
+    this.uid = uid;
+  }
 
-    public void setModule(java.lang.String module) {
-        this.module = module;
-    }
+  public void setModule(java.lang.String module) {
+    this.module = module;
+  }
 
-    public void setName(java.lang.String name) {
-        this.name = name;
-    }
+  public void setName(java.lang.String name) {
+    this.name = name;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((uid == null) ? 0 : uid.hashCode());
-        result = prime * result + ((module == null) ? 0 : module.hashCode());
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((uid == null) ? 0 : uid.hashCode());
+    result = prime * result + ((module == null) ? 0 : module.hashCode());
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlUsersDataId other = (LafOlUsersDataId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlUsersDataId other = (LafOlUsersDataId) obj;
 
-        if (uid == null) {
-            if (other.uid != null) return false;
-        } else if (!uid.equals(other.uid)) return false;
+    if (uid == null) {
+      if (other.uid != null) return false;
+    } else if (!uid.equals(other.uid)) return false;
 
-        if (module == null) {
-            if (other.module != null) return false;
-        } else if (!module.equals(other.module)) return false;
+    if (module == null) {
+      if (other.module != null) return false;
+    } else if (!module.equals(other.module)) return false;
 
-        if (name == null) {
-            if (other.name != null) return false;
-        } else if (!name.equals(other.name)) return false;
+    if (name == null) {
+      if (other.name != null) return false;
+    } else if (!name.equals(other.name)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

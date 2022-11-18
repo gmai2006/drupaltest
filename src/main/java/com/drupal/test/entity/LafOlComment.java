@@ -16,72 +16,72 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlCommentId.class)
 @Table(name = "lafol_comment")
 public class LafOlComment implements Serializable {
-    private static final long serialVersionUID = 163445265021135220L;
+  private static final long serialVersionUID = 166875433013541966L;
 
-    /** Description: uuid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "uuid")
-    private java.lang.String uuid;
-    /** Description: cid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "cid")
-    private java.lang.Integer cid;
+  /** Description: uuid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "uuid")
+  private java.lang.String uuid;
+  /** Description: cid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "cid")
+  private java.lang.Integer cid;
 
-    /** Description: comment_type. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "comment_type", length = 32)
-    private java.lang.String commentType;
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "langcode", length = 12)
-    private java.lang.String langcode;
+  /** Description: comment_type. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "comment_type", length = 32)
+  private java.lang.String commentType;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "langcode", length = 12)
+  private java.lang.String langcode;
 
-    public LafOlComment() {}
+  public LafOlComment() {}
 
-    public java.lang.String getUuid() {
-        return this.uuid;
-    }
+  public java.lang.String getUuid() {
+    return this.uuid;
+  }
 
-    public java.lang.Integer getCid() {
-        return this.cid;
-    }
+  public java.lang.Integer getCid() {
+    return this.cid;
+  }
 
-    public void setUuid(java.lang.String uuid) {
-        this.uuid = uuid;
-    }
+  public void setUuid(java.lang.String uuid) {
+    this.uuid = uuid;
+  }
 
-    public void setCid(java.lang.Integer cid) {
-        this.cid = cid;
-    }
+  public void setCid(java.lang.Integer cid) {
+    this.cid = cid;
+  }
 
-    public java.lang.String getCommentType() {
-        return this.commentType;
-    }
+  public java.lang.String getCommentType() {
+    return this.commentType;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public void setCommentType(java.lang.String commentType) {
-        this.commentType = commentType;
-    }
+  public void setCommentType(java.lang.String commentType) {
+    this.commentType = commentType;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 }

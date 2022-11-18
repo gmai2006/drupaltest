@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeRevisionFieldImage;
 import com.drupal.test.entity.LafOlNodeRevisionFieldImageId;
-import java.util.List;
 
 public interface LafOlNodeRevisionFieldImageService {
-    public LafOlNodeRevisionFieldImage find(LafOlNodeRevisionFieldImageId id);
-    /**
-     * Select a list of LafOlNodeRevisionFieldImage based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlNodeRevisionFieldImage records.
-     */
-    public List<LafOlNodeRevisionFieldImage> select(int maxResult);
+  public LafOlNodeRevisionFieldImage find(LafOlNodeRevisionFieldImageId id);
+  /**
+   * Select a list of LafOlNodeRevisionFieldImage based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlNodeRevisionFieldImage records.
+   */
+  public List<LafOlNodeRevisionFieldImage> select(int maxResult);
 
-    /**
-     * Select all LafOlNodeRevisionFieldImage.
-     *
-     * @return all LafOlNodeRevisionFieldImage records.
-     */
-    public List<LafOlNodeRevisionFieldImage> selectAll();
+  /**
+   * Select all LafOlNodeRevisionFieldImage.
+   *
+   * @return all LafOlNodeRevisionFieldImage records.
+   */
+  public List<LafOlNodeRevisionFieldImage> selectAll();
 
-    /**
-     * Create LafOlNodeRevisionFieldImage.
-     *
-     * @param bean The LafOlNodeRevisionFieldImage.
-     * @return The LafOlNodeRevisionFieldImage.
-     */
-    public LafOlNodeRevisionFieldImage create(LafOlNodeRevisionFieldImage bean);
+  /**
+   * Create LafOlNodeRevisionFieldImage.
+   *
+   * @param bean The LafOlNodeRevisionFieldImage.
+   * @return The LafOlNodeRevisionFieldImage.
+   */
+  public LafOlNodeRevisionFieldImage create(LafOlNodeRevisionFieldImage bean);
 
-    /**
-     * Update a LafOlNodeRevisionFieldImage.
-     *
-     * @param bean - The LafOlNodeRevisionFieldImage.
-     * @return LafOlNodeRevisionFieldImage.
-     */
-    public LafOlNodeRevisionFieldImage update(LafOlNodeRevisionFieldImage bean);
+  /**
+   * Update a LafOlNodeRevisionFieldImage.
+   *
+   * @param bean - The LafOlNodeRevisionFieldImage.
+   * @return LafOlNodeRevisionFieldImage.
+   */
+  public LafOlNodeRevisionFieldImage update(LafOlNodeRevisionFieldImage bean);
 }

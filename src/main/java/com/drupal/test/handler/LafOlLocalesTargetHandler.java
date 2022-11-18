@@ -16,45 +16,48 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlLocalesTarget;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlLocalesTarget;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlLocalesTargetHandler")
 public class LafOlLocalesTargetHandler extends DelimiterFileHandler<LafOlLocalesTarget> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlLocalesTargetHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlLocalesTargetHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlLocalesTarget parseLine(List<String> headers, List<String> tokens) {
+    LafOlLocalesTarget record = new LafOlLocalesTarget();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "lid":
+          record.setLid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "translation":
+          record.setTranslation(java.lang.String.valueOf((tokens.get(i))));
+          break;
+        case "language":
+          record.setLanguage(tokens.get(i));
+          break;
+
+        case "customized":
+          record.setCustomized(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlLocalesTarget parseLine(List<String> headers, List<String> tokens) {
-        LafOlLocalesTarget record = new LafOlLocalesTarget();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "lid":
-                    record.setLid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "translation":
-                    record.setTranslation(java.lang.String.valueOf((tokens.get(i))));
-                    break;
-                case "language":
-                    record.setLanguage(tokens.get(i));
-                    break;
-
-                case "customized":
-                    record.setCustomized(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

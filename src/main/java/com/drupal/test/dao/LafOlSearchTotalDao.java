@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlSearchTotal;
 import java.util.List;
+import com.drupal.test.entity.LafOlSearchTotal;
 
 public interface LafOlSearchTotalDao {
-    /**
-     * Retrieve all records LafOlSearchTotal.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlSearchTotal
-     */
-    public List<LafOlSearchTotal> select(int maxResult);
+  /**
+   * Retrieve all records LafOlSearchTotal.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlSearchTotal
+   */
+  public List<LafOlSearchTotal> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlSearchTotal.
-     *
-     * @return A list of LafOlSearchTotal
-     */
-    public List<LafOlSearchTotal> selectAll();
+  /**
+   * Retrieve all records LafOlSearchTotal.
+   *
+   * @return A list of LafOlSearchTotal
+   */
+  public List<LafOlSearchTotal> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlSearchTotal id.
-     * @return The same LafOlSearchTotal.
-     */
-    public LafOlSearchTotal find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlSearchTotal id.
+   * @return The same LafOlSearchTotal.
+   */
+  public LafOlSearchTotal find(java.lang.String id);
 
-    /**
-     * Create an LafOlSearchTotal.
-     *
-     * @param e the LafOlSearchTotal.
-     * @return The same LafOlSearchTotal.
-     */
-    public LafOlSearchTotal create(LafOlSearchTotal e);
+  /**
+   * Create an LafOlSearchTotal.
+   *
+   * @param e the LafOlSearchTotal.
+   * @return The same LafOlSearchTotal.
+   */
+  public LafOlSearchTotal create(LafOlSearchTotal e);
 
-    /**
-     * Update the LafOlSearchTotal.
-     *
-     * @param e the LafOlSearchTotal.
-     * @return The same LafOlSearchTotal.
-     */
-    public LafOlSearchTotal update(LafOlSearchTotal e);
+  /**
+   * Update the LafOlSearchTotal.
+   *
+   * @param e the LafOlSearchTotal.
+   * @return The same LafOlSearchTotal.
+   */
+  public LafOlSearchTotal update(LafOlSearchTotal e);
 }

@@ -16,12 +16,11 @@
  */
 package com.drupal.test.dao;
 
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.io.IOException;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
-import com.drupal.test.entity.LafOlCommentCommentBody;
-import com.drupal.test.entity.LafOlCommentCommentBodyId;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.IOException;
@@ -33,66 +32,68 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import com.drupal.test.entity.LafOlCommentCommentBody;
+import com.drupal.test.entity.LafOlCommentCommentBodyId;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
 
 public class LafOlCommentCommentBodyDaoTestIt {
-    static final String inputFile = "LafOlCommentCommentBody.json";
-    static LafOlCommentCommentBodyDao dao;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlCommentCommentBody[] records;
+  static final String inputFile = "LafOlCommentCommentBody.json";
+  static LafOlCommentCommentBodyDao dao;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlCommentCommentBody[] records;
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void beforeClass() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
-        JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
-        dao = new DefaultLafOlCommentCommentBodyDao(jpa);
-    }
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void beforeClass() {
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
+    dao = new DefaultLafOlCommentCommentBodyDao(jpa);
+  }
 
-    /** Run before the test. */
-    @Before
-    public void before() {
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlCommentCommentBody[].class);
-            json = null;
-            Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+  /** Run before the test. */
+  @Before
+  public void before() {
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlCommentCommentBody[].class);
+      json = null;
+      Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
+  }
 
-    @After
-    public void after() {
-        records = null;
-    }
+  @After
+  public void after() {
+    records = null;
+  }
 
-    @Test
-    public void testSelect() {
-        final LafOlCommentCommentBodyId id =
-                new LafOlCommentCommentBodyId(
-                        this.records[1].getLangcode(),
-                        this.records[1].getDeleted(),
-                        this.records[1].getDelta(),
-                        this.records[1].getEntityId());
-        LafOlCommentCommentBody testResult = dao.find(id);
-        assertNotNull("expect result", testResult);
-        org.junit.Assert.assertEquals(
-                "expect equals bundle ", this.records[1].getBundle(), testResult.getBundle());
-        org.junit.Assert.assertTrue(
-                "expect equals revisionId ",
-                this.records[1].getRevisionId() == testResult.getRevisionId());
-        org.junit.Assert.assertEquals(
-                "expect equals commentBodyValue ",
-                this.records[1].getCommentBodyValue(),
-                testResult.getCommentBodyValue());
-        org.junit.Assert.assertEquals(
-                "expect equals commentBodyFormat ",
-                this.records[1].getCommentBodyFormat(),
-                testResult.getCommentBodyFormat());
-    }
+  @Test
+  public void testSelect() {
+    final LafOlCommentCommentBodyId id =
+        new LafOlCommentCommentBodyId(
+            this.records[1].getLangcode(),
+            this.records[1].getDeleted(),
+            this.records[1].getDelta(),
+            this.records[1].getEntityId());
+    LafOlCommentCommentBody testResult = dao.find(id);
+    assertNotNull("expect result", testResult);
+    org.junit.Assert.assertEquals(
+        "expect equals bundle ", this.records[1].getBundle(), testResult.getBundle());
+    org.junit.Assert.assertTrue(
+        "expect equals revisionId ", this.records[1].getRevisionId() == testResult.getRevisionId());
+    org.junit.Assert.assertEquals(
+        "expect equals commentBodyValue ",
+        this.records[1].getCommentBodyValue(),
+        testResult.getCommentBodyValue());
+    org.junit.Assert.assertEquals(
+        "expect equals commentBodyFormat ",
+        this.records[1].getCommentBodyFormat(),
+        testResult.getCommentBodyFormat());
+  }
 }

@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlNodeFieldImageDao;
 import com.drupal.test.entity.LafOlNodeFieldImage;
 import com.drupal.test.entity.LafOlNodeFieldImageId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlNodeFieldImageService")
 public class DefaultLafOlNodeFieldImageService implements LafOlNodeFieldImageService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlNodeFieldImageDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlNodeFieldImageDao dao;
 
-    @Inject
-    @Named("DefaultLafOlNodeFieldImageDao")
-    public DefaultLafOlNodeFieldImageService(final LafOlNodeFieldImageDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlNodeFieldImageDao")
+  public DefaultLafOlNodeFieldImageService(final LafOlNodeFieldImageDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeFieldImage find(LafOlNodeFieldImageId id) {
-        final LafOlNodeFieldImage result = dao.find(id);
-        logger.info("find(LafOlNodeFieldImage) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeFieldImage find(LafOlNodeFieldImageId id) {
+    final LafOlNodeFieldImage result = dao.find(id);
+    logger.info("find(LafOlNodeFieldImage) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeFieldImage> select(int maxResult) {
-        final List<LafOlNodeFieldImage> result = dao.select(maxResult);
-        logger.info("select(LafOlNodeFieldImage) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlNodeFieldImage> select(int maxResult) {
+    final List<LafOlNodeFieldImage> result = dao.select(maxResult);
+    logger.info("select(LafOlNodeFieldImage) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeFieldImage> selectAll() {
-        final List<LafOlNodeFieldImage> results = dao.selectAll();
-        logger.info("selectAll(LafOlNodeFieldImage) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlNodeFieldImage> selectAll() {
+    final List<LafOlNodeFieldImage> results = dao.selectAll();
+    logger.info("selectAll(LafOlNodeFieldImage) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeFieldImage create(LafOlNodeFieldImage bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlNodeFieldImage={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeFieldImage create(LafOlNodeFieldImage bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlNodeFieldImage={}) - entered bean ");
 
-        final LafOlNodeFieldImage result = dao.create(bean);
+    final LafOlNodeFieldImage result = dao.create(bean);
 
-        logger.info("create(LafOlNodeFieldImage) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlNodeFieldImage) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeFieldImage update(LafOlNodeFieldImage bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlNodeFieldImage={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeFieldImage update(LafOlNodeFieldImage bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlNodeFieldImage={}) - entered bean ");
 
-        final LafOlNodeFieldImage result = dao.update(bean);
+    final LafOlNodeFieldImage result = dao.update(bean);
 
-        logger.info("update(LafOlNodeFieldImage) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlNodeFieldImage) - exited - return value={} result ");
+    return result;
+  }
 }

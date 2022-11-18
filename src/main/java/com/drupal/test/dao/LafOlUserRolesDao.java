@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlUserRoles;
 import com.drupal.test.entity.LafOlUserRolesId;
-import java.util.List;
 
 public interface LafOlUserRolesDao {
-    /**
-     * Retrieve all records LafOlUserRoles.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlUserRoles
-     */
-    public List<LafOlUserRoles> select(int maxResult);
+  /**
+   * Retrieve all records LafOlUserRoles.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlUserRoles
+   */
+  public List<LafOlUserRoles> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlUserRoles.
-     *
-     * @return A list of LafOlUserRoles
-     */
-    public List<LafOlUserRoles> selectAll();
+  /**
+   * Retrieve all records LafOlUserRoles.
+   *
+   * @return A list of LafOlUserRoles
+   */
+  public List<LafOlUserRoles> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlUserRoles id.
-     * @return The same LafOlUserRoles.
-     */
-    public LafOlUserRoles find(LafOlUserRolesId id);
-    /**
-     * Create an LafOlUserRoles.
-     *
-     * @param e the LafOlUserRoles.
-     * @return The same LafOlUserRoles.
-     */
-    public LafOlUserRoles create(LafOlUserRoles e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlUserRoles id.
+   * @return The same LafOlUserRoles.
+   */
+  public LafOlUserRoles find(LafOlUserRolesId id);
+  /**
+   * Create an LafOlUserRoles.
+   *
+   * @param e the LafOlUserRoles.
+   * @return The same LafOlUserRoles.
+   */
+  public LafOlUserRoles create(LafOlUserRoles e);
 
-    /**
-     * Update the LafOlUserRoles.
-     *
-     * @param e the LafOlUserRoles.
-     * @return The same LafOlUserRoles.
-     */
-    public LafOlUserRoles update(LafOlUserRoles e);
+  /**
+   * Update the LafOlUserRoles.
+   *
+   * @param e the LafOlUserRoles.
+   * @return The same LafOlUserRoles.
+   */
+  public LafOlUserRoles update(LafOlUserRoles e);
 }

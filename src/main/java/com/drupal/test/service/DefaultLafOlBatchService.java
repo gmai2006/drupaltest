@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlBatchDao;
-import com.drupal.test.entity.LafOlBatch;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlBatchDao;
+import com.drupal.test.entity.LafOlBatch;
 
 @Stateless
 @Named("DefaultLafOlBatchService")
 public class DefaultLafOlBatchService implements LafOlBatchService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlBatchDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlBatchDao dao;
 
-    @Inject
-    @Named("DefaultLafOlBatchDao")
-    public DefaultLafOlBatchService(final LafOlBatchDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlBatchDao")
+  public DefaultLafOlBatchService(final LafOlBatchDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBatch find(java.lang.Integer id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBatch find(java.lang.Integer id) {
 
-        final LafOlBatch result = dao.find(id);
-        logger.info("find(LafOlBatch) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlBatch result = dao.find(id);
+    logger.info("find(LafOlBatch) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlBatch> select(int maxResult) {
-        final List<LafOlBatch> result = dao.select(maxResult);
-        logger.info("select(LafOlBatch) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlBatch> select(int maxResult) {
+    final List<LafOlBatch> result = dao.select(maxResult);
+    logger.info("select(LafOlBatch) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlBatch> selectAll() {
-        final List<LafOlBatch> results = dao.selectAll();
-        logger.info("selectAll(LafOlBatch) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlBatch> selectAll() {
+    final List<LafOlBatch> results = dao.selectAll();
+    logger.info("selectAll(LafOlBatch) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBatch create(LafOlBatch bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlBatch={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBatch create(LafOlBatch bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlBatch={}) - entered bean ");
 
-        final LafOlBatch result = dao.create(bean);
+    final LafOlBatch result = dao.create(bean);
 
-        logger.info("create(LafOlBatch) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlBatch) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBatch update(LafOlBatch bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlBatch={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBatch update(LafOlBatch bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlBatch={}) - entered bean ");
 
-        final LafOlBatch result = dao.update(bean);
+    final LafOlBatch result = dao.update(bean);
 
-        logger.info("update(LafOlBatch) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlBatch) - exited - return value={} result ");
+    return result;
+  }
 }

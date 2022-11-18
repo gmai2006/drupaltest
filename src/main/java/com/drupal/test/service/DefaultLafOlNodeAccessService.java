@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlNodeAccessDao;
 import com.drupal.test.entity.LafOlNodeAccess;
 import com.drupal.test.entity.LafOlNodeAccessId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlNodeAccessService")
 public class DefaultLafOlNodeAccessService implements LafOlNodeAccessService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlNodeAccessDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlNodeAccessDao dao;
 
-    @Inject
-    @Named("DefaultLafOlNodeAccessDao")
-    public DefaultLafOlNodeAccessService(final LafOlNodeAccessDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlNodeAccessDao")
+  public DefaultLafOlNodeAccessService(final LafOlNodeAccessDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeAccess find(LafOlNodeAccessId id) {
-        final LafOlNodeAccess result = dao.find(id);
-        logger.info("find(LafOlNodeAccess) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeAccess find(LafOlNodeAccessId id) {
+    final LafOlNodeAccess result = dao.find(id);
+    logger.info("find(LafOlNodeAccess) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeAccess> select(int maxResult) {
-        final List<LafOlNodeAccess> result = dao.select(maxResult);
-        logger.info("select(LafOlNodeAccess) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlNodeAccess> select(int maxResult) {
+    final List<LafOlNodeAccess> result = dao.select(maxResult);
+    logger.info("select(LafOlNodeAccess) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeAccess> selectAll() {
-        final List<LafOlNodeAccess> results = dao.selectAll();
-        logger.info("selectAll(LafOlNodeAccess) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlNodeAccess> selectAll() {
+    final List<LafOlNodeAccess> results = dao.selectAll();
+    logger.info("selectAll(LafOlNodeAccess) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeAccess create(LafOlNodeAccess bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlNodeAccess={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeAccess create(LafOlNodeAccess bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlNodeAccess={}) - entered bean ");
 
-        final LafOlNodeAccess result = dao.create(bean);
+    final LafOlNodeAccess result = dao.create(bean);
 
-        logger.info("create(LafOlNodeAccess) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlNodeAccess) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeAccess update(LafOlNodeAccess bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlNodeAccess={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeAccess update(LafOlNodeAccess bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlNodeAccess={}) - entered bean ");
 
-        final LafOlNodeAccess result = dao.update(bean);
+    final LafOlNodeAccess result = dao.update(bean);
 
-        logger.info("update(LafOlNodeAccess) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlNodeAccess) - exited - return value={} result ");
+    return result;
+  }
 }

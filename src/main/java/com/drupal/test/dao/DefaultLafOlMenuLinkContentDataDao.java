@@ -16,60 +16,63 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlMenuLinkContentData;
-import com.drupal.test.entity.LafOlMenuLinkContentDataId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlMenuLinkContentData;
+import com.drupal.test.entity.LafOlMenuLinkContentDataId;
 
 @Stateless
 @Named("DefaultLafOlMenuLinkContentDataDao")
 public class DefaultLafOlMenuLinkContentDataDao implements LafOlMenuLinkContentDataDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlMenuLinkContentDataDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlMenuLinkContentDataDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlMenuLinkContentDataDao() {}
+  public DefaultLafOlMenuLinkContentDataDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlMenuLinkContentData find(LafOlMenuLinkContentDataId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlMenuLinkContentData.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlMenuLinkContentData find(LafOlMenuLinkContentDataId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlMenuLinkContentData.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlMenuLinkContentData> select(int max) {
-        return dao.select(
-                "select a from LafOlMenuLinkContentData a", LafOlMenuLinkContentData.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlMenuLinkContentData> select(int max) {
+    return dao.select(
+        "select a from LafOlMenuLinkContentData a", LafOlMenuLinkContentData.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlMenuLinkContentData> selectAll() {
-        return dao.selectAll(
-                "select a from LafOlMenuLinkContentData a", LafOlMenuLinkContentData.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlMenuLinkContentData> selectAll() {
+    return dao.selectAll(
+        "select a from LafOlMenuLinkContentData a", LafOlMenuLinkContentData.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlMenuLinkContentData create(LafOlMenuLinkContentData e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlMenuLinkContentData create(LafOlMenuLinkContentData e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlMenuLinkContentData update(LafOlMenuLinkContentData e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlMenuLinkContentData update(LafOlMenuLinkContentData e) {
+    return dao.update(e);
+  }
 }

@@ -18,72 +18,73 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlNodeFieldData. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlNodeFieldData. generated on 11/17/2022 from a schema. */
 public class LafOlNodeFieldDataId implements Serializable {
-    private static final long serialVersionUID = 163445265064253663L;
+  private static final long serialVersionUID = 166875433039720015L;
 
-    @Column(name = "langcode")
-    private java.lang.String langcode;
+  @Column(name = "langcode")
+  private java.lang.String langcode;
 
-    @Column(name = "nid")
-    private java.lang.Integer nid;
+  @Column(name = "nid")
+  private java.lang.Integer nid;
 
-    /** Constructor: LafOlNodeFieldDataId. */
-    public LafOlNodeFieldDataId() {}
+  /** Constructor: LafOlNodeFieldDataId. */
+  public LafOlNodeFieldDataId() {}
 
-    /**
-     * Constructor: LafOlNodeFieldDataId.
-     *
-     * @param langcode - langcode.
-     * @param nid - nid.
-     */
-    public LafOlNodeFieldDataId(java.lang.String langcode, java.lang.Integer nid) {
-        this.langcode = langcode;
-        this.nid = nid;
-    }
+  /**
+   * Constructor: LafOlNodeFieldDataId.
+   *
+   * @param langcode - langcode.
+   * @param nid - nid.
+   */
+  public LafOlNodeFieldDataId(java.lang.String langcode, java.lang.Integer nid) {
+    this.langcode = langcode;
+    this.nid = nid;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.Integer getNid() {
-        return this.nid;
-    }
+  public java.lang.Integer getNid() {
+    return this.nid;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setNid(java.lang.Integer nid) {
-        this.nid = nid;
-    }
+  public void setNid(java.lang.Integer nid) {
+    this.nid = nid;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
-        result = prime * result + ((nid == null) ? 0 : nid.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
+    result = prime * result + ((nid == null) ? 0 : nid.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlNodeFieldDataId other = (LafOlNodeFieldDataId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlNodeFieldDataId other = (LafOlNodeFieldDataId) obj;
 
-        if (langcode == null) {
-            if (other.langcode != null) return false;
-        } else if (!langcode.equals(other.langcode)) return false;
+    if (langcode == null) {
+      if (other.langcode != null) return false;
+    } else if (!langcode.equals(other.langcode)) return false;
 
-        if (nid == null) {
-            if (other.nid != null) return false;
-        } else if (!nid.equals(other.nid)) return false;
+    if (nid == null) {
+      if (other.nid != null) return false;
+    } else if (!nid.equals(other.nid)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

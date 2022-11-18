@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlTaxonomyTermData;
 import com.drupal.test.entity.LafOlTaxonomyTermDataId;
-import java.util.List;
 
 public interface LafOlTaxonomyTermDataService {
-    public LafOlTaxonomyTermData find(LafOlTaxonomyTermDataId id);
-    /**
-     * Select a list of LafOlTaxonomyTermData based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlTaxonomyTermData records.
-     */
-    public List<LafOlTaxonomyTermData> select(int maxResult);
+  public LafOlTaxonomyTermData find(LafOlTaxonomyTermDataId id);
+  /**
+   * Select a list of LafOlTaxonomyTermData based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlTaxonomyTermData records.
+   */
+  public List<LafOlTaxonomyTermData> select(int maxResult);
 
-    /**
-     * Select all LafOlTaxonomyTermData.
-     *
-     * @return all LafOlTaxonomyTermData records.
-     */
-    public List<LafOlTaxonomyTermData> selectAll();
+  /**
+   * Select all LafOlTaxonomyTermData.
+   *
+   * @return all LafOlTaxonomyTermData records.
+   */
+  public List<LafOlTaxonomyTermData> selectAll();
 
-    /**
-     * Create LafOlTaxonomyTermData.
-     *
-     * @param bean The LafOlTaxonomyTermData.
-     * @return The LafOlTaxonomyTermData.
-     */
-    public LafOlTaxonomyTermData create(LafOlTaxonomyTermData bean);
+  /**
+   * Create LafOlTaxonomyTermData.
+   *
+   * @param bean The LafOlTaxonomyTermData.
+   * @return The LafOlTaxonomyTermData.
+   */
+  public LafOlTaxonomyTermData create(LafOlTaxonomyTermData bean);
 
-    /**
-     * Update a LafOlTaxonomyTermData.
-     *
-     * @param bean - The LafOlTaxonomyTermData.
-     * @return LafOlTaxonomyTermData.
-     */
-    public LafOlTaxonomyTermData update(LafOlTaxonomyTermData bean);
+  /**
+   * Update a LafOlTaxonomyTermData.
+   *
+   * @param bean - The LafOlTaxonomyTermData.
+   * @return LafOlTaxonomyTermData.
+   */
+  public LafOlTaxonomyTermData update(LafOlTaxonomyTermData bean);
 }

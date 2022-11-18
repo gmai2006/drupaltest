@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlComment;
 import com.drupal.test.entity.LafOlCommentId;
-import java.util.List;
 
 public interface LafOlCommentDao {
-    /**
-     * Retrieve all records LafOlComment.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlComment
-     */
-    public List<LafOlComment> select(int maxResult);
+  /**
+   * Retrieve all records LafOlComment.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlComment
+   */
+  public List<LafOlComment> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlComment.
-     *
-     * @return A list of LafOlComment
-     */
-    public List<LafOlComment> selectAll();
+  /**
+   * Retrieve all records LafOlComment.
+   *
+   * @return A list of LafOlComment
+   */
+  public List<LafOlComment> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlComment id.
-     * @return The same LafOlComment.
-     */
-    public LafOlComment find(LafOlCommentId id);
-    /**
-     * Create an LafOlComment.
-     *
-     * @param e the LafOlComment.
-     * @return The same LafOlComment.
-     */
-    public LafOlComment create(LafOlComment e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlComment id.
+   * @return The same LafOlComment.
+   */
+  public LafOlComment find(LafOlCommentId id);
+  /**
+   * Create an LafOlComment.
+   *
+   * @param e the LafOlComment.
+   * @return The same LafOlComment.
+   */
+  public LafOlComment create(LafOlComment e);
 
-    /**
-     * Update the LafOlComment.
-     *
-     * @param e the LafOlComment.
-     * @return The same LafOlComment.
-     */
-    public LafOlComment update(LafOlComment e);
+  /**
+   * Update the LafOlComment.
+   *
+   * @param e the LafOlComment.
+   * @return The same LafOlComment.
+   */
+  public LafOlComment update(LafOlComment e);
 }

@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCacheBootstrap;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheBootstrap;
 
 public interface LafOlCacheBootstrapDao {
-    /**
-     * Retrieve all records LafOlCacheBootstrap.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCacheBootstrap
-     */
-    public List<LafOlCacheBootstrap> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCacheBootstrap.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCacheBootstrap
+   */
+  public List<LafOlCacheBootstrap> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCacheBootstrap.
-     *
-     * @return A list of LafOlCacheBootstrap
-     */
-    public List<LafOlCacheBootstrap> selectAll();
+  /**
+   * Retrieve all records LafOlCacheBootstrap.
+   *
+   * @return A list of LafOlCacheBootstrap
+   */
+  public List<LafOlCacheBootstrap> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCacheBootstrap id.
-     * @return The same LafOlCacheBootstrap.
-     */
-    public LafOlCacheBootstrap find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCacheBootstrap id.
+   * @return The same LafOlCacheBootstrap.
+   */
+  public LafOlCacheBootstrap find(java.lang.String id);
 
-    /**
-     * Create an LafOlCacheBootstrap.
-     *
-     * @param e the LafOlCacheBootstrap.
-     * @return The same LafOlCacheBootstrap.
-     */
-    public LafOlCacheBootstrap create(LafOlCacheBootstrap e);
+  /**
+   * Create an LafOlCacheBootstrap.
+   *
+   * @param e the LafOlCacheBootstrap.
+   * @return The same LafOlCacheBootstrap.
+   */
+  public LafOlCacheBootstrap create(LafOlCacheBootstrap e);
 
-    /**
-     * Update the LafOlCacheBootstrap.
-     *
-     * @param e the LafOlCacheBootstrap.
-     * @return The same LafOlCacheBootstrap.
-     */
-    public LafOlCacheBootstrap update(LafOlCacheBootstrap e);
+  /**
+   * Update the LafOlCacheBootstrap.
+   *
+   * @param e the LafOlCacheBootstrap.
+   * @return The same LafOlCacheBootstrap.
+   */
+  public LafOlCacheBootstrap update(LafOlCacheBootstrap e);
 }

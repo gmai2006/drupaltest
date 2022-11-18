@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlBatch;
 import java.util.List;
+import com.drupal.test.entity.LafOlBatch;
 
 public interface LafOlBatchService {
-    public LafOlBatch find(java.lang.Integer id);
+  public LafOlBatch find(java.lang.Integer id);
 
-    /**
-     * Select a list of LafOlBatch based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlBatch records.
-     */
-    public List<LafOlBatch> select(int maxResult);
+  /**
+   * Select a list of LafOlBatch based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlBatch records.
+   */
+  public List<LafOlBatch> select(int maxResult);
 
-    /**
-     * Select all LafOlBatch.
-     *
-     * @return all LafOlBatch records.
-     */
-    public List<LafOlBatch> selectAll();
+  /**
+   * Select all LafOlBatch.
+   *
+   * @return all LafOlBatch records.
+   */
+  public List<LafOlBatch> selectAll();
 
-    /**
-     * Create LafOlBatch.
-     *
-     * @param bean The LafOlBatch.
-     * @return The LafOlBatch.
-     */
-    public LafOlBatch create(LafOlBatch bean);
+  /**
+   * Create LafOlBatch.
+   *
+   * @param bean The LafOlBatch.
+   * @return The LafOlBatch.
+   */
+  public LafOlBatch create(LafOlBatch bean);
 
-    /**
-     * Update a LafOlBatch.
-     *
-     * @param bean - The LafOlBatch.
-     * @return LafOlBatch.
-     */
-    public LafOlBatch update(LafOlBatch bean);
+  /**
+   * Update a LafOlBatch.
+   *
+   * @param bean - The LafOlBatch.
+   * @return LafOlBatch.
+   */
+  public LafOlBatch update(LafOlBatch bean);
 }

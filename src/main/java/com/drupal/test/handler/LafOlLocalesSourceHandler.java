@@ -16,45 +16,48 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlLocalesSource;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlLocalesSource;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlLocalesSourceHandler")
 public class LafOlLocalesSourceHandler extends DelimiterFileHandler<LafOlLocalesSource> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlLocalesSourceHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlLocalesSourceHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlLocalesSource parseLine(List<String> headers, List<String> tokens) {
+    LafOlLocalesSource record = new LafOlLocalesSource();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "lid":
+          record.setLid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "source":
+          record.setSource(java.lang.String.valueOf((tokens.get(i))));
+          break;
+        case "context":
+          record.setContext(tokens.get(i));
+          break;
+
+        case "version":
+          record.setVersion(tokens.get(i));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlLocalesSource parseLine(List<String> headers, List<String> tokens) {
-        LafOlLocalesSource record = new LafOlLocalesSource();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "lid":
-                    record.setLid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "source":
-                    record.setSource(java.lang.String.valueOf((tokens.get(i))));
-                    break;
-                case "context":
-                    record.setContext(tokens.get(i));
-                    break;
-
-                case "version":
-                    record.setVersion(tokens.get(i));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

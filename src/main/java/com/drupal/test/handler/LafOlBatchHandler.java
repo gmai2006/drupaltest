@@ -16,45 +16,48 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlBatch;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlBatch;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlBatchHandler")
 public class LafOlBatchHandler extends DelimiterFileHandler<LafOlBatch> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlBatchHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlBatchHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlBatch parseLine(List<String> headers, List<String> tokens) {
+    LafOlBatch record = new LafOlBatch();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "bid":
+          record.setBid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "token":
+          record.setToken(tokens.get(i));
+          break;
+
+        case "timestamp":
+          record.setTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "batch":
+          record.setBatch(tokens.get(i));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlBatch parseLine(List<String> headers, List<String> tokens) {
-        LafOlBatch record = new LafOlBatch();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "bid":
-                    record.setBid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "token":
-                    record.setToken(tokens.get(i));
-                    break;
-
-                case "timestamp":
-                    record.setTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "batch":
-                    record.setBatch(tokens.get(i));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

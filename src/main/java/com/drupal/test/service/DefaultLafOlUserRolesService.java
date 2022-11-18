@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlUserRolesDao;
 import com.drupal.test.entity.LafOlUserRoles;
 import com.drupal.test.entity.LafOlUserRolesId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlUserRolesService")
 public class DefaultLafOlUserRolesService implements LafOlUserRolesService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlUserRolesDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlUserRolesDao dao;
 
-    @Inject
-    @Named("DefaultLafOlUserRolesDao")
-    public DefaultLafOlUserRolesService(final LafOlUserRolesDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlUserRolesDao")
+  public DefaultLafOlUserRolesService(final LafOlUserRolesDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUserRoles find(LafOlUserRolesId id) {
-        final LafOlUserRoles result = dao.find(id);
-        logger.info("find(LafOlUserRoles) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUserRoles find(LafOlUserRolesId id) {
+    final LafOlUserRoles result = dao.find(id);
+    logger.info("find(LafOlUserRoles) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlUserRoles> select(int maxResult) {
-        final List<LafOlUserRoles> result = dao.select(maxResult);
-        logger.info("select(LafOlUserRoles) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlUserRoles> select(int maxResult) {
+    final List<LafOlUserRoles> result = dao.select(maxResult);
+    logger.info("select(LafOlUserRoles) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlUserRoles> selectAll() {
-        final List<LafOlUserRoles> results = dao.selectAll();
-        logger.info("selectAll(LafOlUserRoles) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlUserRoles> selectAll() {
+    final List<LafOlUserRoles> results = dao.selectAll();
+    logger.info("selectAll(LafOlUserRoles) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUserRoles create(LafOlUserRoles bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlUserRoles={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUserRoles create(LafOlUserRoles bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlUserRoles={}) - entered bean ");
 
-        final LafOlUserRoles result = dao.create(bean);
+    final LafOlUserRoles result = dao.create(bean);
 
-        logger.info("create(LafOlUserRoles) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlUserRoles) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUserRoles update(LafOlUserRoles bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlUserRoles={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUserRoles update(LafOlUserRoles bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlUserRoles={}) - entered bean ");
 
-        final LafOlUserRoles result = dao.update(bean);
+    final LafOlUserRoles result = dao.update(bean);
 
-        logger.info("update(LafOlUserRoles) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlUserRoles) - exited - return value={} result ");
+    return result;
+  }
 }

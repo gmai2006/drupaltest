@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeBody;
 import com.drupal.test.entity.LafOlNodeBodyId;
-import java.util.List;
 
 public interface LafOlNodeBodyDao {
-    /**
-     * Retrieve all records LafOlNodeBody.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlNodeBody
-     */
-    public List<LafOlNodeBody> select(int maxResult);
+  /**
+   * Retrieve all records LafOlNodeBody.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlNodeBody
+   */
+  public List<LafOlNodeBody> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlNodeBody.
-     *
-     * @return A list of LafOlNodeBody
-     */
-    public List<LafOlNodeBody> selectAll();
+  /**
+   * Retrieve all records LafOlNodeBody.
+   *
+   * @return A list of LafOlNodeBody
+   */
+  public List<LafOlNodeBody> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlNodeBody id.
-     * @return The same LafOlNodeBody.
-     */
-    public LafOlNodeBody find(LafOlNodeBodyId id);
-    /**
-     * Create an LafOlNodeBody.
-     *
-     * @param e the LafOlNodeBody.
-     * @return The same LafOlNodeBody.
-     */
-    public LafOlNodeBody create(LafOlNodeBody e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlNodeBody id.
+   * @return The same LafOlNodeBody.
+   */
+  public LafOlNodeBody find(LafOlNodeBodyId id);
+  /**
+   * Create an LafOlNodeBody.
+   *
+   * @param e the LafOlNodeBody.
+   * @return The same LafOlNodeBody.
+   */
+  public LafOlNodeBody create(LafOlNodeBody e);
 
-    /**
-     * Update the LafOlNodeBody.
-     *
-     * @param e the LafOlNodeBody.
-     * @return The same LafOlNodeBody.
-     */
-    public LafOlNodeBody update(LafOlNodeBody e);
+  /**
+   * Update the LafOlNodeBody.
+   *
+   * @param e the LafOlNodeBody.
+   * @return The same LafOlNodeBody.
+   */
+  public LafOlNodeBody update(LafOlNodeBody e);
 }

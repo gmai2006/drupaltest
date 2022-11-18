@@ -16,84 +16,84 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlSearchIndexId.class)
 @Table(name = "lafol_search_index")
 public class LafOlSearchIndex implements Serializable {
-    private static final long serialVersionUID = 163445265084419511L;
+  private static final long serialVersionUID = 166875433050641997L;
 
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "langcode")
-    private java.lang.String langcode;
-    /** Description: type. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "type")
-    private java.lang.String type;
-    /** Description: word. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "word")
-    private java.lang.String word;
-    /** Description: sid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "sid")
-    private java.lang.Integer sid;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "langcode")
+  private java.lang.String langcode;
+  /** Description: type. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "type")
+  private java.lang.String type;
+  /** Description: word. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "word")
+  private java.lang.String word;
+  /** Description: sid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "sid")
+  private java.lang.Integer sid;
 
-    /** Description: score. */
-    @Basic
-    @Column(name = "score")
-    private java.lang.Float score;
+  /** Description: score. */
+  @Basic
+  @Column(name = "score")
+  private java.lang.Float score;
 
-    public LafOlSearchIndex() {}
+  public LafOlSearchIndex() {}
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.String getType() {
-        return this.type;
-    }
+  public java.lang.String getType() {
+    return this.type;
+  }
 
-    public java.lang.String getWord() {
-        return this.word;
-    }
+  public java.lang.String getWord() {
+    return this.word;
+  }
 
-    public java.lang.Integer getSid() {
-        return this.sid;
-    }
+  public java.lang.Integer getSid() {
+    return this.sid;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setType(java.lang.String type) {
-        this.type = type;
-    }
+  public void setType(java.lang.String type) {
+    this.type = type;
+  }
 
-    public void setWord(java.lang.String word) {
-        this.word = word;
-    }
+  public void setWord(java.lang.String word) {
+    this.word = word;
+  }
 
-    public void setSid(java.lang.Integer sid) {
-        this.sid = sid;
-    }
+  public void setSid(java.lang.Integer sid) {
+    this.sid = sid;
+  }
 
-    public java.lang.Float getScore() {
-        return this.score;
-    }
+  public java.lang.Float getScore() {
+    return this.score;
+  }
 
-    public void setScore(java.lang.Float score) {
-        this.score = score;
-    }
+  public void setScore(java.lang.Float score) {
+    this.score = score;
+  }
 }

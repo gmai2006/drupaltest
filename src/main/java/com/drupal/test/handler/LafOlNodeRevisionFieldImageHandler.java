@@ -16,70 +16,73 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlNodeRevisionFieldImage;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlNodeRevisionFieldImage;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlNodeRevisionFieldImageHandler")
 public class LafOlNodeRevisionFieldImageHandler
-        extends DelimiterFileHandler<LafOlNodeRevisionFieldImage> {
+    extends DelimiterFileHandler<LafOlNodeRevisionFieldImage> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlNodeRevisionFieldImageHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlNodeRevisionFieldImageHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlNodeRevisionFieldImage parseLine(List<String> headers, List<String> tokens) {
+    LafOlNodeRevisionFieldImage record = new LafOlNodeRevisionFieldImage();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "bundle":
+          record.setBundle(tokens.get(i));
+          break;
+
+        case "deleted":
+          record.setDeleted(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "entityId":
+          record.setEntityId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionId":
+          record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "delta":
+          record.setDelta(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "fieldImageTargetId":
+          record.setFieldImageTargetId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "fieldImageAlt":
+          record.setFieldImageAlt(tokens.get(i));
+          break;
+
+        case "fieldImageTitle":
+          record.setFieldImageTitle(tokens.get(i));
+          break;
+
+        case "fieldImageWidth":
+          record.setFieldImageWidth(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "fieldImageHeight":
+          record.setFieldImageHeight(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlNodeRevisionFieldImage parseLine(List<String> headers, List<String> tokens) {
-        LafOlNodeRevisionFieldImage record = new LafOlNodeRevisionFieldImage();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "bundle":
-                    record.setBundle(tokens.get(i));
-                    break;
-
-                case "deleted":
-                    record.setDeleted(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "entityId":
-                    record.setEntityId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionId":
-                    record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "delta":
-                    record.setDelta(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "fieldImageTargetId":
-                    record.setFieldImageTargetId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "fieldImageAlt":
-                    record.setFieldImageAlt(tokens.get(i));
-                    break;
-
-                case "fieldImageTitle":
-                    record.setFieldImageTitle(tokens.get(i));
-                    break;
-
-                case "fieldImageWidth":
-                    record.setFieldImageWidth(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "fieldImageHeight":
-                    record.setFieldImageHeight(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

@@ -18,72 +18,73 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlFileManaged. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlFileManaged. generated on 11/17/2022 from a schema. */
 public class LafOlFileManagedId implements Serializable {
-    private static final long serialVersionUID = 163445265029451269L;
+  private static final long serialVersionUID = 166875433018662959L;
 
-    @Column(name = "fid")
-    private java.lang.Integer fid;
+  @Column(name = "fid")
+  private java.lang.Integer fid;
 
-    @Column(name = "uuid")
-    private java.lang.String uuid;
+  @Column(name = "uuid")
+  private java.lang.String uuid;
 
-    /** Constructor: LafOlFileManagedId. */
-    public LafOlFileManagedId() {}
+  /** Constructor: LafOlFileManagedId. */
+  public LafOlFileManagedId() {}
 
-    /**
-     * Constructor: LafOlFileManagedId.
-     *
-     * @param fid - fid.
-     * @param uuid - uuid.
-     */
-    public LafOlFileManagedId(java.lang.Integer fid, java.lang.String uuid) {
-        this.fid = fid;
-        this.uuid = uuid;
-    }
+  /**
+   * Constructor: LafOlFileManagedId.
+   *
+   * @param fid - fid.
+   * @param uuid - uuid.
+   */
+  public LafOlFileManagedId(java.lang.Integer fid, java.lang.String uuid) {
+    this.fid = fid;
+    this.uuid = uuid;
+  }
 
-    public java.lang.Integer getFid() {
-        return this.fid;
-    }
+  public java.lang.Integer getFid() {
+    return this.fid;
+  }
 
-    public java.lang.String getUuid() {
-        return this.uuid;
-    }
+  public java.lang.String getUuid() {
+    return this.uuid;
+  }
 
-    public void setFid(java.lang.Integer fid) {
-        this.fid = fid;
-    }
+  public void setFid(java.lang.Integer fid) {
+    this.fid = fid;
+  }
 
-    public void setUuid(java.lang.String uuid) {
-        this.uuid = uuid;
-    }
+  public void setUuid(java.lang.String uuid) {
+    this.uuid = uuid;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((fid == null) ? 0 : fid.hashCode());
-        result = prime * result + ((uuid == null) ? 0 : uuid.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((fid == null) ? 0 : fid.hashCode());
+    result = prime * result + ((uuid == null) ? 0 : uuid.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlFileManagedId other = (LafOlFileManagedId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlFileManagedId other = (LafOlFileManagedId) obj;
 
-        if (fid == null) {
-            if (other.fid != null) return false;
-        } else if (!fid.equals(other.fid)) return false;
+    if (fid == null) {
+      if (other.fid != null) return false;
+    } else if (!fid.equals(other.fid)) return false;
 
-        if (uuid == null) {
-            if (other.uuid != null) return false;
-        } else if (!uuid.equals(other.uuid)) return false;
+    if (uuid == null) {
+      if (other.uuid != null) return false;
+    } else if (!uuid.equals(other.uuid)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

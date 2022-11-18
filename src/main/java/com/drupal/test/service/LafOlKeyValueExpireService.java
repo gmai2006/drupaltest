@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlKeyValueExpire;
 import com.drupal.test.entity.LafOlKeyValueExpireId;
-import java.util.List;
 
 public interface LafOlKeyValueExpireService {
-    public LafOlKeyValueExpire find(LafOlKeyValueExpireId id);
-    /**
-     * Select a list of LafOlKeyValueExpire based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlKeyValueExpire records.
-     */
-    public List<LafOlKeyValueExpire> select(int maxResult);
+  public LafOlKeyValueExpire find(LafOlKeyValueExpireId id);
+  /**
+   * Select a list of LafOlKeyValueExpire based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlKeyValueExpire records.
+   */
+  public List<LafOlKeyValueExpire> select(int maxResult);
 
-    /**
-     * Select all LafOlKeyValueExpire.
-     *
-     * @return all LafOlKeyValueExpire records.
-     */
-    public List<LafOlKeyValueExpire> selectAll();
+  /**
+   * Select all LafOlKeyValueExpire.
+   *
+   * @return all LafOlKeyValueExpire records.
+   */
+  public List<LafOlKeyValueExpire> selectAll();
 
-    /**
-     * Create LafOlKeyValueExpire.
-     *
-     * @param bean The LafOlKeyValueExpire.
-     * @return The LafOlKeyValueExpire.
-     */
-    public LafOlKeyValueExpire create(LafOlKeyValueExpire bean);
+  /**
+   * Create LafOlKeyValueExpire.
+   *
+   * @param bean The LafOlKeyValueExpire.
+   * @return The LafOlKeyValueExpire.
+   */
+  public LafOlKeyValueExpire create(LafOlKeyValueExpire bean);
 
-    /**
-     * Update a LafOlKeyValueExpire.
-     *
-     * @param bean - The LafOlKeyValueExpire.
-     * @return LafOlKeyValueExpire.
-     */
-    public LafOlKeyValueExpire update(LafOlKeyValueExpire bean);
+  /**
+   * Update a LafOlKeyValueExpire.
+   *
+   * @param bean - The LafOlKeyValueExpire.
+   * @return LafOlKeyValueExpire.
+   */
+  public LafOlKeyValueExpire update(LafOlKeyValueExpire bean);
 }

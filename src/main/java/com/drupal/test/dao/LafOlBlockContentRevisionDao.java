@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlBlockContentRevision;
 import java.util.List;
+import com.drupal.test.entity.LafOlBlockContentRevision;
 
 public interface LafOlBlockContentRevisionDao {
-    /**
-     * Retrieve all records LafOlBlockContentRevision.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlBlockContentRevision
-     */
-    public List<LafOlBlockContentRevision> select(int maxResult);
+  /**
+   * Retrieve all records LafOlBlockContentRevision.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlBlockContentRevision
+   */
+  public List<LafOlBlockContentRevision> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlBlockContentRevision.
-     *
-     * @return A list of LafOlBlockContentRevision
-     */
-    public List<LafOlBlockContentRevision> selectAll();
+  /**
+   * Retrieve all records LafOlBlockContentRevision.
+   *
+   * @return A list of LafOlBlockContentRevision
+   */
+  public List<LafOlBlockContentRevision> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlBlockContentRevision id.
-     * @return The same LafOlBlockContentRevision.
-     */
-    public LafOlBlockContentRevision find(java.lang.Integer id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlBlockContentRevision id.
+   * @return The same LafOlBlockContentRevision.
+   */
+  public LafOlBlockContentRevision find(java.lang.Integer id);
 
-    /**
-     * Create an LafOlBlockContentRevision.
-     *
-     * @param e the LafOlBlockContentRevision.
-     * @return The same LafOlBlockContentRevision.
-     */
-    public LafOlBlockContentRevision create(LafOlBlockContentRevision e);
+  /**
+   * Create an LafOlBlockContentRevision.
+   *
+   * @param e the LafOlBlockContentRevision.
+   * @return The same LafOlBlockContentRevision.
+   */
+  public LafOlBlockContentRevision create(LafOlBlockContentRevision e);
 
-    /**
-     * Update the LafOlBlockContentRevision.
-     *
-     * @param e the LafOlBlockContentRevision.
-     * @return The same LafOlBlockContentRevision.
-     */
-    public LafOlBlockContentRevision update(LafOlBlockContentRevision e);
+  /**
+   * Update the LafOlBlockContentRevision.
+   *
+   * @param e the LafOlBlockContentRevision.
+   * @return The same LafOlBlockContentRevision.
+   */
+  public LafOlBlockContentRevision update(LafOlBlockContentRevision e);
 }

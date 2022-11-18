@@ -16,12 +16,11 @@
  */
 package com.drupal.test.dao;
 
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.io.IOException;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
-import com.drupal.test.entity.LafOlLocalesTarget;
-import com.drupal.test.entity.LafOlLocalesTargetId;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.IOException;
@@ -33,52 +32,54 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import com.drupal.test.entity.LafOlLocalesTarget;
+import com.drupal.test.entity.LafOlLocalesTargetId;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
 
 public class LafOlLocalesTargetDaoTestIt {
-    static final String inputFile = "LafOlLocalesTarget.json";
-    static LafOlLocalesTargetDao dao;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlLocalesTarget[] records;
+  static final String inputFile = "LafOlLocalesTarget.json";
+  static LafOlLocalesTargetDao dao;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlLocalesTarget[] records;
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void beforeClass() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
-        JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
-        dao = new DefaultLafOlLocalesTargetDao(jpa);
-    }
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void beforeClass() {
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
+    dao = new DefaultLafOlLocalesTargetDao(jpa);
+  }
 
-    /** Run before the test. */
-    @Before
-    public void before() {
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlLocalesTarget[].class);
-            json = null;
-            Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+  /** Run before the test. */
+  @Before
+  public void before() {
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlLocalesTarget[].class);
+      json = null;
+      Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
+  }
 
-    @After
-    public void after() {
-        records = null;
-    }
+  @After
+  public void after() {
+    records = null;
+  }
 
-    @Test
-    public void testSelect() {
-        final LafOlLocalesTargetId id =
-                new LafOlLocalesTargetId(this.records[1].getLid(), this.records[1].getLanguage());
-        LafOlLocalesTarget testResult = dao.find(id);
-        assertNotNull("expect result", testResult);
-        org.junit.Assert.assertTrue(
-                "expect equals customized ",
-                this.records[1].getCustomized() == testResult.getCustomized());
-    }
+  @Test
+  public void testSelect() {
+    final LafOlLocalesTargetId id =
+        new LafOlLocalesTargetId(this.records[1].getLid(), this.records[1].getLanguage());
+    LafOlLocalesTarget testResult = dao.find(id);
+    assertNotNull("expect result", testResult);
+    org.junit.Assert.assertTrue(
+        "expect equals customized ", this.records[1].getCustomized() == testResult.getCustomized());
+  }
 }

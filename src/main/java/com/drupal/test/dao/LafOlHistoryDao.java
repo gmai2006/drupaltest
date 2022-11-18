@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlHistory;
 import com.drupal.test.entity.LafOlHistoryId;
-import java.util.List;
 
 public interface LafOlHistoryDao {
-    /**
-     * Retrieve all records LafOlHistory.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlHistory
-     */
-    public List<LafOlHistory> select(int maxResult);
+  /**
+   * Retrieve all records LafOlHistory.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlHistory
+   */
+  public List<LafOlHistory> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlHistory.
-     *
-     * @return A list of LafOlHistory
-     */
-    public List<LafOlHistory> selectAll();
+  /**
+   * Retrieve all records LafOlHistory.
+   *
+   * @return A list of LafOlHistory
+   */
+  public List<LafOlHistory> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlHistory id.
-     * @return The same LafOlHistory.
-     */
-    public LafOlHistory find(LafOlHistoryId id);
-    /**
-     * Create an LafOlHistory.
-     *
-     * @param e the LafOlHistory.
-     * @return The same LafOlHistory.
-     */
-    public LafOlHistory create(LafOlHistory e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlHistory id.
+   * @return The same LafOlHistory.
+   */
+  public LafOlHistory find(LafOlHistoryId id);
+  /**
+   * Create an LafOlHistory.
+   *
+   * @param e the LafOlHistory.
+   * @return The same LafOlHistory.
+   */
+  public LafOlHistory create(LafOlHistory e);
 
-    /**
-     * Update the LafOlHistory.
-     *
-     * @param e the LafOlHistory.
-     * @return The same LafOlHistory.
-     */
-    public LafOlHistory update(LafOlHistory e);
+  /**
+   * Update the LafOlHistory.
+   *
+   * @param e the LafOlHistory.
+   * @return The same LafOlHistory.
+   */
+  public LafOlHistory update(LafOlHistory e);
 }

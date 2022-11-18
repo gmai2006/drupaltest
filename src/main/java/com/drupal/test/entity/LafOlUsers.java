@@ -16,59 +16,59 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlUsersId.class)
 @Table(name = "lafol_users")
 public class LafOlUsers implements Serializable {
-    private static final long serialVersionUID = 163445265110184882L;
+  private static final long serialVersionUID = 166875433070297540L;
 
-    /** Description: uid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "uid")
-    private java.lang.Integer uid;
-    /** Description: uuid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "uuid")
-    private java.lang.String uuid;
+  /** Description: uid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "uid")
+  private java.lang.Integer uid;
+  /** Description: uuid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "uuid")
+  private java.lang.String uuid;
 
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "langcode", length = 12)
-    private java.lang.String langcode;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "langcode", length = 12)
+  private java.lang.String langcode;
 
-    public LafOlUsers() {}
+  public LafOlUsers() {}
 
-    public java.lang.Integer getUid() {
-        return this.uid;
-    }
+  public java.lang.Integer getUid() {
+    return this.uid;
+  }
 
-    public java.lang.String getUuid() {
-        return this.uuid;
-    }
+  public java.lang.String getUuid() {
+    return this.uuid;
+  }
 
-    public void setUid(java.lang.Integer uid) {
-        this.uid = uid;
-    }
+  public void setUid(java.lang.Integer uid) {
+    this.uid = uid;
+  }
 
-    public void setUuid(java.lang.String uuid) {
-        this.uuid = uuid;
-    }
+  public void setUuid(java.lang.String uuid) {
+    this.uuid = uuid;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 }

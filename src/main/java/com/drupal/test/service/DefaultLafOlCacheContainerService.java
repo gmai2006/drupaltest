@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlCacheContainerDao;
-import com.drupal.test.entity.LafOlCacheContainer;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlCacheContainerDao;
+import com.drupal.test.entity.LafOlCacheContainer;
 
 @Stateless
 @Named("DefaultLafOlCacheContainerService")
 public class DefaultLafOlCacheContainerService implements LafOlCacheContainerService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlCacheContainerDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlCacheContainerDao dao;
 
-    @Inject
-    @Named("DefaultLafOlCacheContainerDao")
-    public DefaultLafOlCacheContainerService(final LafOlCacheContainerDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlCacheContainerDao")
+  public DefaultLafOlCacheContainerService(final LafOlCacheContainerDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheContainer find(java.lang.String id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheContainer find(java.lang.String id) {
 
-        final LafOlCacheContainer result = dao.find(id);
-        logger.info("find(LafOlCacheContainer) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlCacheContainer result = dao.find(id);
+    logger.info("find(LafOlCacheContainer) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCacheContainer> select(int maxResult) {
-        final List<LafOlCacheContainer> result = dao.select(maxResult);
-        logger.info("select(LafOlCacheContainer) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlCacheContainer> select(int maxResult) {
+    final List<LafOlCacheContainer> result = dao.select(maxResult);
+    logger.info("select(LafOlCacheContainer) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCacheContainer> selectAll() {
-        final List<LafOlCacheContainer> results = dao.selectAll();
-        logger.info("selectAll(LafOlCacheContainer) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlCacheContainer> selectAll() {
+    final List<LafOlCacheContainer> results = dao.selectAll();
+    logger.info("selectAll(LafOlCacheContainer) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheContainer create(LafOlCacheContainer bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlCacheContainer={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheContainer create(LafOlCacheContainer bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlCacheContainer={}) - entered bean ");
 
-        final LafOlCacheContainer result = dao.create(bean);
+    final LafOlCacheContainer result = dao.create(bean);
 
-        logger.info("create(LafOlCacheContainer) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlCacheContainer) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheContainer update(LafOlCacheContainer bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlCacheContainer={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheContainer update(LafOlCacheContainer bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlCacheContainer={}) - entered bean ");
 
-        final LafOlCacheContainer result = dao.update(bean);
+    final LafOlCacheContainer result = dao.update(bean);
 
-        logger.info("update(LafOlCacheContainer) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlCacheContainer) - exited - return value={} result ");
+    return result;
+  }
 }

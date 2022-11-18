@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlTaxonomyTermFieldDataDao;
 import com.drupal.test.entity.LafOlTaxonomyTermFieldData;
 import com.drupal.test.entity.LafOlTaxonomyTermFieldDataId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlTaxonomyTermFieldDataService")
 public class DefaultLafOlTaxonomyTermFieldDataService implements LafOlTaxonomyTermFieldDataService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlTaxonomyTermFieldDataDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlTaxonomyTermFieldDataDao dao;
 
-    @Inject
-    @Named("DefaultLafOlTaxonomyTermFieldDataDao")
-    public DefaultLafOlTaxonomyTermFieldDataService(final LafOlTaxonomyTermFieldDataDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlTaxonomyTermFieldDataDao")
+  public DefaultLafOlTaxonomyTermFieldDataService(final LafOlTaxonomyTermFieldDataDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlTaxonomyTermFieldData find(LafOlTaxonomyTermFieldDataId id) {
-        final LafOlTaxonomyTermFieldData result = dao.find(id);
-        logger.info("find(LafOlTaxonomyTermFieldData) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlTaxonomyTermFieldData find(LafOlTaxonomyTermFieldDataId id) {
+    final LafOlTaxonomyTermFieldData result = dao.find(id);
+    logger.info("find(LafOlTaxonomyTermFieldData) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlTaxonomyTermFieldData> select(int maxResult) {
-        final List<LafOlTaxonomyTermFieldData> result = dao.select(maxResult);
-        logger.info("select(LafOlTaxonomyTermFieldData) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlTaxonomyTermFieldData> select(int maxResult) {
+    final List<LafOlTaxonomyTermFieldData> result = dao.select(maxResult);
+    logger.info("select(LafOlTaxonomyTermFieldData) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlTaxonomyTermFieldData> selectAll() {
-        final List<LafOlTaxonomyTermFieldData> results = dao.selectAll();
-        logger.info("selectAll(LafOlTaxonomyTermFieldData) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlTaxonomyTermFieldData> selectAll() {
+    final List<LafOlTaxonomyTermFieldData> results = dao.selectAll();
+    logger.info("selectAll(LafOlTaxonomyTermFieldData) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlTaxonomyTermFieldData create(LafOlTaxonomyTermFieldData bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlTaxonomyTermFieldData={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlTaxonomyTermFieldData create(LafOlTaxonomyTermFieldData bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlTaxonomyTermFieldData={}) - entered bean ");
 
-        final LafOlTaxonomyTermFieldData result = dao.create(bean);
+    final LafOlTaxonomyTermFieldData result = dao.create(bean);
 
-        logger.info("create(LafOlTaxonomyTermFieldData) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlTaxonomyTermFieldData) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlTaxonomyTermFieldData update(LafOlTaxonomyTermFieldData bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlTaxonomyTermFieldData={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlTaxonomyTermFieldData update(LafOlTaxonomyTermFieldData bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlTaxonomyTermFieldData={}) - entered bean ");
 
-        final LafOlTaxonomyTermFieldData result = dao.update(bean);
+    final LafOlTaxonomyTermFieldData result = dao.update(bean);
 
-        logger.info("update(LafOlTaxonomyTermFieldData) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlTaxonomyTermFieldData) - exited - return value={} result ");
+    return result;
+  }
 }

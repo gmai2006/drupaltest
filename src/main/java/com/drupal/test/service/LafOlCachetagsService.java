@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlCachetags;
 import java.util.List;
+import com.drupal.test.entity.LafOlCachetags;
 
 public interface LafOlCachetagsService {
-    public LafOlCachetags find(java.lang.String id);
+  public LafOlCachetags find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlCachetags based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCachetags records.
-     */
-    public List<LafOlCachetags> select(int maxResult);
+  /**
+   * Select a list of LafOlCachetags based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCachetags records.
+   */
+  public List<LafOlCachetags> select(int maxResult);
 
-    /**
-     * Select all LafOlCachetags.
-     *
-     * @return all LafOlCachetags records.
-     */
-    public List<LafOlCachetags> selectAll();
+  /**
+   * Select all LafOlCachetags.
+   *
+   * @return all LafOlCachetags records.
+   */
+  public List<LafOlCachetags> selectAll();
 
-    /**
-     * Create LafOlCachetags.
-     *
-     * @param bean The LafOlCachetags.
-     * @return The LafOlCachetags.
-     */
-    public LafOlCachetags create(LafOlCachetags bean);
+  /**
+   * Create LafOlCachetags.
+   *
+   * @param bean The LafOlCachetags.
+   * @return The LafOlCachetags.
+   */
+  public LafOlCachetags create(LafOlCachetags bean);
 
-    /**
-     * Update a LafOlCachetags.
-     *
-     * @param bean - The LafOlCachetags.
-     * @return LafOlCachetags.
-     */
-    public LafOlCachetags update(LafOlCachetags bean);
+  /**
+   * Update a LafOlCachetags.
+   *
+   * @param bean - The LafOlCachetags.
+   * @return LafOlCachetags.
+   */
+  public LafOlCachetags update(LafOlCachetags bean);
 }

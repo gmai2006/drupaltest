@@ -16,145 +16,145 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlTaxonomyTermFieldRevisionId.class)
 @Table(name = "lafol_taxonomy_term_field_revision")
 public class LafOlTaxonomyTermFieldRevision implements Serializable {
-    private static final long serialVersionUID = 163445265100262753L;
+  private static final long serialVersionUID = 166875433063386626L;
 
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "langcode")
-    private java.lang.String langcode;
-    /** Description: revision_id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "revision_id")
-    private java.lang.Integer revisionId;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "langcode")
+  private java.lang.String langcode;
+  /** Description: revision_id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "revision_id")
+  private java.lang.Integer revisionId;
 
-    /** Description: tid. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "tid")
-    private java.lang.Integer tid;
-    /** Description: status. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "status")
-    private java.lang.Integer status;
-    /** Description: name. */
-    @Basic
-    @Column(name = "name", length = 255)
-    private java.lang.String name;
-    /** Description: description__value. */
-    @Basic
-    @Column(name = "description__value", length = 0)
-    private java.lang.String descriptionValue;
-    /** Description: description__format. */
-    @Basic
-    @Column(name = "description__format", length = 255)
-    private java.lang.String descriptionFormat;
-    /** Description: changed. */
-    @Basic
-    @Column(name = "changed")
-    private java.lang.Integer changed;
-    /** Description: default_langcode. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "default_langcode")
-    private java.lang.Integer defaultLangcode;
-    /** Description: revision_translation_affected. */
-    @Basic
-    @Column(name = "revision_translation_affected")
-    private java.lang.Integer revisionTranslationAffected;
+  /** Description: tid. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "tid")
+  private java.lang.Integer tid;
+  /** Description: status. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "status")
+  private java.lang.Integer status;
+  /** Description: name. */
+  @Basic
+  @Column(name = "name", length = 255)
+  private java.lang.String name;
+  /** Description: description__value. */
+  @Basic
+  @Column(name = "description__value", length = 0)
+  private java.lang.String descriptionValue;
+  /** Description: description__format. */
+  @Basic
+  @Column(name = "description__format", length = 255)
+  private java.lang.String descriptionFormat;
+  /** Description: changed. */
+  @Basic
+  @Column(name = "changed")
+  private java.lang.Integer changed;
+  /** Description: default_langcode. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "default_langcode")
+  private java.lang.Integer defaultLangcode;
+  /** Description: revision_translation_affected. */
+  @Basic
+  @Column(name = "revision_translation_affected")
+  private java.lang.Integer revisionTranslationAffected;
 
-    public LafOlTaxonomyTermFieldRevision() {}
+  public LafOlTaxonomyTermFieldRevision() {}
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.Integer getRevisionId() {
-        return this.revisionId;
-    }
+  public java.lang.Integer getRevisionId() {
+    return this.revisionId;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setRevisionId(java.lang.Integer revisionId) {
-        this.revisionId = revisionId;
-    }
+  public void setRevisionId(java.lang.Integer revisionId) {
+    this.revisionId = revisionId;
+  }
 
-    public java.lang.Integer getTid() {
-        return this.tid;
-    }
+  public java.lang.Integer getTid() {
+    return this.tid;
+  }
 
-    public java.lang.Integer getStatus() {
-        return this.status;
-    }
+  public java.lang.Integer getStatus() {
+    return this.status;
+  }
 
-    public java.lang.String getName() {
-        return this.name;
-    }
+  public java.lang.String getName() {
+    return this.name;
+  }
 
-    public java.lang.String getDescriptionValue() {
-        return this.descriptionValue;
-    }
+  public java.lang.String getDescriptionValue() {
+    return this.descriptionValue;
+  }
 
-    public java.lang.String getDescriptionFormat() {
-        return this.descriptionFormat;
-    }
+  public java.lang.String getDescriptionFormat() {
+    return this.descriptionFormat;
+  }
 
-    public java.lang.Integer getChanged() {
-        return this.changed;
-    }
+  public java.lang.Integer getChanged() {
+    return this.changed;
+  }
 
-    public java.lang.Integer getDefaultLangcode() {
-        return this.defaultLangcode;
-    }
+  public java.lang.Integer getDefaultLangcode() {
+    return this.defaultLangcode;
+  }
 
-    public java.lang.Integer getRevisionTranslationAffected() {
-        return this.revisionTranslationAffected;
-    }
+  public java.lang.Integer getRevisionTranslationAffected() {
+    return this.revisionTranslationAffected;
+  }
 
-    public void setTid(java.lang.Integer tid) {
-        this.tid = tid;
-    }
+  public void setTid(java.lang.Integer tid) {
+    this.tid = tid;
+  }
 
-    public void setStatus(java.lang.Integer status) {
-        this.status = status;
-    }
+  public void setStatus(java.lang.Integer status) {
+    this.status = status;
+  }
 
-    public void setName(java.lang.String name) {
-        this.name = name;
-    }
+  public void setName(java.lang.String name) {
+    this.name = name;
+  }
 
-    public void setDescriptionValue(java.lang.String descriptionValue) {
-        this.descriptionValue = descriptionValue;
-    }
+  public void setDescriptionValue(java.lang.String descriptionValue) {
+    this.descriptionValue = descriptionValue;
+  }
 
-    public void setDescriptionFormat(java.lang.String descriptionFormat) {
-        this.descriptionFormat = descriptionFormat;
-    }
+  public void setDescriptionFormat(java.lang.String descriptionFormat) {
+    this.descriptionFormat = descriptionFormat;
+  }
 
-    public void setChanged(java.lang.Integer changed) {
-        this.changed = changed;
-    }
+  public void setChanged(java.lang.Integer changed) {
+    this.changed = changed;
+  }
 
-    public void setDefaultLangcode(java.lang.Integer defaultLangcode) {
-        this.defaultLangcode = defaultLangcode;
-    }
+  public void setDefaultLangcode(java.lang.Integer defaultLangcode) {
+    this.defaultLangcode = defaultLangcode;
+  }
 
-    public void setRevisionTranslationAffected(java.lang.Integer revisionTranslationAffected) {
-        this.revisionTranslationAffected = revisionTranslationAffected;
-    }
+  public void setRevisionTranslationAffected(java.lang.Integer revisionTranslationAffected) {
+    this.revisionTranslationAffected = revisionTranslationAffected;
+  }
 }

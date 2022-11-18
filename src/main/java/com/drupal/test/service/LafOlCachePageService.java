@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlCachePage;
 import java.util.List;
+import com.drupal.test.entity.LafOlCachePage;
 
 public interface LafOlCachePageService {
-    public LafOlCachePage find(java.lang.String id);
+  public LafOlCachePage find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlCachePage based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCachePage records.
-     */
-    public List<LafOlCachePage> select(int maxResult);
+  /**
+   * Select a list of LafOlCachePage based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCachePage records.
+   */
+  public List<LafOlCachePage> select(int maxResult);
 
-    /**
-     * Select all LafOlCachePage.
-     *
-     * @return all LafOlCachePage records.
-     */
-    public List<LafOlCachePage> selectAll();
+  /**
+   * Select all LafOlCachePage.
+   *
+   * @return all LafOlCachePage records.
+   */
+  public List<LafOlCachePage> selectAll();
 
-    /**
-     * Create LafOlCachePage.
-     *
-     * @param bean The LafOlCachePage.
-     * @return The LafOlCachePage.
-     */
-    public LafOlCachePage create(LafOlCachePage bean);
+  /**
+   * Create LafOlCachePage.
+   *
+   * @param bean The LafOlCachePage.
+   * @return The LafOlCachePage.
+   */
+  public LafOlCachePage create(LafOlCachePage bean);
 
-    /**
-     * Update a LafOlCachePage.
-     *
-     * @param bean - The LafOlCachePage.
-     * @return LafOlCachePage.
-     */
-    public LafOlCachePage update(LafOlCachePage bean);
+  /**
+   * Update a LafOlCachePage.
+   *
+   * @param bean - The LafOlCachePage.
+   * @return LafOlCachePage.
+   */
+  public LafOlCachePage update(LafOlCachePage bean);
 }

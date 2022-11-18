@@ -16,85 +16,85 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlBlockContentId.class)
 @Table(name = "lafol_block_content")
 public class LafOlBlockContent implements Serializable {
-    private static final long serialVersionUID = 163445264992861993L;
+  private static final long serialVersionUID = 166875433000345555L;
 
-    /** Description: id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "id")
-    private java.lang.Integer id;
-    /** Description: uuid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "uuid")
-    private java.lang.String uuid;
-    /** Description: revision_id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "revision_id")
-    private java.lang.Integer revisionId;
+  /** Description: id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "id")
+  private java.lang.Integer id;
+  /** Description: uuid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "uuid")
+  private java.lang.String uuid;
+  /** Description: revision_id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "revision_id")
+  private java.lang.Integer revisionId;
 
-    /** Description: type. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "type", length = 32)
-    private java.lang.String type;
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "langcode", length = 12)
-    private java.lang.String langcode;
+  /** Description: type. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "type", length = 32)
+  private java.lang.String type;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "langcode", length = 12)
+  private java.lang.String langcode;
 
-    public LafOlBlockContent() {}
+  public LafOlBlockContent() {}
 
-    public java.lang.Integer getId() {
-        return this.id;
-    }
+  public java.lang.Integer getId() {
+    return this.id;
+  }
 
-    public java.lang.String getUuid() {
-        return this.uuid;
-    }
+  public java.lang.String getUuid() {
+    return this.uuid;
+  }
 
-    public java.lang.Integer getRevisionId() {
-        return this.revisionId;
-    }
+  public java.lang.Integer getRevisionId() {
+    return this.revisionId;
+  }
 
-    public void setId(java.lang.Integer id) {
-        this.id = id;
-    }
+  public void setId(java.lang.Integer id) {
+    this.id = id;
+  }
 
-    public void setUuid(java.lang.String uuid) {
-        this.uuid = uuid;
-    }
+  public void setUuid(java.lang.String uuid) {
+    this.uuid = uuid;
+  }
 
-    public void setRevisionId(java.lang.Integer revisionId) {
-        this.revisionId = revisionId;
-    }
+  public void setRevisionId(java.lang.Integer revisionId) {
+    this.revisionId = revisionId;
+  }
 
-    public java.lang.String getType() {
-        return this.type;
-    }
+  public java.lang.String getType() {
+    return this.type;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public void setType(java.lang.String type) {
-        this.type = type;
-    }
+  public void setType(java.lang.String type) {
+    this.type = type;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 }

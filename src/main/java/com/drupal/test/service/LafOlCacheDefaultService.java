@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlCacheDefault;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheDefault;
 
 public interface LafOlCacheDefaultService {
-    public LafOlCacheDefault find(java.lang.String id);
+  public LafOlCacheDefault find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlCacheDefault based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCacheDefault records.
-     */
-    public List<LafOlCacheDefault> select(int maxResult);
+  /**
+   * Select a list of LafOlCacheDefault based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCacheDefault records.
+   */
+  public List<LafOlCacheDefault> select(int maxResult);
 
-    /**
-     * Select all LafOlCacheDefault.
-     *
-     * @return all LafOlCacheDefault records.
-     */
-    public List<LafOlCacheDefault> selectAll();
+  /**
+   * Select all LafOlCacheDefault.
+   *
+   * @return all LafOlCacheDefault records.
+   */
+  public List<LafOlCacheDefault> selectAll();
 
-    /**
-     * Create LafOlCacheDefault.
-     *
-     * @param bean The LafOlCacheDefault.
-     * @return The LafOlCacheDefault.
-     */
-    public LafOlCacheDefault create(LafOlCacheDefault bean);
+  /**
+   * Create LafOlCacheDefault.
+   *
+   * @param bean The LafOlCacheDefault.
+   * @return The LafOlCacheDefault.
+   */
+  public LafOlCacheDefault create(LafOlCacheDefault bean);
 
-    /**
-     * Update a LafOlCacheDefault.
-     *
-     * @param bean - The LafOlCacheDefault.
-     * @return LafOlCacheDefault.
-     */
-    public LafOlCacheDefault update(LafOlCacheDefault bean);
+  /**
+   * Update a LafOlCacheDefault.
+   *
+   * @param bean - The LafOlCacheDefault.
+   * @return LafOlCacheDefault.
+   */
+  public LafOlCacheDefault update(LafOlCacheDefault bean);
 }

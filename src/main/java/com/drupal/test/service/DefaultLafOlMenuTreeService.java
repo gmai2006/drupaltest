@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlMenuTreeDao;
 import com.drupal.test.entity.LafOlMenuTree;
 import com.drupal.test.entity.LafOlMenuTreeId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlMenuTreeService")
 public class DefaultLafOlMenuTreeService implements LafOlMenuTreeService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlMenuTreeDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlMenuTreeDao dao;
 
-    @Inject
-    @Named("DefaultLafOlMenuTreeDao")
-    public DefaultLafOlMenuTreeService(final LafOlMenuTreeDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlMenuTreeDao")
+  public DefaultLafOlMenuTreeService(final LafOlMenuTreeDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlMenuTree find(LafOlMenuTreeId id) {
-        final LafOlMenuTree result = dao.find(id);
-        logger.info("find(LafOlMenuTree) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlMenuTree find(LafOlMenuTreeId id) {
+    final LafOlMenuTree result = dao.find(id);
+    logger.info("find(LafOlMenuTree) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlMenuTree> select(int maxResult) {
-        final List<LafOlMenuTree> result = dao.select(maxResult);
-        logger.info("select(LafOlMenuTree) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlMenuTree> select(int maxResult) {
+    final List<LafOlMenuTree> result = dao.select(maxResult);
+    logger.info("select(LafOlMenuTree) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlMenuTree> selectAll() {
-        final List<LafOlMenuTree> results = dao.selectAll();
-        logger.info("selectAll(LafOlMenuTree) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlMenuTree> selectAll() {
+    final List<LafOlMenuTree> results = dao.selectAll();
+    logger.info("selectAll(LafOlMenuTree) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlMenuTree create(LafOlMenuTree bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlMenuTree={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlMenuTree create(LafOlMenuTree bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlMenuTree={}) - entered bean ");
 
-        final LafOlMenuTree result = dao.create(bean);
+    final LafOlMenuTree result = dao.create(bean);
 
-        logger.info("create(LafOlMenuTree) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlMenuTree) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlMenuTree update(LafOlMenuTree bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlMenuTree={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlMenuTree update(LafOlMenuTree bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlMenuTree={}) - entered bean ");
 
-        final LafOlMenuTree result = dao.update(bean);
+    final LafOlMenuTree result = dao.update(bean);
 
-        logger.info("update(LafOlMenuTree) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlMenuTree) - exited - return value={} result ");
+    return result;
+  }
 }

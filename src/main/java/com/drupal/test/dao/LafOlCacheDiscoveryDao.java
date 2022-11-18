@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCacheDiscovery;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheDiscovery;
 
 public interface LafOlCacheDiscoveryDao {
-    /**
-     * Retrieve all records LafOlCacheDiscovery.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCacheDiscovery
-     */
-    public List<LafOlCacheDiscovery> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCacheDiscovery.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCacheDiscovery
+   */
+  public List<LafOlCacheDiscovery> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCacheDiscovery.
-     *
-     * @return A list of LafOlCacheDiscovery
-     */
-    public List<LafOlCacheDiscovery> selectAll();
+  /**
+   * Retrieve all records LafOlCacheDiscovery.
+   *
+   * @return A list of LafOlCacheDiscovery
+   */
+  public List<LafOlCacheDiscovery> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCacheDiscovery id.
-     * @return The same LafOlCacheDiscovery.
-     */
-    public LafOlCacheDiscovery find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCacheDiscovery id.
+   * @return The same LafOlCacheDiscovery.
+   */
+  public LafOlCacheDiscovery find(java.lang.String id);
 
-    /**
-     * Create an LafOlCacheDiscovery.
-     *
-     * @param e the LafOlCacheDiscovery.
-     * @return The same LafOlCacheDiscovery.
-     */
-    public LafOlCacheDiscovery create(LafOlCacheDiscovery e);
+  /**
+   * Create an LafOlCacheDiscovery.
+   *
+   * @param e the LafOlCacheDiscovery.
+   * @return The same LafOlCacheDiscovery.
+   */
+  public LafOlCacheDiscovery create(LafOlCacheDiscovery e);
 
-    /**
-     * Update the LafOlCacheDiscovery.
-     *
-     * @param e the LafOlCacheDiscovery.
-     * @return The same LafOlCacheDiscovery.
-     */
-    public LafOlCacheDiscovery update(LafOlCacheDiscovery e);
+  /**
+   * Update the LafOlCacheDiscovery.
+   *
+   * @param e the LafOlCacheDiscovery.
+   * @return The same LafOlCacheDiscovery.
+   */
+  public LafOlCacheDiscovery update(LafOlCacheDiscovery e);
 }

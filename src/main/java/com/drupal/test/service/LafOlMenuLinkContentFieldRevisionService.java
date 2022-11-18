@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlMenuLinkContentFieldRevision;
 import com.drupal.test.entity.LafOlMenuLinkContentFieldRevisionId;
-import java.util.List;
 
 public interface LafOlMenuLinkContentFieldRevisionService {
-    public LafOlMenuLinkContentFieldRevision find(LafOlMenuLinkContentFieldRevisionId id);
-    /**
-     * Select a list of LafOlMenuLinkContentFieldRevision based on a given maximum number of
-     * returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlMenuLinkContentFieldRevision records.
-     */
-    public List<LafOlMenuLinkContentFieldRevision> select(int maxResult);
+  public LafOlMenuLinkContentFieldRevision find(LafOlMenuLinkContentFieldRevisionId id);
+  /**
+   * Select a list of LafOlMenuLinkContentFieldRevision based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlMenuLinkContentFieldRevision records.
+   */
+  public List<LafOlMenuLinkContentFieldRevision> select(int maxResult);
 
-    /**
-     * Select all LafOlMenuLinkContentFieldRevision.
-     *
-     * @return all LafOlMenuLinkContentFieldRevision records.
-     */
-    public List<LafOlMenuLinkContentFieldRevision> selectAll();
+  /**
+   * Select all LafOlMenuLinkContentFieldRevision.
+   *
+   * @return all LafOlMenuLinkContentFieldRevision records.
+   */
+  public List<LafOlMenuLinkContentFieldRevision> selectAll();
 
-    /**
-     * Create LafOlMenuLinkContentFieldRevision.
-     *
-     * @param bean The LafOlMenuLinkContentFieldRevision.
-     * @return The LafOlMenuLinkContentFieldRevision.
-     */
-    public LafOlMenuLinkContentFieldRevision create(LafOlMenuLinkContentFieldRevision bean);
+  /**
+   * Create LafOlMenuLinkContentFieldRevision.
+   *
+   * @param bean The LafOlMenuLinkContentFieldRevision.
+   * @return The LafOlMenuLinkContentFieldRevision.
+   */
+  public LafOlMenuLinkContentFieldRevision create(LafOlMenuLinkContentFieldRevision bean);
 
-    /**
-     * Update a LafOlMenuLinkContentFieldRevision.
-     *
-     * @param bean - The LafOlMenuLinkContentFieldRevision.
-     * @return LafOlMenuLinkContentFieldRevision.
-     */
-    public LafOlMenuLinkContentFieldRevision update(LafOlMenuLinkContentFieldRevision bean);
+  /**
+   * Update a LafOlMenuLinkContentFieldRevision.
+   *
+   * @param bean - The LafOlMenuLinkContentFieldRevision.
+   * @return LafOlMenuLinkContentFieldRevision.
+   */
+  public LafOlMenuLinkContentFieldRevision update(LafOlMenuLinkContentFieldRevision bean);
 }

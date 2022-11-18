@@ -16,58 +16,61 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlFileManaged;
-import com.drupal.test.entity.LafOlFileManagedId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlFileManaged;
+import com.drupal.test.entity.LafOlFileManagedId;
 
 @Stateless
 @Named("DefaultLafOlFileManagedDao")
 public class DefaultLafOlFileManagedDao implements LafOlFileManagedDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlFileManagedDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlFileManagedDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlFileManagedDao() {}
+  public DefaultLafOlFileManagedDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlFileManaged find(LafOlFileManagedId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlFileManaged.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlFileManaged find(LafOlFileManagedId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlFileManaged.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlFileManaged> select(int max) {
-        return dao.select("select a from LafOlFileManaged a", LafOlFileManaged.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlFileManaged> select(int max) {
+    return dao.select("select a from LafOlFileManaged a", LafOlFileManaged.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlFileManaged> selectAll() {
-        return dao.selectAll("select a from LafOlFileManaged a", LafOlFileManaged.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlFileManaged> selectAll() {
+    return dao.selectAll("select a from LafOlFileManaged a", LafOlFileManaged.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlFileManaged create(LafOlFileManaged e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlFileManaged create(LafOlFileManaged e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlFileManaged update(LafOlFileManaged e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlFileManaged update(LafOlFileManaged e) {
+    return dao.update(e);
+  }
 }

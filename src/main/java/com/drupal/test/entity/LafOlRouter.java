@@ -16,95 +16,95 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @Table(name = "lafol_router")
 public class LafOlRouter implements Serializable {
-    private static final long serialVersionUID = 163445265078552655L;
+  private static final long serialVersionUID = 166875433048288123L;
 
-    /** Description: name. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "name")
-    private java.lang.String name;
+  /** Description: name. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "name")
+  private java.lang.String name;
 
-    /** Description: path. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "path", length = 255)
-    private java.lang.String path;
-    /** Description: pattern_outline. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "pattern_outline", length = 255)
-    private java.lang.String patternOutline;
-    /** Description: fit. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "fit")
-    private java.lang.Integer fit;
-    /** Description: route. */
-    @Basic
-    @Column(name = "route", length = 0)
-    private java.lang.String route;
-    /** Description: number_parts. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "number_parts")
-    private java.lang.Integer numberParts;
+  /** Description: path. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "path", length = 255)
+  private java.lang.String path;
+  /** Description: pattern_outline. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "pattern_outline", length = 255)
+  private java.lang.String patternOutline;
+  /** Description: fit. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "fit")
+  private java.lang.Integer fit;
+  /** Description: route. */
+  @Basic
+  @Column(name = "route", length = 0)
+  private java.lang.String route;
+  /** Description: number_parts. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "number_parts")
+  private java.lang.Integer numberParts;
 
-    public LafOlRouter() {}
+  public LafOlRouter() {}
 
-    public java.lang.String getName() {
-        return this.name;
-    }
+  public java.lang.String getName() {
+    return this.name;
+  }
 
-    public void setName(java.lang.String name) {
-        this.name = name;
-    }
+  public void setName(java.lang.String name) {
+    this.name = name;
+  }
 
-    public java.lang.String getPath() {
-        return this.path;
-    }
+  public java.lang.String getPath() {
+    return this.path;
+  }
 
-    public java.lang.String getPatternOutline() {
-        return this.patternOutline;
-    }
+  public java.lang.String getPatternOutline() {
+    return this.patternOutline;
+  }
 
-    public java.lang.Integer getFit() {
-        return this.fit;
-    }
+  public java.lang.Integer getFit() {
+    return this.fit;
+  }
 
-    public java.lang.String getRoute() {
-        return this.route;
-    }
+  public java.lang.String getRoute() {
+    return this.route;
+  }
 
-    public java.lang.Integer getNumberParts() {
-        return this.numberParts;
-    }
+  public java.lang.Integer getNumberParts() {
+    return this.numberParts;
+  }
 
-    public void setPath(java.lang.String path) {
-        this.path = path;
-    }
+  public void setPath(java.lang.String path) {
+    this.path = path;
+  }
 
-    public void setPatternOutline(java.lang.String patternOutline) {
-        this.patternOutline = patternOutline;
-    }
+  public void setPatternOutline(java.lang.String patternOutline) {
+    this.patternOutline = patternOutline;
+  }
 
-    public void setFit(java.lang.Integer fit) {
-        this.fit = fit;
-    }
+  public void setFit(java.lang.Integer fit) {
+    this.fit = fit;
+  }
 
-    public void setRoute(java.lang.String route) {
-        this.route = route;
-    }
+  public void setRoute(java.lang.String route) {
+    this.route = route;
+  }
 
-    public void setNumberParts(java.lang.Integer numberParts) {
-        this.numberParts = numberParts;
-    }
+  public void setNumberParts(java.lang.Integer numberParts) {
+    this.numberParts = numberParts;
+  }
 }

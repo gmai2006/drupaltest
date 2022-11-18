@@ -16,85 +16,85 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlSearchDatasetId.class)
 @Table(name = "lafol_search_dataset")
 public class LafOlSearchDataset implements Serializable {
-    private static final long serialVersionUID = 163445265080134816L;
+  private static final long serialVersionUID = 166875433049288440L;
 
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "langcode")
-    private java.lang.String langcode;
-    /** Description: type. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "type")
-    private java.lang.String type;
-    /** Description: sid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "sid")
-    private java.lang.Integer sid;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "langcode")
+  private java.lang.String langcode;
+  /** Description: type. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "type")
+  private java.lang.String type;
+  /** Description: sid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "sid")
+  private java.lang.Integer sid;
 
-    /** Description: data. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "data", length = 0)
-    private java.lang.String data;
-    /** Description: reindex. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "reindex")
-    private java.lang.Integer reindex;
+  /** Description: data. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "data", length = 0)
+  private java.lang.String data;
+  /** Description: reindex. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "reindex")
+  private java.lang.Integer reindex;
 
-    public LafOlSearchDataset() {}
+  public LafOlSearchDataset() {}
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.String getType() {
-        return this.type;
-    }
+  public java.lang.String getType() {
+    return this.type;
+  }
 
-    public java.lang.Integer getSid() {
-        return this.sid;
-    }
+  public java.lang.Integer getSid() {
+    return this.sid;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setType(java.lang.String type) {
-        this.type = type;
-    }
+  public void setType(java.lang.String type) {
+    this.type = type;
+  }
 
-    public void setSid(java.lang.Integer sid) {
-        this.sid = sid;
-    }
+  public void setSid(java.lang.Integer sid) {
+    this.sid = sid;
+  }
 
-    public java.lang.String getData() {
-        return this.data;
-    }
+  public java.lang.String getData() {
+    return this.data;
+  }
 
-    public java.lang.Integer getReindex() {
-        return this.reindex;
-    }
+  public java.lang.Integer getReindex() {
+    return this.reindex;
+  }
 
-    public void setData(java.lang.String data) {
-        this.data = data;
-    }
+  public void setData(java.lang.String data) {
+    this.data = data;
+  }
 
-    public void setReindex(java.lang.Integer reindex) {
-        this.reindex = reindex;
-    }
+  public void setReindex(java.lang.Integer reindex) {
+    this.reindex = reindex;
+  }
 }

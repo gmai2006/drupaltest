@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlUserUserPicture;
 import com.drupal.test.entity.LafOlUserUserPictureId;
-import java.util.List;
 
 public interface LafOlUserUserPictureService {
-    public LafOlUserUserPicture find(LafOlUserUserPictureId id);
-    /**
-     * Select a list of LafOlUserUserPicture based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlUserUserPicture records.
-     */
-    public List<LafOlUserUserPicture> select(int maxResult);
+  public LafOlUserUserPicture find(LafOlUserUserPictureId id);
+  /**
+   * Select a list of LafOlUserUserPicture based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlUserUserPicture records.
+   */
+  public List<LafOlUserUserPicture> select(int maxResult);
 
-    /**
-     * Select all LafOlUserUserPicture.
-     *
-     * @return all LafOlUserUserPicture records.
-     */
-    public List<LafOlUserUserPicture> selectAll();
+  /**
+   * Select all LafOlUserUserPicture.
+   *
+   * @return all LafOlUserUserPicture records.
+   */
+  public List<LafOlUserUserPicture> selectAll();
 
-    /**
-     * Create LafOlUserUserPicture.
-     *
-     * @param bean The LafOlUserUserPicture.
-     * @return The LafOlUserUserPicture.
-     */
-    public LafOlUserUserPicture create(LafOlUserUserPicture bean);
+  /**
+   * Create LafOlUserUserPicture.
+   *
+   * @param bean The LafOlUserUserPicture.
+   * @return The LafOlUserUserPicture.
+   */
+  public LafOlUserUserPicture create(LafOlUserUserPicture bean);
 
-    /**
-     * Update a LafOlUserUserPicture.
-     *
-     * @param bean - The LafOlUserUserPicture.
-     * @return LafOlUserUserPicture.
-     */
-    public LafOlUserUserPicture update(LafOlUserUserPicture bean);
+  /**
+   * Update a LafOlUserUserPicture.
+   *
+   * @param bean - The LafOlUserUserPicture.
+   * @return LafOlUserUserPicture.
+   */
+  public LafOlUserUserPicture update(LafOlUserUserPicture bean);
 }

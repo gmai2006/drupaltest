@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeFieldImage;
 import com.drupal.test.entity.LafOlNodeFieldImageId;
-import java.util.List;
 
 public interface LafOlNodeFieldImageDao {
-    /**
-     * Retrieve all records LafOlNodeFieldImage.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlNodeFieldImage
-     */
-    public List<LafOlNodeFieldImage> select(int maxResult);
+  /**
+   * Retrieve all records LafOlNodeFieldImage.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlNodeFieldImage
+   */
+  public List<LafOlNodeFieldImage> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlNodeFieldImage.
-     *
-     * @return A list of LafOlNodeFieldImage
-     */
-    public List<LafOlNodeFieldImage> selectAll();
+  /**
+   * Retrieve all records LafOlNodeFieldImage.
+   *
+   * @return A list of LafOlNodeFieldImage
+   */
+  public List<LafOlNodeFieldImage> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlNodeFieldImage id.
-     * @return The same LafOlNodeFieldImage.
-     */
-    public LafOlNodeFieldImage find(LafOlNodeFieldImageId id);
-    /**
-     * Create an LafOlNodeFieldImage.
-     *
-     * @param e the LafOlNodeFieldImage.
-     * @return The same LafOlNodeFieldImage.
-     */
-    public LafOlNodeFieldImage create(LafOlNodeFieldImage e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlNodeFieldImage id.
+   * @return The same LafOlNodeFieldImage.
+   */
+  public LafOlNodeFieldImage find(LafOlNodeFieldImageId id);
+  /**
+   * Create an LafOlNodeFieldImage.
+   *
+   * @param e the LafOlNodeFieldImage.
+   * @return The same LafOlNodeFieldImage.
+   */
+  public LafOlNodeFieldImage create(LafOlNodeFieldImage e);
 
-    /**
-     * Update the LafOlNodeFieldImage.
-     *
-     * @param e the LafOlNodeFieldImage.
-     * @return The same LafOlNodeFieldImage.
-     */
-    public LafOlNodeFieldImage update(LafOlNodeFieldImage e);
+  /**
+   * Update the LafOlNodeFieldImage.
+   *
+   * @param e the LafOlNodeFieldImage.
+   * @return The same LafOlNodeFieldImage.
+   */
+  public LafOlNodeFieldImage update(LafOlNodeFieldImage e);
 }

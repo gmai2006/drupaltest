@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlSearchTotalDao;
-import com.drupal.test.entity.LafOlSearchTotal;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlSearchTotalDao;
+import com.drupal.test.entity.LafOlSearchTotal;
 
 @Stateless
 @Named("DefaultLafOlSearchTotalService")
 public class DefaultLafOlSearchTotalService implements LafOlSearchTotalService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlSearchTotalDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlSearchTotalDao dao;
 
-    @Inject
-    @Named("DefaultLafOlSearchTotalDao")
-    public DefaultLafOlSearchTotalService(final LafOlSearchTotalDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlSearchTotalDao")
+  public DefaultLafOlSearchTotalService(final LafOlSearchTotalDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSearchTotal find(java.lang.String id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSearchTotal find(java.lang.String id) {
 
-        final LafOlSearchTotal result = dao.find(id);
-        logger.info("find(LafOlSearchTotal) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlSearchTotal result = dao.find(id);
+    logger.info("find(LafOlSearchTotal) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlSearchTotal> select(int maxResult) {
-        final List<LafOlSearchTotal> result = dao.select(maxResult);
-        logger.info("select(LafOlSearchTotal) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlSearchTotal> select(int maxResult) {
+    final List<LafOlSearchTotal> result = dao.select(maxResult);
+    logger.info("select(LafOlSearchTotal) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlSearchTotal> selectAll() {
-        final List<LafOlSearchTotal> results = dao.selectAll();
-        logger.info("selectAll(LafOlSearchTotal) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlSearchTotal> selectAll() {
+    final List<LafOlSearchTotal> results = dao.selectAll();
+    logger.info("selectAll(LafOlSearchTotal) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSearchTotal create(LafOlSearchTotal bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlSearchTotal={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSearchTotal create(LafOlSearchTotal bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlSearchTotal={}) - entered bean ");
 
-        final LafOlSearchTotal result = dao.create(bean);
+    final LafOlSearchTotal result = dao.create(bean);
 
-        logger.info("create(LafOlSearchTotal) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlSearchTotal) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSearchTotal update(LafOlSearchTotal bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlSearchTotal={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSearchTotal update(LafOlSearchTotal bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlSearchTotal={}) - entered bean ");
 
-        final LafOlSearchTotal result = dao.update(bean);
+    final LafOlSearchTotal result = dao.update(bean);
 
-        logger.info("update(LafOlSearchTotal) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlSearchTotal) - exited - return value={} result ");
+    return result;
+  }
 }

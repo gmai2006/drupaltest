@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlLocalesSource;
 import java.util.List;
+import com.drupal.test.entity.LafOlLocalesSource;
 
 public interface LafOlLocalesSourceDao {
-    /**
-     * Retrieve all records LafOlLocalesSource.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlLocalesSource
-     */
-    public List<LafOlLocalesSource> select(int maxResult);
+  /**
+   * Retrieve all records LafOlLocalesSource.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlLocalesSource
+   */
+  public List<LafOlLocalesSource> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlLocalesSource.
-     *
-     * @return A list of LafOlLocalesSource
-     */
-    public List<LafOlLocalesSource> selectAll();
+  /**
+   * Retrieve all records LafOlLocalesSource.
+   *
+   * @return A list of LafOlLocalesSource
+   */
+  public List<LafOlLocalesSource> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlLocalesSource id.
-     * @return The same LafOlLocalesSource.
-     */
-    public LafOlLocalesSource find(java.lang.Integer id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlLocalesSource id.
+   * @return The same LafOlLocalesSource.
+   */
+  public LafOlLocalesSource find(java.lang.Integer id);
 
-    /**
-     * Create an LafOlLocalesSource.
-     *
-     * @param e the LafOlLocalesSource.
-     * @return The same LafOlLocalesSource.
-     */
-    public LafOlLocalesSource create(LafOlLocalesSource e);
+  /**
+   * Create an LafOlLocalesSource.
+   *
+   * @param e the LafOlLocalesSource.
+   * @return The same LafOlLocalesSource.
+   */
+  public LafOlLocalesSource create(LafOlLocalesSource e);
 
-    /**
-     * Update the LafOlLocalesSource.
-     *
-     * @param e the LafOlLocalesSource.
-     * @return The same LafOlLocalesSource.
-     */
-    public LafOlLocalesSource update(LafOlLocalesSource e);
+  /**
+   * Update the LafOlLocalesSource.
+   *
+   * @param e the LafOlLocalesSource.
+   * @return The same LafOlLocalesSource.
+   */
+  public LafOlLocalesSource update(LafOlLocalesSource e);
 }

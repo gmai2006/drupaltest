@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlFileManaged;
 import com.drupal.test.entity.LafOlFileManagedId;
-import java.util.List;
 
 public interface LafOlFileManagedDao {
-    /**
-     * Retrieve all records LafOlFileManaged.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlFileManaged
-     */
-    public List<LafOlFileManaged> select(int maxResult);
+  /**
+   * Retrieve all records LafOlFileManaged.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlFileManaged
+   */
+  public List<LafOlFileManaged> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlFileManaged.
-     *
-     * @return A list of LafOlFileManaged
-     */
-    public List<LafOlFileManaged> selectAll();
+  /**
+   * Retrieve all records LafOlFileManaged.
+   *
+   * @return A list of LafOlFileManaged
+   */
+  public List<LafOlFileManaged> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlFileManaged id.
-     * @return The same LafOlFileManaged.
-     */
-    public LafOlFileManaged find(LafOlFileManagedId id);
-    /**
-     * Create an LafOlFileManaged.
-     *
-     * @param e the LafOlFileManaged.
-     * @return The same LafOlFileManaged.
-     */
-    public LafOlFileManaged create(LafOlFileManaged e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlFileManaged id.
+   * @return The same LafOlFileManaged.
+   */
+  public LafOlFileManaged find(LafOlFileManagedId id);
+  /**
+   * Create an LafOlFileManaged.
+   *
+   * @param e the LafOlFileManaged.
+   * @return The same LafOlFileManaged.
+   */
+  public LafOlFileManaged create(LafOlFileManaged e);
 
-    /**
-     * Update the LafOlFileManaged.
-     *
-     * @param e the LafOlFileManaged.
-     * @return The same LafOlFileManaged.
-     */
-    public LafOlFileManaged update(LafOlFileManaged e);
+  /**
+   * Update the LafOlFileManaged.
+   *
+   * @param e the LafOlFileManaged.
+   * @return The same LafOlFileManaged.
+   */
+  public LafOlFileManaged update(LafOlFileManaged e);
 }

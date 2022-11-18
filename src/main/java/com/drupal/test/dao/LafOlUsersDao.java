@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlUsers;
 import com.drupal.test.entity.LafOlUsersId;
-import java.util.List;
 
 public interface LafOlUsersDao {
-    /**
-     * Retrieve all records LafOlUsers.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlUsers
-     */
-    public List<LafOlUsers> select(int maxResult);
+  /**
+   * Retrieve all records LafOlUsers.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlUsers
+   */
+  public List<LafOlUsers> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlUsers.
-     *
-     * @return A list of LafOlUsers
-     */
-    public List<LafOlUsers> selectAll();
+  /**
+   * Retrieve all records LafOlUsers.
+   *
+   * @return A list of LafOlUsers
+   */
+  public List<LafOlUsers> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlUsers id.
-     * @return The same LafOlUsers.
-     */
-    public LafOlUsers find(LafOlUsersId id);
-    /**
-     * Create an LafOlUsers.
-     *
-     * @param e the LafOlUsers.
-     * @return The same LafOlUsers.
-     */
-    public LafOlUsers create(LafOlUsers e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlUsers id.
+   * @return The same LafOlUsers.
+   */
+  public LafOlUsers find(LafOlUsersId id);
+  /**
+   * Create an LafOlUsers.
+   *
+   * @param e the LafOlUsers.
+   * @return The same LafOlUsers.
+   */
+  public LafOlUsers create(LafOlUsers e);
 
-    /**
-     * Update the LafOlUsers.
-     *
-     * @param e the LafOlUsers.
-     * @return The same LafOlUsers.
-     */
-    public LafOlUsers update(LafOlUsers e);
+  /**
+   * Update the LafOlUsers.
+   *
+   * @param e the LafOlUsers.
+   * @return The same LafOlUsers.
+   */
+  public LafOlUsers update(LafOlUsers e);
 }

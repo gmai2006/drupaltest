@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlShortcutDao;
 import com.drupal.test.entity.LafOlShortcut;
 import com.drupal.test.entity.LafOlShortcutId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlShortcutService")
 public class DefaultLafOlShortcutService implements LafOlShortcutService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlShortcutDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlShortcutDao dao;
 
-    @Inject
-    @Named("DefaultLafOlShortcutDao")
-    public DefaultLafOlShortcutService(final LafOlShortcutDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlShortcutDao")
+  public DefaultLafOlShortcutService(final LafOlShortcutDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlShortcut find(LafOlShortcutId id) {
-        final LafOlShortcut result = dao.find(id);
-        logger.info("find(LafOlShortcut) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlShortcut find(LafOlShortcutId id) {
+    final LafOlShortcut result = dao.find(id);
+    logger.info("find(LafOlShortcut) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlShortcut> select(int maxResult) {
-        final List<LafOlShortcut> result = dao.select(maxResult);
-        logger.info("select(LafOlShortcut) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlShortcut> select(int maxResult) {
+    final List<LafOlShortcut> result = dao.select(maxResult);
+    logger.info("select(LafOlShortcut) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlShortcut> selectAll() {
-        final List<LafOlShortcut> results = dao.selectAll();
-        logger.info("selectAll(LafOlShortcut) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlShortcut> selectAll() {
+    final List<LafOlShortcut> results = dao.selectAll();
+    logger.info("selectAll(LafOlShortcut) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlShortcut create(LafOlShortcut bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlShortcut={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlShortcut create(LafOlShortcut bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlShortcut={}) - entered bean ");
 
-        final LafOlShortcut result = dao.create(bean);
+    final LafOlShortcut result = dao.create(bean);
 
-        logger.info("create(LafOlShortcut) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlShortcut) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlShortcut update(LafOlShortcut bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlShortcut={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlShortcut update(LafOlShortcut bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlShortcut={}) - entered bean ");
 
-        final LafOlShortcut result = dao.update(bean);
+    final LafOlShortcut result = dao.update(bean);
 
-        logger.info("update(LafOlShortcut) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlShortcut) - exited - return value={} result ");
+    return result;
+  }
 }

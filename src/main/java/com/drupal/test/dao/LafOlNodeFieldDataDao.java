@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeFieldData;
 import com.drupal.test.entity.LafOlNodeFieldDataId;
-import java.util.List;
 
 public interface LafOlNodeFieldDataDao {
-    /**
-     * Retrieve all records LafOlNodeFieldData.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlNodeFieldData
-     */
-    public List<LafOlNodeFieldData> select(int maxResult);
+  /**
+   * Retrieve all records LafOlNodeFieldData.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlNodeFieldData
+   */
+  public List<LafOlNodeFieldData> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlNodeFieldData.
-     *
-     * @return A list of LafOlNodeFieldData
-     */
-    public List<LafOlNodeFieldData> selectAll();
+  /**
+   * Retrieve all records LafOlNodeFieldData.
+   *
+   * @return A list of LafOlNodeFieldData
+   */
+  public List<LafOlNodeFieldData> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlNodeFieldData id.
-     * @return The same LafOlNodeFieldData.
-     */
-    public LafOlNodeFieldData find(LafOlNodeFieldDataId id);
-    /**
-     * Create an LafOlNodeFieldData.
-     *
-     * @param e the LafOlNodeFieldData.
-     * @return The same LafOlNodeFieldData.
-     */
-    public LafOlNodeFieldData create(LafOlNodeFieldData e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlNodeFieldData id.
+   * @return The same LafOlNodeFieldData.
+   */
+  public LafOlNodeFieldData find(LafOlNodeFieldDataId id);
+  /**
+   * Create an LafOlNodeFieldData.
+   *
+   * @param e the LafOlNodeFieldData.
+   * @return The same LafOlNodeFieldData.
+   */
+  public LafOlNodeFieldData create(LafOlNodeFieldData e);
 
-    /**
-     * Update the LafOlNodeFieldData.
-     *
-     * @param e the LafOlNodeFieldData.
-     * @return The same LafOlNodeFieldData.
-     */
-    public LafOlNodeFieldData update(LafOlNodeFieldData e);
+  /**
+   * Update the LafOlNodeFieldData.
+   *
+   * @param e the LafOlNodeFieldData.
+   * @return The same LafOlNodeFieldData.
+   */
+  public LafOlNodeFieldData update(LafOlNodeFieldData e);
 }

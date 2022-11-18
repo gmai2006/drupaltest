@@ -16,60 +16,62 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlTaxonomyTermParent;
-import com.drupal.test.entity.LafOlTaxonomyTermParentId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlTaxonomyTermParent;
+import com.drupal.test.entity.LafOlTaxonomyTermParentId;
 
 @Stateless
 @Named("DefaultLafOlTaxonomyTermParentDao")
 public class DefaultLafOlTaxonomyTermParentDao implements LafOlTaxonomyTermParentDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlTaxonomyTermParentDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlTaxonomyTermParentDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlTaxonomyTermParentDao() {}
+  public DefaultLafOlTaxonomyTermParentDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlTaxonomyTermParent find(LafOlTaxonomyTermParentId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlTaxonomyTermParent.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlTaxonomyTermParent find(LafOlTaxonomyTermParentId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlTaxonomyTermParent.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlTaxonomyTermParent> select(int max) {
-        return dao.select(
-                "select a from LafOlTaxonomyTermParent a", LafOlTaxonomyTermParent.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlTaxonomyTermParent> select(int max) {
+    return dao.select(
+        "select a from LafOlTaxonomyTermParent a", LafOlTaxonomyTermParent.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlTaxonomyTermParent> selectAll() {
-        return dao.selectAll(
-                "select a from LafOlTaxonomyTermParent a", LafOlTaxonomyTermParent.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlTaxonomyTermParent> selectAll() {
+    return dao.selectAll("select a from LafOlTaxonomyTermParent a", LafOlTaxonomyTermParent.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlTaxonomyTermParent create(LafOlTaxonomyTermParent e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlTaxonomyTermParent create(LafOlTaxonomyTermParent e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlTaxonomyTermParent update(LafOlTaxonomyTermParent e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlTaxonomyTermParent update(LafOlTaxonomyTermParent e) {
+    return dao.update(e);
+  }
 }

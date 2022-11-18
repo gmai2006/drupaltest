@@ -16,12 +16,11 @@
  */
 package com.drupal.test.dao;
 
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.io.IOException;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
-import com.drupal.test.entity.LafOlNodeRevisionBody;
-import com.drupal.test.entity.LafOlNodeRevisionBodyId;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.IOException;
@@ -33,68 +32,67 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import com.drupal.test.entity.LafOlNodeRevisionBody;
+import com.drupal.test.entity.LafOlNodeRevisionBodyId;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
 
 public class LafOlNodeRevisionBodyDaoTestIt {
-    static final String inputFile = "LafOlNodeRevisionBody.json";
-    static LafOlNodeRevisionBodyDao dao;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlNodeRevisionBody[] records;
+  static final String inputFile = "LafOlNodeRevisionBody.json";
+  static LafOlNodeRevisionBodyDao dao;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlNodeRevisionBody[] records;
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void beforeClass() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
-        JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
-        dao = new DefaultLafOlNodeRevisionBodyDao(jpa);
-    }
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void beforeClass() {
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
+    dao = new DefaultLafOlNodeRevisionBodyDao(jpa);
+  }
 
-    /** Run before the test. */
-    @Before
-    public void before() {
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlNodeRevisionBody[].class);
-            json = null;
-            Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+  /** Run before the test. */
+  @Before
+  public void before() {
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlNodeRevisionBody[].class);
+      json = null;
+      Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
+  }
 
-    @After
-    public void after() {
-        records = null;
-    }
+  @After
+  public void after() {
+    records = null;
+  }
 
-    @Test
-    public void testSelect() {
-        final LafOlNodeRevisionBodyId id =
-                new LafOlNodeRevisionBodyId(
-                        this.records[1].getLangcode(),
-                        this.records[1].getDeleted(),
-                        this.records[1].getDelta(),
-                        this.records[1].getEntityId(),
-                        this.records[1].getRevisionId());
-        LafOlNodeRevisionBody testResult = dao.find(id);
-        assertNotNull("expect result", testResult);
-        org.junit.Assert.assertEquals(
-                "expect equals bundle ", this.records[1].getBundle(), testResult.getBundle());
-        org.junit.Assert.assertEquals(
-                "expect equals bodyValue ",
-                this.records[1].getBodyValue(),
-                testResult.getBodyValue());
-        org.junit.Assert.assertEquals(
-                "expect equals bodySummary ",
-                this.records[1].getBodySummary(),
-                testResult.getBodySummary());
-        org.junit.Assert.assertEquals(
-                "expect equals bodyFormat ",
-                this.records[1].getBodyFormat(),
-                testResult.getBodyFormat());
-    }
+  @Test
+  public void testSelect() {
+    final LafOlNodeRevisionBodyId id =
+        new LafOlNodeRevisionBodyId(
+            this.records[1].getLangcode(),
+            this.records[1].getDeleted(),
+            this.records[1].getDelta(),
+            this.records[1].getEntityId(),
+            this.records[1].getRevisionId());
+    LafOlNodeRevisionBody testResult = dao.find(id);
+    assertNotNull("expect result", testResult);
+    org.junit.Assert.assertEquals(
+        "expect equals bundle ", this.records[1].getBundle(), testResult.getBundle());
+    org.junit.Assert.assertEquals(
+        "expect equals bodyValue ", this.records[1].getBodyValue(), testResult.getBodyValue());
+    org.junit.Assert.assertEquals(
+        "expect equals bodySummary ",
+        this.records[1].getBodySummary(),
+        testResult.getBodySummary());
+    org.junit.Assert.assertEquals(
+        "expect equals bodyFormat ", this.records[1].getBodyFormat(), testResult.getBodyFormat());
+  }
 }

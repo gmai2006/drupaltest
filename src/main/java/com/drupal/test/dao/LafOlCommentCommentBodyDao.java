@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlCommentCommentBody;
 import com.drupal.test.entity.LafOlCommentCommentBodyId;
-import java.util.List;
 
 public interface LafOlCommentCommentBodyDao {
-    /**
-     * Retrieve all records LafOlCommentCommentBody.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCommentCommentBody
-     */
-    public List<LafOlCommentCommentBody> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCommentCommentBody.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCommentCommentBody
+   */
+  public List<LafOlCommentCommentBody> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCommentCommentBody.
-     *
-     * @return A list of LafOlCommentCommentBody
-     */
-    public List<LafOlCommentCommentBody> selectAll();
+  /**
+   * Retrieve all records LafOlCommentCommentBody.
+   *
+   * @return A list of LafOlCommentCommentBody
+   */
+  public List<LafOlCommentCommentBody> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCommentCommentBody id.
-     * @return The same LafOlCommentCommentBody.
-     */
-    public LafOlCommentCommentBody find(LafOlCommentCommentBodyId id);
-    /**
-     * Create an LafOlCommentCommentBody.
-     *
-     * @param e the LafOlCommentCommentBody.
-     * @return The same LafOlCommentCommentBody.
-     */
-    public LafOlCommentCommentBody create(LafOlCommentCommentBody e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCommentCommentBody id.
+   * @return The same LafOlCommentCommentBody.
+   */
+  public LafOlCommentCommentBody find(LafOlCommentCommentBodyId id);
+  /**
+   * Create an LafOlCommentCommentBody.
+   *
+   * @param e the LafOlCommentCommentBody.
+   * @return The same LafOlCommentCommentBody.
+   */
+  public LafOlCommentCommentBody create(LafOlCommentCommentBody e);
 
-    /**
-     * Update the LafOlCommentCommentBody.
-     *
-     * @param e the LafOlCommentCommentBody.
-     * @return The same LafOlCommentCommentBody.
-     */
-    public LafOlCommentCommentBody update(LafOlCommentCommentBody e);
+  /**
+   * Update the LafOlCommentCommentBody.
+   *
+   * @param e the LafOlCommentCommentBody.
+   * @return The same LafOlCommentCommentBody.
+   */
+  public LafOlCommentCommentBody update(LafOlCommentCommentBody e);
 }

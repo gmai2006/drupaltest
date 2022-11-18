@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeFieldTags;
 import com.drupal.test.entity.LafOlNodeFieldTagsId;
-import java.util.List;
 
 public interface LafOlNodeFieldTagsService {
-    public LafOlNodeFieldTags find(LafOlNodeFieldTagsId id);
-    /**
-     * Select a list of LafOlNodeFieldTags based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlNodeFieldTags records.
-     */
-    public List<LafOlNodeFieldTags> select(int maxResult);
+  public LafOlNodeFieldTags find(LafOlNodeFieldTagsId id);
+  /**
+   * Select a list of LafOlNodeFieldTags based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlNodeFieldTags records.
+   */
+  public List<LafOlNodeFieldTags> select(int maxResult);
 
-    /**
-     * Select all LafOlNodeFieldTags.
-     *
-     * @return all LafOlNodeFieldTags records.
-     */
-    public List<LafOlNodeFieldTags> selectAll();
+  /**
+   * Select all LafOlNodeFieldTags.
+   *
+   * @return all LafOlNodeFieldTags records.
+   */
+  public List<LafOlNodeFieldTags> selectAll();
 
-    /**
-     * Create LafOlNodeFieldTags.
-     *
-     * @param bean The LafOlNodeFieldTags.
-     * @return The LafOlNodeFieldTags.
-     */
-    public LafOlNodeFieldTags create(LafOlNodeFieldTags bean);
+  /**
+   * Create LafOlNodeFieldTags.
+   *
+   * @param bean The LafOlNodeFieldTags.
+   * @return The LafOlNodeFieldTags.
+   */
+  public LafOlNodeFieldTags create(LafOlNodeFieldTags bean);
 
-    /**
-     * Update a LafOlNodeFieldTags.
-     *
-     * @param bean - The LafOlNodeFieldTags.
-     * @return LafOlNodeFieldTags.
-     */
-    public LafOlNodeFieldTags update(LafOlNodeFieldTags bean);
+  /**
+   * Update a LafOlNodeFieldTags.
+   *
+   * @param bean - The LafOlNodeFieldTags.
+   * @return LafOlNodeFieldTags.
+   */
+  public LafOlNodeFieldTags update(LafOlNodeFieldTags bean);
 }

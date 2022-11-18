@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlShortcutSetUsersDao;
-import com.drupal.test.entity.LafOlShortcutSetUsers;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlShortcutSetUsersDao;
+import com.drupal.test.entity.LafOlShortcutSetUsers;
 
 @Stateless
 @Named("DefaultLafOlShortcutSetUsersService")
 public class DefaultLafOlShortcutSetUsersService implements LafOlShortcutSetUsersService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlShortcutSetUsersDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlShortcutSetUsersDao dao;
 
-    @Inject
-    @Named("DefaultLafOlShortcutSetUsersDao")
-    public DefaultLafOlShortcutSetUsersService(final LafOlShortcutSetUsersDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlShortcutSetUsersDao")
+  public DefaultLafOlShortcutSetUsersService(final LafOlShortcutSetUsersDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlShortcutSetUsers find(java.lang.Integer id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlShortcutSetUsers find(java.lang.Integer id) {
 
-        final LafOlShortcutSetUsers result = dao.find(id);
-        logger.info("find(LafOlShortcutSetUsers) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlShortcutSetUsers result = dao.find(id);
+    logger.info("find(LafOlShortcutSetUsers) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlShortcutSetUsers> select(int maxResult) {
-        final List<LafOlShortcutSetUsers> result = dao.select(maxResult);
-        logger.info("select(LafOlShortcutSetUsers) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlShortcutSetUsers> select(int maxResult) {
+    final List<LafOlShortcutSetUsers> result = dao.select(maxResult);
+    logger.info("select(LafOlShortcutSetUsers) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlShortcutSetUsers> selectAll() {
-        final List<LafOlShortcutSetUsers> results = dao.selectAll();
-        logger.info("selectAll(LafOlShortcutSetUsers) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlShortcutSetUsers> selectAll() {
+    final List<LafOlShortcutSetUsers> results = dao.selectAll();
+    logger.info("selectAll(LafOlShortcutSetUsers) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlShortcutSetUsers create(LafOlShortcutSetUsers bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlShortcutSetUsers={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlShortcutSetUsers create(LafOlShortcutSetUsers bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlShortcutSetUsers={}) - entered bean ");
 
-        final LafOlShortcutSetUsers result = dao.create(bean);
+    final LafOlShortcutSetUsers result = dao.create(bean);
 
-        logger.info("create(LafOlShortcutSetUsers) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlShortcutSetUsers) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlShortcutSetUsers update(LafOlShortcutSetUsers bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlShortcutSetUsers={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlShortcutSetUsers update(LafOlShortcutSetUsers bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlShortcutSetUsers={}) - entered bean ");
 
-        final LafOlShortcutSetUsers result = dao.update(bean);
+    final LafOlShortcutSetUsers result = dao.update(bean);
 
-        logger.info("update(LafOlShortcutSetUsers) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlShortcutSetUsers) - exited - return value={} result ");
+    return result;
+  }
 }

@@ -16,44 +16,44 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @Table(name = "lafol_shortcut_set_users")
 public class LafOlShortcutSetUsers implements Serializable {
-    private static final long serialVersionUID = 163445265091342573L;
+  private static final long serialVersionUID = 16687543305672454L;
 
-    /** Description: uid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "uid")
-    private java.lang.Integer uid;
+  /** Description: uid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "uid")
+  private java.lang.Integer uid;
 
-    /** Description: set_name. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "set_name", length = 32)
-    private java.lang.String setName;
+  /** Description: set_name. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "set_name", length = 32)
+  private java.lang.String setName;
 
-    public LafOlShortcutSetUsers() {}
+  public LafOlShortcutSetUsers() {}
 
-    public java.lang.Integer getUid() {
-        return this.uid;
-    }
+  public java.lang.Integer getUid() {
+    return this.uid;
+  }
 
-    public void setUid(java.lang.Integer uid) {
-        this.uid = uid;
-    }
+  public void setUid(java.lang.Integer uid) {
+    this.uid = uid;
+  }
 
-    public java.lang.String getSetName() {
-        return this.setName;
-    }
+  public java.lang.String getSetName() {
+    return this.setName;
+  }
 
-    public void setSetName(java.lang.String setName) {
-        this.setName = setName;
-    }
+  public void setSetName(java.lang.String setName) {
+    this.setName = setName;
+  }
 }

@@ -16,41 +16,44 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlHistory;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlHistory;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlHistoryHandler")
 public class LafOlHistoryHandler extends DelimiterFileHandler<LafOlHistory> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlHistoryHandler(final JpaDao dao) {
-        super(dao);
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlHistoryHandler(final JpaDao dao) {
+    super(dao);
+  }
 
-    @Override
-    protected LafOlHistory parseLine(List<String> headers, List<String> tokens) {
-        LafOlHistory record = new LafOlHistory();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "uid":
-                    record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "nid":
-                    record.setNid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "timestamp":
-                    record.setTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
+  @Override
+  protected LafOlHistory parseLine(List<String> headers, List<String> tokens) {
+    LafOlHistory record = new LafOlHistory();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "uid":
+          record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "nid":
+          record.setNid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "timestamp":
+          record.setTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
 
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
+    return record;
+  }
 }

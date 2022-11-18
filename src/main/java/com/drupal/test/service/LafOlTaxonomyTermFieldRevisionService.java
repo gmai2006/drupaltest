@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlTaxonomyTermFieldRevision;
 import com.drupal.test.entity.LafOlTaxonomyTermFieldRevisionId;
-import java.util.List;
 
 public interface LafOlTaxonomyTermFieldRevisionService {
-    public LafOlTaxonomyTermFieldRevision find(LafOlTaxonomyTermFieldRevisionId id);
-    /**
-     * Select a list of LafOlTaxonomyTermFieldRevision based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlTaxonomyTermFieldRevision records.
-     */
-    public List<LafOlTaxonomyTermFieldRevision> select(int maxResult);
+  public LafOlTaxonomyTermFieldRevision find(LafOlTaxonomyTermFieldRevisionId id);
+  /**
+   * Select a list of LafOlTaxonomyTermFieldRevision based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlTaxonomyTermFieldRevision records.
+   */
+  public List<LafOlTaxonomyTermFieldRevision> select(int maxResult);
 
-    /**
-     * Select all LafOlTaxonomyTermFieldRevision.
-     *
-     * @return all LafOlTaxonomyTermFieldRevision records.
-     */
-    public List<LafOlTaxonomyTermFieldRevision> selectAll();
+  /**
+   * Select all LafOlTaxonomyTermFieldRevision.
+   *
+   * @return all LafOlTaxonomyTermFieldRevision records.
+   */
+  public List<LafOlTaxonomyTermFieldRevision> selectAll();
 
-    /**
-     * Create LafOlTaxonomyTermFieldRevision.
-     *
-     * @param bean The LafOlTaxonomyTermFieldRevision.
-     * @return The LafOlTaxonomyTermFieldRevision.
-     */
-    public LafOlTaxonomyTermFieldRevision create(LafOlTaxonomyTermFieldRevision bean);
+  /**
+   * Create LafOlTaxonomyTermFieldRevision.
+   *
+   * @param bean The LafOlTaxonomyTermFieldRevision.
+   * @return The LafOlTaxonomyTermFieldRevision.
+   */
+  public LafOlTaxonomyTermFieldRevision create(LafOlTaxonomyTermFieldRevision bean);
 
-    /**
-     * Update a LafOlTaxonomyTermFieldRevision.
-     *
-     * @param bean - The LafOlTaxonomyTermFieldRevision.
-     * @return LafOlTaxonomyTermFieldRevision.
-     */
-    public LafOlTaxonomyTermFieldRevision update(LafOlTaxonomyTermFieldRevision bean);
+  /**
+   * Update a LafOlTaxonomyTermFieldRevision.
+   *
+   * @param bean - The LafOlTaxonomyTermFieldRevision.
+   * @return LafOlTaxonomyTermFieldRevision.
+   */
+  public LafOlTaxonomyTermFieldRevision update(LafOlTaxonomyTermFieldRevision bean);
 }

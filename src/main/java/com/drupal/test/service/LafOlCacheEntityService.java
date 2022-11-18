@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlCacheEntity;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheEntity;
 
 public interface LafOlCacheEntityService {
-    public LafOlCacheEntity find(java.lang.String id);
+  public LafOlCacheEntity find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlCacheEntity based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCacheEntity records.
-     */
-    public List<LafOlCacheEntity> select(int maxResult);
+  /**
+   * Select a list of LafOlCacheEntity based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCacheEntity records.
+   */
+  public List<LafOlCacheEntity> select(int maxResult);
 
-    /**
-     * Select all LafOlCacheEntity.
-     *
-     * @return all LafOlCacheEntity records.
-     */
-    public List<LafOlCacheEntity> selectAll();
+  /**
+   * Select all LafOlCacheEntity.
+   *
+   * @return all LafOlCacheEntity records.
+   */
+  public List<LafOlCacheEntity> selectAll();
 
-    /**
-     * Create LafOlCacheEntity.
-     *
-     * @param bean The LafOlCacheEntity.
-     * @return The LafOlCacheEntity.
-     */
-    public LafOlCacheEntity create(LafOlCacheEntity bean);
+  /**
+   * Create LafOlCacheEntity.
+   *
+   * @param bean The LafOlCacheEntity.
+   * @return The LafOlCacheEntity.
+   */
+  public LafOlCacheEntity create(LafOlCacheEntity bean);
 
-    /**
-     * Update a LafOlCacheEntity.
-     *
-     * @param bean - The LafOlCacheEntity.
-     * @return LafOlCacheEntity.
-     */
-    public LafOlCacheEntity update(LafOlCacheEntity bean);
+  /**
+   * Update a LafOlCacheEntity.
+   *
+   * @param bean - The LafOlCacheEntity.
+   * @return LafOlCacheEntity.
+   */
+  public LafOlCacheEntity update(LafOlCacheEntity bean);
 }

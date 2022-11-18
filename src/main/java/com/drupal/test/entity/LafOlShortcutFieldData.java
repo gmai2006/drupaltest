@@ -16,132 +16,132 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlShortcutFieldDataId.class)
 @Table(name = "lafol_shortcut_field_data")
 public class LafOlShortcutFieldData implements Serializable {
-    private static final long serialVersionUID = 163445265090320395L;
+  private static final long serialVersionUID = 166875433056150304L;
 
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "langcode")
-    private java.lang.String langcode;
-    /** Description: id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "id")
-    private java.lang.Integer id;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "langcode")
+  private java.lang.String langcode;
+  /** Description: id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "id")
+  private java.lang.Integer id;
 
-    /** Description: shortcut_set. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "shortcut_set", length = 32)
-    private java.lang.String shortcutSet;
-    /** Description: title. */
-    @Basic
-    @Column(name = "title", length = 255)
-    private java.lang.String title;
-    /** Description: weight. */
-    @Basic
-    @Column(name = "weight")
-    private java.lang.Integer weight;
-    /** Description: link__uri. */
-    @Basic
-    @Column(name = "link__uri", length = 2048)
-    private java.lang.String linkUri;
-    /** Description: link__title. */
-    @Basic
-    @Column(name = "link__title", length = 255)
-    private java.lang.String linkTitle;
-    /** Description: link__options. */
-    @Basic
-    @Column(name = "link__options", length = 0)
-    private java.lang.String linkOptions;
-    /** Description: default_langcode. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "default_langcode")
-    private java.lang.Integer defaultLangcode;
+  /** Description: shortcut_set. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "shortcut_set", length = 32)
+  private java.lang.String shortcutSet;
+  /** Description: title. */
+  @Basic
+  @Column(name = "title", length = 255)
+  private java.lang.String title;
+  /** Description: weight. */
+  @Basic
+  @Column(name = "weight")
+  private java.lang.Integer weight;
+  /** Description: link__uri. */
+  @Basic
+  @Column(name = "link__uri", length = 2048)
+  private java.lang.String linkUri;
+  /** Description: link__title. */
+  @Basic
+  @Column(name = "link__title", length = 255)
+  private java.lang.String linkTitle;
+  /** Description: link__options. */
+  @Basic
+  @Column(name = "link__options", length = 0)
+  private java.lang.String linkOptions;
+  /** Description: default_langcode. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "default_langcode")
+  private java.lang.Integer defaultLangcode;
 
-    public LafOlShortcutFieldData() {}
+  public LafOlShortcutFieldData() {}
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.Integer getId() {
-        return this.id;
-    }
+  public java.lang.Integer getId() {
+    return this.id;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setId(java.lang.Integer id) {
-        this.id = id;
-    }
+  public void setId(java.lang.Integer id) {
+    this.id = id;
+  }
 
-    public java.lang.String getShortcutSet() {
-        return this.shortcutSet;
-    }
+  public java.lang.String getShortcutSet() {
+    return this.shortcutSet;
+  }
 
-    public java.lang.String getTitle() {
-        return this.title;
-    }
+  public java.lang.String getTitle() {
+    return this.title;
+  }
 
-    public java.lang.Integer getWeight() {
-        return this.weight;
-    }
+  public java.lang.Integer getWeight() {
+    return this.weight;
+  }
 
-    public java.lang.String getLinkUri() {
-        return this.linkUri;
-    }
+  public java.lang.String getLinkUri() {
+    return this.linkUri;
+  }
 
-    public java.lang.String getLinkTitle() {
-        return this.linkTitle;
-    }
+  public java.lang.String getLinkTitle() {
+    return this.linkTitle;
+  }
 
-    public java.lang.String getLinkOptions() {
-        return this.linkOptions;
-    }
+  public java.lang.String getLinkOptions() {
+    return this.linkOptions;
+  }
 
-    public java.lang.Integer getDefaultLangcode() {
-        return this.defaultLangcode;
-    }
+  public java.lang.Integer getDefaultLangcode() {
+    return this.defaultLangcode;
+  }
 
-    public void setShortcutSet(java.lang.String shortcutSet) {
-        this.shortcutSet = shortcutSet;
-    }
+  public void setShortcutSet(java.lang.String shortcutSet) {
+    this.shortcutSet = shortcutSet;
+  }
 
-    public void setTitle(java.lang.String title) {
-        this.title = title;
-    }
+  public void setTitle(java.lang.String title) {
+    this.title = title;
+  }
 
-    public void setWeight(java.lang.Integer weight) {
-        this.weight = weight;
-    }
+  public void setWeight(java.lang.Integer weight) {
+    this.weight = weight;
+  }
 
-    public void setLinkUri(java.lang.String linkUri) {
-        this.linkUri = linkUri;
-    }
+  public void setLinkUri(java.lang.String linkUri) {
+    this.linkUri = linkUri;
+  }
 
-    public void setLinkTitle(java.lang.String linkTitle) {
-        this.linkTitle = linkTitle;
-    }
+  public void setLinkTitle(java.lang.String linkTitle) {
+    this.linkTitle = linkTitle;
+  }
 
-    public void setLinkOptions(java.lang.String linkOptions) {
-        this.linkOptions = linkOptions;
-    }
+  public void setLinkOptions(java.lang.String linkOptions) {
+    this.linkOptions = linkOptions;
+  }
 
-    public void setDefaultLangcode(java.lang.Integer defaultLangcode) {
-        this.defaultLangcode = defaultLangcode;
-    }
+  public void setDefaultLangcode(java.lang.Integer defaultLangcode) {
+    this.defaultLangcode = defaultLangcode;
+  }
 }

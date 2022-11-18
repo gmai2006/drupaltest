@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlLocalesSource;
 import java.util.List;
+import com.drupal.test.entity.LafOlLocalesSource;
 
 public interface LafOlLocalesSourceService {
-    public LafOlLocalesSource find(java.lang.Integer id);
+  public LafOlLocalesSource find(java.lang.Integer id);
 
-    /**
-     * Select a list of LafOlLocalesSource based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlLocalesSource records.
-     */
-    public List<LafOlLocalesSource> select(int maxResult);
+  /**
+   * Select a list of LafOlLocalesSource based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlLocalesSource records.
+   */
+  public List<LafOlLocalesSource> select(int maxResult);
 
-    /**
-     * Select all LafOlLocalesSource.
-     *
-     * @return all LafOlLocalesSource records.
-     */
-    public List<LafOlLocalesSource> selectAll();
+  /**
+   * Select all LafOlLocalesSource.
+   *
+   * @return all LafOlLocalesSource records.
+   */
+  public List<LafOlLocalesSource> selectAll();
 
-    /**
-     * Create LafOlLocalesSource.
-     *
-     * @param bean The LafOlLocalesSource.
-     * @return The LafOlLocalesSource.
-     */
-    public LafOlLocalesSource create(LafOlLocalesSource bean);
+  /**
+   * Create LafOlLocalesSource.
+   *
+   * @param bean The LafOlLocalesSource.
+   * @return The LafOlLocalesSource.
+   */
+  public LafOlLocalesSource create(LafOlLocalesSource bean);
 
-    /**
-     * Update a LafOlLocalesSource.
-     *
-     * @param bean - The LafOlLocalesSource.
-     * @return LafOlLocalesSource.
-     */
-    public LafOlLocalesSource update(LafOlLocalesSource bean);
+  /**
+   * Update a LafOlLocalesSource.
+   *
+   * @param bean - The LafOlLocalesSource.
+   * @return LafOlLocalesSource.
+   */
+  public LafOlLocalesSource update(LafOlLocalesSource bean);
 }

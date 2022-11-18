@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlSearchDataset;
 import com.drupal.test.entity.LafOlSearchDatasetId;
-import java.util.List;
 
 public interface LafOlSearchDatasetDao {
-    /**
-     * Retrieve all records LafOlSearchDataset.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlSearchDataset
-     */
-    public List<LafOlSearchDataset> select(int maxResult);
+  /**
+   * Retrieve all records LafOlSearchDataset.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlSearchDataset
+   */
+  public List<LafOlSearchDataset> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlSearchDataset.
-     *
-     * @return A list of LafOlSearchDataset
-     */
-    public List<LafOlSearchDataset> selectAll();
+  /**
+   * Retrieve all records LafOlSearchDataset.
+   *
+   * @return A list of LafOlSearchDataset
+   */
+  public List<LafOlSearchDataset> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlSearchDataset id.
-     * @return The same LafOlSearchDataset.
-     */
-    public LafOlSearchDataset find(LafOlSearchDatasetId id);
-    /**
-     * Create an LafOlSearchDataset.
-     *
-     * @param e the LafOlSearchDataset.
-     * @return The same LafOlSearchDataset.
-     */
-    public LafOlSearchDataset create(LafOlSearchDataset e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlSearchDataset id.
+   * @return The same LafOlSearchDataset.
+   */
+  public LafOlSearchDataset find(LafOlSearchDatasetId id);
+  /**
+   * Create an LafOlSearchDataset.
+   *
+   * @param e the LafOlSearchDataset.
+   * @return The same LafOlSearchDataset.
+   */
+  public LafOlSearchDataset create(LafOlSearchDataset e);
 
-    /**
-     * Update the LafOlSearchDataset.
-     *
-     * @param e the LafOlSearchDataset.
-     * @return The same LafOlSearchDataset.
-     */
-    public LafOlSearchDataset update(LafOlSearchDataset e);
+  /**
+   * Update the LafOlSearchDataset.
+   *
+   * @param e the LafOlSearchDataset.
+   * @return The same LafOlSearchDataset.
+   */
+  public LafOlSearchDataset update(LafOlSearchDataset e);
 }

@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlNodeCommentDao;
 import com.drupal.test.entity.LafOlNodeComment;
 import com.drupal.test.entity.LafOlNodeCommentId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlNodeCommentService")
 public class DefaultLafOlNodeCommentService implements LafOlNodeCommentService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlNodeCommentDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlNodeCommentDao dao;
 
-    @Inject
-    @Named("DefaultLafOlNodeCommentDao")
-    public DefaultLafOlNodeCommentService(final LafOlNodeCommentDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlNodeCommentDao")
+  public DefaultLafOlNodeCommentService(final LafOlNodeCommentDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeComment find(LafOlNodeCommentId id) {
-        final LafOlNodeComment result = dao.find(id);
-        logger.info("find(LafOlNodeComment) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeComment find(LafOlNodeCommentId id) {
+    final LafOlNodeComment result = dao.find(id);
+    logger.info("find(LafOlNodeComment) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeComment> select(int maxResult) {
-        final List<LafOlNodeComment> result = dao.select(maxResult);
-        logger.info("select(LafOlNodeComment) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlNodeComment> select(int maxResult) {
+    final List<LafOlNodeComment> result = dao.select(maxResult);
+    logger.info("select(LafOlNodeComment) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeComment> selectAll() {
-        final List<LafOlNodeComment> results = dao.selectAll();
-        logger.info("selectAll(LafOlNodeComment) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlNodeComment> selectAll() {
+    final List<LafOlNodeComment> results = dao.selectAll();
+    logger.info("selectAll(LafOlNodeComment) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeComment create(LafOlNodeComment bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlNodeComment={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeComment create(LafOlNodeComment bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlNodeComment={}) - entered bean ");
 
-        final LafOlNodeComment result = dao.create(bean);
+    final LafOlNodeComment result = dao.create(bean);
 
-        logger.info("create(LafOlNodeComment) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlNodeComment) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeComment update(LafOlNodeComment bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlNodeComment={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeComment update(LafOlNodeComment bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlNodeComment={}) - entered bean ");
 
-        final LafOlNodeComment result = dao.update(bean);
+    final LafOlNodeComment result = dao.update(bean);
 
-        logger.info("update(LafOlNodeComment) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlNodeComment) - exited - return value={} result ");
+    return result;
+  }
 }

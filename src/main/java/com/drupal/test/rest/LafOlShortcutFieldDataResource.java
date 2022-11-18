@@ -17,14 +17,14 @@
 package com.drupal.test.rest;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.entity.LafOlShortcutFieldData;
-import com.drupal.test.service.LafOlShortcutFieldDataService;
 import java.util.List;
+
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -32,96 +32,95 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import com.drupal.test.service.LafOlShortcutFieldDataService;
+import com.drupal.test.entity.LafOlShortcutFieldData;
+
 @Path("/lafolshortcutfielddata")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces({MediaType.APPLICATION_JSON})
 public class LafOlShortcutFieldDataResource {
 
-    @Inject private LafOlShortcutFieldDataService service;
+  @Inject private LafOlShortcutFieldDataService service;
 
-    public LafOlShortcutFieldDataResource() {}
+  public LafOlShortcutFieldDataResource() {}
 
-    public LafOlShortcutFieldDataResource(final LafOlShortcutFieldDataService service) {
-        requireNonNull(service);
-        this.service = service;
+  public LafOlShortcutFieldDataResource(final LafOlShortcutFieldDataService service) {
+    requireNonNull(service);
+    this.service = service;
+  }
+
+  /**
+   * hello.
+   *
+   * @return a hello.
+   */
+  @GET
+  @Path("")
+  public Response hello() {
+    return Response.status(Response.Status.OK).entity(this.getClass().getName()).build();
+  }
+
+  /**
+   * InIdempotent method. Update existing LafOlShortcutFieldData.
+   *
+   * @param obj - instance of LafOlShortcutFieldData.
+   * @return LafOlShortcutFieldData.
+   */
+  @Consumes(MediaType.APPLICATION_JSON)
+  @POST
+  public LafOlShortcutFieldData update(LafOlShortcutFieldData obj) {
+    return this.service.update(obj);
+  }
+
+  /**
+   * Delete existing LafOlShortcutFieldData.
+   *
+   * @param id instance of LafOlShortcutFieldData.
+   * @return LafOlShortcutFieldData.
+   */
+
+  /**
+   * Select all LafOlShortcutFieldData with limit of returned records.
+   *
+   * @param max - number of records.
+   * @return a list LafOlShortcutFieldData.
+   */
+  @GET
+  @Path("select/{max}")
+  public Response findWithLimit(@PathParam("max") String max) {
+    Integer input = null;
+    try {
+      input = Integer.valueOf(max);
+    } catch (NumberFormatException ex) {
+      throw new WebApplicationException(Response.Status.BAD_REQUEST);
     }
+    List<LafOlShortcutFieldData> result = service.select(input);
 
-    /**
-     * hello.
-     *
-     * @return a hello.
-     */
-    @GET
-    @Path("")
-    public Response hello() {
-        return Response.status(Response.Status.OK).entity(this.getClass().getName()).build();
-    }
+    return Response.status(Response.Status.OK)
+        .header("Access-Control-Allow-Origin", "*")
+        .header("Access-Control-Allow-Credentials", "true")
+        .header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
+        .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
+        .entity(result)
+        .build();
+  }
 
-    /**
-     * InIdempotent method. Update existing LafOlShortcutFieldData.
-     *
-     * @param obj - instance of LafOlShortcutFieldData.
-     * @return LafOlShortcutFieldData.
-     */
-    @Consumes(MediaType.APPLICATION_JSON)
-    @POST
-    public LafOlShortcutFieldData update(LafOlShortcutFieldData obj) {
-        return this.service.update(obj);
-    }
+  /**
+   * Select all LafOlShortcutFieldData records.
+   *
+   * @return a list LafOlShortcutFieldData.
+   */
+  @GET
+  @Path("selectAll")
+  public Response selectAll() {
+    List<LafOlShortcutFieldData> result = service.selectAll();
 
-    /**
-     * Delete existing LafOlShortcutFieldData.
-     *
-     * @param id instance of LafOlShortcutFieldData.
-     * @return LafOlShortcutFieldData.
-     */
-
-    /**
-     * Select all LafOlShortcutFieldData with limit of returned records.
-     *
-     * @param max - number of records.
-     * @return a list LafOlShortcutFieldData.
-     */
-    @GET
-    @Path("select/{max}")
-    public Response findWithLimit(@PathParam("max") String max) {
-        Integer input = null;
-        try {
-            input = Integer.valueOf(max);
-        } catch (NumberFormatException ex) {
-            throw new WebApplicationException(Response.Status.BAD_REQUEST);
-        }
-        List<LafOlShortcutFieldData> result = service.select(input);
-
-        return Response.status(Response.Status.OK)
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Credentials", "true")
-                .header(
-                        "Access-Control-Allow-Headers",
-                        "origin, content-type, accept, authorization")
-                .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
-                .entity(result)
-                .build();
-    }
-
-    /**
-     * Select all LafOlShortcutFieldData records.
-     *
-     * @return a list LafOlShortcutFieldData.
-     */
-    @GET
-    @Path("selectAll")
-    public Response selectAll() {
-        List<LafOlShortcutFieldData> result = service.selectAll();
-
-        return Response.status(Response.Status.OK)
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Credentials", "true")
-                .header(
-                        "Access-Control-Allow-Headers",
-                        "origin, content-type, accept, authorization")
-                .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
-                .entity(result)
-                .build();
-    }
+    return Response.status(Response.Status.OK)
+        .header("Access-Control-Allow-Origin", "*")
+        .header("Access-Control-Allow-Credentials", "true")
+        .header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
+        .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
+        .entity(result)
+        .build();
+  }
 }

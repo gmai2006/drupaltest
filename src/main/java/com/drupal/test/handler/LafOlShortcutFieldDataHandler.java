@@ -16,65 +16,68 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlShortcutFieldData;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlShortcutFieldData;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlShortcutFieldDataHandler")
 public class LafOlShortcutFieldDataHandler extends DelimiterFileHandler<LafOlShortcutFieldData> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlShortcutFieldDataHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlShortcutFieldDataHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlShortcutFieldData parseLine(List<String> headers, List<String> tokens) {
+    LafOlShortcutFieldData record = new LafOlShortcutFieldData();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "id":
+          record.setId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "shortcutSet":
+          record.setShortcutSet(tokens.get(i));
+          break;
+
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "title":
+          record.setTitle(tokens.get(i));
+          break;
+
+        case "weight":
+          record.setWeight(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "linkUri":
+          record.setLinkUri(tokens.get(i));
+          break;
+
+        case "linkTitle":
+          record.setLinkTitle(tokens.get(i));
+          break;
+
+        case "linkOptions":
+          record.setLinkOptions(tokens.get(i));
+          break;
+
+        case "defaultLangcode":
+          record.setDefaultLangcode(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlShortcutFieldData parseLine(List<String> headers, List<String> tokens) {
-        LafOlShortcutFieldData record = new LafOlShortcutFieldData();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "id":
-                    record.setId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "shortcutSet":
-                    record.setShortcutSet(tokens.get(i));
-                    break;
-
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "title":
-                    record.setTitle(tokens.get(i));
-                    break;
-
-                case "weight":
-                    record.setWeight(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "linkUri":
-                    record.setLinkUri(tokens.get(i));
-                    break;
-
-                case "linkTitle":
-                    record.setLinkTitle(tokens.get(i));
-                    break;
-
-                case "linkOptions":
-                    record.setLinkOptions(tokens.get(i));
-                    break;
-
-                case "defaultLangcode":
-                    record.setDefaultLangcode(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

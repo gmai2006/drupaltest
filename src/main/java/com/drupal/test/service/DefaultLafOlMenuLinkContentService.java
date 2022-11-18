@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlMenuLinkContentDao;
 import com.drupal.test.entity.LafOlMenuLinkContent;
 import com.drupal.test.entity.LafOlMenuLinkContentId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlMenuLinkContentService")
 public class DefaultLafOlMenuLinkContentService implements LafOlMenuLinkContentService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlMenuLinkContentDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlMenuLinkContentDao dao;
 
-    @Inject
-    @Named("DefaultLafOlMenuLinkContentDao")
-    public DefaultLafOlMenuLinkContentService(final LafOlMenuLinkContentDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlMenuLinkContentDao")
+  public DefaultLafOlMenuLinkContentService(final LafOlMenuLinkContentDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlMenuLinkContent find(LafOlMenuLinkContentId id) {
-        final LafOlMenuLinkContent result = dao.find(id);
-        logger.info("find(LafOlMenuLinkContent) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlMenuLinkContent find(LafOlMenuLinkContentId id) {
+    final LafOlMenuLinkContent result = dao.find(id);
+    logger.info("find(LafOlMenuLinkContent) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlMenuLinkContent> select(int maxResult) {
-        final List<LafOlMenuLinkContent> result = dao.select(maxResult);
-        logger.info("select(LafOlMenuLinkContent) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlMenuLinkContent> select(int maxResult) {
+    final List<LafOlMenuLinkContent> result = dao.select(maxResult);
+    logger.info("select(LafOlMenuLinkContent) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlMenuLinkContent> selectAll() {
-        final List<LafOlMenuLinkContent> results = dao.selectAll();
-        logger.info("selectAll(LafOlMenuLinkContent) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlMenuLinkContent> selectAll() {
+    final List<LafOlMenuLinkContent> results = dao.selectAll();
+    logger.info("selectAll(LafOlMenuLinkContent) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlMenuLinkContent create(LafOlMenuLinkContent bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlMenuLinkContent={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlMenuLinkContent create(LafOlMenuLinkContent bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlMenuLinkContent={}) - entered bean ");
 
-        final LafOlMenuLinkContent result = dao.create(bean);
+    final LafOlMenuLinkContent result = dao.create(bean);
 
-        logger.info("create(LafOlMenuLinkContent) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlMenuLinkContent) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlMenuLinkContent update(LafOlMenuLinkContent bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlMenuLinkContent={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlMenuLinkContent update(LafOlMenuLinkContent bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlMenuLinkContent={}) - entered bean ");
 
-        final LafOlMenuLinkContent result = dao.update(bean);
+    final LafOlMenuLinkContent result = dao.update(bean);
 
-        logger.info("update(LafOlMenuLinkContent) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlMenuLinkContent) - exited - return value={} result ");
+    return result;
+  }
 }

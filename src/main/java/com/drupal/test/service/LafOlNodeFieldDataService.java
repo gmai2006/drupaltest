@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeFieldData;
 import com.drupal.test.entity.LafOlNodeFieldDataId;
-import java.util.List;
 
 public interface LafOlNodeFieldDataService {
-    public LafOlNodeFieldData find(LafOlNodeFieldDataId id);
-    /**
-     * Select a list of LafOlNodeFieldData based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlNodeFieldData records.
-     */
-    public List<LafOlNodeFieldData> select(int maxResult);
+  public LafOlNodeFieldData find(LafOlNodeFieldDataId id);
+  /**
+   * Select a list of LafOlNodeFieldData based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlNodeFieldData records.
+   */
+  public List<LafOlNodeFieldData> select(int maxResult);
 
-    /**
-     * Select all LafOlNodeFieldData.
-     *
-     * @return all LafOlNodeFieldData records.
-     */
-    public List<LafOlNodeFieldData> selectAll();
+  /**
+   * Select all LafOlNodeFieldData.
+   *
+   * @return all LafOlNodeFieldData records.
+   */
+  public List<LafOlNodeFieldData> selectAll();
 
-    /**
-     * Create LafOlNodeFieldData.
-     *
-     * @param bean The LafOlNodeFieldData.
-     * @return The LafOlNodeFieldData.
-     */
-    public LafOlNodeFieldData create(LafOlNodeFieldData bean);
+  /**
+   * Create LafOlNodeFieldData.
+   *
+   * @param bean The LafOlNodeFieldData.
+   * @return The LafOlNodeFieldData.
+   */
+  public LafOlNodeFieldData create(LafOlNodeFieldData bean);
 
-    /**
-     * Update a LafOlNodeFieldData.
-     *
-     * @param bean - The LafOlNodeFieldData.
-     * @return LafOlNodeFieldData.
-     */
-    public LafOlNodeFieldData update(LafOlNodeFieldData bean);
+  /**
+   * Update a LafOlNodeFieldData.
+   *
+   * @param bean - The LafOlNodeFieldData.
+   * @return LafOlNodeFieldData.
+   */
+  public LafOlNodeFieldData update(LafOlNodeFieldData bean);
 }

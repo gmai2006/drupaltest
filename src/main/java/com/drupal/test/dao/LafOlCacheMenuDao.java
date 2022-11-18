@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCacheMenu;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheMenu;
 
 public interface LafOlCacheMenuDao {
-    /**
-     * Retrieve all records LafOlCacheMenu.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCacheMenu
-     */
-    public List<LafOlCacheMenu> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCacheMenu.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCacheMenu
+   */
+  public List<LafOlCacheMenu> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCacheMenu.
-     *
-     * @return A list of LafOlCacheMenu
-     */
-    public List<LafOlCacheMenu> selectAll();
+  /**
+   * Retrieve all records LafOlCacheMenu.
+   *
+   * @return A list of LafOlCacheMenu
+   */
+  public List<LafOlCacheMenu> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCacheMenu id.
-     * @return The same LafOlCacheMenu.
-     */
-    public LafOlCacheMenu find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCacheMenu id.
+   * @return The same LafOlCacheMenu.
+   */
+  public LafOlCacheMenu find(java.lang.String id);
 
-    /**
-     * Create an LafOlCacheMenu.
-     *
-     * @param e the LafOlCacheMenu.
-     * @return The same LafOlCacheMenu.
-     */
-    public LafOlCacheMenu create(LafOlCacheMenu e);
+  /**
+   * Create an LafOlCacheMenu.
+   *
+   * @param e the LafOlCacheMenu.
+   * @return The same LafOlCacheMenu.
+   */
+  public LafOlCacheMenu create(LafOlCacheMenu e);
 
-    /**
-     * Update the LafOlCacheMenu.
-     *
-     * @param e the LafOlCacheMenu.
-     * @return The same LafOlCacheMenu.
-     */
-    public LafOlCacheMenu update(LafOlCacheMenu e);
+  /**
+   * Update the LafOlCacheMenu.
+   *
+   * @param e the LafOlCacheMenu.
+   * @return The same LafOlCacheMenu.
+   */
+  public LafOlCacheMenu update(LafOlCacheMenu e);
 }

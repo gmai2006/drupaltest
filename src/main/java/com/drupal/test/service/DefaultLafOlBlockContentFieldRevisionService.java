@@ -17,75 +17,73 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlBlockContentFieldRevisionDao;
 import com.drupal.test.entity.LafOlBlockContentFieldRevision;
 import com.drupal.test.entity.LafOlBlockContentFieldRevisionId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlBlockContentFieldRevisionService")
 public class DefaultLafOlBlockContentFieldRevisionService
-        implements LafOlBlockContentFieldRevisionService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlBlockContentFieldRevisionDao dao;
+    implements LafOlBlockContentFieldRevisionService {
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlBlockContentFieldRevisionDao dao;
 
-    @Inject
-    @Named("DefaultLafOlBlockContentFieldRevisionDao")
-    public DefaultLafOlBlockContentFieldRevisionService(
-            final LafOlBlockContentFieldRevisionDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlBlockContentFieldRevisionDao")
+  public DefaultLafOlBlockContentFieldRevisionService(final LafOlBlockContentFieldRevisionDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBlockContentFieldRevision find(LafOlBlockContentFieldRevisionId id) {
-        final LafOlBlockContentFieldRevision result = dao.find(id);
-        logger.info("find(LafOlBlockContentFieldRevision) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBlockContentFieldRevision find(LafOlBlockContentFieldRevisionId id) {
+    final LafOlBlockContentFieldRevision result = dao.find(id);
+    logger.info("find(LafOlBlockContentFieldRevision) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlBlockContentFieldRevision> select(int maxResult) {
-        final List<LafOlBlockContentFieldRevision> result = dao.select(maxResult);
-        logger.info("select(LafOlBlockContentFieldRevision) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlBlockContentFieldRevision> select(int maxResult) {
+    final List<LafOlBlockContentFieldRevision> result = dao.select(maxResult);
+    logger.info("select(LafOlBlockContentFieldRevision) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlBlockContentFieldRevision> selectAll() {
-        final List<LafOlBlockContentFieldRevision> results = dao.selectAll();
-        logger.info("selectAll(LafOlBlockContentFieldRevision) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlBlockContentFieldRevision> selectAll() {
+    final List<LafOlBlockContentFieldRevision> results = dao.selectAll();
+    logger.info("selectAll(LafOlBlockContentFieldRevision) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBlockContentFieldRevision create(LafOlBlockContentFieldRevision bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlBlockContentFieldRevision={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBlockContentFieldRevision create(LafOlBlockContentFieldRevision bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlBlockContentFieldRevision={}) - entered bean ");
 
-        final LafOlBlockContentFieldRevision result = dao.create(bean);
+    final LafOlBlockContentFieldRevision result = dao.create(bean);
 
-        logger.info("create(LafOlBlockContentFieldRevision) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlBlockContentFieldRevision) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBlockContentFieldRevision update(LafOlBlockContentFieldRevision bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlBlockContentFieldRevision={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBlockContentFieldRevision update(LafOlBlockContentFieldRevision bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlBlockContentFieldRevision={}) - entered bean ");
 
-        final LafOlBlockContentFieldRevision result = dao.update(bean);
+    final LafOlBlockContentFieldRevision result = dao.update(bean);
 
-        logger.info("update(LafOlBlockContentFieldRevision) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlBlockContentFieldRevision) - exited - return value={} result ");
+    return result;
+  }
 }

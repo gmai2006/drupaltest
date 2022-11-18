@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeRevisionComment;
 import com.drupal.test.entity.LafOlNodeRevisionCommentId;
-import java.util.List;
 
 public interface LafOlNodeRevisionCommentDao {
-    /**
-     * Retrieve all records LafOlNodeRevisionComment.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlNodeRevisionComment
-     */
-    public List<LafOlNodeRevisionComment> select(int maxResult);
+  /**
+   * Retrieve all records LafOlNodeRevisionComment.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlNodeRevisionComment
+   */
+  public List<LafOlNodeRevisionComment> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlNodeRevisionComment.
-     *
-     * @return A list of LafOlNodeRevisionComment
-     */
-    public List<LafOlNodeRevisionComment> selectAll();
+  /**
+   * Retrieve all records LafOlNodeRevisionComment.
+   *
+   * @return A list of LafOlNodeRevisionComment
+   */
+  public List<LafOlNodeRevisionComment> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlNodeRevisionComment id.
-     * @return The same LafOlNodeRevisionComment.
-     */
-    public LafOlNodeRevisionComment find(LafOlNodeRevisionCommentId id);
-    /**
-     * Create an LafOlNodeRevisionComment.
-     *
-     * @param e the LafOlNodeRevisionComment.
-     * @return The same LafOlNodeRevisionComment.
-     */
-    public LafOlNodeRevisionComment create(LafOlNodeRevisionComment e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlNodeRevisionComment id.
+   * @return The same LafOlNodeRevisionComment.
+   */
+  public LafOlNodeRevisionComment find(LafOlNodeRevisionCommentId id);
+  /**
+   * Create an LafOlNodeRevisionComment.
+   *
+   * @param e the LafOlNodeRevisionComment.
+   * @return The same LafOlNodeRevisionComment.
+   */
+  public LafOlNodeRevisionComment create(LafOlNodeRevisionComment e);
 
-    /**
-     * Update the LafOlNodeRevisionComment.
-     *
-     * @param e the LafOlNodeRevisionComment.
-     * @return The same LafOlNodeRevisionComment.
-     */
-    public LafOlNodeRevisionComment update(LafOlNodeRevisionComment e);
+  /**
+   * Update the LafOlNodeRevisionComment.
+   *
+   * @param e the LafOlNodeRevisionComment.
+   * @return The same LafOlNodeRevisionComment.
+   */
+  public LafOlNodeRevisionComment update(LafOlNodeRevisionComment e);
 }

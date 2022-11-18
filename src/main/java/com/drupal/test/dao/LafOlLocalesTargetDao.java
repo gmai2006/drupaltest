@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlLocalesTarget;
 import com.drupal.test.entity.LafOlLocalesTargetId;
-import java.util.List;
 
 public interface LafOlLocalesTargetDao {
-    /**
-     * Retrieve all records LafOlLocalesTarget.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlLocalesTarget
-     */
-    public List<LafOlLocalesTarget> select(int maxResult);
+  /**
+   * Retrieve all records LafOlLocalesTarget.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlLocalesTarget
+   */
+  public List<LafOlLocalesTarget> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlLocalesTarget.
-     *
-     * @return A list of LafOlLocalesTarget
-     */
-    public List<LafOlLocalesTarget> selectAll();
+  /**
+   * Retrieve all records LafOlLocalesTarget.
+   *
+   * @return A list of LafOlLocalesTarget
+   */
+  public List<LafOlLocalesTarget> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlLocalesTarget id.
-     * @return The same LafOlLocalesTarget.
-     */
-    public LafOlLocalesTarget find(LafOlLocalesTargetId id);
-    /**
-     * Create an LafOlLocalesTarget.
-     *
-     * @param e the LafOlLocalesTarget.
-     * @return The same LafOlLocalesTarget.
-     */
-    public LafOlLocalesTarget create(LafOlLocalesTarget e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlLocalesTarget id.
+   * @return The same LafOlLocalesTarget.
+   */
+  public LafOlLocalesTarget find(LafOlLocalesTargetId id);
+  /**
+   * Create an LafOlLocalesTarget.
+   *
+   * @param e the LafOlLocalesTarget.
+   * @return The same LafOlLocalesTarget.
+   */
+  public LafOlLocalesTarget create(LafOlLocalesTarget e);
 
-    /**
-     * Update the LafOlLocalesTarget.
-     *
-     * @param e the LafOlLocalesTarget.
-     * @return The same LafOlLocalesTarget.
-     */
-    public LafOlLocalesTarget update(LafOlLocalesTarget e);
+  /**
+   * Update the LafOlLocalesTarget.
+   *
+   * @param e the LafOlLocalesTarget.
+   * @return The same LafOlLocalesTarget.
+   */
+  public LafOlLocalesTarget update(LafOlLocalesTarget e);
 }

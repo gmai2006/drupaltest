@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlShortcutSetUsers;
 import java.util.List;
+import com.drupal.test.entity.LafOlShortcutSetUsers;
 
 public interface LafOlShortcutSetUsersDao {
-    /**
-     * Retrieve all records LafOlShortcutSetUsers.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlShortcutSetUsers
-     */
-    public List<LafOlShortcutSetUsers> select(int maxResult);
+  /**
+   * Retrieve all records LafOlShortcutSetUsers.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlShortcutSetUsers
+   */
+  public List<LafOlShortcutSetUsers> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlShortcutSetUsers.
-     *
-     * @return A list of LafOlShortcutSetUsers
-     */
-    public List<LafOlShortcutSetUsers> selectAll();
+  /**
+   * Retrieve all records LafOlShortcutSetUsers.
+   *
+   * @return A list of LafOlShortcutSetUsers
+   */
+  public List<LafOlShortcutSetUsers> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlShortcutSetUsers id.
-     * @return The same LafOlShortcutSetUsers.
-     */
-    public LafOlShortcutSetUsers find(java.lang.Integer id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlShortcutSetUsers id.
+   * @return The same LafOlShortcutSetUsers.
+   */
+  public LafOlShortcutSetUsers find(java.lang.Integer id);
 
-    /**
-     * Create an LafOlShortcutSetUsers.
-     *
-     * @param e the LafOlShortcutSetUsers.
-     * @return The same LafOlShortcutSetUsers.
-     */
-    public LafOlShortcutSetUsers create(LafOlShortcutSetUsers e);
+  /**
+   * Create an LafOlShortcutSetUsers.
+   *
+   * @param e the LafOlShortcutSetUsers.
+   * @return The same LafOlShortcutSetUsers.
+   */
+  public LafOlShortcutSetUsers create(LafOlShortcutSetUsers e);
 
-    /**
-     * Update the LafOlShortcutSetUsers.
-     *
-     * @param e the LafOlShortcutSetUsers.
-     * @return The same LafOlShortcutSetUsers.
-     */
-    public LafOlShortcutSetUsers update(LafOlShortcutSetUsers e);
+  /**
+   * Update the LafOlShortcutSetUsers.
+   *
+   * @param e the LafOlShortcutSetUsers.
+   * @return The same LafOlShortcutSetUsers.
+   */
+  public LafOlShortcutSetUsers update(LafOlShortcutSetUsers e);
 }

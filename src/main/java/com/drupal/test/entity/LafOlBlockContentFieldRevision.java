@@ -16,121 +16,121 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlBlockContentFieldRevisionId.class)
 @Table(name = "lafol_block_content_field_revision")
 public class LafOlBlockContentFieldRevision implements Serializable {
-    private static final long serialVersionUID = 163445265002982013L;
+  private static final long serialVersionUID = 166875433004110860L;
 
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "langcode")
-    private java.lang.String langcode;
-    /** Description: revision_id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "revision_id")
-    private java.lang.Integer revisionId;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "langcode")
+  private java.lang.String langcode;
+  /** Description: revision_id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "revision_id")
+  private java.lang.Integer revisionId;
 
-    /** Description: id. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "id")
-    private java.lang.Integer id;
-    /** Description: status. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "status")
-    private java.lang.Integer status;
-    /** Description: info. */
-    @Basic
-    @Column(name = "info", length = 255)
-    private java.lang.String info;
-    /** Description: changed. */
-    @Basic
-    @Column(name = "changed")
-    private java.lang.Integer changed;
-    /** Description: default_langcode. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "default_langcode")
-    private java.lang.Integer defaultLangcode;
-    /** Description: revision_translation_affected. */
-    @Basic
-    @Column(name = "revision_translation_affected")
-    private java.lang.Integer revisionTranslationAffected;
+  /** Description: id. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "id")
+  private java.lang.Integer id;
+  /** Description: status. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "status")
+  private java.lang.Integer status;
+  /** Description: info. */
+  @Basic
+  @Column(name = "info", length = 255)
+  private java.lang.String info;
+  /** Description: changed. */
+  @Basic
+  @Column(name = "changed")
+  private java.lang.Integer changed;
+  /** Description: default_langcode. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "default_langcode")
+  private java.lang.Integer defaultLangcode;
+  /** Description: revision_translation_affected. */
+  @Basic
+  @Column(name = "revision_translation_affected")
+  private java.lang.Integer revisionTranslationAffected;
 
-    public LafOlBlockContentFieldRevision() {}
+  public LafOlBlockContentFieldRevision() {}
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.Integer getRevisionId() {
-        return this.revisionId;
-    }
+  public java.lang.Integer getRevisionId() {
+    return this.revisionId;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setRevisionId(java.lang.Integer revisionId) {
-        this.revisionId = revisionId;
-    }
+  public void setRevisionId(java.lang.Integer revisionId) {
+    this.revisionId = revisionId;
+  }
 
-    public java.lang.Integer getId() {
-        return this.id;
-    }
+  public java.lang.Integer getId() {
+    return this.id;
+  }
 
-    public java.lang.Integer getStatus() {
-        return this.status;
-    }
+  public java.lang.Integer getStatus() {
+    return this.status;
+  }
 
-    public java.lang.String getInfo() {
-        return this.info;
-    }
+  public java.lang.String getInfo() {
+    return this.info;
+  }
 
-    public java.lang.Integer getChanged() {
-        return this.changed;
-    }
+  public java.lang.Integer getChanged() {
+    return this.changed;
+  }
 
-    public java.lang.Integer getDefaultLangcode() {
-        return this.defaultLangcode;
-    }
+  public java.lang.Integer getDefaultLangcode() {
+    return this.defaultLangcode;
+  }
 
-    public java.lang.Integer getRevisionTranslationAffected() {
-        return this.revisionTranslationAffected;
-    }
+  public java.lang.Integer getRevisionTranslationAffected() {
+    return this.revisionTranslationAffected;
+  }
 
-    public void setId(java.lang.Integer id) {
-        this.id = id;
-    }
+  public void setId(java.lang.Integer id) {
+    this.id = id;
+  }
 
-    public void setStatus(java.lang.Integer status) {
-        this.status = status;
-    }
+  public void setStatus(java.lang.Integer status) {
+    this.status = status;
+  }
 
-    public void setInfo(java.lang.String info) {
-        this.info = info;
-    }
+  public void setInfo(java.lang.String info) {
+    this.info = info;
+  }
 
-    public void setChanged(java.lang.Integer changed) {
-        this.changed = changed;
-    }
+  public void setChanged(java.lang.Integer changed) {
+    this.changed = changed;
+  }
 
-    public void setDefaultLangcode(java.lang.Integer defaultLangcode) {
-        this.defaultLangcode = defaultLangcode;
-    }
+  public void setDefaultLangcode(java.lang.Integer defaultLangcode) {
+    this.defaultLangcode = defaultLangcode;
+  }
 
-    public void setRevisionTranslationAffected(java.lang.Integer revisionTranslationAffected) {
-        this.revisionTranslationAffected = revisionTranslationAffected;
-    }
+  public void setRevisionTranslationAffected(java.lang.Integer revisionTranslationAffected) {
+    this.revisionTranslationAffected = revisionTranslationAffected;
+  }
 }

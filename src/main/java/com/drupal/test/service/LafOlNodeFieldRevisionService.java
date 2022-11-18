@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeFieldRevision;
 import com.drupal.test.entity.LafOlNodeFieldRevisionId;
-import java.util.List;
 
 public interface LafOlNodeFieldRevisionService {
-    public LafOlNodeFieldRevision find(LafOlNodeFieldRevisionId id);
-    /**
-     * Select a list of LafOlNodeFieldRevision based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlNodeFieldRevision records.
-     */
-    public List<LafOlNodeFieldRevision> select(int maxResult);
+  public LafOlNodeFieldRevision find(LafOlNodeFieldRevisionId id);
+  /**
+   * Select a list of LafOlNodeFieldRevision based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlNodeFieldRevision records.
+   */
+  public List<LafOlNodeFieldRevision> select(int maxResult);
 
-    /**
-     * Select all LafOlNodeFieldRevision.
-     *
-     * @return all LafOlNodeFieldRevision records.
-     */
-    public List<LafOlNodeFieldRevision> selectAll();
+  /**
+   * Select all LafOlNodeFieldRevision.
+   *
+   * @return all LafOlNodeFieldRevision records.
+   */
+  public List<LafOlNodeFieldRevision> selectAll();
 
-    /**
-     * Create LafOlNodeFieldRevision.
-     *
-     * @param bean The LafOlNodeFieldRevision.
-     * @return The LafOlNodeFieldRevision.
-     */
-    public LafOlNodeFieldRevision create(LafOlNodeFieldRevision bean);
+  /**
+   * Create LafOlNodeFieldRevision.
+   *
+   * @param bean The LafOlNodeFieldRevision.
+   * @return The LafOlNodeFieldRevision.
+   */
+  public LafOlNodeFieldRevision create(LafOlNodeFieldRevision bean);
 
-    /**
-     * Update a LafOlNodeFieldRevision.
-     *
-     * @param bean - The LafOlNodeFieldRevision.
-     * @return LafOlNodeFieldRevision.
-     */
-    public LafOlNodeFieldRevision update(LafOlNodeFieldRevision bean);
+  /**
+   * Update a LafOlNodeFieldRevision.
+   *
+   * @param bean - The LafOlNodeFieldRevision.
+   * @return LafOlNodeFieldRevision.
+   */
+  public LafOlNodeFieldRevision update(LafOlNodeFieldRevision bean);
 }

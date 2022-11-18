@@ -18,72 +18,73 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlNodeFieldRevision. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlNodeFieldRevision. generated on 11/17/2022 from a schema. */
 public class LafOlNodeFieldRevisionId implements Serializable {
-    private static final long serialVersionUID = 163445265066213463L;
+  private static final long serialVersionUID = 166875433041113947L;
 
-    @Column(name = "vid")
-    private java.lang.Integer vid;
+  @Column(name = "vid")
+  private java.lang.Integer vid;
 
-    @Column(name = "langcode")
-    private java.lang.String langcode;
+  @Column(name = "langcode")
+  private java.lang.String langcode;
 
-    /** Constructor: LafOlNodeFieldRevisionId. */
-    public LafOlNodeFieldRevisionId() {}
+  /** Constructor: LafOlNodeFieldRevisionId. */
+  public LafOlNodeFieldRevisionId() {}
 
-    /**
-     * Constructor: LafOlNodeFieldRevisionId.
-     *
-     * @param vid - vid.
-     * @param langcode - langcode.
-     */
-    public LafOlNodeFieldRevisionId(java.lang.Integer vid, java.lang.String langcode) {
-        this.vid = vid;
-        this.langcode = langcode;
-    }
+  /**
+   * Constructor: LafOlNodeFieldRevisionId.
+   *
+   * @param vid - vid.
+   * @param langcode - langcode.
+   */
+  public LafOlNodeFieldRevisionId(java.lang.Integer vid, java.lang.String langcode) {
+    this.vid = vid;
+    this.langcode = langcode;
+  }
 
-    public java.lang.Integer getVid() {
-        return this.vid;
-    }
+  public java.lang.Integer getVid() {
+    return this.vid;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public void setVid(java.lang.Integer vid) {
-        this.vid = vid;
-    }
+  public void setVid(java.lang.Integer vid) {
+    this.vid = vid;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((vid == null) ? 0 : vid.hashCode());
-        result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((vid == null) ? 0 : vid.hashCode());
+    result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlNodeFieldRevisionId other = (LafOlNodeFieldRevisionId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlNodeFieldRevisionId other = (LafOlNodeFieldRevisionId) obj;
 
-        if (vid == null) {
-            if (other.vid != null) return false;
-        } else if (!vid.equals(other.vid)) return false;
+    if (vid == null) {
+      if (other.vid != null) return false;
+    } else if (!vid.equals(other.vid)) return false;
 
-        if (langcode == null) {
-            if (other.langcode != null) return false;
-        } else if (!langcode.equals(other.langcode)) return false;
+    if (langcode == null) {
+      if (other.langcode != null) return false;
+    } else if (!langcode.equals(other.langcode)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

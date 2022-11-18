@@ -16,59 +16,59 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlHistoryId.class)
 @Table(name = "lafol_history")
 public class LafOlHistory implements Serializable {
-    private static final long serialVersionUID = 163445265033757291L;
+  private static final long serialVersionUID = 166875433021125952L;
 
-    /** Description: uid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "uid")
-    private java.lang.Integer uid;
-    /** Description: nid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "nid")
-    private java.lang.Integer nid;
+  /** Description: uid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "uid")
+  private java.lang.Integer uid;
+  /** Description: nid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "nid")
+  private java.lang.Integer nid;
 
-    /** Description: timestamp. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "timestamp")
-    private java.lang.Integer timestamp;
+  /** Description: timestamp. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "timestamp")
+  private java.lang.Integer timestamp;
 
-    public LafOlHistory() {}
+  public LafOlHistory() {}
 
-    public java.lang.Integer getUid() {
-        return this.uid;
-    }
+  public java.lang.Integer getUid() {
+    return this.uid;
+  }
 
-    public java.lang.Integer getNid() {
-        return this.nid;
-    }
+  public java.lang.Integer getNid() {
+    return this.nid;
+  }
 
-    public void setUid(java.lang.Integer uid) {
-        this.uid = uid;
-    }
+  public void setUid(java.lang.Integer uid) {
+    this.uid = uid;
+  }
 
-    public void setNid(java.lang.Integer nid) {
-        this.nid = nid;
-    }
+  public void setNid(java.lang.Integer nid) {
+    this.nid = nid;
+  }
 
-    public java.lang.Integer getTimestamp() {
-        return this.timestamp;
-    }
+  public java.lang.Integer getTimestamp() {
+    return this.timestamp;
+  }
 
-    public void setTimestamp(java.lang.Integer timestamp) {
-        this.timestamp = timestamp;
-    }
+  public void setTimestamp(java.lang.Integer timestamp) {
+    this.timestamp = timestamp;
+  }
 }

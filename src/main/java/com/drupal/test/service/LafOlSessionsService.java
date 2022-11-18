@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlSessions;
 import java.util.List;
+import com.drupal.test.entity.LafOlSessions;
 
 public interface LafOlSessionsService {
-    public LafOlSessions find(java.lang.String id);
+  public LafOlSessions find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlSessions based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlSessions records.
-     */
-    public List<LafOlSessions> select(int maxResult);
+  /**
+   * Select a list of LafOlSessions based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlSessions records.
+   */
+  public List<LafOlSessions> select(int maxResult);
 
-    /**
-     * Select all LafOlSessions.
-     *
-     * @return all LafOlSessions records.
-     */
-    public List<LafOlSessions> selectAll();
+  /**
+   * Select all LafOlSessions.
+   *
+   * @return all LafOlSessions records.
+   */
+  public List<LafOlSessions> selectAll();
 
-    /**
-     * Create LafOlSessions.
-     *
-     * @param bean The LafOlSessions.
-     * @return The LafOlSessions.
-     */
-    public LafOlSessions create(LafOlSessions bean);
+  /**
+   * Create LafOlSessions.
+   *
+   * @param bean The LafOlSessions.
+   * @return The LafOlSessions.
+   */
+  public LafOlSessions create(LafOlSessions bean);
 
-    /**
-     * Update a LafOlSessions.
-     *
-     * @param bean - The LafOlSessions.
-     * @return LafOlSessions.
-     */
-    public LafOlSessions update(LafOlSessions bean);
+  /**
+   * Update a LafOlSessions.
+   *
+   * @param bean - The LafOlSessions.
+   * @return LafOlSessions.
+   */
+  public LafOlSessions update(LafOlSessions bean);
 }

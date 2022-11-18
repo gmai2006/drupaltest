@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlLocaleFile;
 import com.drupal.test.entity.LafOlLocaleFileId;
-import java.util.List;
 
 public interface LafOlLocaleFileDao {
-    /**
-     * Retrieve all records LafOlLocaleFile.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlLocaleFile
-     */
-    public List<LafOlLocaleFile> select(int maxResult);
+  /**
+   * Retrieve all records LafOlLocaleFile.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlLocaleFile
+   */
+  public List<LafOlLocaleFile> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlLocaleFile.
-     *
-     * @return A list of LafOlLocaleFile
-     */
-    public List<LafOlLocaleFile> selectAll();
+  /**
+   * Retrieve all records LafOlLocaleFile.
+   *
+   * @return A list of LafOlLocaleFile
+   */
+  public List<LafOlLocaleFile> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlLocaleFile id.
-     * @return The same LafOlLocaleFile.
-     */
-    public LafOlLocaleFile find(LafOlLocaleFileId id);
-    /**
-     * Create an LafOlLocaleFile.
-     *
-     * @param e the LafOlLocaleFile.
-     * @return The same LafOlLocaleFile.
-     */
-    public LafOlLocaleFile create(LafOlLocaleFile e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlLocaleFile id.
+   * @return The same LafOlLocaleFile.
+   */
+  public LafOlLocaleFile find(LafOlLocaleFileId id);
+  /**
+   * Create an LafOlLocaleFile.
+   *
+   * @param e the LafOlLocaleFile.
+   * @return The same LafOlLocaleFile.
+   */
+  public LafOlLocaleFile create(LafOlLocaleFile e);
 
-    /**
-     * Update the LafOlLocaleFile.
-     *
-     * @param e the LafOlLocaleFile.
-     * @return The same LafOlLocaleFile.
-     */
-    public LafOlLocaleFile update(LafOlLocaleFile e);
+  /**
+   * Update the LafOlLocaleFile.
+   *
+   * @param e the LafOlLocaleFile.
+   * @return The same LafOlLocaleFile.
+   */
+  public LafOlLocaleFile update(LafOlLocaleFile e);
 }

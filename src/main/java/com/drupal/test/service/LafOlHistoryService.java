@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlHistory;
 import com.drupal.test.entity.LafOlHistoryId;
-import java.util.List;
 
 public interface LafOlHistoryService {
-    public LafOlHistory find(LafOlHistoryId id);
-    /**
-     * Select a list of LafOlHistory based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlHistory records.
-     */
-    public List<LafOlHistory> select(int maxResult);
+  public LafOlHistory find(LafOlHistoryId id);
+  /**
+   * Select a list of LafOlHistory based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlHistory records.
+   */
+  public List<LafOlHistory> select(int maxResult);
 
-    /**
-     * Select all LafOlHistory.
-     *
-     * @return all LafOlHistory records.
-     */
-    public List<LafOlHistory> selectAll();
+  /**
+   * Select all LafOlHistory.
+   *
+   * @return all LafOlHistory records.
+   */
+  public List<LafOlHistory> selectAll();
 
-    /**
-     * Create LafOlHistory.
-     *
-     * @param bean The LafOlHistory.
-     * @return The LafOlHistory.
-     */
-    public LafOlHistory create(LafOlHistory bean);
+  /**
+   * Create LafOlHistory.
+   *
+   * @param bean The LafOlHistory.
+   * @return The LafOlHistory.
+   */
+  public LafOlHistory create(LafOlHistory bean);
 
-    /**
-     * Update a LafOlHistory.
-     *
-     * @param bean - The LafOlHistory.
-     * @return LafOlHistory.
-     */
-    public LafOlHistory update(LafOlHistory bean);
+  /**
+   * Update a LafOlHistory.
+   *
+   * @param bean - The LafOlHistory.
+   * @return LafOlHistory.
+   */
+  public LafOlHistory update(LafOlHistory bean);
 }

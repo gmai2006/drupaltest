@@ -16,49 +16,52 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlLocalesLocation;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlLocalesLocation;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlLocalesLocationHandler")
 public class LafOlLocalesLocationHandler extends DelimiterFileHandler<LafOlLocalesLocation> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlLocalesLocationHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlLocalesLocationHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlLocalesLocation parseLine(List<String> headers, List<String> tokens) {
+    LafOlLocalesLocation record = new LafOlLocalesLocation();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "lid":
+          record.setLid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "sid":
+          record.setSid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "type":
+          record.setType(tokens.get(i));
+          break;
+
+        case "name":
+          record.setName(tokens.get(i));
+          break;
+
+        case "version":
+          record.setVersion(tokens.get(i));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlLocalesLocation parseLine(List<String> headers, List<String> tokens) {
-        LafOlLocalesLocation record = new LafOlLocalesLocation();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "lid":
-                    record.setLid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "sid":
-                    record.setSid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "type":
-                    record.setType(tokens.get(i));
-                    break;
-
-                case "name":
-                    record.setName(tokens.get(i));
-                    break;
-
-                case "version":
-                    record.setVersion(tokens.get(i));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

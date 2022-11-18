@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeFieldTags;
 import com.drupal.test.entity.LafOlNodeFieldTagsId;
-import java.util.List;
 
 public interface LafOlNodeFieldTagsDao {
-    /**
-     * Retrieve all records LafOlNodeFieldTags.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlNodeFieldTags
-     */
-    public List<LafOlNodeFieldTags> select(int maxResult);
+  /**
+   * Retrieve all records LafOlNodeFieldTags.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlNodeFieldTags
+   */
+  public List<LafOlNodeFieldTags> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlNodeFieldTags.
-     *
-     * @return A list of LafOlNodeFieldTags
-     */
-    public List<LafOlNodeFieldTags> selectAll();
+  /**
+   * Retrieve all records LafOlNodeFieldTags.
+   *
+   * @return A list of LafOlNodeFieldTags
+   */
+  public List<LafOlNodeFieldTags> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlNodeFieldTags id.
-     * @return The same LafOlNodeFieldTags.
-     */
-    public LafOlNodeFieldTags find(LafOlNodeFieldTagsId id);
-    /**
-     * Create an LafOlNodeFieldTags.
-     *
-     * @param e the LafOlNodeFieldTags.
-     * @return The same LafOlNodeFieldTags.
-     */
-    public LafOlNodeFieldTags create(LafOlNodeFieldTags e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlNodeFieldTags id.
+   * @return The same LafOlNodeFieldTags.
+   */
+  public LafOlNodeFieldTags find(LafOlNodeFieldTagsId id);
+  /**
+   * Create an LafOlNodeFieldTags.
+   *
+   * @param e the LafOlNodeFieldTags.
+   * @return The same LafOlNodeFieldTags.
+   */
+  public LafOlNodeFieldTags create(LafOlNodeFieldTags e);
 
-    /**
-     * Update the LafOlNodeFieldTags.
-     *
-     * @param e the LafOlNodeFieldTags.
-     * @return The same LafOlNodeFieldTags.
-     */
-    public LafOlNodeFieldTags update(LafOlNodeFieldTags e);
+  /**
+   * Update the LafOlNodeFieldTags.
+   *
+   * @param e the LafOlNodeFieldTags.
+   * @return The same LafOlNodeFieldTags.
+   */
+  public LafOlNodeFieldTags update(LafOlNodeFieldTags e);
 }

@@ -18,72 +18,73 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlLocaleFile. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlLocaleFile. generated on 11/17/2022 from a schema. */
 public class LafOlLocaleFileId implements Serializable {
-    private static final long serialVersionUID = 163445265037458880L;
+  private static final long serialVersionUID = 166875433023770976L;
 
-    @Column(name = "langcode")
-    private java.lang.String langcode;
+  @Column(name = "langcode")
+  private java.lang.String langcode;
 
-    @Column(name = "project")
-    private java.lang.String project;
+  @Column(name = "project")
+  private java.lang.String project;
 
-    /** Constructor: LafOlLocaleFileId. */
-    public LafOlLocaleFileId() {}
+  /** Constructor: LafOlLocaleFileId. */
+  public LafOlLocaleFileId() {}
 
-    /**
-     * Constructor: LafOlLocaleFileId.
-     *
-     * @param langcode - langcode.
-     * @param project - project.
-     */
-    public LafOlLocaleFileId(java.lang.String langcode, java.lang.String project) {
-        this.langcode = langcode;
-        this.project = project;
-    }
+  /**
+   * Constructor: LafOlLocaleFileId.
+   *
+   * @param langcode - langcode.
+   * @param project - project.
+   */
+  public LafOlLocaleFileId(java.lang.String langcode, java.lang.String project) {
+    this.langcode = langcode;
+    this.project = project;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.String getProject() {
-        return this.project;
-    }
+  public java.lang.String getProject() {
+    return this.project;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setProject(java.lang.String project) {
-        this.project = project;
-    }
+  public void setProject(java.lang.String project) {
+    this.project = project;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
-        result = prime * result + ((project == null) ? 0 : project.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
+    result = prime * result + ((project == null) ? 0 : project.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlLocaleFileId other = (LafOlLocaleFileId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlLocaleFileId other = (LafOlLocaleFileId) obj;
 
-        if (langcode == null) {
-            if (other.langcode != null) return false;
-        } else if (!langcode.equals(other.langcode)) return false;
+    if (langcode == null) {
+      if (other.langcode != null) return false;
+    } else if (!langcode.equals(other.langcode)) return false;
 
-        if (project == null) {
-            if (other.project != null) return false;
-        } else if (!project.equals(other.project)) return false;
+    if (project == null) {
+      if (other.project != null) return false;
+    } else if (!project.equals(other.project)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

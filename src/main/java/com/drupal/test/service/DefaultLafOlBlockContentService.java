@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlBlockContentDao;
 import com.drupal.test.entity.LafOlBlockContent;
 import com.drupal.test.entity.LafOlBlockContentId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlBlockContentService")
 public class DefaultLafOlBlockContentService implements LafOlBlockContentService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlBlockContentDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlBlockContentDao dao;
 
-    @Inject
-    @Named("DefaultLafOlBlockContentDao")
-    public DefaultLafOlBlockContentService(final LafOlBlockContentDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlBlockContentDao")
+  public DefaultLafOlBlockContentService(final LafOlBlockContentDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBlockContent find(LafOlBlockContentId id) {
-        final LafOlBlockContent result = dao.find(id);
-        logger.info("find(LafOlBlockContent) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBlockContent find(LafOlBlockContentId id) {
+    final LafOlBlockContent result = dao.find(id);
+    logger.info("find(LafOlBlockContent) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlBlockContent> select(int maxResult) {
-        final List<LafOlBlockContent> result = dao.select(maxResult);
-        logger.info("select(LafOlBlockContent) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlBlockContent> select(int maxResult) {
+    final List<LafOlBlockContent> result = dao.select(maxResult);
+    logger.info("select(LafOlBlockContent) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlBlockContent> selectAll() {
-        final List<LafOlBlockContent> results = dao.selectAll();
-        logger.info("selectAll(LafOlBlockContent) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlBlockContent> selectAll() {
+    final List<LafOlBlockContent> results = dao.selectAll();
+    logger.info("selectAll(LafOlBlockContent) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBlockContent create(LafOlBlockContent bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlBlockContent={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBlockContent create(LafOlBlockContent bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlBlockContent={}) - entered bean ");
 
-        final LafOlBlockContent result = dao.create(bean);
+    final LafOlBlockContent result = dao.create(bean);
 
-        logger.info("create(LafOlBlockContent) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlBlockContent) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBlockContent update(LafOlBlockContent bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlBlockContent={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBlockContent update(LafOlBlockContent bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlBlockContent={}) - entered bean ");
 
-        final LafOlBlockContent result = dao.update(bean);
+    final LafOlBlockContent result = dao.update(bean);
 
-        logger.info("update(LafOlBlockContent) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlBlockContent) - exited - return value={} result ");
+    return result;
+  }
 }

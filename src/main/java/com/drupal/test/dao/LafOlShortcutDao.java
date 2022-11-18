@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlShortcut;
 import com.drupal.test.entity.LafOlShortcutId;
-import java.util.List;
 
 public interface LafOlShortcutDao {
-    /**
-     * Retrieve all records LafOlShortcut.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlShortcut
-     */
-    public List<LafOlShortcut> select(int maxResult);
+  /**
+   * Retrieve all records LafOlShortcut.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlShortcut
+   */
+  public List<LafOlShortcut> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlShortcut.
-     *
-     * @return A list of LafOlShortcut
-     */
-    public List<LafOlShortcut> selectAll();
+  /**
+   * Retrieve all records LafOlShortcut.
+   *
+   * @return A list of LafOlShortcut
+   */
+  public List<LafOlShortcut> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlShortcut id.
-     * @return The same LafOlShortcut.
-     */
-    public LafOlShortcut find(LafOlShortcutId id);
-    /**
-     * Create an LafOlShortcut.
-     *
-     * @param e the LafOlShortcut.
-     * @return The same LafOlShortcut.
-     */
-    public LafOlShortcut create(LafOlShortcut e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlShortcut id.
+   * @return The same LafOlShortcut.
+   */
+  public LafOlShortcut find(LafOlShortcutId id);
+  /**
+   * Create an LafOlShortcut.
+   *
+   * @param e the LafOlShortcut.
+   * @return The same LafOlShortcut.
+   */
+  public LafOlShortcut create(LafOlShortcut e);
 
-    /**
-     * Update the LafOlShortcut.
-     *
-     * @param e the LafOlShortcut.
-     * @return The same LafOlShortcut.
-     */
-    public LafOlShortcut update(LafOlShortcut e);
+  /**
+   * Update the LafOlShortcut.
+   *
+   * @param e the LafOlShortcut.
+   * @return The same LafOlShortcut.
+   */
+  public LafOlShortcut update(LafOlShortcut e);
 }

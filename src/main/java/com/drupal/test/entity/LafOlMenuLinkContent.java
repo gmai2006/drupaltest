@@ -16,85 +16,85 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlMenuLinkContentId.class)
 @Table(name = "lafol_menu_link_content")
 public class LafOlMenuLinkContent implements Serializable {
-    private static final long serialVersionUID = 16344526504253727L;
+  private static final long serialVersionUID = 166875433027269795L;
 
-    /** Description: id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "id")
-    private java.lang.Integer id;
-    /** Description: uuid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "uuid")
-    private java.lang.String uuid;
-    /** Description: revision_id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "revision_id")
-    private java.lang.Integer revisionId;
+  /** Description: id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "id")
+  private java.lang.Integer id;
+  /** Description: uuid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "uuid")
+  private java.lang.String uuid;
+  /** Description: revision_id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "revision_id")
+  private java.lang.Integer revisionId;
 
-    /** Description: bundle. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "bundle", length = 32)
-    private java.lang.String bundle;
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "langcode", length = 12)
-    private java.lang.String langcode;
+  /** Description: bundle. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "bundle", length = 32)
+  private java.lang.String bundle;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "langcode", length = 12)
+  private java.lang.String langcode;
 
-    public LafOlMenuLinkContent() {}
+  public LafOlMenuLinkContent() {}
 
-    public java.lang.Integer getId() {
-        return this.id;
-    }
+  public java.lang.Integer getId() {
+    return this.id;
+  }
 
-    public java.lang.String getUuid() {
-        return this.uuid;
-    }
+  public java.lang.String getUuid() {
+    return this.uuid;
+  }
 
-    public java.lang.Integer getRevisionId() {
-        return this.revisionId;
-    }
+  public java.lang.Integer getRevisionId() {
+    return this.revisionId;
+  }
 
-    public void setId(java.lang.Integer id) {
-        this.id = id;
-    }
+  public void setId(java.lang.Integer id) {
+    this.id = id;
+  }
 
-    public void setUuid(java.lang.String uuid) {
-        this.uuid = uuid;
-    }
+  public void setUuid(java.lang.String uuid) {
+    this.uuid = uuid;
+  }
 
-    public void setRevisionId(java.lang.Integer revisionId) {
-        this.revisionId = revisionId;
-    }
+  public void setRevisionId(java.lang.Integer revisionId) {
+    this.revisionId = revisionId;
+  }
 
-    public java.lang.String getBundle() {
-        return this.bundle;
-    }
+  public java.lang.String getBundle() {
+    return this.bundle;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public void setBundle(java.lang.String bundle) {
-        this.bundle = bundle;
-    }
+  public void setBundle(java.lang.String bundle) {
+    this.bundle = bundle;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 }

@@ -17,117 +17,93 @@
 package com.drupal.test.handler;
 
 import static org.junit.Assert.assertEquals;
-
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.dao.StandaloneJpaDao;
-import com.drupal.test.entity.LafOlUserUserPicture;
-import com.drupal.test.entity.LafOlUserUserPictureId;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import java.io.IOException;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import org.json.CDL;
 import org.json.JSONArray;
+import com.google.gson.Gson;
+import com.drupal.test.entity.LafOlUserUserPicture;
+import com.drupal.test.dao.JpaDao;
+import com.drupal.test.dao.StandaloneJpaDao;
+import com.drupal.test.dao.DefaultLafOlUserUserPictureDao;
+import com.drupal.test.utils.DelimiterParser;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
+
+import com.drupal.test.entity.LafOlUserUserPictureId;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.google.gson.GsonBuilder;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class LafOlUserUserPictureHandlerTestIt {
-    static final String inputFile = "LafOlUserUserPicture.json";
-    static LafOlUserUserPictureHandler handler;
-    private static JpaDao jpa;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlUserUserPicture[] records;
+  static final String inputFile = "LafOlUserUserPicture.json";
+  static LafOlUserUserPictureHandler handler;
+  private static JpaDao jpa;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlUserUserPicture[] records;
 
-    /** Run before the test. */
-    @BeforeClass
-    public static void before() {
-        final EntityManagerFactory factory =
-                Persistence.createEntityManagerFactory("testpersistence");
-        jpa = new StandaloneJpaDao(factory.createEntityManager());
-        handler = new LafOlUserUserPictureHandler(jpa);
-    }
+  /** Run before the test. */
+  @BeforeClass
+  public static void before() {
+    final EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    jpa = new StandaloneJpaDao(factory.createEntityManager());
+    handler = new LafOlUserUserPictureHandler(jpa);
+  }
 
-    @Test
-    public void testSelect() throws IOException {
-        final File tempFile =
-                createRecordInputStreamFromJsonFile(inputFile, Charset.defaultCharset());
-        final InputStream inputStream = new BufferedInputStream(new FileInputStream(tempFile));
-        int count = handler.process(inputStream);
-        String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-        records = gson.fromJson(json, LafOlUserUserPicture[].class);
-        assertEquals("match count", count, records.length);
-        final LafOlUserUserPictureId id =
-                new LafOlUserUserPictureId(
-                        this.records[0].getLangcode(),
-                        this.records[0].getDeleted(),
-                        this.records[0].getDelta(),
-                        this.records[0].getEntityId());
-        LafOlUserUserPicture testResult = jpa.find(LafOlUserUserPicture.class, id);
-        assertEquals("expect equals bundle ", this.records[0].getBundle(), testResult.getBundle());
-        org.junit.Assert.assertEquals(
-                "expect equals revisionId ",
-                this.records[0].getRevisionId(),
-                testResult.getRevisionId());
-        org.junit.Assert.assertEquals(
-                "expect equals userPictureTargetId ",
-                this.records[0].getUserPictureTargetId(),
-                testResult.getUserPictureTargetId());
-        assertEquals(
-                "expect equals userPictureAlt ",
-                this.records[0].getUserPictureAlt(),
-                testResult.getUserPictureAlt());
-        assertEquals(
-                "expect equals userPictureTitle ",
-                this.records[0].getUserPictureTitle(),
-                testResult.getUserPictureTitle());
-        org.junit.Assert.assertEquals(
-                "expect equals userPictureWidth ",
-                this.records[0].getUserPictureWidth(),
-                testResult.getUserPictureWidth());
-        org.junit.Assert.assertEquals(
-                "expect equals userPictureHeight ",
-                this.records[0].getUserPictureHeight(),
-                testResult.getUserPictureHeight());
+  @Test
+  public void testSelect() throws IOException {
+    final File tempFile = new File("./src/test/resources/LafOlUserUserPicture.csv");
+    final InputStream inputStream = new BufferedInputStream(new FileInputStream(tempFile));
+    int count = handler.process(inputStream);
+    String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+    records = gson.fromJson(json, LafOlUserUserPicture[].class);
+    assertEquals("match count", count, records.length);
+    final LafOlUserUserPictureId id =
+        new LafOlUserUserPictureId(
+            this.records[0].getLangcode(),
+            this.records[0].getDeleted(),
+            this.records[0].getDelta(),
+            this.records[0].getEntityId());
+    LafOlUserUserPicture testResult = jpa.find(LafOlUserUserPicture.class, id);
+    assertEquals("expect equals bundle ", this.records[0].getBundle(), testResult.getBundle());
+    org.junit.Assert.assertEquals(
+        "expect equals revisionId ", this.records[0].getRevisionId(), testResult.getRevisionId());
+    org.junit.Assert.assertEquals(
+        "expect equals userPictureTargetId ",
+        this.records[0].getUserPictureTargetId(),
+        testResult.getUserPictureTargetId());
+    assertEquals(
+        "expect equals userPictureAlt ",
+        this.records[0].getUserPictureAlt(),
+        testResult.getUserPictureAlt());
+    assertEquals(
+        "expect equals userPictureTitle ",
+        this.records[0].getUserPictureTitle(),
+        testResult.getUserPictureTitle());
+    org.junit.Assert.assertEquals(
+        "expect equals userPictureWidth ",
+        this.records[0].getUserPictureWidth(),
+        testResult.getUserPictureWidth());
+    org.junit.Assert.assertEquals(
+        "expect equals userPictureHeight ",
+        this.records[0].getUserPictureHeight(),
+        testResult.getUserPictureHeight());
 
-        // cleanup
-        inputStream.close();
-        json = null;
-        records = null;
-    }
-
-    /**
-     * Construct a delimiter file from a json file.
-     *
-     * @param inputFile the json file.
-     * @param charset default charset.
-     * @return
-     */
-    private File createRecordInputStreamFromJsonFile(String inputFile, Charset charset) {
-        try {
-            final File tempFile = File.createTempFile(inputFile, ".txt");
-            tempFile.deleteOnExit();
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            JSONArray docs = new JSONArray(json);
-            String csv = CDL.toString(docs);
-            org.apache.commons.io.FileUtils.writeStringToFile(
-                    tempFile, csv, Charset.defaultCharset());
-            return tempFile;
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-    }
+    // cleanup
+    inputStream.close();
+    json = null;
+    records = null;
+  }
 }

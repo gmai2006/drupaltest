@@ -16,105 +16,105 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @Table(name = "lafol_node_revision")
 public class LafOlNodeRevision implements Serializable {
-    private static final long serialVersionUID = 163445265068384055L;
+  private static final long serialVersionUID = 166875433042255854L;
 
-    /** Description: vid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "vid")
-    private java.lang.Integer vid;
+  /** Description: vid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "vid")
+  private java.lang.Integer vid;
 
-    /** Description: nid. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "nid")
-    private java.lang.Integer nid;
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "langcode", length = 12)
-    private java.lang.String langcode;
-    /** Description: revision_uid. */
-    @Basic
-    @Column(name = "revision_uid")
-    private java.lang.Integer revisionUid;
-    /** Description: revision_timestamp. */
-    @Basic
-    @Column(name = "revision_timestamp")
-    private java.lang.Integer revisionTimestamp;
-    /** Description: revision_log. */
-    @Basic
-    @Column(name = "revision_log", length = 0)
-    private java.lang.String revisionLog;
-    /** Description: revision_default. */
-    @Basic
-    @Column(name = "revision_default")
-    private java.lang.Integer revisionDefault;
+  /** Description: nid. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "nid")
+  private java.lang.Integer nid;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "langcode", length = 12)
+  private java.lang.String langcode;
+  /** Description: revision_uid. */
+  @Basic
+  @Column(name = "revision_uid")
+  private java.lang.Integer revisionUid;
+  /** Description: revision_timestamp. */
+  @Basic
+  @Column(name = "revision_timestamp")
+  private java.lang.Integer revisionTimestamp;
+  /** Description: revision_log. */
+  @Basic
+  @Column(name = "revision_log", length = 0)
+  private java.lang.String revisionLog;
+  /** Description: revision_default. */
+  @Basic
+  @Column(name = "revision_default")
+  private java.lang.Integer revisionDefault;
 
-    public LafOlNodeRevision() {}
+  public LafOlNodeRevision() {}
 
-    public java.lang.Integer getVid() {
-        return this.vid;
-    }
+  public java.lang.Integer getVid() {
+    return this.vid;
+  }
 
-    public void setVid(java.lang.Integer vid) {
-        this.vid = vid;
-    }
+  public void setVid(java.lang.Integer vid) {
+    this.vid = vid;
+  }
 
-    public java.lang.Integer getNid() {
-        return this.nid;
-    }
+  public java.lang.Integer getNid() {
+    return this.nid;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.Integer getRevisionUid() {
-        return this.revisionUid;
-    }
+  public java.lang.Integer getRevisionUid() {
+    return this.revisionUid;
+  }
 
-    public java.lang.Integer getRevisionTimestamp() {
-        return this.revisionTimestamp;
-    }
+  public java.lang.Integer getRevisionTimestamp() {
+    return this.revisionTimestamp;
+  }
 
-    public java.lang.String getRevisionLog() {
-        return this.revisionLog;
-    }
+  public java.lang.String getRevisionLog() {
+    return this.revisionLog;
+  }
 
-    public java.lang.Integer getRevisionDefault() {
-        return this.revisionDefault;
-    }
+  public java.lang.Integer getRevisionDefault() {
+    return this.revisionDefault;
+  }
 
-    public void setNid(java.lang.Integer nid) {
-        this.nid = nid;
-    }
+  public void setNid(java.lang.Integer nid) {
+    this.nid = nid;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setRevisionUid(java.lang.Integer revisionUid) {
-        this.revisionUid = revisionUid;
-    }
+  public void setRevisionUid(java.lang.Integer revisionUid) {
+    this.revisionUid = revisionUid;
+  }
 
-    public void setRevisionTimestamp(java.lang.Integer revisionTimestamp) {
-        this.revisionTimestamp = revisionTimestamp;
-    }
+  public void setRevisionTimestamp(java.lang.Integer revisionTimestamp) {
+    this.revisionTimestamp = revisionTimestamp;
+  }
 
-    public void setRevisionLog(java.lang.String revisionLog) {
-        this.revisionLog = revisionLog;
-    }
+  public void setRevisionLog(java.lang.String revisionLog) {
+    this.revisionLog = revisionLog;
+  }
 
-    public void setRevisionDefault(java.lang.Integer revisionDefault) {
-        this.revisionDefault = revisionDefault;
-    }
+  public void setRevisionDefault(java.lang.Integer revisionDefault) {
+    this.revisionDefault = revisionDefault;
+  }
 }

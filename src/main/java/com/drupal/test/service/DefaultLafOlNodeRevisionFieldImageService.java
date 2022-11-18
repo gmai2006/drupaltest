@@ -17,74 +17,73 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlNodeRevisionFieldImageDao;
 import com.drupal.test.entity.LafOlNodeRevisionFieldImage;
 import com.drupal.test.entity.LafOlNodeRevisionFieldImageId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlNodeRevisionFieldImageService")
 public class DefaultLafOlNodeRevisionFieldImageService
-        implements LafOlNodeRevisionFieldImageService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlNodeRevisionFieldImageDao dao;
+    implements LafOlNodeRevisionFieldImageService {
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlNodeRevisionFieldImageDao dao;
 
-    @Inject
-    @Named("DefaultLafOlNodeRevisionFieldImageDao")
-    public DefaultLafOlNodeRevisionFieldImageService(final LafOlNodeRevisionFieldImageDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlNodeRevisionFieldImageDao")
+  public DefaultLafOlNodeRevisionFieldImageService(final LafOlNodeRevisionFieldImageDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionFieldImage find(LafOlNodeRevisionFieldImageId id) {
-        final LafOlNodeRevisionFieldImage result = dao.find(id);
-        logger.info("find(LafOlNodeRevisionFieldImage) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionFieldImage find(LafOlNodeRevisionFieldImageId id) {
+    final LafOlNodeRevisionFieldImage result = dao.find(id);
+    logger.info("find(LafOlNodeRevisionFieldImage) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeRevisionFieldImage> select(int maxResult) {
-        final List<LafOlNodeRevisionFieldImage> result = dao.select(maxResult);
-        logger.info("select(LafOlNodeRevisionFieldImage) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlNodeRevisionFieldImage> select(int maxResult) {
+    final List<LafOlNodeRevisionFieldImage> result = dao.select(maxResult);
+    logger.info("select(LafOlNodeRevisionFieldImage) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeRevisionFieldImage> selectAll() {
-        final List<LafOlNodeRevisionFieldImage> results = dao.selectAll();
-        logger.info("selectAll(LafOlNodeRevisionFieldImage) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlNodeRevisionFieldImage> selectAll() {
+    final List<LafOlNodeRevisionFieldImage> results = dao.selectAll();
+    logger.info("selectAll(LafOlNodeRevisionFieldImage) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionFieldImage create(LafOlNodeRevisionFieldImage bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlNodeRevisionFieldImage={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionFieldImage create(LafOlNodeRevisionFieldImage bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlNodeRevisionFieldImage={}) - entered bean ");
 
-        final LafOlNodeRevisionFieldImage result = dao.create(bean);
+    final LafOlNodeRevisionFieldImage result = dao.create(bean);
 
-        logger.info("create(LafOlNodeRevisionFieldImage) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlNodeRevisionFieldImage) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionFieldImage update(LafOlNodeRevisionFieldImage bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlNodeRevisionFieldImage={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionFieldImage update(LafOlNodeRevisionFieldImage bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlNodeRevisionFieldImage={}) - entered bean ");
 
-        final LafOlNodeRevisionFieldImage result = dao.update(bean);
+    final LafOlNodeRevisionFieldImage result = dao.update(bean);
 
-        logger.info("update(LafOlNodeRevisionFieldImage) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlNodeRevisionFieldImage) - exited - return value={} result ");
+    return result;
+  }
 }

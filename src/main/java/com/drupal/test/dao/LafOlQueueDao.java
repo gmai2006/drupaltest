@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlQueue;
 import java.util.List;
+import com.drupal.test.entity.LafOlQueue;
 
 public interface LafOlQueueDao {
-    /**
-     * Retrieve all records LafOlQueue.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlQueue
-     */
-    public List<LafOlQueue> select(int maxResult);
+  /**
+   * Retrieve all records LafOlQueue.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlQueue
+   */
+  public List<LafOlQueue> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlQueue.
-     *
-     * @return A list of LafOlQueue
-     */
-    public List<LafOlQueue> selectAll();
+  /**
+   * Retrieve all records LafOlQueue.
+   *
+   * @return A list of LafOlQueue
+   */
+  public List<LafOlQueue> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlQueue id.
-     * @return The same LafOlQueue.
-     */
-    public LafOlQueue find(java.lang.Integer id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlQueue id.
+   * @return The same LafOlQueue.
+   */
+  public LafOlQueue find(java.lang.Integer id);
 
-    /**
-     * Create an LafOlQueue.
-     *
-     * @param e the LafOlQueue.
-     * @return The same LafOlQueue.
-     */
-    public LafOlQueue create(LafOlQueue e);
+  /**
+   * Create an LafOlQueue.
+   *
+   * @param e the LafOlQueue.
+   * @return The same LafOlQueue.
+   */
+  public LafOlQueue create(LafOlQueue e);
 
-    /**
-     * Update the LafOlQueue.
-     *
-     * @param e the LafOlQueue.
-     * @return The same LafOlQueue.
-     */
-    public LafOlQueue update(LafOlQueue e);
+  /**
+   * Update the LafOlQueue.
+   *
+   * @param e the LafOlQueue.
+   * @return The same LafOlQueue.
+   */
+  public LafOlQueue update(LafOlQueue e);
 }

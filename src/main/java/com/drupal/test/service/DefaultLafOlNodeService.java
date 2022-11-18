@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlNodeDao;
 import com.drupal.test.entity.LafOlNode;
 import com.drupal.test.entity.LafOlNodeId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlNodeService")
 public class DefaultLafOlNodeService implements LafOlNodeService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlNodeDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlNodeDao dao;
 
-    @Inject
-    @Named("DefaultLafOlNodeDao")
-    public DefaultLafOlNodeService(final LafOlNodeDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlNodeDao")
+  public DefaultLafOlNodeService(final LafOlNodeDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNode find(LafOlNodeId id) {
-        final LafOlNode result = dao.find(id);
-        logger.info("find(LafOlNode) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNode find(LafOlNodeId id) {
+    final LafOlNode result = dao.find(id);
+    logger.info("find(LafOlNode) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNode> select(int maxResult) {
-        final List<LafOlNode> result = dao.select(maxResult);
-        logger.info("select(LafOlNode) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlNode> select(int maxResult) {
+    final List<LafOlNode> result = dao.select(maxResult);
+    logger.info("select(LafOlNode) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNode> selectAll() {
-        final List<LafOlNode> results = dao.selectAll();
-        logger.info("selectAll(LafOlNode) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlNode> selectAll() {
+    final List<LafOlNode> results = dao.selectAll();
+    logger.info("selectAll(LafOlNode) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNode create(LafOlNode bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlNode={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNode create(LafOlNode bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlNode={}) - entered bean ");
 
-        final LafOlNode result = dao.create(bean);
+    final LafOlNode result = dao.create(bean);
 
-        logger.info("create(LafOlNode) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlNode) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNode update(LafOlNode bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlNode={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNode update(LafOlNode bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlNode={}) - entered bean ");
 
-        final LafOlNode result = dao.update(bean);
+    final LafOlNode result = dao.update(bean);
 
-        logger.info("update(LafOlNode) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlNode) - exited - return value={} result ");
+    return result;
+  }
 }

@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlBatch;
 import java.util.List;
+import com.drupal.test.entity.LafOlBatch;
 
 public interface LafOlBatchDao {
-    /**
-     * Retrieve all records LafOlBatch.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlBatch
-     */
-    public List<LafOlBatch> select(int maxResult);
+  /**
+   * Retrieve all records LafOlBatch.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlBatch
+   */
+  public List<LafOlBatch> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlBatch.
-     *
-     * @return A list of LafOlBatch
-     */
-    public List<LafOlBatch> selectAll();
+  /**
+   * Retrieve all records LafOlBatch.
+   *
+   * @return A list of LafOlBatch
+   */
+  public List<LafOlBatch> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlBatch id.
-     * @return The same LafOlBatch.
-     */
-    public LafOlBatch find(java.lang.Integer id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlBatch id.
+   * @return The same LafOlBatch.
+   */
+  public LafOlBatch find(java.lang.Integer id);
 
-    /**
-     * Create an LafOlBatch.
-     *
-     * @param e the LafOlBatch.
-     * @return The same LafOlBatch.
-     */
-    public LafOlBatch create(LafOlBatch e);
+  /**
+   * Create an LafOlBatch.
+   *
+   * @param e the LafOlBatch.
+   * @return The same LafOlBatch.
+   */
+  public LafOlBatch create(LafOlBatch e);
 
-    /**
-     * Update the LafOlBatch.
-     *
-     * @param e the LafOlBatch.
-     * @return The same LafOlBatch.
-     */
-    public LafOlBatch update(LafOlBatch e);
+  /**
+   * Update the LafOlBatch.
+   *
+   * @param e the LafOlBatch.
+   * @return The same LafOlBatch.
+   */
+  public LafOlBatch update(LafOlBatch e);
 }

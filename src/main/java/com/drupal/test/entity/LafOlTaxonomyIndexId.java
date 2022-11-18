@@ -18,72 +18,73 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlTaxonomyIndex. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlTaxonomyIndex. generated on 11/17/2022 from a schema. */
 public class LafOlTaxonomyIndexId implements Serializable {
-    private static final long serialVersionUID = 16344526509183782L;
+  private static final long serialVersionUID = 166875433057293419L;
 
-    @Column(name = "nid")
-    private java.lang.Integer nid;
+  @Column(name = "nid")
+  private java.lang.Integer nid;
 
-    @Column(name = "tid")
-    private java.lang.Integer tid;
+  @Column(name = "tid")
+  private java.lang.Integer tid;
 
-    /** Constructor: LafOlTaxonomyIndexId. */
-    public LafOlTaxonomyIndexId() {}
+  /** Constructor: LafOlTaxonomyIndexId. */
+  public LafOlTaxonomyIndexId() {}
 
-    /**
-     * Constructor: LafOlTaxonomyIndexId.
-     *
-     * @param nid - nid.
-     * @param tid - tid.
-     */
-    public LafOlTaxonomyIndexId(java.lang.Integer nid, java.lang.Integer tid) {
-        this.nid = nid;
-        this.tid = tid;
-    }
+  /**
+   * Constructor: LafOlTaxonomyIndexId.
+   *
+   * @param nid - nid.
+   * @param tid - tid.
+   */
+  public LafOlTaxonomyIndexId(java.lang.Integer nid, java.lang.Integer tid) {
+    this.nid = nid;
+    this.tid = tid;
+  }
 
-    public java.lang.Integer getNid() {
-        return this.nid;
-    }
+  public java.lang.Integer getNid() {
+    return this.nid;
+  }
 
-    public java.lang.Integer getTid() {
-        return this.tid;
-    }
+  public java.lang.Integer getTid() {
+    return this.tid;
+  }
 
-    public void setNid(java.lang.Integer nid) {
-        this.nid = nid;
-    }
+  public void setNid(java.lang.Integer nid) {
+    this.nid = nid;
+  }
 
-    public void setTid(java.lang.Integer tid) {
-        this.tid = tid;
-    }
+  public void setTid(java.lang.Integer tid) {
+    this.tid = tid;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((nid == null) ? 0 : nid.hashCode());
-        result = prime * result + ((tid == null) ? 0 : tid.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((nid == null) ? 0 : nid.hashCode());
+    result = prime * result + ((tid == null) ? 0 : tid.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlTaxonomyIndexId other = (LafOlTaxonomyIndexId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlTaxonomyIndexId other = (LafOlTaxonomyIndexId) obj;
 
-        if (nid == null) {
-            if (other.nid != null) return false;
-        } else if (!nid.equals(other.nid)) return false;
+    if (nid == null) {
+      if (other.nid != null) return false;
+    } else if (!nid.equals(other.nid)) return false;
 
-        if (tid == null) {
-            if (other.tid != null) return false;
-        } else if (!tid.equals(other.tid)) return false;
+    if (tid == null) {
+      if (other.tid != null) return false;
+    } else if (!tid.equals(other.tid)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

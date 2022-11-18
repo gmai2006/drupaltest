@@ -16,69 +16,72 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlUserUserPicture;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlUserUserPicture;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlUserUserPictureHandler")
 public class LafOlUserUserPictureHandler extends DelimiterFileHandler<LafOlUserUserPicture> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlUserUserPictureHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlUserUserPictureHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlUserUserPicture parseLine(List<String> headers, List<String> tokens) {
+    LafOlUserUserPicture record = new LafOlUserUserPicture();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "bundle":
+          record.setBundle(tokens.get(i));
+          break;
+
+        case "deleted":
+          record.setDeleted(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "entityId":
+          record.setEntityId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionId":
+          record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "delta":
+          record.setDelta(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "userPictureTargetId":
+          record.setUserPictureTargetId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "userPictureAlt":
+          record.setUserPictureAlt(tokens.get(i));
+          break;
+
+        case "userPictureTitle":
+          record.setUserPictureTitle(tokens.get(i));
+          break;
+
+        case "userPictureWidth":
+          record.setUserPictureWidth(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "userPictureHeight":
+          record.setUserPictureHeight(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlUserUserPicture parseLine(List<String> headers, List<String> tokens) {
-        LafOlUserUserPicture record = new LafOlUserUserPicture();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "bundle":
-                    record.setBundle(tokens.get(i));
-                    break;
-
-                case "deleted":
-                    record.setDeleted(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "entityId":
-                    record.setEntityId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionId":
-                    record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "delta":
-                    record.setDelta(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "userPictureTargetId":
-                    record.setUserPictureTargetId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "userPictureAlt":
-                    record.setUserPictureAlt(tokens.get(i));
-                    break;
-
-                case "userPictureTitle":
-                    record.setUserPictureTitle(tokens.get(i));
-                    break;
-
-                case "userPictureWidth":
-                    record.setUserPictureWidth(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "userPictureHeight":
-                    record.setUserPictureHeight(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlUserUserPictureDao;
 import com.drupal.test.entity.LafOlUserUserPicture;
 import com.drupal.test.entity.LafOlUserUserPictureId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlUserUserPictureService")
 public class DefaultLafOlUserUserPictureService implements LafOlUserUserPictureService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlUserUserPictureDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlUserUserPictureDao dao;
 
-    @Inject
-    @Named("DefaultLafOlUserUserPictureDao")
-    public DefaultLafOlUserUserPictureService(final LafOlUserUserPictureDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlUserUserPictureDao")
+  public DefaultLafOlUserUserPictureService(final LafOlUserUserPictureDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUserUserPicture find(LafOlUserUserPictureId id) {
-        final LafOlUserUserPicture result = dao.find(id);
-        logger.info("find(LafOlUserUserPicture) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUserUserPicture find(LafOlUserUserPictureId id) {
+    final LafOlUserUserPicture result = dao.find(id);
+    logger.info("find(LafOlUserUserPicture) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlUserUserPicture> select(int maxResult) {
-        final List<LafOlUserUserPicture> result = dao.select(maxResult);
-        logger.info("select(LafOlUserUserPicture) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlUserUserPicture> select(int maxResult) {
+    final List<LafOlUserUserPicture> result = dao.select(maxResult);
+    logger.info("select(LafOlUserUserPicture) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlUserUserPicture> selectAll() {
-        final List<LafOlUserUserPicture> results = dao.selectAll();
-        logger.info("selectAll(LafOlUserUserPicture) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlUserUserPicture> selectAll() {
+    final List<LafOlUserUserPicture> results = dao.selectAll();
+    logger.info("selectAll(LafOlUserUserPicture) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUserUserPicture create(LafOlUserUserPicture bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlUserUserPicture={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUserUserPicture create(LafOlUserUserPicture bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlUserUserPicture={}) - entered bean ");
 
-        final LafOlUserUserPicture result = dao.create(bean);
+    final LafOlUserUserPicture result = dao.create(bean);
 
-        logger.info("create(LafOlUserUserPicture) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlUserUserPicture) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUserUserPicture update(LafOlUserUserPicture bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlUserUserPicture={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUserUserPicture update(LafOlUserUserPicture bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlUserUserPicture={}) - entered bean ");
 
-        final LafOlUserUserPicture result = dao.update(bean);
+    final LafOlUserUserPicture result = dao.update(bean);
 
-        logger.info("update(LafOlUserUserPicture) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlUserUserPicture) - exited - return value={} result ");
+    return result;
+  }
 }

@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeRevisionFieldTags;
 import com.drupal.test.entity.LafOlNodeRevisionFieldTagsId;
-import java.util.List;
 
 public interface LafOlNodeRevisionFieldTagsService {
-    public LafOlNodeRevisionFieldTags find(LafOlNodeRevisionFieldTagsId id);
-    /**
-     * Select a list of LafOlNodeRevisionFieldTags based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlNodeRevisionFieldTags records.
-     */
-    public List<LafOlNodeRevisionFieldTags> select(int maxResult);
+  public LafOlNodeRevisionFieldTags find(LafOlNodeRevisionFieldTagsId id);
+  /**
+   * Select a list of LafOlNodeRevisionFieldTags based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlNodeRevisionFieldTags records.
+   */
+  public List<LafOlNodeRevisionFieldTags> select(int maxResult);
 
-    /**
-     * Select all LafOlNodeRevisionFieldTags.
-     *
-     * @return all LafOlNodeRevisionFieldTags records.
-     */
-    public List<LafOlNodeRevisionFieldTags> selectAll();
+  /**
+   * Select all LafOlNodeRevisionFieldTags.
+   *
+   * @return all LafOlNodeRevisionFieldTags records.
+   */
+  public List<LafOlNodeRevisionFieldTags> selectAll();
 
-    /**
-     * Create LafOlNodeRevisionFieldTags.
-     *
-     * @param bean The LafOlNodeRevisionFieldTags.
-     * @return The LafOlNodeRevisionFieldTags.
-     */
-    public LafOlNodeRevisionFieldTags create(LafOlNodeRevisionFieldTags bean);
+  /**
+   * Create LafOlNodeRevisionFieldTags.
+   *
+   * @param bean The LafOlNodeRevisionFieldTags.
+   * @return The LafOlNodeRevisionFieldTags.
+   */
+  public LafOlNodeRevisionFieldTags create(LafOlNodeRevisionFieldTags bean);
 
-    /**
-     * Update a LafOlNodeRevisionFieldTags.
-     *
-     * @param bean - The LafOlNodeRevisionFieldTags.
-     * @return LafOlNodeRevisionFieldTags.
-     */
-    public LafOlNodeRevisionFieldTags update(LafOlNodeRevisionFieldTags bean);
+  /**
+   * Update a LafOlNodeRevisionFieldTags.
+   *
+   * @param bean - The LafOlNodeRevisionFieldTags.
+   * @return LafOlNodeRevisionFieldTags.
+   */
+  public LafOlNodeRevisionFieldTags update(LafOlNodeRevisionFieldTags bean);
 }

@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlCommentFieldDataDao;
 import com.drupal.test.entity.LafOlCommentFieldData;
 import com.drupal.test.entity.LafOlCommentFieldDataId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlCommentFieldDataService")
 public class DefaultLafOlCommentFieldDataService implements LafOlCommentFieldDataService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlCommentFieldDataDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlCommentFieldDataDao dao;
 
-    @Inject
-    @Named("DefaultLafOlCommentFieldDataDao")
-    public DefaultLafOlCommentFieldDataService(final LafOlCommentFieldDataDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlCommentFieldDataDao")
+  public DefaultLafOlCommentFieldDataService(final LafOlCommentFieldDataDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCommentFieldData find(LafOlCommentFieldDataId id) {
-        final LafOlCommentFieldData result = dao.find(id);
-        logger.info("find(LafOlCommentFieldData) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCommentFieldData find(LafOlCommentFieldDataId id) {
+    final LafOlCommentFieldData result = dao.find(id);
+    logger.info("find(LafOlCommentFieldData) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCommentFieldData> select(int maxResult) {
-        final List<LafOlCommentFieldData> result = dao.select(maxResult);
-        logger.info("select(LafOlCommentFieldData) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlCommentFieldData> select(int maxResult) {
+    final List<LafOlCommentFieldData> result = dao.select(maxResult);
+    logger.info("select(LafOlCommentFieldData) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCommentFieldData> selectAll() {
-        final List<LafOlCommentFieldData> results = dao.selectAll();
-        logger.info("selectAll(LafOlCommentFieldData) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlCommentFieldData> selectAll() {
+    final List<LafOlCommentFieldData> results = dao.selectAll();
+    logger.info("selectAll(LafOlCommentFieldData) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCommentFieldData create(LafOlCommentFieldData bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlCommentFieldData={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCommentFieldData create(LafOlCommentFieldData bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlCommentFieldData={}) - entered bean ");
 
-        final LafOlCommentFieldData result = dao.create(bean);
+    final LafOlCommentFieldData result = dao.create(bean);
 
-        logger.info("create(LafOlCommentFieldData) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlCommentFieldData) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCommentFieldData update(LafOlCommentFieldData bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlCommentFieldData={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCommentFieldData update(LafOlCommentFieldData bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlCommentFieldData={}) - entered bean ");
 
-        final LafOlCommentFieldData result = dao.update(bean);
+    final LafOlCommentFieldData result = dao.update(bean);
 
-        logger.info("update(LafOlCommentFieldData) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlCommentFieldData) - exited - return value={} result ");
+    return result;
+  }
 }

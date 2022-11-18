@@ -16,50 +16,53 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlFileUsage;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlFileUsage;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlFileUsageHandler")
 public class LafOlFileUsageHandler extends DelimiterFileHandler<LafOlFileUsage> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlFileUsageHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlFileUsageHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlFileUsage parseLine(List<String> headers, List<String> tokens) {
+    LafOlFileUsage record = new LafOlFileUsage();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "fid":
+          record.setFid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "module":
+          record.setModule(tokens.get(i));
+          break;
+
+        case "type":
+          record.setType(tokens.get(i));
+          break;
+
+        case "id":
+          record.setId(tokens.get(i));
+          break;
+
+        case "count":
+          record.setCount(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlFileUsage parseLine(List<String> headers, List<String> tokens) {
-        LafOlFileUsage record = new LafOlFileUsage();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "fid":
-                    record.setFid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "module":
-                    record.setModule(tokens.get(i));
-                    break;
-
-                case "type":
-                    record.setType(tokens.get(i));
-                    break;
-
-                case "id":
-                    record.setId(tokens.get(i));
-                    break;
-
-                case "count":
-                    record.setCount(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

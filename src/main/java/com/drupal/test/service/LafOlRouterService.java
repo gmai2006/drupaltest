@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlRouter;
 import java.util.List;
+import com.drupal.test.entity.LafOlRouter;
 
 public interface LafOlRouterService {
-    public LafOlRouter find(java.lang.String id);
+  public LafOlRouter find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlRouter based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlRouter records.
-     */
-    public List<LafOlRouter> select(int maxResult);
+  /**
+   * Select a list of LafOlRouter based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlRouter records.
+   */
+  public List<LafOlRouter> select(int maxResult);
 
-    /**
-     * Select all LafOlRouter.
-     *
-     * @return all LafOlRouter records.
-     */
-    public List<LafOlRouter> selectAll();
+  /**
+   * Select all LafOlRouter.
+   *
+   * @return all LafOlRouter records.
+   */
+  public List<LafOlRouter> selectAll();
 
-    /**
-     * Create LafOlRouter.
-     *
-     * @param bean The LafOlRouter.
-     * @return The LafOlRouter.
-     */
-    public LafOlRouter create(LafOlRouter bean);
+  /**
+   * Create LafOlRouter.
+   *
+   * @param bean The LafOlRouter.
+   * @return The LafOlRouter.
+   */
+  public LafOlRouter create(LafOlRouter bean);
 
-    /**
-     * Update a LafOlRouter.
-     *
-     * @param bean - The LafOlRouter.
-     * @return LafOlRouter.
-     */
-    public LafOlRouter update(LafOlRouter bean);
+  /**
+   * Update a LafOlRouter.
+   *
+   * @param bean - The LafOlRouter.
+   * @return LafOlRouter.
+   */
+  public LafOlRouter update(LafOlRouter bean);
 }

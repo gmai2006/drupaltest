@@ -16,42 +16,45 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlUsers;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlUsers;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlUsersHandler")
 public class LafOlUsersHandler extends DelimiterFileHandler<LafOlUsers> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlUsersHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlUsersHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlUsers parseLine(List<String> headers, List<String> tokens) {
+    LafOlUsers record = new LafOlUsers();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "uid":
+          record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "uuid":
+          record.setUuid(tokens.get(i));
+          break;
+
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlUsers parseLine(List<String> headers, List<String> tokens) {
-        LafOlUsers record = new LafOlUsers();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "uid":
-                    record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "uuid":
-                    record.setUuid(tokens.get(i));
-                    break;
-
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

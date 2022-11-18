@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlBlockContentRevisionBody;
 import com.drupal.test.entity.LafOlBlockContentRevisionBodyId;
-import java.util.List;
 
 public interface LafOlBlockContentRevisionBodyService {
-    public LafOlBlockContentRevisionBody find(LafOlBlockContentRevisionBodyId id);
-    /**
-     * Select a list of LafOlBlockContentRevisionBody based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlBlockContentRevisionBody records.
-     */
-    public List<LafOlBlockContentRevisionBody> select(int maxResult);
+  public LafOlBlockContentRevisionBody find(LafOlBlockContentRevisionBodyId id);
+  /**
+   * Select a list of LafOlBlockContentRevisionBody based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlBlockContentRevisionBody records.
+   */
+  public List<LafOlBlockContentRevisionBody> select(int maxResult);
 
-    /**
-     * Select all LafOlBlockContentRevisionBody.
-     *
-     * @return all LafOlBlockContentRevisionBody records.
-     */
-    public List<LafOlBlockContentRevisionBody> selectAll();
+  /**
+   * Select all LafOlBlockContentRevisionBody.
+   *
+   * @return all LafOlBlockContentRevisionBody records.
+   */
+  public List<LafOlBlockContentRevisionBody> selectAll();
 
-    /**
-     * Create LafOlBlockContentRevisionBody.
-     *
-     * @param bean The LafOlBlockContentRevisionBody.
-     * @return The LafOlBlockContentRevisionBody.
-     */
-    public LafOlBlockContentRevisionBody create(LafOlBlockContentRevisionBody bean);
+  /**
+   * Create LafOlBlockContentRevisionBody.
+   *
+   * @param bean The LafOlBlockContentRevisionBody.
+   * @return The LafOlBlockContentRevisionBody.
+   */
+  public LafOlBlockContentRevisionBody create(LafOlBlockContentRevisionBody bean);
 
-    /**
-     * Update a LafOlBlockContentRevisionBody.
-     *
-     * @param bean - The LafOlBlockContentRevisionBody.
-     * @return LafOlBlockContentRevisionBody.
-     */
-    public LafOlBlockContentRevisionBody update(LafOlBlockContentRevisionBody bean);
+  /**
+   * Update a LafOlBlockContentRevisionBody.
+   *
+   * @param bean - The LafOlBlockContentRevisionBody.
+   * @return LafOlBlockContentRevisionBody.
+   */
+  public LafOlBlockContentRevisionBody update(LafOlBlockContentRevisionBody bean);
 }

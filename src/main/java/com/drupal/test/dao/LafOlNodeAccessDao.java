@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeAccess;
 import com.drupal.test.entity.LafOlNodeAccessId;
-import java.util.List;
 
 public interface LafOlNodeAccessDao {
-    /**
-     * Retrieve all records LafOlNodeAccess.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlNodeAccess
-     */
-    public List<LafOlNodeAccess> select(int maxResult);
+  /**
+   * Retrieve all records LafOlNodeAccess.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlNodeAccess
+   */
+  public List<LafOlNodeAccess> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlNodeAccess.
-     *
-     * @return A list of LafOlNodeAccess
-     */
-    public List<LafOlNodeAccess> selectAll();
+  /**
+   * Retrieve all records LafOlNodeAccess.
+   *
+   * @return A list of LafOlNodeAccess
+   */
+  public List<LafOlNodeAccess> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlNodeAccess id.
-     * @return The same LafOlNodeAccess.
-     */
-    public LafOlNodeAccess find(LafOlNodeAccessId id);
-    /**
-     * Create an LafOlNodeAccess.
-     *
-     * @param e the LafOlNodeAccess.
-     * @return The same LafOlNodeAccess.
-     */
-    public LafOlNodeAccess create(LafOlNodeAccess e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlNodeAccess id.
+   * @return The same LafOlNodeAccess.
+   */
+  public LafOlNodeAccess find(LafOlNodeAccessId id);
+  /**
+   * Create an LafOlNodeAccess.
+   *
+   * @param e the LafOlNodeAccess.
+   * @return The same LafOlNodeAccess.
+   */
+  public LafOlNodeAccess create(LafOlNodeAccess e);
 
-    /**
-     * Update the LafOlNodeAccess.
-     *
-     * @param e the LafOlNodeAccess.
-     * @return The same LafOlNodeAccess.
-     */
-    public LafOlNodeAccess update(LafOlNodeAccess e);
+  /**
+   * Update the LafOlNodeAccess.
+   *
+   * @param e the LafOlNodeAccess.
+   * @return The same LafOlNodeAccess.
+   */
+  public LafOlNodeAccess update(LafOlNodeAccess e);
 }

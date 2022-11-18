@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlSequences;
 import java.util.List;
+import com.drupal.test.entity.LafOlSequences;
 
 public interface LafOlSequencesService {
-    public LafOlSequences find(java.lang.Integer id);
+  public LafOlSequences find(java.lang.Integer id);
 
-    /**
-     * Select a list of LafOlSequences based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlSequences records.
-     */
-    public List<LafOlSequences> select(int maxResult);
+  /**
+   * Select a list of LafOlSequences based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlSequences records.
+   */
+  public List<LafOlSequences> select(int maxResult);
 
-    /**
-     * Select all LafOlSequences.
-     *
-     * @return all LafOlSequences records.
-     */
-    public List<LafOlSequences> selectAll();
+  /**
+   * Select all LafOlSequences.
+   *
+   * @return all LafOlSequences records.
+   */
+  public List<LafOlSequences> selectAll();
 
-    /**
-     * Create LafOlSequences.
-     *
-     * @param bean The LafOlSequences.
-     * @return The LafOlSequences.
-     */
-    public LafOlSequences create(LafOlSequences bean);
+  /**
+   * Create LafOlSequences.
+   *
+   * @param bean The LafOlSequences.
+   * @return The LafOlSequences.
+   */
+  public LafOlSequences create(LafOlSequences bean);
 
-    /**
-     * Update a LafOlSequences.
-     *
-     * @param bean - The LafOlSequences.
-     * @return LafOlSequences.
-     */
-    public LafOlSequences update(LafOlSequences bean);
+  /**
+   * Update a LafOlSequences.
+   *
+   * @param bean - The LafOlSequences.
+   * @return LafOlSequences.
+   */
+  public LafOlSequences update(LafOlSequences bean);
 }

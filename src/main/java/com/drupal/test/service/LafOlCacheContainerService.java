@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlCacheContainer;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheContainer;
 
 public interface LafOlCacheContainerService {
-    public LafOlCacheContainer find(java.lang.String id);
+  public LafOlCacheContainer find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlCacheContainer based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCacheContainer records.
-     */
-    public List<LafOlCacheContainer> select(int maxResult);
+  /**
+   * Select a list of LafOlCacheContainer based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCacheContainer records.
+   */
+  public List<LafOlCacheContainer> select(int maxResult);
 
-    /**
-     * Select all LafOlCacheContainer.
-     *
-     * @return all LafOlCacheContainer records.
-     */
-    public List<LafOlCacheContainer> selectAll();
+  /**
+   * Select all LafOlCacheContainer.
+   *
+   * @return all LafOlCacheContainer records.
+   */
+  public List<LafOlCacheContainer> selectAll();
 
-    /**
-     * Create LafOlCacheContainer.
-     *
-     * @param bean The LafOlCacheContainer.
-     * @return The LafOlCacheContainer.
-     */
-    public LafOlCacheContainer create(LafOlCacheContainer bean);
+  /**
+   * Create LafOlCacheContainer.
+   *
+   * @param bean The LafOlCacheContainer.
+   * @return The LafOlCacheContainer.
+   */
+  public LafOlCacheContainer create(LafOlCacheContainer bean);
 
-    /**
-     * Update a LafOlCacheContainer.
-     *
-     * @param bean - The LafOlCacheContainer.
-     * @return LafOlCacheContainer.
-     */
-    public LafOlCacheContainer update(LafOlCacheContainer bean);
+  /**
+   * Update a LafOlCacheContainer.
+   *
+   * @param bean - The LafOlCacheContainer.
+   * @return LafOlCacheContainer.
+   */
+  public LafOlCacheContainer update(LafOlCacheContainer bean);
 }

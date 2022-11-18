@@ -16,58 +16,61 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlConfig;
-import com.drupal.test.entity.LafOlConfigId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlConfig;
+import com.drupal.test.entity.LafOlConfigId;
 
 @Stateless
 @Named("DefaultLafOlConfigDao")
 public class DefaultLafOlConfigDao implements LafOlConfigDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlConfigDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlConfigDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlConfigDao() {}
+  public DefaultLafOlConfigDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlConfig find(LafOlConfigId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlConfig.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlConfig find(LafOlConfigId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlConfig.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlConfig> select(int max) {
-        return dao.select("select a from LafOlConfig a", LafOlConfig.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlConfig> select(int max) {
+    return dao.select("select a from LafOlConfig a", LafOlConfig.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlConfig> selectAll() {
-        return dao.selectAll("select a from LafOlConfig a", LafOlConfig.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlConfig> selectAll() {
+    return dao.selectAll("select a from LafOlConfig a", LafOlConfig.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlConfig create(LafOlConfig e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlConfig create(LafOlConfig e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlConfig update(LafOlConfig e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlConfig update(LafOlConfig e) {
+    return dao.update(e);
+  }
 }

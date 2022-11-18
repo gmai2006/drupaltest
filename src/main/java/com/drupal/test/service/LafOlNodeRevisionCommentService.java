@@ -16,41 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeRevisionComment;
 import com.drupal.test.entity.LafOlNodeRevisionCommentId;
-import java.util.List;
 
 public interface LafOlNodeRevisionCommentService {
-    public LafOlNodeRevisionComment find(LafOlNodeRevisionCommentId id);
-    /**
-     * Select a list of LafOlNodeRevisionComment based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlNodeRevisionComment records.
-     */
-    public List<LafOlNodeRevisionComment> select(int maxResult);
+  public LafOlNodeRevisionComment find(LafOlNodeRevisionCommentId id);
+  /**
+   * Select a list of LafOlNodeRevisionComment based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlNodeRevisionComment records.
+   */
+  public List<LafOlNodeRevisionComment> select(int maxResult);
 
-    /**
-     * Select all LafOlNodeRevisionComment.
-     *
-     * @return all LafOlNodeRevisionComment records.
-     */
-    public List<LafOlNodeRevisionComment> selectAll();
+  /**
+   * Select all LafOlNodeRevisionComment.
+   *
+   * @return all LafOlNodeRevisionComment records.
+   */
+  public List<LafOlNodeRevisionComment> selectAll();
 
-    /**
-     * Create LafOlNodeRevisionComment.
-     *
-     * @param bean The LafOlNodeRevisionComment.
-     * @return The LafOlNodeRevisionComment.
-     */
-    public LafOlNodeRevisionComment create(LafOlNodeRevisionComment bean);
+  /**
+   * Create LafOlNodeRevisionComment.
+   *
+   * @param bean The LafOlNodeRevisionComment.
+   * @return The LafOlNodeRevisionComment.
+   */
+  public LafOlNodeRevisionComment create(LafOlNodeRevisionComment bean);
 
-    /**
-     * Update a LafOlNodeRevisionComment.
-     *
-     * @param bean - The LafOlNodeRevisionComment.
-     * @return LafOlNodeRevisionComment.
-     */
-    public LafOlNodeRevisionComment update(LafOlNodeRevisionComment bean);
+  /**
+   * Update a LafOlNodeRevisionComment.
+   *
+   * @param bean - The LafOlNodeRevisionComment.
+   * @return LafOlNodeRevisionComment.
+   */
+  public LafOlNodeRevisionComment update(LafOlNodeRevisionComment bean);
 }

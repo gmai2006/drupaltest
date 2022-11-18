@@ -16,84 +16,84 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlTaxonomyIndexId.class)
 @Table(name = "lafol_taxonomy_index")
 public class LafOlTaxonomyIndex implements Serializable {
-    private static final long serialVersionUID = 163445265092563221L;
+  private static final long serialVersionUID = 166875433057949720L;
 
-    /** Description: nid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "nid")
-    private java.lang.Integer nid;
-    /** Description: tid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "tid")
-    private java.lang.Integer tid;
+  /** Description: nid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "nid")
+  private java.lang.Integer nid;
+  /** Description: tid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "tid")
+  private java.lang.Integer tid;
 
-    /** Description: status. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "status")
-    private java.lang.Integer status;
-    /** Description: sticky. */
-    @Basic
-    @Column(name = "sticky")
-    private java.lang.Integer sticky;
-    /** Description: created. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "created")
-    private java.lang.Integer created;
+  /** Description: status. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "status")
+  private java.lang.Integer status;
+  /** Description: sticky. */
+  @Basic
+  @Column(name = "sticky")
+  private java.lang.Integer sticky;
+  /** Description: created. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "created")
+  private java.lang.Integer created;
 
-    public LafOlTaxonomyIndex() {}
+  public LafOlTaxonomyIndex() {}
 
-    public java.lang.Integer getNid() {
-        return this.nid;
-    }
+  public java.lang.Integer getNid() {
+    return this.nid;
+  }
 
-    public java.lang.Integer getTid() {
-        return this.tid;
-    }
+  public java.lang.Integer getTid() {
+    return this.tid;
+  }
 
-    public void setNid(java.lang.Integer nid) {
-        this.nid = nid;
-    }
+  public void setNid(java.lang.Integer nid) {
+    this.nid = nid;
+  }
 
-    public void setTid(java.lang.Integer tid) {
-        this.tid = tid;
-    }
+  public void setTid(java.lang.Integer tid) {
+    this.tid = tid;
+  }
 
-    public java.lang.Integer getStatus() {
-        return this.status;
-    }
+  public java.lang.Integer getStatus() {
+    return this.status;
+  }
 
-    public java.lang.Integer getSticky() {
-        return this.sticky;
-    }
+  public java.lang.Integer getSticky() {
+    return this.sticky;
+  }
 
-    public java.lang.Integer getCreated() {
-        return this.created;
-    }
+  public java.lang.Integer getCreated() {
+    return this.created;
+  }
 
-    public void setStatus(java.lang.Integer status) {
-        this.status = status;
-    }
+  public void setStatus(java.lang.Integer status) {
+    this.status = status;
+  }
 
-    public void setSticky(java.lang.Integer sticky) {
-        this.sticky = sticky;
-    }
+  public void setSticky(java.lang.Integer sticky) {
+    this.sticky = sticky;
+  }
 
-    public void setCreated(java.lang.Integer created) {
-        this.created = created;
-    }
+  public void setCreated(java.lang.Integer created) {
+    this.created = created;
+  }
 }

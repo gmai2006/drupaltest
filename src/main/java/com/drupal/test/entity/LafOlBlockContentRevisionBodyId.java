@@ -18,131 +18,132 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlBlockContentRevisionBody. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlBlockContentRevisionBody. generated on 11/17/2022 from a schema. */
 public class LafOlBlockContentRevisionBodyId implements Serializable {
-    private static final long serialVersionUID = 163445265004979733L;
+  private static final long serialVersionUID = 166875433005180340L;
 
-    @Column(name = "langcode")
-    private java.lang.String langcode;
+  @Column(name = "langcode")
+  private java.lang.String langcode;
 
-    @Column(name = "deleted")
-    private java.lang.Integer deleted;
+  @Column(name = "deleted")
+  private java.lang.Integer deleted;
 
-    @Column(name = "delta")
-    private java.lang.Integer delta;
+  @Column(name = "delta")
+  private java.lang.Integer delta;
 
-    @Column(name = "entity_id")
-    private java.lang.Integer entityId;
+  @Column(name = "entity_id")
+  private java.lang.Integer entityId;
 
-    @Column(name = "revision_id")
-    private java.lang.Integer revisionId;
+  @Column(name = "revision_id")
+  private java.lang.Integer revisionId;
 
-    /** Constructor: LafOlBlockContentRevisionBodyId. */
-    public LafOlBlockContentRevisionBodyId() {}
+  /** Constructor: LafOlBlockContentRevisionBodyId. */
+  public LafOlBlockContentRevisionBodyId() {}
 
-    /**
-     * Constructor: LafOlBlockContentRevisionBodyId.
-     *
-     * @param langcode - langcode.
-     * @param deleted - deleted.
-     * @param delta - delta.
-     * @param entityId - entityId.
-     * @param revisionId - revisionId.
-     */
-    public LafOlBlockContentRevisionBodyId(
-            java.lang.String langcode,
-            java.lang.Integer deleted,
-            java.lang.Integer delta,
-            java.lang.Integer entityId,
-            java.lang.Integer revisionId) {
-        this.langcode = langcode;
-        this.deleted = deleted;
-        this.delta = delta;
-        this.entityId = entityId;
-        this.revisionId = revisionId;
-    }
+  /**
+   * Constructor: LafOlBlockContentRevisionBodyId.
+   *
+   * @param langcode - langcode.
+   * @param deleted - deleted.
+   * @param delta - delta.
+   * @param entityId - entityId.
+   * @param revisionId - revisionId.
+   */
+  public LafOlBlockContentRevisionBodyId(
+      java.lang.String langcode,
+      java.lang.Integer deleted,
+      java.lang.Integer delta,
+      java.lang.Integer entityId,
+      java.lang.Integer revisionId) {
+    this.langcode = langcode;
+    this.deleted = deleted;
+    this.delta = delta;
+    this.entityId = entityId;
+    this.revisionId = revisionId;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.Integer getDeleted() {
-        return this.deleted;
-    }
+  public java.lang.Integer getDeleted() {
+    return this.deleted;
+  }
 
-    public java.lang.Integer getDelta() {
-        return this.delta;
-    }
+  public java.lang.Integer getDelta() {
+    return this.delta;
+  }
 
-    public java.lang.Integer getEntityId() {
-        return this.entityId;
-    }
+  public java.lang.Integer getEntityId() {
+    return this.entityId;
+  }
 
-    public java.lang.Integer getRevisionId() {
-        return this.revisionId;
-    }
+  public java.lang.Integer getRevisionId() {
+    return this.revisionId;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setDeleted(java.lang.Integer deleted) {
-        this.deleted = deleted;
-    }
+  public void setDeleted(java.lang.Integer deleted) {
+    this.deleted = deleted;
+  }
 
-    public void setDelta(java.lang.Integer delta) {
-        this.delta = delta;
-    }
+  public void setDelta(java.lang.Integer delta) {
+    this.delta = delta;
+  }
 
-    public void setEntityId(java.lang.Integer entityId) {
-        this.entityId = entityId;
-    }
+  public void setEntityId(java.lang.Integer entityId) {
+    this.entityId = entityId;
+  }
 
-    public void setRevisionId(java.lang.Integer revisionId) {
-        this.revisionId = revisionId;
-    }
+  public void setRevisionId(java.lang.Integer revisionId) {
+    this.revisionId = revisionId;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
-        result = prime * result + ((deleted == null) ? 0 : deleted.hashCode());
-        result = prime * result + ((delta == null) ? 0 : delta.hashCode());
-        result = prime * result + ((entityId == null) ? 0 : entityId.hashCode());
-        result = prime * result + ((revisionId == null) ? 0 : revisionId.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
+    result = prime * result + ((deleted == null) ? 0 : deleted.hashCode());
+    result = prime * result + ((delta == null) ? 0 : delta.hashCode());
+    result = prime * result + ((entityId == null) ? 0 : entityId.hashCode());
+    result = prime * result + ((revisionId == null) ? 0 : revisionId.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlBlockContentRevisionBodyId other = (LafOlBlockContentRevisionBodyId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlBlockContentRevisionBodyId other = (LafOlBlockContentRevisionBodyId) obj;
 
-        if (langcode == null) {
-            if (other.langcode != null) return false;
-        } else if (!langcode.equals(other.langcode)) return false;
+    if (langcode == null) {
+      if (other.langcode != null) return false;
+    } else if (!langcode.equals(other.langcode)) return false;
 
-        if (deleted == null) {
-            if (other.deleted != null) return false;
-        } else if (!deleted.equals(other.deleted)) return false;
+    if (deleted == null) {
+      if (other.deleted != null) return false;
+    } else if (!deleted.equals(other.deleted)) return false;
 
-        if (delta == null) {
-            if (other.delta != null) return false;
-        } else if (!delta.equals(other.delta)) return false;
+    if (delta == null) {
+      if (other.delta != null) return false;
+    } else if (!delta.equals(other.delta)) return false;
 
-        if (entityId == null) {
-            if (other.entityId != null) return false;
-        } else if (!entityId.equals(other.entityId)) return false;
+    if (entityId == null) {
+      if (other.entityId != null) return false;
+    } else if (!entityId.equals(other.entityId)) return false;
 
-        if (revisionId == null) {
-            if (other.revisionId != null) return false;
-        } else if (!revisionId.equals(other.revisionId)) return false;
+    if (revisionId == null) {
+      if (other.revisionId != null) return false;
+    } else if (!revisionId.equals(other.revisionId)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

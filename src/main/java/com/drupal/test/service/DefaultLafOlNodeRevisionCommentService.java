@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlNodeRevisionCommentDao;
 import com.drupal.test.entity.LafOlNodeRevisionComment;
 import com.drupal.test.entity.LafOlNodeRevisionCommentId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlNodeRevisionCommentService")
 public class DefaultLafOlNodeRevisionCommentService implements LafOlNodeRevisionCommentService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlNodeRevisionCommentDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlNodeRevisionCommentDao dao;
 
-    @Inject
-    @Named("DefaultLafOlNodeRevisionCommentDao")
-    public DefaultLafOlNodeRevisionCommentService(final LafOlNodeRevisionCommentDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlNodeRevisionCommentDao")
+  public DefaultLafOlNodeRevisionCommentService(final LafOlNodeRevisionCommentDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionComment find(LafOlNodeRevisionCommentId id) {
-        final LafOlNodeRevisionComment result = dao.find(id);
-        logger.info("find(LafOlNodeRevisionComment) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionComment find(LafOlNodeRevisionCommentId id) {
+    final LafOlNodeRevisionComment result = dao.find(id);
+    logger.info("find(LafOlNodeRevisionComment) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeRevisionComment> select(int maxResult) {
-        final List<LafOlNodeRevisionComment> result = dao.select(maxResult);
-        logger.info("select(LafOlNodeRevisionComment) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlNodeRevisionComment> select(int maxResult) {
+    final List<LafOlNodeRevisionComment> result = dao.select(maxResult);
+    logger.info("select(LafOlNodeRevisionComment) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeRevisionComment> selectAll() {
-        final List<LafOlNodeRevisionComment> results = dao.selectAll();
-        logger.info("selectAll(LafOlNodeRevisionComment) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlNodeRevisionComment> selectAll() {
+    final List<LafOlNodeRevisionComment> results = dao.selectAll();
+    logger.info("selectAll(LafOlNodeRevisionComment) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionComment create(LafOlNodeRevisionComment bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlNodeRevisionComment={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionComment create(LafOlNodeRevisionComment bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlNodeRevisionComment={}) - entered bean ");
 
-        final LafOlNodeRevisionComment result = dao.create(bean);
+    final LafOlNodeRevisionComment result = dao.create(bean);
 
-        logger.info("create(LafOlNodeRevisionComment) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlNodeRevisionComment) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionComment update(LafOlNodeRevisionComment bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlNodeRevisionComment={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionComment update(LafOlNodeRevisionComment bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlNodeRevisionComment={}) - entered bean ");
 
-        final LafOlNodeRevisionComment result = dao.update(bean);
+    final LafOlNodeRevisionComment result = dao.update(bean);
 
-        logger.info("update(LafOlNodeRevisionComment) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlNodeRevisionComment) - exited - return value={} result ");
+    return result;
+  }
 }

@@ -16,50 +16,53 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlUsersData;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlUsersData;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlUsersDataHandler")
 public class LafOlUsersDataHandler extends DelimiterFileHandler<LafOlUsersData> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlUsersDataHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlUsersDataHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlUsersData parseLine(List<String> headers, List<String> tokens) {
+    LafOlUsersData record = new LafOlUsersData();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "uid":
+          record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "module":
+          record.setModule(tokens.get(i));
+          break;
+
+        case "name":
+          record.setName(tokens.get(i));
+          break;
+
+        case "value":
+          record.setValue(tokens.get(i));
+          break;
+
+        case "serialized":
+          record.setSerialized(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlUsersData parseLine(List<String> headers, List<String> tokens) {
-        LafOlUsersData record = new LafOlUsersData();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "uid":
-                    record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "module":
-                    record.setModule(tokens.get(i));
-                    break;
-
-                case "name":
-                    record.setName(tokens.get(i));
-                    break;
-
-                case "value":
-                    record.setValue(tokens.get(i));
-                    break;
-
-                case "serialized":
-                    record.setSerialized(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

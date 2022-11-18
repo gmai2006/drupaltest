@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlSearchIndex;
 import com.drupal.test.entity.LafOlSearchIndexId;
-import java.util.List;
 
 public interface LafOlSearchIndexDao {
-    /**
-     * Retrieve all records LafOlSearchIndex.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlSearchIndex
-     */
-    public List<LafOlSearchIndex> select(int maxResult);
+  /**
+   * Retrieve all records LafOlSearchIndex.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlSearchIndex
+   */
+  public List<LafOlSearchIndex> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlSearchIndex.
-     *
-     * @return A list of LafOlSearchIndex
-     */
-    public List<LafOlSearchIndex> selectAll();
+  /**
+   * Retrieve all records LafOlSearchIndex.
+   *
+   * @return A list of LafOlSearchIndex
+   */
+  public List<LafOlSearchIndex> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlSearchIndex id.
-     * @return The same LafOlSearchIndex.
-     */
-    public LafOlSearchIndex find(LafOlSearchIndexId id);
-    /**
-     * Create an LafOlSearchIndex.
-     *
-     * @param e the LafOlSearchIndex.
-     * @return The same LafOlSearchIndex.
-     */
-    public LafOlSearchIndex create(LafOlSearchIndex e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlSearchIndex id.
+   * @return The same LafOlSearchIndex.
+   */
+  public LafOlSearchIndex find(LafOlSearchIndexId id);
+  /**
+   * Create an LafOlSearchIndex.
+   *
+   * @param e the LafOlSearchIndex.
+   * @return The same LafOlSearchIndex.
+   */
+  public LafOlSearchIndex create(LafOlSearchIndex e);
 
-    /**
-     * Update the LafOlSearchIndex.
-     *
-     * @param e the LafOlSearchIndex.
-     * @return The same LafOlSearchIndex.
-     */
-    public LafOlSearchIndex update(LafOlSearchIndex e);
+  /**
+   * Update the LafOlSearchIndex.
+   *
+   * @param e the LafOlSearchIndex.
+   * @return The same LafOlSearchIndex.
+   */
+  public LafOlSearchIndex update(LafOlSearchIndex e);
 }

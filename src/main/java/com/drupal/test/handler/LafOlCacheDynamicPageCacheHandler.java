@@ -16,58 +16,61 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlCacheDynamicPageCache;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlCacheDynamicPageCache;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlCacheDynamicPageCacheHandler")
 public class LafOlCacheDynamicPageCacheHandler
-        extends DelimiterFileHandler<LafOlCacheDynamicPageCache> {
+    extends DelimiterFileHandler<LafOlCacheDynamicPageCache> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlCacheDynamicPageCacheHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlCacheDynamicPageCacheHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlCacheDynamicPageCache parseLine(List<String> headers, List<String> tokens) {
+    LafOlCacheDynamicPageCache record = new LafOlCacheDynamicPageCache();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "cid":
+          record.setCid(tokens.get(i));
+          break;
+
+        case "data":
+          record.setData(tokens.get(i));
+          break;
+
+        case "expire":
+          record.setExpire(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "created":
+          record.setCreated(new java.math.BigDecimal(tokens.get(i)));
+          break;
+
+        case "serialized":
+          record.setSerialized(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "tags":
+          record.setTags(tokens.get(i));
+          break;
+
+        case "checksum":
+          record.setChecksum(tokens.get(i));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlCacheDynamicPageCache parseLine(List<String> headers, List<String> tokens) {
-        LafOlCacheDynamicPageCache record = new LafOlCacheDynamicPageCache();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "cid":
-                    record.setCid(tokens.get(i));
-                    break;
-
-                case "data":
-                    record.setData(tokens.get(i));
-                    break;
-
-                case "expire":
-                    record.setExpire(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "created":
-                    record.setCreated(new java.math.BigDecimal(tokens.get(i)));
-                    break;
-
-                case "serialized":
-                    record.setSerialized(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "tags":
-                    record.setTags(tokens.get(i));
-                    break;
-
-                case "checksum":
-                    record.setChecksum(tokens.get(i));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

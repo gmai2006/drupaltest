@@ -16,68 +16,70 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlTaxonomyTermFieldRevision;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlTaxonomyTermFieldRevision;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlTaxonomyTermFieldRevisionHandler")
 public class LafOlTaxonomyTermFieldRevisionHandler
-        extends DelimiterFileHandler<LafOlTaxonomyTermFieldRevision> {
+    extends DelimiterFileHandler<LafOlTaxonomyTermFieldRevision> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlTaxonomyTermFieldRevisionHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlTaxonomyTermFieldRevisionHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlTaxonomyTermFieldRevision parseLine(List<String> headers, List<String> tokens) {
+    LafOlTaxonomyTermFieldRevision record = new LafOlTaxonomyTermFieldRevision();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "tid":
+          record.setTid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionId":
+          record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "status":
+          record.setStatus(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "name":
+          record.setName(tokens.get(i));
+          break;
+
+        case "descriptionValue":
+          record.setDescriptionValue(tokens.get(i));
+          break;
+
+        case "descriptionFormat":
+          record.setDescriptionFormat(tokens.get(i));
+          break;
+
+        case "changed":
+          record.setChanged(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "defaultLangcode":
+          record.setDefaultLangcode(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionTranslationAffected":
+          record.setRevisionTranslationAffected(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlTaxonomyTermFieldRevision parseLine(List<String> headers, List<String> tokens) {
-        LafOlTaxonomyTermFieldRevision record = new LafOlTaxonomyTermFieldRevision();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "tid":
-                    record.setTid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionId":
-                    record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "status":
-                    record.setStatus(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "name":
-                    record.setName(tokens.get(i));
-                    break;
-
-                case "descriptionValue":
-                    record.setDescriptionValue(tokens.get(i));
-                    break;
-
-                case "descriptionFormat":
-                    record.setDescriptionFormat(tokens.get(i));
-                    break;
-
-                case "changed":
-                    record.setChanged(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "defaultLangcode":
-                    record.setDefaultLangcode(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionTranslationAffected":
-                    record.setRevisionTranslationAffected(
-                            java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

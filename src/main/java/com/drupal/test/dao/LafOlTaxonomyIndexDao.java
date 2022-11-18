@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlTaxonomyIndex;
 import com.drupal.test.entity.LafOlTaxonomyIndexId;
-import java.util.List;
 
 public interface LafOlTaxonomyIndexDao {
-    /**
-     * Retrieve all records LafOlTaxonomyIndex.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlTaxonomyIndex
-     */
-    public List<LafOlTaxonomyIndex> select(int maxResult);
+  /**
+   * Retrieve all records LafOlTaxonomyIndex.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlTaxonomyIndex
+   */
+  public List<LafOlTaxonomyIndex> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlTaxonomyIndex.
-     *
-     * @return A list of LafOlTaxonomyIndex
-     */
-    public List<LafOlTaxonomyIndex> selectAll();
+  /**
+   * Retrieve all records LafOlTaxonomyIndex.
+   *
+   * @return A list of LafOlTaxonomyIndex
+   */
+  public List<LafOlTaxonomyIndex> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlTaxonomyIndex id.
-     * @return The same LafOlTaxonomyIndex.
-     */
-    public LafOlTaxonomyIndex find(LafOlTaxonomyIndexId id);
-    /**
-     * Create an LafOlTaxonomyIndex.
-     *
-     * @param e the LafOlTaxonomyIndex.
-     * @return The same LafOlTaxonomyIndex.
-     */
-    public LafOlTaxonomyIndex create(LafOlTaxonomyIndex e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlTaxonomyIndex id.
+   * @return The same LafOlTaxonomyIndex.
+   */
+  public LafOlTaxonomyIndex find(LafOlTaxonomyIndexId id);
+  /**
+   * Create an LafOlTaxonomyIndex.
+   *
+   * @param e the LafOlTaxonomyIndex.
+   * @return The same LafOlTaxonomyIndex.
+   */
+  public LafOlTaxonomyIndex create(LafOlTaxonomyIndex e);
 
-    /**
-     * Update the LafOlTaxonomyIndex.
-     *
-     * @param e the LafOlTaxonomyIndex.
-     * @return The same LafOlTaxonomyIndex.
-     */
-    public LafOlTaxonomyIndex update(LafOlTaxonomyIndex e);
+  /**
+   * Update the LafOlTaxonomyIndex.
+   *
+   * @param e the LafOlTaxonomyIndex.
+   * @return The same LafOlTaxonomyIndex.
+   */
+  public LafOlTaxonomyIndex update(LafOlTaxonomyIndex e);
 }

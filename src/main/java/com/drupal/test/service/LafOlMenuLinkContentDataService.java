@@ -16,41 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlMenuLinkContentData;
 import com.drupal.test.entity.LafOlMenuLinkContentDataId;
-import java.util.List;
 
 public interface LafOlMenuLinkContentDataService {
-    public LafOlMenuLinkContentData find(LafOlMenuLinkContentDataId id);
-    /**
-     * Select a list of LafOlMenuLinkContentData based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlMenuLinkContentData records.
-     */
-    public List<LafOlMenuLinkContentData> select(int maxResult);
+  public LafOlMenuLinkContentData find(LafOlMenuLinkContentDataId id);
+  /**
+   * Select a list of LafOlMenuLinkContentData based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlMenuLinkContentData records.
+   */
+  public List<LafOlMenuLinkContentData> select(int maxResult);
 
-    /**
-     * Select all LafOlMenuLinkContentData.
-     *
-     * @return all LafOlMenuLinkContentData records.
-     */
-    public List<LafOlMenuLinkContentData> selectAll();
+  /**
+   * Select all LafOlMenuLinkContentData.
+   *
+   * @return all LafOlMenuLinkContentData records.
+   */
+  public List<LafOlMenuLinkContentData> selectAll();
 
-    /**
-     * Create LafOlMenuLinkContentData.
-     *
-     * @param bean The LafOlMenuLinkContentData.
-     * @return The LafOlMenuLinkContentData.
-     */
-    public LafOlMenuLinkContentData create(LafOlMenuLinkContentData bean);
+  /**
+   * Create LafOlMenuLinkContentData.
+   *
+   * @param bean The LafOlMenuLinkContentData.
+   * @return The LafOlMenuLinkContentData.
+   */
+  public LafOlMenuLinkContentData create(LafOlMenuLinkContentData bean);
 
-    /**
-     * Update a LafOlMenuLinkContentData.
-     *
-     * @param bean - The LafOlMenuLinkContentData.
-     * @return LafOlMenuLinkContentData.
-     */
-    public LafOlMenuLinkContentData update(LafOlMenuLinkContentData bean);
+  /**
+   * Update a LafOlMenuLinkContentData.
+   *
+   * @param bean - The LafOlMenuLinkContentData.
+   * @return LafOlMenuLinkContentData.
+   */
+  public LafOlMenuLinkContentData update(LafOlMenuLinkContentData bean);
 }

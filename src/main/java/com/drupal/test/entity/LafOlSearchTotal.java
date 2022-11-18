@@ -16,43 +16,43 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @Table(name = "lafol_search_total")
 public class LafOlSearchTotal implements Serializable {
-    private static final long serialVersionUID = 163445265085196158L;
+  private static final long serialVersionUID = 166875433051258792L;
 
-    /** Description: word. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "word")
-    private java.lang.String word;
+  /** Description: word. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "word")
+  private java.lang.String word;
 
-    /** Description: count. */
-    @Basic
-    @Column(name = "count")
-    private java.lang.Float count;
+  /** Description: count. */
+  @Basic
+  @Column(name = "count")
+  private java.lang.Float count;
 
-    public LafOlSearchTotal() {}
+  public LafOlSearchTotal() {}
 
-    public java.lang.String getWord() {
-        return this.word;
-    }
+  public java.lang.String getWord() {
+    return this.word;
+  }
 
-    public void setWord(java.lang.String word) {
-        this.word = word;
-    }
+  public void setWord(java.lang.String word) {
+    this.word = word;
+  }
 
-    public java.lang.Float getCount() {
-        return this.count;
-    }
+  public java.lang.Float getCount() {
+    return this.count;
+  }
 
-    public void setCount(java.lang.Float count) {
-        this.count = count;
-    }
+  public void setCount(java.lang.Float count) {
+    this.count = count;
+  }
 }

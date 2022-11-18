@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlNodeRevision;
 import java.util.List;
+import com.drupal.test.entity.LafOlNodeRevision;
 
 public interface LafOlNodeRevisionDao {
-    /**
-     * Retrieve all records LafOlNodeRevision.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlNodeRevision
-     */
-    public List<LafOlNodeRevision> select(int maxResult);
+  /**
+   * Retrieve all records LafOlNodeRevision.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlNodeRevision
+   */
+  public List<LafOlNodeRevision> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlNodeRevision.
-     *
-     * @return A list of LafOlNodeRevision
-     */
-    public List<LafOlNodeRevision> selectAll();
+  /**
+   * Retrieve all records LafOlNodeRevision.
+   *
+   * @return A list of LafOlNodeRevision
+   */
+  public List<LafOlNodeRevision> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlNodeRevision id.
-     * @return The same LafOlNodeRevision.
-     */
-    public LafOlNodeRevision find(java.lang.Integer id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlNodeRevision id.
+   * @return The same LafOlNodeRevision.
+   */
+  public LafOlNodeRevision find(java.lang.Integer id);
 
-    /**
-     * Create an LafOlNodeRevision.
-     *
-     * @param e the LafOlNodeRevision.
-     * @return The same LafOlNodeRevision.
-     */
-    public LafOlNodeRevision create(LafOlNodeRevision e);
+  /**
+   * Create an LafOlNodeRevision.
+   *
+   * @param e the LafOlNodeRevision.
+   * @return The same LafOlNodeRevision.
+   */
+  public LafOlNodeRevision create(LafOlNodeRevision e);
 
-    /**
-     * Update the LafOlNodeRevision.
-     *
-     * @param e the LafOlNodeRevision.
-     * @return The same LafOlNodeRevision.
-     */
-    public LafOlNodeRevision update(LafOlNodeRevision e);
+  /**
+   * Update the LafOlNodeRevision.
+   *
+   * @param e the LafOlNodeRevision.
+   * @return The same LafOlNodeRevision.
+   */
+  public LafOlNodeRevision update(LafOlNodeRevision e);
 }

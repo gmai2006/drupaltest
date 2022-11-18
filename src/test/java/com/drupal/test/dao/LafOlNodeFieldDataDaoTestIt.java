@@ -16,12 +16,11 @@
  */
 package com.drupal.test.dao;
 
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.io.IOException;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
-import com.drupal.test.entity.LafOlNodeFieldData;
-import com.drupal.test.entity.LafOlNodeFieldDataId;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.IOException;
@@ -33,74 +32,77 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import com.drupal.test.entity.LafOlNodeFieldData;
+import com.drupal.test.entity.LafOlNodeFieldDataId;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
 
 public class LafOlNodeFieldDataDaoTestIt {
-    static final String inputFile = "LafOlNodeFieldData.json";
-    static LafOlNodeFieldDataDao dao;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlNodeFieldData[] records;
+  static final String inputFile = "LafOlNodeFieldData.json";
+  static LafOlNodeFieldDataDao dao;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlNodeFieldData[] records;
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void beforeClass() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
-        JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
-        dao = new DefaultLafOlNodeFieldDataDao(jpa);
-    }
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void beforeClass() {
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
+    dao = new DefaultLafOlNodeFieldDataDao(jpa);
+  }
 
-    /** Run before the test. */
-    @Before
-    public void before() {
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlNodeFieldData[].class);
-            json = null;
-            Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+  /** Run before the test. */
+  @Before
+  public void before() {
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlNodeFieldData[].class);
+      json = null;
+      Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
+  }
 
-    @After
-    public void after() {
-        records = null;
-    }
+  @After
+  public void after() {
+    records = null;
+  }
 
-    @Test
-    public void testSelect() {
-        final LafOlNodeFieldDataId id =
-                new LafOlNodeFieldDataId(this.records[1].getLangcode(), this.records[1].getNid());
-        LafOlNodeFieldData testResult = dao.find(id);
-        assertNotNull("expect result", testResult);
-        org.junit.Assert.assertTrue(
-                "expect equals vid ", this.records[1].getVid() == testResult.getVid());
-        org.junit.Assert.assertEquals(
-                "expect equals type ", this.records[1].getType(), testResult.getType());
-        org.junit.Assert.assertTrue(
-                "expect equals status ", this.records[1].getStatus() == testResult.getStatus());
-        org.junit.Assert.assertTrue(
-                "expect equals uid ", this.records[1].getUid() == testResult.getUid());
-        org.junit.Assert.assertEquals(
-                "expect equals title ", this.records[1].getTitle(), testResult.getTitle());
-        org.junit.Assert.assertTrue(
-                "expect equals created ", this.records[1].getCreated() == testResult.getCreated());
-        org.junit.Assert.assertTrue(
-                "expect equals changed ", this.records[1].getChanged() == testResult.getChanged());
-        org.junit.Assert.assertTrue(
-                "expect equals promote ", this.records[1].getPromote() == testResult.getPromote());
-        org.junit.Assert.assertTrue(
-                "expect equals sticky ", this.records[1].getSticky() == testResult.getSticky());
-        org.junit.Assert.assertTrue(
-                "expect equals defaultLangcode ",
-                this.records[1].getDefaultLangcode() == testResult.getDefaultLangcode());
-        org.junit.Assert.assertTrue(
-                "expect equals revisionTranslationAffected ",
-                this.records[1].getRevisionTranslationAffected()
-                        == testResult.getRevisionTranslationAffected());
-    }
+  @Test
+  public void testSelect() {
+    final LafOlNodeFieldDataId id =
+        new LafOlNodeFieldDataId(this.records[1].getLangcode(), this.records[1].getNid());
+    LafOlNodeFieldData testResult = dao.find(id);
+    assertNotNull("expect result", testResult);
+    org.junit.Assert.assertTrue(
+        "expect equals vid ", this.records[1].getVid() == testResult.getVid());
+    org.junit.Assert.assertEquals(
+        "expect equals type ", this.records[1].getType(), testResult.getType());
+    org.junit.Assert.assertTrue(
+        "expect equals status ", this.records[1].getStatus() == testResult.getStatus());
+    org.junit.Assert.assertTrue(
+        "expect equals uid ", this.records[1].getUid() == testResult.getUid());
+    org.junit.Assert.assertEquals(
+        "expect equals title ", this.records[1].getTitle(), testResult.getTitle());
+    org.junit.Assert.assertTrue(
+        "expect equals created ", this.records[1].getCreated() == testResult.getCreated());
+    org.junit.Assert.assertTrue(
+        "expect equals changed ", this.records[1].getChanged() == testResult.getChanged());
+    org.junit.Assert.assertTrue(
+        "expect equals promote ", this.records[1].getPromote() == testResult.getPromote());
+    org.junit.Assert.assertTrue(
+        "expect equals sticky ", this.records[1].getSticky() == testResult.getSticky());
+    org.junit.Assert.assertTrue(
+        "expect equals defaultLangcode ",
+        this.records[1].getDefaultLangcode() == testResult.getDefaultLangcode());
+    org.junit.Assert.assertTrue(
+        "expect equals revisionTranslationAffected ",
+        this.records[1].getRevisionTranslationAffected()
+            == testResult.getRevisionTranslationAffected());
+  }
 }

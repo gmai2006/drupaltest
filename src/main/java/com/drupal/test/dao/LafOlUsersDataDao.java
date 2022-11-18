@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlUsersData;
 import com.drupal.test.entity.LafOlUsersDataId;
-import java.util.List;
 
 public interface LafOlUsersDataDao {
-    /**
-     * Retrieve all records LafOlUsersData.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlUsersData
-     */
-    public List<LafOlUsersData> select(int maxResult);
+  /**
+   * Retrieve all records LafOlUsersData.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlUsersData
+   */
+  public List<LafOlUsersData> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlUsersData.
-     *
-     * @return A list of LafOlUsersData
-     */
-    public List<LafOlUsersData> selectAll();
+  /**
+   * Retrieve all records LafOlUsersData.
+   *
+   * @return A list of LafOlUsersData
+   */
+  public List<LafOlUsersData> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlUsersData id.
-     * @return The same LafOlUsersData.
-     */
-    public LafOlUsersData find(LafOlUsersDataId id);
-    /**
-     * Create an LafOlUsersData.
-     *
-     * @param e the LafOlUsersData.
-     * @return The same LafOlUsersData.
-     */
-    public LafOlUsersData create(LafOlUsersData e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlUsersData id.
+   * @return The same LafOlUsersData.
+   */
+  public LafOlUsersData find(LafOlUsersDataId id);
+  /**
+   * Create an LafOlUsersData.
+   *
+   * @param e the LafOlUsersData.
+   * @return The same LafOlUsersData.
+   */
+  public LafOlUsersData create(LafOlUsersData e);
 
-    /**
-     * Update the LafOlUsersData.
-     *
-     * @param e the LafOlUsersData.
-     * @return The same LafOlUsersData.
-     */
-    public LafOlUsersData update(LafOlUsersData e);
+  /**
+   * Update the LafOlUsersData.
+   *
+   * @param e the LafOlUsersData.
+   * @return The same LafOlUsersData.
+   */
+  public LafOlUsersData update(LafOlUsersData e);
 }

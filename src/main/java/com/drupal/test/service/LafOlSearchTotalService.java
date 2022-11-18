@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlSearchTotal;
 import java.util.List;
+import com.drupal.test.entity.LafOlSearchTotal;
 
 public interface LafOlSearchTotalService {
-    public LafOlSearchTotal find(java.lang.String id);
+  public LafOlSearchTotal find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlSearchTotal based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlSearchTotal records.
-     */
-    public List<LafOlSearchTotal> select(int maxResult);
+  /**
+   * Select a list of LafOlSearchTotal based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlSearchTotal records.
+   */
+  public List<LafOlSearchTotal> select(int maxResult);
 
-    /**
-     * Select all LafOlSearchTotal.
-     *
-     * @return all LafOlSearchTotal records.
-     */
-    public List<LafOlSearchTotal> selectAll();
+  /**
+   * Select all LafOlSearchTotal.
+   *
+   * @return all LafOlSearchTotal records.
+   */
+  public List<LafOlSearchTotal> selectAll();
 
-    /**
-     * Create LafOlSearchTotal.
-     *
-     * @param bean The LafOlSearchTotal.
-     * @return The LafOlSearchTotal.
-     */
-    public LafOlSearchTotal create(LafOlSearchTotal bean);
+  /**
+   * Create LafOlSearchTotal.
+   *
+   * @param bean The LafOlSearchTotal.
+   * @return The LafOlSearchTotal.
+   */
+  public LafOlSearchTotal create(LafOlSearchTotal bean);
 
-    /**
-     * Update a LafOlSearchTotal.
-     *
-     * @param bean - The LafOlSearchTotal.
-     * @return LafOlSearchTotal.
-     */
-    public LafOlSearchTotal update(LafOlSearchTotal bean);
+  /**
+   * Update a LafOlSearchTotal.
+   *
+   * @param bean - The LafOlSearchTotal.
+   * @return LafOlSearchTotal.
+   */
+  public LafOlSearchTotal update(LafOlSearchTotal bean);
 }

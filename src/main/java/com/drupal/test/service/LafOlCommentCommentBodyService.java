@@ -16,41 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlCommentCommentBody;
 import com.drupal.test.entity.LafOlCommentCommentBodyId;
-import java.util.List;
 
 public interface LafOlCommentCommentBodyService {
-    public LafOlCommentCommentBody find(LafOlCommentCommentBodyId id);
-    /**
-     * Select a list of LafOlCommentCommentBody based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCommentCommentBody records.
-     */
-    public List<LafOlCommentCommentBody> select(int maxResult);
+  public LafOlCommentCommentBody find(LafOlCommentCommentBodyId id);
+  /**
+   * Select a list of LafOlCommentCommentBody based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCommentCommentBody records.
+   */
+  public List<LafOlCommentCommentBody> select(int maxResult);
 
-    /**
-     * Select all LafOlCommentCommentBody.
-     *
-     * @return all LafOlCommentCommentBody records.
-     */
-    public List<LafOlCommentCommentBody> selectAll();
+  /**
+   * Select all LafOlCommentCommentBody.
+   *
+   * @return all LafOlCommentCommentBody records.
+   */
+  public List<LafOlCommentCommentBody> selectAll();
 
-    /**
-     * Create LafOlCommentCommentBody.
-     *
-     * @param bean The LafOlCommentCommentBody.
-     * @return The LafOlCommentCommentBody.
-     */
-    public LafOlCommentCommentBody create(LafOlCommentCommentBody bean);
+  /**
+   * Create LafOlCommentCommentBody.
+   *
+   * @param bean The LafOlCommentCommentBody.
+   * @return The LafOlCommentCommentBody.
+   */
+  public LafOlCommentCommentBody create(LafOlCommentCommentBody bean);
 
-    /**
-     * Update a LafOlCommentCommentBody.
-     *
-     * @param bean - The LafOlCommentCommentBody.
-     * @return LafOlCommentCommentBody.
-     */
-    public LafOlCommentCommentBody update(LafOlCommentCommentBody bean);
+  /**
+   * Update a LafOlCommentCommentBody.
+   *
+   * @param bean - The LafOlCommentCommentBody.
+   * @return LafOlCommentCommentBody.
+   */
+  public LafOlCommentCommentBody update(LafOlCommentCommentBody bean);
 }

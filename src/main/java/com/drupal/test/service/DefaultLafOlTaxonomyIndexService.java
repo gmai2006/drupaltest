@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlTaxonomyIndexDao;
 import com.drupal.test.entity.LafOlTaxonomyIndex;
 import com.drupal.test.entity.LafOlTaxonomyIndexId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlTaxonomyIndexService")
 public class DefaultLafOlTaxonomyIndexService implements LafOlTaxonomyIndexService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlTaxonomyIndexDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlTaxonomyIndexDao dao;
 
-    @Inject
-    @Named("DefaultLafOlTaxonomyIndexDao")
-    public DefaultLafOlTaxonomyIndexService(final LafOlTaxonomyIndexDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlTaxonomyIndexDao")
+  public DefaultLafOlTaxonomyIndexService(final LafOlTaxonomyIndexDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlTaxonomyIndex find(LafOlTaxonomyIndexId id) {
-        final LafOlTaxonomyIndex result = dao.find(id);
-        logger.info("find(LafOlTaxonomyIndex) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlTaxonomyIndex find(LafOlTaxonomyIndexId id) {
+    final LafOlTaxonomyIndex result = dao.find(id);
+    logger.info("find(LafOlTaxonomyIndex) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlTaxonomyIndex> select(int maxResult) {
-        final List<LafOlTaxonomyIndex> result = dao.select(maxResult);
-        logger.info("select(LafOlTaxonomyIndex) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlTaxonomyIndex> select(int maxResult) {
+    final List<LafOlTaxonomyIndex> result = dao.select(maxResult);
+    logger.info("select(LafOlTaxonomyIndex) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlTaxonomyIndex> selectAll() {
-        final List<LafOlTaxonomyIndex> results = dao.selectAll();
-        logger.info("selectAll(LafOlTaxonomyIndex) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlTaxonomyIndex> selectAll() {
+    final List<LafOlTaxonomyIndex> results = dao.selectAll();
+    logger.info("selectAll(LafOlTaxonomyIndex) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlTaxonomyIndex create(LafOlTaxonomyIndex bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlTaxonomyIndex={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlTaxonomyIndex create(LafOlTaxonomyIndex bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlTaxonomyIndex={}) - entered bean ");
 
-        final LafOlTaxonomyIndex result = dao.create(bean);
+    final LafOlTaxonomyIndex result = dao.create(bean);
 
-        logger.info("create(LafOlTaxonomyIndex) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlTaxonomyIndex) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlTaxonomyIndex update(LafOlTaxonomyIndex bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlTaxonomyIndex={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlTaxonomyIndex update(LafOlTaxonomyIndex bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlTaxonomyIndex={}) - entered bean ");
 
-        final LafOlTaxonomyIndex result = dao.update(bean);
+    final LafOlTaxonomyIndex result = dao.update(bean);
 
-        logger.info("update(LafOlTaxonomyIndex) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlTaxonomyIndex) - exited - return value={} result ");
+    return result;
+  }
 }

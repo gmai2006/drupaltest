@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlShortcutFieldData;
 import com.drupal.test.entity.LafOlShortcutFieldDataId;
-import java.util.List;
 
 public interface LafOlShortcutFieldDataService {
-    public LafOlShortcutFieldData find(LafOlShortcutFieldDataId id);
-    /**
-     * Select a list of LafOlShortcutFieldData based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlShortcutFieldData records.
-     */
-    public List<LafOlShortcutFieldData> select(int maxResult);
+  public LafOlShortcutFieldData find(LafOlShortcutFieldDataId id);
+  /**
+   * Select a list of LafOlShortcutFieldData based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlShortcutFieldData records.
+   */
+  public List<LafOlShortcutFieldData> select(int maxResult);
 
-    /**
-     * Select all LafOlShortcutFieldData.
-     *
-     * @return all LafOlShortcutFieldData records.
-     */
-    public List<LafOlShortcutFieldData> selectAll();
+  /**
+   * Select all LafOlShortcutFieldData.
+   *
+   * @return all LafOlShortcutFieldData records.
+   */
+  public List<LafOlShortcutFieldData> selectAll();
 
-    /**
-     * Create LafOlShortcutFieldData.
-     *
-     * @param bean The LafOlShortcutFieldData.
-     * @return The LafOlShortcutFieldData.
-     */
-    public LafOlShortcutFieldData create(LafOlShortcutFieldData bean);
+  /**
+   * Create LafOlShortcutFieldData.
+   *
+   * @param bean The LafOlShortcutFieldData.
+   * @return The LafOlShortcutFieldData.
+   */
+  public LafOlShortcutFieldData create(LafOlShortcutFieldData bean);
 
-    /**
-     * Update a LafOlShortcutFieldData.
-     *
-     * @param bean - The LafOlShortcutFieldData.
-     * @return LafOlShortcutFieldData.
-     */
-    public LafOlShortcutFieldData update(LafOlShortcutFieldData bean);
+  /**
+   * Update a LafOlShortcutFieldData.
+   *
+   * @param bean - The LafOlShortcutFieldData.
+   * @return LafOlShortcutFieldData.
+   */
+  public LafOlShortcutFieldData update(LafOlShortcutFieldData bean);
 }

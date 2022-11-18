@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlShortcutSetUsers;
 import java.util.List;
+import com.drupal.test.entity.LafOlShortcutSetUsers;
 
 public interface LafOlShortcutSetUsersService {
-    public LafOlShortcutSetUsers find(java.lang.Integer id);
+  public LafOlShortcutSetUsers find(java.lang.Integer id);
 
-    /**
-     * Select a list of LafOlShortcutSetUsers based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlShortcutSetUsers records.
-     */
-    public List<LafOlShortcutSetUsers> select(int maxResult);
+  /**
+   * Select a list of LafOlShortcutSetUsers based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlShortcutSetUsers records.
+   */
+  public List<LafOlShortcutSetUsers> select(int maxResult);
 
-    /**
-     * Select all LafOlShortcutSetUsers.
-     *
-     * @return all LafOlShortcutSetUsers records.
-     */
-    public List<LafOlShortcutSetUsers> selectAll();
+  /**
+   * Select all LafOlShortcutSetUsers.
+   *
+   * @return all LafOlShortcutSetUsers records.
+   */
+  public List<LafOlShortcutSetUsers> selectAll();
 
-    /**
-     * Create LafOlShortcutSetUsers.
-     *
-     * @param bean The LafOlShortcutSetUsers.
-     * @return The LafOlShortcutSetUsers.
-     */
-    public LafOlShortcutSetUsers create(LafOlShortcutSetUsers bean);
+  /**
+   * Create LafOlShortcutSetUsers.
+   *
+   * @param bean The LafOlShortcutSetUsers.
+   * @return The LafOlShortcutSetUsers.
+   */
+  public LafOlShortcutSetUsers create(LafOlShortcutSetUsers bean);
 
-    /**
-     * Update a LafOlShortcutSetUsers.
-     *
-     * @param bean - The LafOlShortcutSetUsers.
-     * @return LafOlShortcutSetUsers.
-     */
-    public LafOlShortcutSetUsers update(LafOlShortcutSetUsers bean);
+  /**
+   * Update a LafOlShortcutSetUsers.
+   *
+   * @param bean - The LafOlShortcutSetUsers.
+   * @return LafOlShortcutSetUsers.
+   */
+  public LafOlShortcutSetUsers update(LafOlShortcutSetUsers bean);
 }

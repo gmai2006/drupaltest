@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeRevisionBody;
 import com.drupal.test.entity.LafOlNodeRevisionBodyId;
-import java.util.List;
 
 public interface LafOlNodeRevisionBodyService {
-    public LafOlNodeRevisionBody find(LafOlNodeRevisionBodyId id);
-    /**
-     * Select a list of LafOlNodeRevisionBody based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlNodeRevisionBody records.
-     */
-    public List<LafOlNodeRevisionBody> select(int maxResult);
+  public LafOlNodeRevisionBody find(LafOlNodeRevisionBodyId id);
+  /**
+   * Select a list of LafOlNodeRevisionBody based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlNodeRevisionBody records.
+   */
+  public List<LafOlNodeRevisionBody> select(int maxResult);
 
-    /**
-     * Select all LafOlNodeRevisionBody.
-     *
-     * @return all LafOlNodeRevisionBody records.
-     */
-    public List<LafOlNodeRevisionBody> selectAll();
+  /**
+   * Select all LafOlNodeRevisionBody.
+   *
+   * @return all LafOlNodeRevisionBody records.
+   */
+  public List<LafOlNodeRevisionBody> selectAll();
 
-    /**
-     * Create LafOlNodeRevisionBody.
-     *
-     * @param bean The LafOlNodeRevisionBody.
-     * @return The LafOlNodeRevisionBody.
-     */
-    public LafOlNodeRevisionBody create(LafOlNodeRevisionBody bean);
+  /**
+   * Create LafOlNodeRevisionBody.
+   *
+   * @param bean The LafOlNodeRevisionBody.
+   * @return The LafOlNodeRevisionBody.
+   */
+  public LafOlNodeRevisionBody create(LafOlNodeRevisionBody bean);
 
-    /**
-     * Update a LafOlNodeRevisionBody.
-     *
-     * @param bean - The LafOlNodeRevisionBody.
-     * @return LafOlNodeRevisionBody.
-     */
-    public LafOlNodeRevisionBody update(LafOlNodeRevisionBody bean);
+  /**
+   * Update a LafOlNodeRevisionBody.
+   *
+   * @param bean - The LafOlNodeRevisionBody.
+   * @return LafOlNodeRevisionBody.
+   */
+  public LafOlNodeRevisionBody update(LafOlNodeRevisionBody bean);
 }

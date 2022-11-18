@@ -17,76 +17,74 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlTaxonomyTermRevisionParentDao;
 import com.drupal.test.entity.LafOlTaxonomyTermRevisionParent;
 import com.drupal.test.entity.LafOlTaxonomyTermRevisionParentId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlTaxonomyTermRevisionParentService")
 public class DefaultLafOlTaxonomyTermRevisionParentService
-        implements LafOlTaxonomyTermRevisionParentService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlTaxonomyTermRevisionParentDao dao;
+    implements LafOlTaxonomyTermRevisionParentService {
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlTaxonomyTermRevisionParentDao dao;
 
-    @Inject
-    @Named("DefaultLafOlTaxonomyTermRevisionParentDao")
-    public DefaultLafOlTaxonomyTermRevisionParentService(
-            final LafOlTaxonomyTermRevisionParentDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlTaxonomyTermRevisionParentDao")
+  public DefaultLafOlTaxonomyTermRevisionParentService(
+      final LafOlTaxonomyTermRevisionParentDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlTaxonomyTermRevisionParent find(LafOlTaxonomyTermRevisionParentId id) {
-        final LafOlTaxonomyTermRevisionParent result = dao.find(id);
-        logger.info("find(LafOlTaxonomyTermRevisionParent) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlTaxonomyTermRevisionParent find(LafOlTaxonomyTermRevisionParentId id) {
+    final LafOlTaxonomyTermRevisionParent result = dao.find(id);
+    logger.info("find(LafOlTaxonomyTermRevisionParent) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlTaxonomyTermRevisionParent> select(int maxResult) {
-        final List<LafOlTaxonomyTermRevisionParent> result = dao.select(maxResult);
-        logger.info("select(LafOlTaxonomyTermRevisionParent) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlTaxonomyTermRevisionParent> select(int maxResult) {
+    final List<LafOlTaxonomyTermRevisionParent> result = dao.select(maxResult);
+    logger.info("select(LafOlTaxonomyTermRevisionParent) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlTaxonomyTermRevisionParent> selectAll() {
-        final List<LafOlTaxonomyTermRevisionParent> results = dao.selectAll();
-        logger.info(
-                "selectAll(LafOlTaxonomyTermRevisionParent) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlTaxonomyTermRevisionParent> selectAll() {
+    final List<LafOlTaxonomyTermRevisionParent> results = dao.selectAll();
+    logger.info("selectAll(LafOlTaxonomyTermRevisionParent) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlTaxonomyTermRevisionParent create(LafOlTaxonomyTermRevisionParent bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlTaxonomyTermRevisionParent={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlTaxonomyTermRevisionParent create(LafOlTaxonomyTermRevisionParent bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlTaxonomyTermRevisionParent={}) - entered bean ");
 
-        final LafOlTaxonomyTermRevisionParent result = dao.create(bean);
+    final LafOlTaxonomyTermRevisionParent result = dao.create(bean);
 
-        logger.info("create(LafOlTaxonomyTermRevisionParent) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlTaxonomyTermRevisionParent) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlTaxonomyTermRevisionParent update(LafOlTaxonomyTermRevisionParent bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlTaxonomyTermRevisionParent={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlTaxonomyTermRevisionParent update(LafOlTaxonomyTermRevisionParent bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlTaxonomyTermRevisionParent={}) - entered bean ");
 
-        final LafOlTaxonomyTermRevisionParent result = dao.update(bean);
+    final LafOlTaxonomyTermRevisionParent result = dao.update(bean);
 
-        logger.info("update(LafOlTaxonomyTermRevisionParent) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlTaxonomyTermRevisionParent) - exited - return value={} result ");
+    return result;
+  }
 }

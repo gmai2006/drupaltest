@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlMenuLinkContentRevision;
 import java.util.List;
+import com.drupal.test.entity.LafOlMenuLinkContentRevision;
 
 public interface LafOlMenuLinkContentRevisionService {
-    public LafOlMenuLinkContentRevision find(java.lang.Integer id);
+  public LafOlMenuLinkContentRevision find(java.lang.Integer id);
 
-    /**
-     * Select a list of LafOlMenuLinkContentRevision based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlMenuLinkContentRevision records.
-     */
-    public List<LafOlMenuLinkContentRevision> select(int maxResult);
+  /**
+   * Select a list of LafOlMenuLinkContentRevision based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlMenuLinkContentRevision records.
+   */
+  public List<LafOlMenuLinkContentRevision> select(int maxResult);
 
-    /**
-     * Select all LafOlMenuLinkContentRevision.
-     *
-     * @return all LafOlMenuLinkContentRevision records.
-     */
-    public List<LafOlMenuLinkContentRevision> selectAll();
+  /**
+   * Select all LafOlMenuLinkContentRevision.
+   *
+   * @return all LafOlMenuLinkContentRevision records.
+   */
+  public List<LafOlMenuLinkContentRevision> selectAll();
 
-    /**
-     * Create LafOlMenuLinkContentRevision.
-     *
-     * @param bean The LafOlMenuLinkContentRevision.
-     * @return The LafOlMenuLinkContentRevision.
-     */
-    public LafOlMenuLinkContentRevision create(LafOlMenuLinkContentRevision bean);
+  /**
+   * Create LafOlMenuLinkContentRevision.
+   *
+   * @param bean The LafOlMenuLinkContentRevision.
+   * @return The LafOlMenuLinkContentRevision.
+   */
+  public LafOlMenuLinkContentRevision create(LafOlMenuLinkContentRevision bean);
 
-    /**
-     * Update a LafOlMenuLinkContentRevision.
-     *
-     * @param bean - The LafOlMenuLinkContentRevision.
-     * @return LafOlMenuLinkContentRevision.
-     */
-    public LafOlMenuLinkContentRevision update(LafOlMenuLinkContentRevision bean);
+  /**
+   * Update a LafOlMenuLinkContentRevision.
+   *
+   * @param bean - The LafOlMenuLinkContentRevision.
+   * @return LafOlMenuLinkContentRevision.
+   */
+  public LafOlMenuLinkContentRevision update(LafOlMenuLinkContentRevision bean);
 }

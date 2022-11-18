@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlSessions;
 import java.util.List;
+import com.drupal.test.entity.LafOlSessions;
 
 public interface LafOlSessionsDao {
-    /**
-     * Retrieve all records LafOlSessions.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlSessions
-     */
-    public List<LafOlSessions> select(int maxResult);
+  /**
+   * Retrieve all records LafOlSessions.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlSessions
+   */
+  public List<LafOlSessions> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlSessions.
-     *
-     * @return A list of LafOlSessions
-     */
-    public List<LafOlSessions> selectAll();
+  /**
+   * Retrieve all records LafOlSessions.
+   *
+   * @return A list of LafOlSessions
+   */
+  public List<LafOlSessions> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlSessions id.
-     * @return The same LafOlSessions.
-     */
-    public LafOlSessions find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlSessions id.
+   * @return The same LafOlSessions.
+   */
+  public LafOlSessions find(java.lang.String id);
 
-    /**
-     * Create an LafOlSessions.
-     *
-     * @param e the LafOlSessions.
-     * @return The same LafOlSessions.
-     */
-    public LafOlSessions create(LafOlSessions e);
+  /**
+   * Create an LafOlSessions.
+   *
+   * @param e the LafOlSessions.
+   * @return The same LafOlSessions.
+   */
+  public LafOlSessions create(LafOlSessions e);
 
-    /**
-     * Update the LafOlSessions.
-     *
-     * @param e the LafOlSessions.
-     * @return The same LafOlSessions.
-     */
-    public LafOlSessions update(LafOlSessions e);
+  /**
+   * Update the LafOlSessions.
+   *
+   * @param e the LafOlSessions.
+   * @return The same LafOlSessions.
+   */
+  public LafOlSessions update(LafOlSessions e);
 }

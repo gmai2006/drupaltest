@@ -18,72 +18,73 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlKeyValueExpire. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlKeyValueExpire. generated on 11/17/2022 from a schema. */
 public class LafOlKeyValueExpireId implements Serializable {
-    private static final long serialVersionUID = 163445265035796699L;
+  private static final long serialVersionUID = 166875433022739380L;
 
-    @Column(name = "name")
-    private java.lang.String name;
+  @Column(name = "name")
+  private java.lang.String name;
 
-    @Column(name = "collection")
-    private java.lang.String collection;
+  @Column(name = "collection")
+  private java.lang.String collection;
 
-    /** Constructor: LafOlKeyValueExpireId. */
-    public LafOlKeyValueExpireId() {}
+  /** Constructor: LafOlKeyValueExpireId. */
+  public LafOlKeyValueExpireId() {}
 
-    /**
-     * Constructor: LafOlKeyValueExpireId.
-     *
-     * @param name - name.
-     * @param collection - collection.
-     */
-    public LafOlKeyValueExpireId(java.lang.String name, java.lang.String collection) {
-        this.name = name;
-        this.collection = collection;
-    }
+  /**
+   * Constructor: LafOlKeyValueExpireId.
+   *
+   * @param name - name.
+   * @param collection - collection.
+   */
+  public LafOlKeyValueExpireId(java.lang.String name, java.lang.String collection) {
+    this.name = name;
+    this.collection = collection;
+  }
 
-    public java.lang.String getName() {
-        return this.name;
-    }
+  public java.lang.String getName() {
+    return this.name;
+  }
 
-    public java.lang.String getCollection() {
-        return this.collection;
-    }
+  public java.lang.String getCollection() {
+    return this.collection;
+  }
 
-    public void setName(java.lang.String name) {
-        this.name = name;
-    }
+  public void setName(java.lang.String name) {
+    this.name = name;
+  }
 
-    public void setCollection(java.lang.String collection) {
-        this.collection = collection;
-    }
+  public void setCollection(java.lang.String collection) {
+    this.collection = collection;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
-        result = prime * result + ((collection == null) ? 0 : collection.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
+    result = prime * result + ((collection == null) ? 0 : collection.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlKeyValueExpireId other = (LafOlKeyValueExpireId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlKeyValueExpireId other = (LafOlKeyValueExpireId) obj;
 
-        if (name == null) {
-            if (other.name != null) return false;
-        } else if (!name.equals(other.name)) return false;
+    if (name == null) {
+      if (other.name != null) return false;
+    } else if (!name.equals(other.name)) return false;
 
-        if (collection == null) {
-            if (other.collection != null) return false;
-        } else if (!collection.equals(other.collection)) return false;
+    if (collection == null) {
+      if (other.collection != null) return false;
+    } else if (!collection.equals(other.collection)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

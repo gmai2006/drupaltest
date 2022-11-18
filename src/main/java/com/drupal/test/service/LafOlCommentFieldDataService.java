@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlCommentFieldData;
 import com.drupal.test.entity.LafOlCommentFieldDataId;
-import java.util.List;
 
 public interface LafOlCommentFieldDataService {
-    public LafOlCommentFieldData find(LafOlCommentFieldDataId id);
-    /**
-     * Select a list of LafOlCommentFieldData based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCommentFieldData records.
-     */
-    public List<LafOlCommentFieldData> select(int maxResult);
+  public LafOlCommentFieldData find(LafOlCommentFieldDataId id);
+  /**
+   * Select a list of LafOlCommentFieldData based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCommentFieldData records.
+   */
+  public List<LafOlCommentFieldData> select(int maxResult);
 
-    /**
-     * Select all LafOlCommentFieldData.
-     *
-     * @return all LafOlCommentFieldData records.
-     */
-    public List<LafOlCommentFieldData> selectAll();
+  /**
+   * Select all LafOlCommentFieldData.
+   *
+   * @return all LafOlCommentFieldData records.
+   */
+  public List<LafOlCommentFieldData> selectAll();
 
-    /**
-     * Create LafOlCommentFieldData.
-     *
-     * @param bean The LafOlCommentFieldData.
-     * @return The LafOlCommentFieldData.
-     */
-    public LafOlCommentFieldData create(LafOlCommentFieldData bean);
+  /**
+   * Create LafOlCommentFieldData.
+   *
+   * @param bean The LafOlCommentFieldData.
+   * @return The LafOlCommentFieldData.
+   */
+  public LafOlCommentFieldData create(LafOlCommentFieldData bean);
 
-    /**
-     * Update a LafOlCommentFieldData.
-     *
-     * @param bean - The LafOlCommentFieldData.
-     * @return LafOlCommentFieldData.
-     */
-    public LafOlCommentFieldData update(LafOlCommentFieldData bean);
+  /**
+   * Update a LafOlCommentFieldData.
+   *
+   * @param bean - The LafOlCommentFieldData.
+   * @return LafOlCommentFieldData.
+   */
+  public LafOlCommentFieldData update(LafOlCommentFieldData bean);
 }

@@ -1,26 +1,26 @@
-# Auto-generated OpenPay application from openpay db schema
+# Auto-generated drupal application from drupal db schema
+
+This application is JEE in the backend using H2 in memory data for testing.  The generated code comes with a docker
+build file for generating a docker image
+
 ## Instruction
 All instructions should be run in a terminal
 
 ### Clone the project
 ```git clone https://github.com/gmai2006/drupaltest.git```
 
-### Run the gradle build to download all dependencies
-```gradle spotlessApply build```
+### Format the source code and build the drupaltest
+```gradle spotlessApply build copyReact buildAll```
 
-### Optional integration test
-```gradle IntegrationTest```
+### Create a Docker image that contains Wildfly and the drupaltest WAR file.  You must have Docker installed
+```sudo docker build --tag=drupaltest .```
 
-### Run the application
-cd ui
-npm install
-npm start
+### Run the docker image
+```sudo docker run -p 8080:8080 -p 9990:9990 -it drupaltest```
 
-Generated UI components
-![An overview](drupal1.png?raw=true "Title")
+### View the generate application
+```http://127.0.0.1:8080/drupaltest/```
 
-drupal entity relationship diagram - generated from the DB schema
-![Openpay entity relationship model](drupal2.png?raw=true "Title")
-
-A tabular view with test data of a table in openpay DB.
-![A view of a table in drupal](drupal3.png?raw=true "Title")
+### Load data from Excel into the DB
+```Initially, the database is empty.  To load the test data from Excel into DB run
+http://127.0.0.1:8080/drupaltest/rest/admin/loadata```

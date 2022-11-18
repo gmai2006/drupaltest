@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlFileUsage;
 import com.drupal.test.entity.LafOlFileUsageId;
-import java.util.List;
 
 public interface LafOlFileUsageService {
-    public LafOlFileUsage find(LafOlFileUsageId id);
-    /**
-     * Select a list of LafOlFileUsage based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlFileUsage records.
-     */
-    public List<LafOlFileUsage> select(int maxResult);
+  public LafOlFileUsage find(LafOlFileUsageId id);
+  /**
+   * Select a list of LafOlFileUsage based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlFileUsage records.
+   */
+  public List<LafOlFileUsage> select(int maxResult);
 
-    /**
-     * Select all LafOlFileUsage.
-     *
-     * @return all LafOlFileUsage records.
-     */
-    public List<LafOlFileUsage> selectAll();
+  /**
+   * Select all LafOlFileUsage.
+   *
+   * @return all LafOlFileUsage records.
+   */
+  public List<LafOlFileUsage> selectAll();
 
-    /**
-     * Create LafOlFileUsage.
-     *
-     * @param bean The LafOlFileUsage.
-     * @return The LafOlFileUsage.
-     */
-    public LafOlFileUsage create(LafOlFileUsage bean);
+  /**
+   * Create LafOlFileUsage.
+   *
+   * @param bean The LafOlFileUsage.
+   * @return The LafOlFileUsage.
+   */
+  public LafOlFileUsage create(LafOlFileUsage bean);
 
-    /**
-     * Update a LafOlFileUsage.
-     *
-     * @param bean - The LafOlFileUsage.
-     * @return LafOlFileUsage.
-     */
-    public LafOlFileUsage update(LafOlFileUsage bean);
+  /**
+   * Update a LafOlFileUsage.
+   *
+   * @param bean - The LafOlFileUsage.
+   * @return LafOlFileUsage.
+   */
+  public LafOlFileUsage update(LafOlFileUsage bean);
 }

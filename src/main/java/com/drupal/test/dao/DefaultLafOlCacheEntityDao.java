@@ -16,57 +16,60 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCacheEntity;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlCacheEntity;
 
 @Stateless
 @Named("DefaultLafOlCacheEntityDao")
 public class DefaultLafOlCacheEntityDao implements LafOlCacheEntityDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlCacheEntityDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlCacheEntityDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlCacheEntityDao() {}
+  public DefaultLafOlCacheEntityDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheEntity find(java.lang.String id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlCacheEntity.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheEntity find(java.lang.String id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlCacheEntity.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlCacheEntity> select(int max) {
-        return dao.select("select a from LafOlCacheEntity a", LafOlCacheEntity.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlCacheEntity> select(int max) {
+    return dao.select("select a from LafOlCacheEntity a", LafOlCacheEntity.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlCacheEntity> selectAll() {
-        return dao.selectAll("select a from LafOlCacheEntity a", LafOlCacheEntity.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlCacheEntity> selectAll() {
+    return dao.selectAll("select a from LafOlCacheEntity a", LafOlCacheEntity.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheEntity create(LafOlCacheEntity e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheEntity create(LafOlCacheEntity e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheEntity update(LafOlCacheEntity e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheEntity update(LafOlCacheEntity e) {
+    return dao.update(e);
+  }
 }

@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlNodeFieldDataDao;
 import com.drupal.test.entity.LafOlNodeFieldData;
 import com.drupal.test.entity.LafOlNodeFieldDataId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlNodeFieldDataService")
 public class DefaultLafOlNodeFieldDataService implements LafOlNodeFieldDataService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlNodeFieldDataDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlNodeFieldDataDao dao;
 
-    @Inject
-    @Named("DefaultLafOlNodeFieldDataDao")
-    public DefaultLafOlNodeFieldDataService(final LafOlNodeFieldDataDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlNodeFieldDataDao")
+  public DefaultLafOlNodeFieldDataService(final LafOlNodeFieldDataDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeFieldData find(LafOlNodeFieldDataId id) {
-        final LafOlNodeFieldData result = dao.find(id);
-        logger.info("find(LafOlNodeFieldData) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeFieldData find(LafOlNodeFieldDataId id) {
+    final LafOlNodeFieldData result = dao.find(id);
+    logger.info("find(LafOlNodeFieldData) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeFieldData> select(int maxResult) {
-        final List<LafOlNodeFieldData> result = dao.select(maxResult);
-        logger.info("select(LafOlNodeFieldData) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlNodeFieldData> select(int maxResult) {
+    final List<LafOlNodeFieldData> result = dao.select(maxResult);
+    logger.info("select(LafOlNodeFieldData) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeFieldData> selectAll() {
-        final List<LafOlNodeFieldData> results = dao.selectAll();
-        logger.info("selectAll(LafOlNodeFieldData) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlNodeFieldData> selectAll() {
+    final List<LafOlNodeFieldData> results = dao.selectAll();
+    logger.info("selectAll(LafOlNodeFieldData) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeFieldData create(LafOlNodeFieldData bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlNodeFieldData={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeFieldData create(LafOlNodeFieldData bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlNodeFieldData={}) - entered bean ");
 
-        final LafOlNodeFieldData result = dao.create(bean);
+    final LafOlNodeFieldData result = dao.create(bean);
 
-        logger.info("create(LafOlNodeFieldData) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlNodeFieldData) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeFieldData update(LafOlNodeFieldData bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlNodeFieldData={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeFieldData update(LafOlNodeFieldData bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlNodeFieldData={}) - entered bean ");
 
-        final LafOlNodeFieldData result = dao.update(bean);
+    final LafOlNodeFieldData result = dao.update(bean);
 
-        logger.info("update(LafOlNodeFieldData) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlNodeFieldData) - exited - return value={} result ");
+    return result;
+  }
 }

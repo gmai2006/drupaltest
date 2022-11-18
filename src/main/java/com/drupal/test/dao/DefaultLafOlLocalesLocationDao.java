@@ -16,57 +16,60 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlLocalesLocation;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlLocalesLocation;
 
 @Stateless
 @Named("DefaultLafOlLocalesLocationDao")
 public class DefaultLafOlLocalesLocationDao implements LafOlLocalesLocationDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlLocalesLocationDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlLocalesLocationDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlLocalesLocationDao() {}
+  public DefaultLafOlLocalesLocationDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlLocalesLocation find(java.lang.Integer id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlLocalesLocation.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlLocalesLocation find(java.lang.Integer id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlLocalesLocation.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlLocalesLocation> select(int max) {
-        return dao.select("select a from LafOlLocalesLocation a", LafOlLocalesLocation.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlLocalesLocation> select(int max) {
+    return dao.select("select a from LafOlLocalesLocation a", LafOlLocalesLocation.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlLocalesLocation> selectAll() {
-        return dao.selectAll("select a from LafOlLocalesLocation a", LafOlLocalesLocation.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlLocalesLocation> selectAll() {
+    return dao.selectAll("select a from LafOlLocalesLocation a", LafOlLocalesLocation.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlLocalesLocation create(LafOlLocalesLocation e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlLocalesLocation create(LafOlLocalesLocation e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlLocalesLocation update(LafOlLocalesLocation e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlLocalesLocation update(LafOlLocalesLocation e) {
+    return dao.update(e);
+  }
 }

@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeAccess;
 import com.drupal.test.entity.LafOlNodeAccessId;
-import java.util.List;
 
 public interface LafOlNodeAccessService {
-    public LafOlNodeAccess find(LafOlNodeAccessId id);
-    /**
-     * Select a list of LafOlNodeAccess based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlNodeAccess records.
-     */
-    public List<LafOlNodeAccess> select(int maxResult);
+  public LafOlNodeAccess find(LafOlNodeAccessId id);
+  /**
+   * Select a list of LafOlNodeAccess based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlNodeAccess records.
+   */
+  public List<LafOlNodeAccess> select(int maxResult);
 
-    /**
-     * Select all LafOlNodeAccess.
-     *
-     * @return all LafOlNodeAccess records.
-     */
-    public List<LafOlNodeAccess> selectAll();
+  /**
+   * Select all LafOlNodeAccess.
+   *
+   * @return all LafOlNodeAccess records.
+   */
+  public List<LafOlNodeAccess> selectAll();
 
-    /**
-     * Create LafOlNodeAccess.
-     *
-     * @param bean The LafOlNodeAccess.
-     * @return The LafOlNodeAccess.
-     */
-    public LafOlNodeAccess create(LafOlNodeAccess bean);
+  /**
+   * Create LafOlNodeAccess.
+   *
+   * @param bean The LafOlNodeAccess.
+   * @return The LafOlNodeAccess.
+   */
+  public LafOlNodeAccess create(LafOlNodeAccess bean);
 
-    /**
-     * Update a LafOlNodeAccess.
-     *
-     * @param bean - The LafOlNodeAccess.
-     * @return LafOlNodeAccess.
-     */
-    public LafOlNodeAccess update(LafOlNodeAccess bean);
+  /**
+   * Update a LafOlNodeAccess.
+   *
+   * @param bean - The LafOlNodeAccess.
+   * @return LafOlNodeAccess.
+   */
+  public LafOlNodeAccess update(LafOlNodeAccess bean);
 }

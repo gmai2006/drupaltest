@@ -16,72 +16,72 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlShortcutId.class)
 @Table(name = "lafol_shortcut")
 public class LafOlShortcut implements Serializable {
-    private static final long serialVersionUID = 163445265088976920L;
+  private static final long serialVersionUID = 166875433054962811L;
 
-    /** Description: id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "id")
-    private java.lang.Integer id;
-    /** Description: uuid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "uuid")
-    private java.lang.String uuid;
+  /** Description: id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "id")
+  private java.lang.Integer id;
+  /** Description: uuid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "uuid")
+  private java.lang.String uuid;
 
-    /** Description: shortcut_set. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "shortcut_set", length = 32)
-    private java.lang.String shortcutSet;
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "langcode", length = 12)
-    private java.lang.String langcode;
+  /** Description: shortcut_set. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "shortcut_set", length = 32)
+  private java.lang.String shortcutSet;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "langcode", length = 12)
+  private java.lang.String langcode;
 
-    public LafOlShortcut() {}
+  public LafOlShortcut() {}
 
-    public java.lang.Integer getId() {
-        return this.id;
-    }
+  public java.lang.Integer getId() {
+    return this.id;
+  }
 
-    public java.lang.String getUuid() {
-        return this.uuid;
-    }
+  public java.lang.String getUuid() {
+    return this.uuid;
+  }
 
-    public void setId(java.lang.Integer id) {
-        this.id = id;
-    }
+  public void setId(java.lang.Integer id) {
+    this.id = id;
+  }
 
-    public void setUuid(java.lang.String uuid) {
-        this.uuid = uuid;
-    }
+  public void setUuid(java.lang.String uuid) {
+    this.uuid = uuid;
+  }
 
-    public java.lang.String getShortcutSet() {
-        return this.shortcutSet;
-    }
+  public java.lang.String getShortcutSet() {
+    return this.shortcutSet;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public void setShortcutSet(java.lang.String shortcutSet) {
-        this.shortcutSet = shortcutSet;
-    }
+  public void setShortcutSet(java.lang.String shortcutSet) {
+    this.shortcutSet = shortcutSet;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 }

@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlFileManagedDao;
 import com.drupal.test.entity.LafOlFileManaged;
 import com.drupal.test.entity.LafOlFileManagedId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlFileManagedService")
 public class DefaultLafOlFileManagedService implements LafOlFileManagedService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlFileManagedDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlFileManagedDao dao;
 
-    @Inject
-    @Named("DefaultLafOlFileManagedDao")
-    public DefaultLafOlFileManagedService(final LafOlFileManagedDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlFileManagedDao")
+  public DefaultLafOlFileManagedService(final LafOlFileManagedDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlFileManaged find(LafOlFileManagedId id) {
-        final LafOlFileManaged result = dao.find(id);
-        logger.info("find(LafOlFileManaged) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlFileManaged find(LafOlFileManagedId id) {
+    final LafOlFileManaged result = dao.find(id);
+    logger.info("find(LafOlFileManaged) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlFileManaged> select(int maxResult) {
-        final List<LafOlFileManaged> result = dao.select(maxResult);
-        logger.info("select(LafOlFileManaged) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlFileManaged> select(int maxResult) {
+    final List<LafOlFileManaged> result = dao.select(maxResult);
+    logger.info("select(LafOlFileManaged) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlFileManaged> selectAll() {
-        final List<LafOlFileManaged> results = dao.selectAll();
-        logger.info("selectAll(LafOlFileManaged) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlFileManaged> selectAll() {
+    final List<LafOlFileManaged> results = dao.selectAll();
+    logger.info("selectAll(LafOlFileManaged) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlFileManaged create(LafOlFileManaged bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlFileManaged={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlFileManaged create(LafOlFileManaged bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlFileManaged={}) - entered bean ");
 
-        final LafOlFileManaged result = dao.create(bean);
+    final LafOlFileManaged result = dao.create(bean);
 
-        logger.info("create(LafOlFileManaged) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlFileManaged) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlFileManaged update(LafOlFileManaged bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlFileManaged={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlFileManaged update(LafOlFileManaged bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlFileManaged={}) - entered bean ");
 
-        final LafOlFileManaged result = dao.update(bean);
+    final LafOlFileManaged result = dao.update(bean);
 
-        logger.info("update(LafOlFileManaged) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlFileManaged) - exited - return value={} result ");
+    return result;
+  }
 }

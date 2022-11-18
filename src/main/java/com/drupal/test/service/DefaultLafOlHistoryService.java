@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlHistoryDao;
 import com.drupal.test.entity.LafOlHistory;
 import com.drupal.test.entity.LafOlHistoryId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlHistoryService")
 public class DefaultLafOlHistoryService implements LafOlHistoryService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlHistoryDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlHistoryDao dao;
 
-    @Inject
-    @Named("DefaultLafOlHistoryDao")
-    public DefaultLafOlHistoryService(final LafOlHistoryDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlHistoryDao")
+  public DefaultLafOlHistoryService(final LafOlHistoryDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlHistory find(LafOlHistoryId id) {
-        final LafOlHistory result = dao.find(id);
-        logger.info("find(LafOlHistory) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlHistory find(LafOlHistoryId id) {
+    final LafOlHistory result = dao.find(id);
+    logger.info("find(LafOlHistory) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlHistory> select(int maxResult) {
-        final List<LafOlHistory> result = dao.select(maxResult);
-        logger.info("select(LafOlHistory) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlHistory> select(int maxResult) {
+    final List<LafOlHistory> result = dao.select(maxResult);
+    logger.info("select(LafOlHistory) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlHistory> selectAll() {
-        final List<LafOlHistory> results = dao.selectAll();
-        logger.info("selectAll(LafOlHistory) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlHistory> selectAll() {
+    final List<LafOlHistory> results = dao.selectAll();
+    logger.info("selectAll(LafOlHistory) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlHistory create(LafOlHistory bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlHistory={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlHistory create(LafOlHistory bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlHistory={}) - entered bean ");
 
-        final LafOlHistory result = dao.create(bean);
+    final LafOlHistory result = dao.create(bean);
 
-        logger.info("create(LafOlHistory) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlHistory) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlHistory update(LafOlHistory bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlHistory={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlHistory update(LafOlHistory bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlHistory={}) - entered bean ");
 
-        final LafOlHistory result = dao.update(bean);
+    final LafOlHistory result = dao.update(bean);
 
-        logger.info("update(LafOlHistory) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlHistory) - exited - return value={} result ");
+    return result;
+  }
 }

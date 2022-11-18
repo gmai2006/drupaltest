@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCachePage;
 import java.util.List;
+import com.drupal.test.entity.LafOlCachePage;
 
 public interface LafOlCachePageDao {
-    /**
-     * Retrieve all records LafOlCachePage.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCachePage
-     */
-    public List<LafOlCachePage> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCachePage.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCachePage
+   */
+  public List<LafOlCachePage> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCachePage.
-     *
-     * @return A list of LafOlCachePage
-     */
-    public List<LafOlCachePage> selectAll();
+  /**
+   * Retrieve all records LafOlCachePage.
+   *
+   * @return A list of LafOlCachePage
+   */
+  public List<LafOlCachePage> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCachePage id.
-     * @return The same LafOlCachePage.
-     */
-    public LafOlCachePage find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCachePage id.
+   * @return The same LafOlCachePage.
+   */
+  public LafOlCachePage find(java.lang.String id);
 
-    /**
-     * Create an LafOlCachePage.
-     *
-     * @param e the LafOlCachePage.
-     * @return The same LafOlCachePage.
-     */
-    public LafOlCachePage create(LafOlCachePage e);
+  /**
+   * Create an LafOlCachePage.
+   *
+   * @param e the LafOlCachePage.
+   * @return The same LafOlCachePage.
+   */
+  public LafOlCachePage create(LafOlCachePage e);
 
-    /**
-     * Update the LafOlCachePage.
-     *
-     * @param e the LafOlCachePage.
-     * @return The same LafOlCachePage.
-     */
-    public LafOlCachePage update(LafOlCachePage e);
+  /**
+   * Update the LafOlCachePage.
+   *
+   * @param e the LafOlCachePage.
+   * @return The same LafOlCachePage.
+   */
+  public LafOlCachePage update(LafOlCachePage e);
 }

@@ -18,75 +18,75 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
 /**
- * embeddable class Id for LafOlTaxonomyTermFieldRevision. generated on 10/16/2021 from a schema.
+ * embeddable class Id for LafOlTaxonomyTermFieldRevision. generated on 11/17/2022 from a schema.
  */
 public class LafOlTaxonomyTermFieldRevisionId implements Serializable {
-    private static final long serialVersionUID = 163445265099540829L;
+  private static final long serialVersionUID = 166875433062762862L;
 
-    @Column(name = "langcode")
-    private java.lang.String langcode;
+  @Column(name = "langcode")
+  private java.lang.String langcode;
 
-    @Column(name = "revision_id")
-    private java.lang.Integer revisionId;
+  @Column(name = "revision_id")
+  private java.lang.Integer revisionId;
 
-    /** Constructor: LafOlTaxonomyTermFieldRevisionId. */
-    public LafOlTaxonomyTermFieldRevisionId() {}
+  /** Constructor: LafOlTaxonomyTermFieldRevisionId. */
+  public LafOlTaxonomyTermFieldRevisionId() {}
 
-    /**
-     * Constructor: LafOlTaxonomyTermFieldRevisionId.
-     *
-     * @param langcode - langcode.
-     * @param revisionId - revisionId.
-     */
-    public LafOlTaxonomyTermFieldRevisionId(
-            java.lang.String langcode, java.lang.Integer revisionId) {
-        this.langcode = langcode;
-        this.revisionId = revisionId;
-    }
+  /**
+   * Constructor: LafOlTaxonomyTermFieldRevisionId.
+   *
+   * @param langcode - langcode.
+   * @param revisionId - revisionId.
+   */
+  public LafOlTaxonomyTermFieldRevisionId(java.lang.String langcode, java.lang.Integer revisionId) {
+    this.langcode = langcode;
+    this.revisionId = revisionId;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.Integer getRevisionId() {
-        return this.revisionId;
-    }
+  public java.lang.Integer getRevisionId() {
+    return this.revisionId;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setRevisionId(java.lang.Integer revisionId) {
-        this.revisionId = revisionId;
-    }
+  public void setRevisionId(java.lang.Integer revisionId) {
+    this.revisionId = revisionId;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
-        result = prime * result + ((revisionId == null) ? 0 : revisionId.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
+    result = prime * result + ((revisionId == null) ? 0 : revisionId.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlTaxonomyTermFieldRevisionId other = (LafOlTaxonomyTermFieldRevisionId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlTaxonomyTermFieldRevisionId other = (LafOlTaxonomyTermFieldRevisionId) obj;
 
-        if (langcode == null) {
-            if (other.langcode != null) return false;
-        } else if (!langcode.equals(other.langcode)) return false;
+    if (langcode == null) {
+      if (other.langcode != null) return false;
+    } else if (!langcode.equals(other.langcode)) return false;
 
-        if (revisionId == null) {
-            if (other.revisionId != null) return false;
-        } else if (!revisionId.equals(other.revisionId)) return false;
+    if (revisionId == null) {
+      if (other.revisionId != null) return false;
+    } else if (!revisionId.equals(other.revisionId)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

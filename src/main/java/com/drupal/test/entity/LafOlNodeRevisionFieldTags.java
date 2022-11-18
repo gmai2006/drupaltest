@@ -16,111 +16,111 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlNodeRevisionFieldTagsId.class)
 @Table(name = "lafol_node_revision__field_tags")
 public class LafOlNodeRevisionFieldTags implements Serializable {
-    private static final long serialVersionUID = 163445265077093981L;
+  private static final long serialVersionUID = 166875433047343585L;
 
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "langcode")
-    private java.lang.String langcode;
-    /** Description: deleted. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "deleted")
-    private java.lang.Integer deleted;
-    /** Description: delta. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "delta")
-    private java.lang.Integer delta;
-    /** Description: entity_id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "entity_id")
-    private java.lang.Integer entityId;
-    /** Description: revision_id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "revision_id")
-    private java.lang.Integer revisionId;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "langcode")
+  private java.lang.String langcode;
+  /** Description: deleted. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "deleted")
+  private java.lang.Integer deleted;
+  /** Description: delta. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "delta")
+  private java.lang.Integer delta;
+  /** Description: entity_id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "entity_id")
+  private java.lang.Integer entityId;
+  /** Description: revision_id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "revision_id")
+  private java.lang.Integer revisionId;
 
-    /** Description: bundle. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "bundle", length = 128)
-    private java.lang.String bundle;
-    /** Description: field_tags_target_id. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "field_tags_target_id")
-    private java.lang.Integer fieldTagsTargetId;
+  /** Description: bundle. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "bundle", length = 128)
+  private java.lang.String bundle;
+  /** Description: field_tags_target_id. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "field_tags_target_id")
+  private java.lang.Integer fieldTagsTargetId;
 
-    public LafOlNodeRevisionFieldTags() {}
+  public LafOlNodeRevisionFieldTags() {}
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.Integer getDeleted() {
-        return this.deleted;
-    }
+  public java.lang.Integer getDeleted() {
+    return this.deleted;
+  }
 
-    public java.lang.Integer getDelta() {
-        return this.delta;
-    }
+  public java.lang.Integer getDelta() {
+    return this.delta;
+  }
 
-    public java.lang.Integer getEntityId() {
-        return this.entityId;
-    }
+  public java.lang.Integer getEntityId() {
+    return this.entityId;
+  }
 
-    public java.lang.Integer getRevisionId() {
-        return this.revisionId;
-    }
+  public java.lang.Integer getRevisionId() {
+    return this.revisionId;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setDeleted(java.lang.Integer deleted) {
-        this.deleted = deleted;
-    }
+  public void setDeleted(java.lang.Integer deleted) {
+    this.deleted = deleted;
+  }
 
-    public void setDelta(java.lang.Integer delta) {
-        this.delta = delta;
-    }
+  public void setDelta(java.lang.Integer delta) {
+    this.delta = delta;
+  }
 
-    public void setEntityId(java.lang.Integer entityId) {
-        this.entityId = entityId;
-    }
+  public void setEntityId(java.lang.Integer entityId) {
+    this.entityId = entityId;
+  }
 
-    public void setRevisionId(java.lang.Integer revisionId) {
-        this.revisionId = revisionId;
-    }
+  public void setRevisionId(java.lang.Integer revisionId) {
+    this.revisionId = revisionId;
+  }
 
-    public java.lang.String getBundle() {
-        return this.bundle;
-    }
+  public java.lang.String getBundle() {
+    return this.bundle;
+  }
 
-    public java.lang.Integer getFieldTagsTargetId() {
-        return this.fieldTagsTargetId;
-    }
+  public java.lang.Integer getFieldTagsTargetId() {
+    return this.fieldTagsTargetId;
+  }
 
-    public void setBundle(java.lang.String bundle) {
-        this.bundle = bundle;
-    }
+  public void setBundle(java.lang.String bundle) {
+    this.bundle = bundle;
+  }
 
-    public void setFieldTagsTargetId(java.lang.Integer fieldTagsTargetId) {
-        this.fieldTagsTargetId = fieldTagsTargetId;
-    }
+  public void setFieldTagsTargetId(java.lang.Integer fieldTagsTargetId) {
+    this.fieldTagsTargetId = fieldTagsTargetId;
+  }
 }

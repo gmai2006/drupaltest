@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlMenuTree;
 import com.drupal.test.entity.LafOlMenuTreeId;
-import java.util.List;
 
 public interface LafOlMenuTreeService {
-    public LafOlMenuTree find(LafOlMenuTreeId id);
-    /**
-     * Select a list of LafOlMenuTree based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlMenuTree records.
-     */
-    public List<LafOlMenuTree> select(int maxResult);
+  public LafOlMenuTree find(LafOlMenuTreeId id);
+  /**
+   * Select a list of LafOlMenuTree based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlMenuTree records.
+   */
+  public List<LafOlMenuTree> select(int maxResult);
 
-    /**
-     * Select all LafOlMenuTree.
-     *
-     * @return all LafOlMenuTree records.
-     */
-    public List<LafOlMenuTree> selectAll();
+  /**
+   * Select all LafOlMenuTree.
+   *
+   * @return all LafOlMenuTree records.
+   */
+  public List<LafOlMenuTree> selectAll();
 
-    /**
-     * Create LafOlMenuTree.
-     *
-     * @param bean The LafOlMenuTree.
-     * @return The LafOlMenuTree.
-     */
-    public LafOlMenuTree create(LafOlMenuTree bean);
+  /**
+   * Create LafOlMenuTree.
+   *
+   * @param bean The LafOlMenuTree.
+   * @return The LafOlMenuTree.
+   */
+  public LafOlMenuTree create(LafOlMenuTree bean);
 
-    /**
-     * Update a LafOlMenuTree.
-     *
-     * @param bean - The LafOlMenuTree.
-     * @return LafOlMenuTree.
-     */
-    public LafOlMenuTree update(LafOlMenuTree bean);
+  /**
+   * Update a LafOlMenuTree.
+   *
+   * @param bean - The LafOlMenuTree.
+   * @return LafOlMenuTree.
+   */
+  public LafOlMenuTree update(LafOlMenuTree bean);
 }

@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlShortcutFieldData;
 import com.drupal.test.entity.LafOlShortcutFieldDataId;
-import java.util.List;
 
 public interface LafOlShortcutFieldDataDao {
-    /**
-     * Retrieve all records LafOlShortcutFieldData.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlShortcutFieldData
-     */
-    public List<LafOlShortcutFieldData> select(int maxResult);
+  /**
+   * Retrieve all records LafOlShortcutFieldData.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlShortcutFieldData
+   */
+  public List<LafOlShortcutFieldData> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlShortcutFieldData.
-     *
-     * @return A list of LafOlShortcutFieldData
-     */
-    public List<LafOlShortcutFieldData> selectAll();
+  /**
+   * Retrieve all records LafOlShortcutFieldData.
+   *
+   * @return A list of LafOlShortcutFieldData
+   */
+  public List<LafOlShortcutFieldData> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlShortcutFieldData id.
-     * @return The same LafOlShortcutFieldData.
-     */
-    public LafOlShortcutFieldData find(LafOlShortcutFieldDataId id);
-    /**
-     * Create an LafOlShortcutFieldData.
-     *
-     * @param e the LafOlShortcutFieldData.
-     * @return The same LafOlShortcutFieldData.
-     */
-    public LafOlShortcutFieldData create(LafOlShortcutFieldData e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlShortcutFieldData id.
+   * @return The same LafOlShortcutFieldData.
+   */
+  public LafOlShortcutFieldData find(LafOlShortcutFieldDataId id);
+  /**
+   * Create an LafOlShortcutFieldData.
+   *
+   * @param e the LafOlShortcutFieldData.
+   * @return The same LafOlShortcutFieldData.
+   */
+  public LafOlShortcutFieldData create(LafOlShortcutFieldData e);
 
-    /**
-     * Update the LafOlShortcutFieldData.
-     *
-     * @param e the LafOlShortcutFieldData.
-     * @return The same LafOlShortcutFieldData.
-     */
-    public LafOlShortcutFieldData update(LafOlShortcutFieldData e);
+  /**
+   * Update the LafOlShortcutFieldData.
+   *
+   * @param e the LafOlShortcutFieldData.
+   * @return The same LafOlShortcutFieldData.
+   */
+  public LafOlShortcutFieldData update(LafOlShortcutFieldData e);
 }

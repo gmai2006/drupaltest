@@ -16,72 +16,75 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlWatchdog;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlWatchdog;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlWatchdogHandler")
 public class LafOlWatchdogHandler extends DelimiterFileHandler<LafOlWatchdog> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlWatchdogHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlWatchdogHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlWatchdog parseLine(List<String> headers, List<String> tokens) {
+    LafOlWatchdog record = new LafOlWatchdog();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "wid":
+          record.setWid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "uid":
+          record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "type":
+          record.setType(tokens.get(i));
+          break;
+
+        case "message":
+          record.setMessage(tokens.get(i));
+          break;
+
+        case "variables":
+          record.setVariables(tokens.get(i));
+          break;
+
+        case "severity":
+          record.setSeverity(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "link":
+          record.setLink(tokens.get(i));
+          break;
+
+        case "location":
+          record.setLocation(tokens.get(i));
+          break;
+
+        case "referer":
+          record.setReferer(tokens.get(i));
+          break;
+
+        case "hostname":
+          record.setHostname(tokens.get(i));
+          break;
+
+        case "timestamp":
+          record.setTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlWatchdog parseLine(List<String> headers, List<String> tokens) {
-        LafOlWatchdog record = new LafOlWatchdog();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "wid":
-                    record.setWid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "uid":
-                    record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "type":
-                    record.setType(tokens.get(i));
-                    break;
-
-                case "message":
-                    record.setMessage(tokens.get(i));
-                    break;
-
-                case "variables":
-                    record.setVariables(tokens.get(i));
-                    break;
-
-                case "severity":
-                    record.setSeverity(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "link":
-                    record.setLink(tokens.get(i));
-                    break;
-
-                case "location":
-                    record.setLocation(tokens.get(i));
-                    break;
-
-                case "referer":
-                    record.setReferer(tokens.get(i));
-                    break;
-
-                case "hostname":
-                    record.setHostname(tokens.get(i));
-                    break;
-
-                case "timestamp":
-                    record.setTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

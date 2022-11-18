@@ -16,35 +16,38 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlSequences;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlSequences;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlSequencesHandler")
 public class LafOlSequencesHandler extends DelimiterFileHandler<LafOlSequences> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlSequencesHandler(final JpaDao dao) {
-        super(dao);
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlSequencesHandler(final JpaDao dao) {
+    super(dao);
+  }
 
-    @Override
-    protected LafOlSequences parseLine(List<String> headers, List<String> tokens) {
-        LafOlSequences record = new LafOlSequences();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "value":
-                    record.setValue(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
+  @Override
+  protected LafOlSequences parseLine(List<String> headers, List<String> tokens) {
+    LafOlSequences record = new LafOlSequences();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "value":
+          record.setValue(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
 
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
+    return record;
+  }
 }

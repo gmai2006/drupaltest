@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlBlockContentRevision;
 import java.util.List;
+import com.drupal.test.entity.LafOlBlockContentRevision;
 
 public interface LafOlBlockContentRevisionService {
-    public LafOlBlockContentRevision find(java.lang.Integer id);
+  public LafOlBlockContentRevision find(java.lang.Integer id);
 
-    /**
-     * Select a list of LafOlBlockContentRevision based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlBlockContentRevision records.
-     */
-    public List<LafOlBlockContentRevision> select(int maxResult);
+  /**
+   * Select a list of LafOlBlockContentRevision based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlBlockContentRevision records.
+   */
+  public List<LafOlBlockContentRevision> select(int maxResult);
 
-    /**
-     * Select all LafOlBlockContentRevision.
-     *
-     * @return all LafOlBlockContentRevision records.
-     */
-    public List<LafOlBlockContentRevision> selectAll();
+  /**
+   * Select all LafOlBlockContentRevision.
+   *
+   * @return all LafOlBlockContentRevision records.
+   */
+  public List<LafOlBlockContentRevision> selectAll();
 
-    /**
-     * Create LafOlBlockContentRevision.
-     *
-     * @param bean The LafOlBlockContentRevision.
-     * @return The LafOlBlockContentRevision.
-     */
-    public LafOlBlockContentRevision create(LafOlBlockContentRevision bean);
+  /**
+   * Create LafOlBlockContentRevision.
+   *
+   * @param bean The LafOlBlockContentRevision.
+   * @return The LafOlBlockContentRevision.
+   */
+  public LafOlBlockContentRevision create(LafOlBlockContentRevision bean);
 
-    /**
-     * Update a LafOlBlockContentRevision.
-     *
-     * @param bean - The LafOlBlockContentRevision.
-     * @return LafOlBlockContentRevision.
-     */
-    public LafOlBlockContentRevision update(LafOlBlockContentRevision bean);
+  /**
+   * Update a LafOlBlockContentRevision.
+   *
+   * @param bean - The LafOlBlockContentRevision.
+   * @return LafOlBlockContentRevision.
+   */
+  public LafOlBlockContentRevision update(LafOlBlockContentRevision bean);
 }

@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlCacheDefaultDao;
-import com.drupal.test.entity.LafOlCacheDefault;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlCacheDefaultDao;
+import com.drupal.test.entity.LafOlCacheDefault;
 
 @Stateless
 @Named("DefaultLafOlCacheDefaultService")
 public class DefaultLafOlCacheDefaultService implements LafOlCacheDefaultService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlCacheDefaultDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlCacheDefaultDao dao;
 
-    @Inject
-    @Named("DefaultLafOlCacheDefaultDao")
-    public DefaultLafOlCacheDefaultService(final LafOlCacheDefaultDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlCacheDefaultDao")
+  public DefaultLafOlCacheDefaultService(final LafOlCacheDefaultDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheDefault find(java.lang.String id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheDefault find(java.lang.String id) {
 
-        final LafOlCacheDefault result = dao.find(id);
-        logger.info("find(LafOlCacheDefault) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlCacheDefault result = dao.find(id);
+    logger.info("find(LafOlCacheDefault) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCacheDefault> select(int maxResult) {
-        final List<LafOlCacheDefault> result = dao.select(maxResult);
-        logger.info("select(LafOlCacheDefault) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlCacheDefault> select(int maxResult) {
+    final List<LafOlCacheDefault> result = dao.select(maxResult);
+    logger.info("select(LafOlCacheDefault) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCacheDefault> selectAll() {
-        final List<LafOlCacheDefault> results = dao.selectAll();
-        logger.info("selectAll(LafOlCacheDefault) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlCacheDefault> selectAll() {
+    final List<LafOlCacheDefault> results = dao.selectAll();
+    logger.info("selectAll(LafOlCacheDefault) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheDefault create(LafOlCacheDefault bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlCacheDefault={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheDefault create(LafOlCacheDefault bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlCacheDefault={}) - entered bean ");
 
-        final LafOlCacheDefault result = dao.create(bean);
+    final LafOlCacheDefault result = dao.create(bean);
 
-        logger.info("create(LafOlCacheDefault) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlCacheDefault) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheDefault update(LafOlCacheDefault bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlCacheDefault={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheDefault update(LafOlCacheDefault bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlCacheDefault={}) - entered bean ");
 
-        final LafOlCacheDefault result = dao.update(bean);
+    final LafOlCacheDefault result = dao.update(bean);
 
-        logger.info("update(LafOlCacheDefault) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlCacheDefault) - exited - return value={} result ");
+    return result;
+  }
 }

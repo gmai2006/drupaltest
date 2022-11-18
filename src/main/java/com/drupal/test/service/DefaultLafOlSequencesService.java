@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlSequencesDao;
-import com.drupal.test.entity.LafOlSequences;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlSequencesDao;
+import com.drupal.test.entity.LafOlSequences;
 
 @Stateless
 @Named("DefaultLafOlSequencesService")
 public class DefaultLafOlSequencesService implements LafOlSequencesService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlSequencesDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlSequencesDao dao;
 
-    @Inject
-    @Named("DefaultLafOlSequencesDao")
-    public DefaultLafOlSequencesService(final LafOlSequencesDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlSequencesDao")
+  public DefaultLafOlSequencesService(final LafOlSequencesDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSequences find(java.lang.Integer id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSequences find(java.lang.Integer id) {
 
-        final LafOlSequences result = dao.find(id);
-        logger.info("find(LafOlSequences) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlSequences result = dao.find(id);
+    logger.info("find(LafOlSequences) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlSequences> select(int maxResult) {
-        final List<LafOlSequences> result = dao.select(maxResult);
-        logger.info("select(LafOlSequences) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlSequences> select(int maxResult) {
+    final List<LafOlSequences> result = dao.select(maxResult);
+    logger.info("select(LafOlSequences) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlSequences> selectAll() {
-        final List<LafOlSequences> results = dao.selectAll();
-        logger.info("selectAll(LafOlSequences) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlSequences> selectAll() {
+    final List<LafOlSequences> results = dao.selectAll();
+    logger.info("selectAll(LafOlSequences) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSequences create(LafOlSequences bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlSequences={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSequences create(LafOlSequences bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlSequences={}) - entered bean ");
 
-        final LafOlSequences result = dao.create(bean);
+    final LafOlSequences result = dao.create(bean);
 
-        logger.info("create(LafOlSequences) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlSequences) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSequences update(LafOlSequences bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlSequences={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSequences update(LafOlSequences bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlSequences={}) - entered bean ");
 
-        final LafOlSequences result = dao.update(bean);
+    final LafOlSequences result = dao.update(bean);
 
-        logger.info("update(LafOlSequences) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlSequences) - exited - return value={} result ");
+    return result;
+  }
 }

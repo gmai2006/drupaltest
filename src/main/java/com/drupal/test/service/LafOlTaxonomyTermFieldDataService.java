@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlTaxonomyTermFieldData;
 import com.drupal.test.entity.LafOlTaxonomyTermFieldDataId;
-import java.util.List;
 
 public interface LafOlTaxonomyTermFieldDataService {
-    public LafOlTaxonomyTermFieldData find(LafOlTaxonomyTermFieldDataId id);
-    /**
-     * Select a list of LafOlTaxonomyTermFieldData based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlTaxonomyTermFieldData records.
-     */
-    public List<LafOlTaxonomyTermFieldData> select(int maxResult);
+  public LafOlTaxonomyTermFieldData find(LafOlTaxonomyTermFieldDataId id);
+  /**
+   * Select a list of LafOlTaxonomyTermFieldData based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlTaxonomyTermFieldData records.
+   */
+  public List<LafOlTaxonomyTermFieldData> select(int maxResult);
 
-    /**
-     * Select all LafOlTaxonomyTermFieldData.
-     *
-     * @return all LafOlTaxonomyTermFieldData records.
-     */
-    public List<LafOlTaxonomyTermFieldData> selectAll();
+  /**
+   * Select all LafOlTaxonomyTermFieldData.
+   *
+   * @return all LafOlTaxonomyTermFieldData records.
+   */
+  public List<LafOlTaxonomyTermFieldData> selectAll();
 
-    /**
-     * Create LafOlTaxonomyTermFieldData.
-     *
-     * @param bean The LafOlTaxonomyTermFieldData.
-     * @return The LafOlTaxonomyTermFieldData.
-     */
-    public LafOlTaxonomyTermFieldData create(LafOlTaxonomyTermFieldData bean);
+  /**
+   * Create LafOlTaxonomyTermFieldData.
+   *
+   * @param bean The LafOlTaxonomyTermFieldData.
+   * @return The LafOlTaxonomyTermFieldData.
+   */
+  public LafOlTaxonomyTermFieldData create(LafOlTaxonomyTermFieldData bean);
 
-    /**
-     * Update a LafOlTaxonomyTermFieldData.
-     *
-     * @param bean - The LafOlTaxonomyTermFieldData.
-     * @return LafOlTaxonomyTermFieldData.
-     */
-    public LafOlTaxonomyTermFieldData update(LafOlTaxonomyTermFieldData bean);
+  /**
+   * Update a LafOlTaxonomyTermFieldData.
+   *
+   * @param bean - The LafOlTaxonomyTermFieldData.
+   * @return LafOlTaxonomyTermFieldData.
+   */
+  public LafOlTaxonomyTermFieldData update(LafOlTaxonomyTermFieldData bean);
 }

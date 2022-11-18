@@ -16,58 +16,61 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlUsersFieldData;
-import com.drupal.test.entity.LafOlUsersFieldDataId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlUsersFieldData;
+import com.drupal.test.entity.LafOlUsersFieldDataId;
 
 @Stateless
 @Named("DefaultLafOlUsersFieldDataDao")
 public class DefaultLafOlUsersFieldDataDao implements LafOlUsersFieldDataDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlUsersFieldDataDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlUsersFieldDataDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlUsersFieldDataDao() {}
+  public DefaultLafOlUsersFieldDataDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUsersFieldData find(LafOlUsersFieldDataId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlUsersFieldData.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUsersFieldData find(LafOlUsersFieldDataId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlUsersFieldData.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlUsersFieldData> select(int max) {
-        return dao.select("select a from LafOlUsersFieldData a", LafOlUsersFieldData.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlUsersFieldData> select(int max) {
+    return dao.select("select a from LafOlUsersFieldData a", LafOlUsersFieldData.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlUsersFieldData> selectAll() {
-        return dao.selectAll("select a from LafOlUsersFieldData a", LafOlUsersFieldData.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlUsersFieldData> selectAll() {
+    return dao.selectAll("select a from LafOlUsersFieldData a", LafOlUsersFieldData.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUsersFieldData create(LafOlUsersFieldData e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUsersFieldData create(LafOlUsersFieldData e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUsersFieldData update(LafOlUsersFieldData e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUsersFieldData update(LafOlUsersFieldData e) {
+    return dao.update(e);
+  }
 }

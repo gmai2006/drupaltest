@@ -16,61 +16,62 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCacheDynamicPageCache;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlCacheDynamicPageCache;
 
 @Stateless
 @Named("DefaultLafOlCacheDynamicPageCacheDao")
 public class DefaultLafOlCacheDynamicPageCacheDao implements LafOlCacheDynamicPageCacheDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlCacheDynamicPageCacheDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlCacheDynamicPageCacheDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlCacheDynamicPageCacheDao() {}
+  public DefaultLafOlCacheDynamicPageCacheDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheDynamicPageCache find(java.lang.String id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlCacheDynamicPageCache.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheDynamicPageCache find(java.lang.String id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlCacheDynamicPageCache.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlCacheDynamicPageCache> select(int max) {
-        return dao.select(
-                "select a from LafOlCacheDynamicPageCache a",
-                LafOlCacheDynamicPageCache.class,
-                max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlCacheDynamicPageCache> select(int max) {
+    return dao.select(
+        "select a from LafOlCacheDynamicPageCache a", LafOlCacheDynamicPageCache.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlCacheDynamicPageCache> selectAll() {
-        return dao.selectAll(
-                "select a from LafOlCacheDynamicPageCache a", LafOlCacheDynamicPageCache.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlCacheDynamicPageCache> selectAll() {
+    return dao.selectAll(
+        "select a from LafOlCacheDynamicPageCache a", LafOlCacheDynamicPageCache.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheDynamicPageCache create(LafOlCacheDynamicPageCache e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheDynamicPageCache create(LafOlCacheDynamicPageCache e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheDynamicPageCache update(LafOlCacheDynamicPageCache e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheDynamicPageCache update(LafOlCacheDynamicPageCache e) {
+    return dao.update(e);
+  }
 }

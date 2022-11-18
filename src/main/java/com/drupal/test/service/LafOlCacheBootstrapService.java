@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlCacheBootstrap;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheBootstrap;
 
 public interface LafOlCacheBootstrapService {
-    public LafOlCacheBootstrap find(java.lang.String id);
+  public LafOlCacheBootstrap find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlCacheBootstrap based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCacheBootstrap records.
-     */
-    public List<LafOlCacheBootstrap> select(int maxResult);
+  /**
+   * Select a list of LafOlCacheBootstrap based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCacheBootstrap records.
+   */
+  public List<LafOlCacheBootstrap> select(int maxResult);
 
-    /**
-     * Select all LafOlCacheBootstrap.
-     *
-     * @return all LafOlCacheBootstrap records.
-     */
-    public List<LafOlCacheBootstrap> selectAll();
+  /**
+   * Select all LafOlCacheBootstrap.
+   *
+   * @return all LafOlCacheBootstrap records.
+   */
+  public List<LafOlCacheBootstrap> selectAll();
 
-    /**
-     * Create LafOlCacheBootstrap.
-     *
-     * @param bean The LafOlCacheBootstrap.
-     * @return The LafOlCacheBootstrap.
-     */
-    public LafOlCacheBootstrap create(LafOlCacheBootstrap bean);
+  /**
+   * Create LafOlCacheBootstrap.
+   *
+   * @param bean The LafOlCacheBootstrap.
+   * @return The LafOlCacheBootstrap.
+   */
+  public LafOlCacheBootstrap create(LafOlCacheBootstrap bean);
 
-    /**
-     * Update a LafOlCacheBootstrap.
-     *
-     * @param bean - The LafOlCacheBootstrap.
-     * @return LafOlCacheBootstrap.
-     */
-    public LafOlCacheBootstrap update(LafOlCacheBootstrap bean);
+  /**
+   * Update a LafOlCacheBootstrap.
+   *
+   * @param bean - The LafOlCacheBootstrap.
+   * @return LafOlCacheBootstrap.
+   */
+  public LafOlCacheBootstrap update(LafOlCacheBootstrap bean);
 }

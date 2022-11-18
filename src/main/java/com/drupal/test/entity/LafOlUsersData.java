@@ -16,83 +16,83 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlUsersDataId.class)
 @Table(name = "lafol_users_data")
 public class LafOlUsersData implements Serializable {
-    private static final long serialVersionUID = 163445265111567700L;
+  private static final long serialVersionUID = 166875433071593448L;
 
-    /** Description: uid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "uid")
-    private java.lang.Integer uid;
-    /** Description: module. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "module")
-    private java.lang.String module;
-    /** Description: name. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "name")
-    private java.lang.String name;
+  /** Description: uid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "uid")
+  private java.lang.Integer uid;
+  /** Description: module. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "module")
+  private java.lang.String module;
+  /** Description: name. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "name")
+  private java.lang.String name;
 
-    /** Description: value. */
-    @Basic
-    @Column(name = "value", length = 0)
-    private java.lang.String value;
-    /** Description: serialized. */
-    @Basic
-    @Column(name = "serialized")
-    private java.lang.Integer serialized;
+  /** Description: value. */
+  @Basic
+  @Column(name = "value", length = 0)
+  private java.lang.String value;
+  /** Description: serialized. */
+  @Basic
+  @Column(name = "serialized")
+  private java.lang.Integer serialized;
 
-    public LafOlUsersData() {}
+  public LafOlUsersData() {}
 
-    public java.lang.Integer getUid() {
-        return this.uid;
-    }
+  public java.lang.Integer getUid() {
+    return this.uid;
+  }
 
-    public java.lang.String getModule() {
-        return this.module;
-    }
+  public java.lang.String getModule() {
+    return this.module;
+  }
 
-    public java.lang.String getName() {
-        return this.name;
-    }
+  public java.lang.String getName() {
+    return this.name;
+  }
 
-    public void setUid(java.lang.Integer uid) {
-        this.uid = uid;
-    }
+  public void setUid(java.lang.Integer uid) {
+    this.uid = uid;
+  }
 
-    public void setModule(java.lang.String module) {
-        this.module = module;
-    }
+  public void setModule(java.lang.String module) {
+    this.module = module;
+  }
 
-    public void setName(java.lang.String name) {
-        this.name = name;
-    }
+  public void setName(java.lang.String name) {
+    this.name = name;
+  }
 
-    public java.lang.String getValue() {
-        return this.value;
-    }
+  public java.lang.String getValue() {
+    return this.value;
+  }
 
-    public java.lang.Integer getSerialized() {
-        return this.serialized;
-    }
+  public java.lang.Integer getSerialized() {
+    return this.serialized;
+  }
 
-    public void setValue(java.lang.String value) {
-        this.value = value;
-    }
+  public void setValue(java.lang.String value) {
+    this.value = value;
+  }
 
-    public void setSerialized(java.lang.Integer serialized) {
-        this.serialized = serialized;
-    }
+  public void setSerialized(java.lang.Integer serialized) {
+    this.serialized = serialized;
+  }
 }

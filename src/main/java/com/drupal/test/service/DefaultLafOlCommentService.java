@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlCommentDao;
 import com.drupal.test.entity.LafOlComment;
 import com.drupal.test.entity.LafOlCommentId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlCommentService")
 public class DefaultLafOlCommentService implements LafOlCommentService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlCommentDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlCommentDao dao;
 
-    @Inject
-    @Named("DefaultLafOlCommentDao")
-    public DefaultLafOlCommentService(final LafOlCommentDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlCommentDao")
+  public DefaultLafOlCommentService(final LafOlCommentDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlComment find(LafOlCommentId id) {
-        final LafOlComment result = dao.find(id);
-        logger.info("find(LafOlComment) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlComment find(LafOlCommentId id) {
+    final LafOlComment result = dao.find(id);
+    logger.info("find(LafOlComment) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlComment> select(int maxResult) {
-        final List<LafOlComment> result = dao.select(maxResult);
-        logger.info("select(LafOlComment) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlComment> select(int maxResult) {
+    final List<LafOlComment> result = dao.select(maxResult);
+    logger.info("select(LafOlComment) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlComment> selectAll() {
-        final List<LafOlComment> results = dao.selectAll();
-        logger.info("selectAll(LafOlComment) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlComment> selectAll() {
+    final List<LafOlComment> results = dao.selectAll();
+    logger.info("selectAll(LafOlComment) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlComment create(LafOlComment bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlComment={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlComment create(LafOlComment bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlComment={}) - entered bean ");
 
-        final LafOlComment result = dao.create(bean);
+    final LafOlComment result = dao.create(bean);
 
-        logger.info("create(LafOlComment) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlComment) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlComment update(LafOlComment bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlComment={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlComment update(LafOlComment bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlComment={}) - entered bean ");
 
-        final LafOlComment result = dao.update(bean);
+    final LafOlComment result = dao.update(bean);
 
-        logger.info("update(LafOlComment) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlComment) - exited - return value={} result ");
+    return result;
+  }
 }

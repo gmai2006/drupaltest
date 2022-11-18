@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlBlockContentFieldData;
 import com.drupal.test.entity.LafOlBlockContentFieldDataId;
-import java.util.List;
 
 public interface LafOlBlockContentFieldDataDao {
-    /**
-     * Retrieve all records LafOlBlockContentFieldData.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlBlockContentFieldData
-     */
-    public List<LafOlBlockContentFieldData> select(int maxResult);
+  /**
+   * Retrieve all records LafOlBlockContentFieldData.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlBlockContentFieldData
+   */
+  public List<LafOlBlockContentFieldData> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlBlockContentFieldData.
-     *
-     * @return A list of LafOlBlockContentFieldData
-     */
-    public List<LafOlBlockContentFieldData> selectAll();
+  /**
+   * Retrieve all records LafOlBlockContentFieldData.
+   *
+   * @return A list of LafOlBlockContentFieldData
+   */
+  public List<LafOlBlockContentFieldData> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlBlockContentFieldData id.
-     * @return The same LafOlBlockContentFieldData.
-     */
-    public LafOlBlockContentFieldData find(LafOlBlockContentFieldDataId id);
-    /**
-     * Create an LafOlBlockContentFieldData.
-     *
-     * @param e the LafOlBlockContentFieldData.
-     * @return The same LafOlBlockContentFieldData.
-     */
-    public LafOlBlockContentFieldData create(LafOlBlockContentFieldData e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlBlockContentFieldData id.
+   * @return The same LafOlBlockContentFieldData.
+   */
+  public LafOlBlockContentFieldData find(LafOlBlockContentFieldDataId id);
+  /**
+   * Create an LafOlBlockContentFieldData.
+   *
+   * @param e the LafOlBlockContentFieldData.
+   * @return The same LafOlBlockContentFieldData.
+   */
+  public LafOlBlockContentFieldData create(LafOlBlockContentFieldData e);
 
-    /**
-     * Update the LafOlBlockContentFieldData.
-     *
-     * @param e the LafOlBlockContentFieldData.
-     * @return The same LafOlBlockContentFieldData.
-     */
-    public LafOlBlockContentFieldData update(LafOlBlockContentFieldData e);
+  /**
+   * Update the LafOlBlockContentFieldData.
+   *
+   * @param e the LafOlBlockContentFieldData.
+   * @return The same LafOlBlockContentFieldData.
+   */
+  public LafOlBlockContentFieldData update(LafOlBlockContentFieldData e);
 }

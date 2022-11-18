@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlMenuLinkContentRevision;
 import java.util.List;
+import com.drupal.test.entity.LafOlMenuLinkContentRevision;
 
 public interface LafOlMenuLinkContentRevisionDao {
-    /**
-     * Retrieve all records LafOlMenuLinkContentRevision.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlMenuLinkContentRevision
-     */
-    public List<LafOlMenuLinkContentRevision> select(int maxResult);
+  /**
+   * Retrieve all records LafOlMenuLinkContentRevision.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlMenuLinkContentRevision
+   */
+  public List<LafOlMenuLinkContentRevision> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlMenuLinkContentRevision.
-     *
-     * @return A list of LafOlMenuLinkContentRevision
-     */
-    public List<LafOlMenuLinkContentRevision> selectAll();
+  /**
+   * Retrieve all records LafOlMenuLinkContentRevision.
+   *
+   * @return A list of LafOlMenuLinkContentRevision
+   */
+  public List<LafOlMenuLinkContentRevision> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlMenuLinkContentRevision id.
-     * @return The same LafOlMenuLinkContentRevision.
-     */
-    public LafOlMenuLinkContentRevision find(java.lang.Integer id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlMenuLinkContentRevision id.
+   * @return The same LafOlMenuLinkContentRevision.
+   */
+  public LafOlMenuLinkContentRevision find(java.lang.Integer id);
 
-    /**
-     * Create an LafOlMenuLinkContentRevision.
-     *
-     * @param e the LafOlMenuLinkContentRevision.
-     * @return The same LafOlMenuLinkContentRevision.
-     */
-    public LafOlMenuLinkContentRevision create(LafOlMenuLinkContentRevision e);
+  /**
+   * Create an LafOlMenuLinkContentRevision.
+   *
+   * @param e the LafOlMenuLinkContentRevision.
+   * @return The same LafOlMenuLinkContentRevision.
+   */
+  public LafOlMenuLinkContentRevision create(LafOlMenuLinkContentRevision e);
 
-    /**
-     * Update the LafOlMenuLinkContentRevision.
-     *
-     * @param e the LafOlMenuLinkContentRevision.
-     * @return The same LafOlMenuLinkContentRevision.
-     */
-    public LafOlMenuLinkContentRevision update(LafOlMenuLinkContentRevision e);
+  /**
+   * Update the LafOlMenuLinkContentRevision.
+   *
+   * @param e the LafOlMenuLinkContentRevision.
+   * @return The same LafOlMenuLinkContentRevision.
+   */
+  public LafOlMenuLinkContentRevision update(LafOlMenuLinkContentRevision e);
 }

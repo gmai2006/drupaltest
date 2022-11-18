@@ -16,62 +16,64 @@
  */
 package com.drupal.test.service;
 
+import com.drupal.test.entity.LafOlRouter;
+
+import com.drupal.test.utils.FileUtils;
+import com.google.gson.JsonArray;
+import com.google.gson.GsonBuilder;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+import com.google.gson.Gson;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import com.drupal.test.entity.LafOlRouter;
 import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import org.junit.BeforeClass;
-import org.junit.Test;
 
 public class LafOlRouterServiceTest {
-    private static DefaultLafOlRouterService serviceMock;
-    private static LafOlRouter[] records;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
+  private static DefaultLafOlRouterService serviceMock;
+  private static LafOlRouter[] records;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void setUp() {
-        serviceMock = mock(DefaultLafOlRouterService.class);
-        String inputFile = "LafOlRouter.json";
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlRouter[].class);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
-        // test data
-        when(serviceMock.find(records[0].getName())).thenReturn(records[0]);
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void setUp() {
+    serviceMock = mock(DefaultLafOlRouterService.class);
+    String inputFile = "LafOlRouter.json";
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlRouter[].class);
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
 
-    @Test
-    public void testFind_success() {
-        LafOlRouter testResult = serviceMock.find(records[0].getName());
+    // test data
+    when(serviceMock.find(records[0].getName())).thenReturn(records[0]);
+  }
 
-        org.junit.Assert.assertNotNull(testResult);
-        org.junit.Assert.assertEquals(
-                "expect equals path ", records[0].getPath(), testResult.getPath());
-        org.junit.Assert.assertEquals(
-                "expect equals patternOutline ",
-                records[0].getPatternOutline(),
-                testResult.getPatternOutline());
-        org.junit.Assert.assertTrue(
-                "expect equals fit ", records[0].getFit() == testResult.getFit());
-        org.junit.Assert.assertEquals(
-                "expect equals route ", records[0].getRoute(), testResult.getRoute());
-        org.junit.Assert.assertTrue(
-                "expect equals numberParts ",
-                records[0].getNumberParts() == testResult.getNumberParts());
-    }
+  @Test
+  public void testFind_success() {
+    LafOlRouter testResult = serviceMock.find(records[0].getName());
+
+    org.junit.Assert.assertNotNull(testResult);
+    org.junit.Assert.assertEquals(
+        "expect equals path ", records[0].getPath(), testResult.getPath());
+    org.junit.Assert.assertEquals(
+        "expect equals patternOutline ",
+        records[0].getPatternOutline(),
+        testResult.getPatternOutline());
+    org.junit.Assert.assertTrue("expect equals fit ", records[0].getFit() == testResult.getFit());
+    org.junit.Assert.assertEquals(
+        "expect equals route ", records[0].getRoute(), testResult.getRoute());
+    org.junit.Assert.assertTrue(
+        "expect equals numberParts ", records[0].getNumberParts() == testResult.getNumberParts());
+  }
 }

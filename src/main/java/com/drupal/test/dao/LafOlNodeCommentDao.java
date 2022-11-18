@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeComment;
 import com.drupal.test.entity.LafOlNodeCommentId;
-import java.util.List;
 
 public interface LafOlNodeCommentDao {
-    /**
-     * Retrieve all records LafOlNodeComment.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlNodeComment
-     */
-    public List<LafOlNodeComment> select(int maxResult);
+  /**
+   * Retrieve all records LafOlNodeComment.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlNodeComment
+   */
+  public List<LafOlNodeComment> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlNodeComment.
-     *
-     * @return A list of LafOlNodeComment
-     */
-    public List<LafOlNodeComment> selectAll();
+  /**
+   * Retrieve all records LafOlNodeComment.
+   *
+   * @return A list of LafOlNodeComment
+   */
+  public List<LafOlNodeComment> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlNodeComment id.
-     * @return The same LafOlNodeComment.
-     */
-    public LafOlNodeComment find(LafOlNodeCommentId id);
-    /**
-     * Create an LafOlNodeComment.
-     *
-     * @param e the LafOlNodeComment.
-     * @return The same LafOlNodeComment.
-     */
-    public LafOlNodeComment create(LafOlNodeComment e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlNodeComment id.
+   * @return The same LafOlNodeComment.
+   */
+  public LafOlNodeComment find(LafOlNodeCommentId id);
+  /**
+   * Create an LafOlNodeComment.
+   *
+   * @param e the LafOlNodeComment.
+   * @return The same LafOlNodeComment.
+   */
+  public LafOlNodeComment create(LafOlNodeComment e);
 
-    /**
-     * Update the LafOlNodeComment.
-     *
-     * @param e the LafOlNodeComment.
-     * @return The same LafOlNodeComment.
-     */
-    public LafOlNodeComment update(LafOlNodeComment e);
+  /**
+   * Update the LafOlNodeComment.
+   *
+   * @param e the LafOlNodeComment.
+   * @return The same LafOlNodeComment.
+   */
+  public LafOlNodeComment update(LafOlNodeComment e);
 }

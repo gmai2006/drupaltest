@@ -16,58 +16,60 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlShortcutSetUsers;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlShortcutSetUsers;
 
 @Stateless
 @Named("DefaultLafOlShortcutSetUsersDao")
 public class DefaultLafOlShortcutSetUsersDao implements LafOlShortcutSetUsersDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlShortcutSetUsersDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlShortcutSetUsersDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlShortcutSetUsersDao() {}
+  public DefaultLafOlShortcutSetUsersDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlShortcutSetUsers find(java.lang.Integer id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlShortcutSetUsers.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlShortcutSetUsers find(java.lang.Integer id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlShortcutSetUsers.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlShortcutSetUsers> select(int max) {
-        return dao.select(
-                "select a from LafOlShortcutSetUsers a", LafOlShortcutSetUsers.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlShortcutSetUsers> select(int max) {
+    return dao.select("select a from LafOlShortcutSetUsers a", LafOlShortcutSetUsers.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlShortcutSetUsers> selectAll() {
-        return dao.selectAll("select a from LafOlShortcutSetUsers a", LafOlShortcutSetUsers.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlShortcutSetUsers> selectAll() {
+    return dao.selectAll("select a from LafOlShortcutSetUsers a", LafOlShortcutSetUsers.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlShortcutSetUsers create(LafOlShortcutSetUsers e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlShortcutSetUsers create(LafOlShortcutSetUsers e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlShortcutSetUsers update(LafOlShortcutSetUsers e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlShortcutSetUsers update(LafOlShortcutSetUsers e) {
+    return dao.update(e);
+  }
 }

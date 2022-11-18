@@ -16,12 +16,11 @@
  */
 package com.drupal.test.dao;
 
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.io.IOException;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
-import com.drupal.test.entity.LafOlBlockContentFieldRevision;
-import com.drupal.test.entity.LafOlBlockContentFieldRevisionId;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.IOException;
@@ -33,65 +32,67 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import com.drupal.test.entity.LafOlBlockContentFieldRevision;
+import com.drupal.test.entity.LafOlBlockContentFieldRevisionId;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
 
 public class LafOlBlockContentFieldRevisionDaoTestIt {
-    static final String inputFile = "LafOlBlockContentFieldRevision.json";
-    static LafOlBlockContentFieldRevisionDao dao;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlBlockContentFieldRevision[] records;
+  static final String inputFile = "LafOlBlockContentFieldRevision.json";
+  static LafOlBlockContentFieldRevisionDao dao;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlBlockContentFieldRevision[] records;
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void beforeClass() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
-        JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
-        dao = new DefaultLafOlBlockContentFieldRevisionDao(jpa);
-    }
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void beforeClass() {
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
+    dao = new DefaultLafOlBlockContentFieldRevisionDao(jpa);
+  }
 
-    /** Run before the test. */
-    @Before
-    public void before() {
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlBlockContentFieldRevision[].class);
-            json = null;
-            Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+  /** Run before the test. */
+  @Before
+  public void before() {
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlBlockContentFieldRevision[].class);
+      json = null;
+      Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
+  }
 
-    @After
-    public void after() {
-        records = null;
-    }
+  @After
+  public void after() {
+    records = null;
+  }
 
-    @Test
-    public void testSelect() {
-        final LafOlBlockContentFieldRevisionId id =
-                new LafOlBlockContentFieldRevisionId(
-                        this.records[1].getLangcode(), this.records[1].getRevisionId());
-        LafOlBlockContentFieldRevision testResult = dao.find(id);
-        assertNotNull("expect result", testResult);
-        org.junit.Assert.assertTrue(
-                "expect equals id ", this.records[1].getId() == testResult.getId());
-        org.junit.Assert.assertTrue(
-                "expect equals status ", this.records[1].getStatus() == testResult.getStatus());
-        org.junit.Assert.assertEquals(
-                "expect equals info ", this.records[1].getInfo(), testResult.getInfo());
-        org.junit.Assert.assertTrue(
-                "expect equals changed ", this.records[1].getChanged() == testResult.getChanged());
-        org.junit.Assert.assertTrue(
-                "expect equals defaultLangcode ",
-                this.records[1].getDefaultLangcode() == testResult.getDefaultLangcode());
-        org.junit.Assert.assertTrue(
-                "expect equals revisionTranslationAffected ",
-                this.records[1].getRevisionTranslationAffected()
-                        == testResult.getRevisionTranslationAffected());
-    }
+  @Test
+  public void testSelect() {
+    final LafOlBlockContentFieldRevisionId id =
+        new LafOlBlockContentFieldRevisionId(
+            this.records[1].getLangcode(), this.records[1].getRevisionId());
+    LafOlBlockContentFieldRevision testResult = dao.find(id);
+    assertNotNull("expect result", testResult);
+    org.junit.Assert.assertTrue("expect equals id ", this.records[1].getId() == testResult.getId());
+    org.junit.Assert.assertTrue(
+        "expect equals status ", this.records[1].getStatus() == testResult.getStatus());
+    org.junit.Assert.assertEquals(
+        "expect equals info ", this.records[1].getInfo(), testResult.getInfo());
+    org.junit.Assert.assertTrue(
+        "expect equals changed ", this.records[1].getChanged() == testResult.getChanged());
+    org.junit.Assert.assertTrue(
+        "expect equals defaultLangcode ",
+        this.records[1].getDefaultLangcode() == testResult.getDefaultLangcode());
+    org.junit.Assert.assertTrue(
+        "expect equals revisionTranslationAffected ",
+        this.records[1].getRevisionTranslationAffected()
+            == testResult.getRevisionTranslationAffected());
+  }
 }

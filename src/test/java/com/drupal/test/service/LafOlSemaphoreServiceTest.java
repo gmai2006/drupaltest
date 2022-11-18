@@ -16,53 +16,57 @@
  */
 package com.drupal.test.service;
 
+import com.drupal.test.entity.LafOlSemaphore;
+
+import com.drupal.test.utils.FileUtils;
+import com.google.gson.JsonArray;
+import com.google.gson.GsonBuilder;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+import com.google.gson.Gson;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import com.drupal.test.entity.LafOlSemaphore;
 import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import org.junit.BeforeClass;
-import org.junit.Test;
 
 public class LafOlSemaphoreServiceTest {
-    private static DefaultLafOlSemaphoreService serviceMock;
-    private static LafOlSemaphore[] records;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
+  private static DefaultLafOlSemaphoreService serviceMock;
+  private static LafOlSemaphore[] records;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void setUp() {
-        serviceMock = mock(DefaultLafOlSemaphoreService.class);
-        String inputFile = "LafOlSemaphore.json";
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlSemaphore[].class);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
-        // test data
-        when(serviceMock.find(records[0].getName())).thenReturn(records[0]);
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void setUp() {
+    serviceMock = mock(DefaultLafOlSemaphoreService.class);
+    String inputFile = "LafOlSemaphore.json";
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlSemaphore[].class);
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
 
-    @Test
-    public void testFind_success() {
-        LafOlSemaphore testResult = serviceMock.find(records[0].getName());
+    // test data
+    when(serviceMock.find(records[0].getName())).thenReturn(records[0]);
+  }
 
-        org.junit.Assert.assertNotNull(testResult);
-        org.junit.Assert.assertEquals(
-                "expect equals value ", records[0].getValue(), testResult.getValue());
-        org.junit.Assert.assertTrue(
-                "expect equals expire ", records[0].getExpire() == testResult.getExpire());
-    }
+  @Test
+  public void testFind_success() {
+    LafOlSemaphore testResult = serviceMock.find(records[0].getName());
+
+    org.junit.Assert.assertNotNull(testResult);
+    org.junit.Assert.assertEquals(
+        "expect equals value ", records[0].getValue(), testResult.getValue());
+    org.junit.Assert.assertTrue(
+        "expect equals expire ", records[0].getExpire() == testResult.getExpire());
+  }
 }

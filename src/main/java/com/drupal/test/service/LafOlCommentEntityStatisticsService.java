@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlCommentEntityStatistics;
 import com.drupal.test.entity.LafOlCommentEntityStatisticsId;
-import java.util.List;
 
 public interface LafOlCommentEntityStatisticsService {
-    public LafOlCommentEntityStatistics find(LafOlCommentEntityStatisticsId id);
-    /**
-     * Select a list of LafOlCommentEntityStatistics based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCommentEntityStatistics records.
-     */
-    public List<LafOlCommentEntityStatistics> select(int maxResult);
+  public LafOlCommentEntityStatistics find(LafOlCommentEntityStatisticsId id);
+  /**
+   * Select a list of LafOlCommentEntityStatistics based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCommentEntityStatistics records.
+   */
+  public List<LafOlCommentEntityStatistics> select(int maxResult);
 
-    /**
-     * Select all LafOlCommentEntityStatistics.
-     *
-     * @return all LafOlCommentEntityStatistics records.
-     */
-    public List<LafOlCommentEntityStatistics> selectAll();
+  /**
+   * Select all LafOlCommentEntityStatistics.
+   *
+   * @return all LafOlCommentEntityStatistics records.
+   */
+  public List<LafOlCommentEntityStatistics> selectAll();
 
-    /**
-     * Create LafOlCommentEntityStatistics.
-     *
-     * @param bean The LafOlCommentEntityStatistics.
-     * @return The LafOlCommentEntityStatistics.
-     */
-    public LafOlCommentEntityStatistics create(LafOlCommentEntityStatistics bean);
+  /**
+   * Create LafOlCommentEntityStatistics.
+   *
+   * @param bean The LafOlCommentEntityStatistics.
+   * @return The LafOlCommentEntityStatistics.
+   */
+  public LafOlCommentEntityStatistics create(LafOlCommentEntityStatistics bean);
 
-    /**
-     * Update a LafOlCommentEntityStatistics.
-     *
-     * @param bean - The LafOlCommentEntityStatistics.
-     * @return LafOlCommentEntityStatistics.
-     */
-    public LafOlCommentEntityStatistics update(LafOlCommentEntityStatistics bean);
+  /**
+   * Update a LafOlCommentEntityStatistics.
+   *
+   * @param bean - The LafOlCommentEntityStatistics.
+   * @return LafOlCommentEntityStatistics.
+   */
+  public LafOlCommentEntityStatistics update(LafOlCommentEntityStatistics bean);
 }

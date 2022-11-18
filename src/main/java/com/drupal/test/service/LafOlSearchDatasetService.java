@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlSearchDataset;
 import com.drupal.test.entity.LafOlSearchDatasetId;
-import java.util.List;
 
 public interface LafOlSearchDatasetService {
-    public LafOlSearchDataset find(LafOlSearchDatasetId id);
-    /**
-     * Select a list of LafOlSearchDataset based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlSearchDataset records.
-     */
-    public List<LafOlSearchDataset> select(int maxResult);
+  public LafOlSearchDataset find(LafOlSearchDatasetId id);
+  /**
+   * Select a list of LafOlSearchDataset based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlSearchDataset records.
+   */
+  public List<LafOlSearchDataset> select(int maxResult);
 
-    /**
-     * Select all LafOlSearchDataset.
-     *
-     * @return all LafOlSearchDataset records.
-     */
-    public List<LafOlSearchDataset> selectAll();
+  /**
+   * Select all LafOlSearchDataset.
+   *
+   * @return all LafOlSearchDataset records.
+   */
+  public List<LafOlSearchDataset> selectAll();
 
-    /**
-     * Create LafOlSearchDataset.
-     *
-     * @param bean The LafOlSearchDataset.
-     * @return The LafOlSearchDataset.
-     */
-    public LafOlSearchDataset create(LafOlSearchDataset bean);
+  /**
+   * Create LafOlSearchDataset.
+   *
+   * @param bean The LafOlSearchDataset.
+   * @return The LafOlSearchDataset.
+   */
+  public LafOlSearchDataset create(LafOlSearchDataset bean);
 
-    /**
-     * Update a LafOlSearchDataset.
-     *
-     * @param bean - The LafOlSearchDataset.
-     * @return LafOlSearchDataset.
-     */
-    public LafOlSearchDataset update(LafOlSearchDataset bean);
+  /**
+   * Update a LafOlSearchDataset.
+   *
+   * @param bean - The LafOlSearchDataset.
+   * @return LafOlSearchDataset.
+   */
+  public LafOlSearchDataset update(LafOlSearchDataset bean);
 }

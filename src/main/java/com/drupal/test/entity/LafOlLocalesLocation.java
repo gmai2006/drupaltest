@@ -16,83 +16,83 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @Table(name = "lafol_locales_location")
 public class LafOlLocalesLocation implements Serializable {
-    private static final long serialVersionUID = 16344526503903057L;
+  private static final long serialVersionUID = 166875433024888802L;
 
-    /** Description: lid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "lid")
-    private java.lang.Integer lid;
+  /** Description: lid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "lid")
+  private java.lang.Integer lid;
 
-    /** Description: sid. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "sid")
-    private java.lang.Integer sid;
-    /** Description: type. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "type", length = 50)
-    private java.lang.String type;
-    /** Description: name. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "name", length = 255)
-    private java.lang.String name;
-    /** Description: version. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "version", length = 20)
-    private java.lang.String version;
+  /** Description: sid. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "sid")
+  private java.lang.Integer sid;
+  /** Description: type. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "type", length = 50)
+  private java.lang.String type;
+  /** Description: name. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "name", length = 255)
+  private java.lang.String name;
+  /** Description: version. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "version", length = 20)
+  private java.lang.String version;
 
-    public LafOlLocalesLocation() {}
+  public LafOlLocalesLocation() {}
 
-    public java.lang.Integer getLid() {
-        return this.lid;
-    }
+  public java.lang.Integer getLid() {
+    return this.lid;
+  }
 
-    public void setLid(java.lang.Integer lid) {
-        this.lid = lid;
-    }
+  public void setLid(java.lang.Integer lid) {
+    this.lid = lid;
+  }
 
-    public java.lang.Integer getSid() {
-        return this.sid;
-    }
+  public java.lang.Integer getSid() {
+    return this.sid;
+  }
 
-    public java.lang.String getType() {
-        return this.type;
-    }
+  public java.lang.String getType() {
+    return this.type;
+  }
 
-    public java.lang.String getName() {
-        return this.name;
-    }
+  public java.lang.String getName() {
+    return this.name;
+  }
 
-    public java.lang.String getVersion() {
-        return this.version;
-    }
+  public java.lang.String getVersion() {
+    return this.version;
+  }
 
-    public void setSid(java.lang.Integer sid) {
-        this.sid = sid;
-    }
+  public void setSid(java.lang.Integer sid) {
+    this.sid = sid;
+  }
 
-    public void setType(java.lang.String type) {
-        this.type = type;
-    }
+  public void setType(java.lang.String type) {
+    this.type = type;
+  }
 
-    public void setName(java.lang.String name) {
-        this.name = name;
-    }
+  public void setName(java.lang.String name) {
+    this.name = name;
+  }
 
-    public void setVersion(java.lang.String version) {
-        this.version = version;
-    }
+  public void setVersion(java.lang.String version) {
+    this.version = version;
+  }
 }

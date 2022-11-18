@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlTaxonomyTermRevision;
 import java.util.List;
+import com.drupal.test.entity.LafOlTaxonomyTermRevision;
 
 public interface LafOlTaxonomyTermRevisionDao {
-    /**
-     * Retrieve all records LafOlTaxonomyTermRevision.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlTaxonomyTermRevision
-     */
-    public List<LafOlTaxonomyTermRevision> select(int maxResult);
+  /**
+   * Retrieve all records LafOlTaxonomyTermRevision.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlTaxonomyTermRevision
+   */
+  public List<LafOlTaxonomyTermRevision> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlTaxonomyTermRevision.
-     *
-     * @return A list of LafOlTaxonomyTermRevision
-     */
-    public List<LafOlTaxonomyTermRevision> selectAll();
+  /**
+   * Retrieve all records LafOlTaxonomyTermRevision.
+   *
+   * @return A list of LafOlTaxonomyTermRevision
+   */
+  public List<LafOlTaxonomyTermRevision> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlTaxonomyTermRevision id.
-     * @return The same LafOlTaxonomyTermRevision.
-     */
-    public LafOlTaxonomyTermRevision find(java.lang.Integer id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlTaxonomyTermRevision id.
+   * @return The same LafOlTaxonomyTermRevision.
+   */
+  public LafOlTaxonomyTermRevision find(java.lang.Integer id);
 
-    /**
-     * Create an LafOlTaxonomyTermRevision.
-     *
-     * @param e the LafOlTaxonomyTermRevision.
-     * @return The same LafOlTaxonomyTermRevision.
-     */
-    public LafOlTaxonomyTermRevision create(LafOlTaxonomyTermRevision e);
+  /**
+   * Create an LafOlTaxonomyTermRevision.
+   *
+   * @param e the LafOlTaxonomyTermRevision.
+   * @return The same LafOlTaxonomyTermRevision.
+   */
+  public LafOlTaxonomyTermRevision create(LafOlTaxonomyTermRevision e);
 
-    /**
-     * Update the LafOlTaxonomyTermRevision.
-     *
-     * @param e the LafOlTaxonomyTermRevision.
-     * @return The same LafOlTaxonomyTermRevision.
-     */
-    public LafOlTaxonomyTermRevision update(LafOlTaxonomyTermRevision e);
+  /**
+   * Update the LafOlTaxonomyTermRevision.
+   *
+   * @param e the LafOlTaxonomyTermRevision.
+   * @return The same LafOlTaxonomyTermRevision.
+   */
+  public LafOlTaxonomyTermRevision update(LafOlTaxonomyTermRevision e);
 }

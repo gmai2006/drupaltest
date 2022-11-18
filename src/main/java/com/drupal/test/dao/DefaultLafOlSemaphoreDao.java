@@ -16,57 +16,60 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlSemaphore;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlSemaphore;
 
 @Stateless
 @Named("DefaultLafOlSemaphoreDao")
 public class DefaultLafOlSemaphoreDao implements LafOlSemaphoreDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlSemaphoreDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlSemaphoreDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlSemaphoreDao() {}
+  public DefaultLafOlSemaphoreDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSemaphore find(java.lang.String id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlSemaphore.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSemaphore find(java.lang.String id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlSemaphore.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlSemaphore> select(int max) {
-        return dao.select("select a from LafOlSemaphore a", LafOlSemaphore.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlSemaphore> select(int max) {
+    return dao.select("select a from LafOlSemaphore a", LafOlSemaphore.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlSemaphore> selectAll() {
-        return dao.selectAll("select a from LafOlSemaphore a", LafOlSemaphore.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlSemaphore> selectAll() {
+    return dao.selectAll("select a from LafOlSemaphore a", LafOlSemaphore.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSemaphore create(LafOlSemaphore e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSemaphore create(LafOlSemaphore e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSemaphore update(LafOlSemaphore e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSemaphore update(LafOlSemaphore e) {
+    return dao.update(e);
+  }
 }

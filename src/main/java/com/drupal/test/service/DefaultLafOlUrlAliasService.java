@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlUrlAliasDao;
-import com.drupal.test.entity.LafOlUrlAlias;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlUrlAliasDao;
+import com.drupal.test.entity.LafOlUrlAlias;
 
 @Stateless
 @Named("DefaultLafOlUrlAliasService")
 public class DefaultLafOlUrlAliasService implements LafOlUrlAliasService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlUrlAliasDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlUrlAliasDao dao;
 
-    @Inject
-    @Named("DefaultLafOlUrlAliasDao")
-    public DefaultLafOlUrlAliasService(final LafOlUrlAliasDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlUrlAliasDao")
+  public DefaultLafOlUrlAliasService(final LafOlUrlAliasDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUrlAlias find(java.lang.Integer id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUrlAlias find(java.lang.Integer id) {
 
-        final LafOlUrlAlias result = dao.find(id);
-        logger.info("find(LafOlUrlAlias) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlUrlAlias result = dao.find(id);
+    logger.info("find(LafOlUrlAlias) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlUrlAlias> select(int maxResult) {
-        final List<LafOlUrlAlias> result = dao.select(maxResult);
-        logger.info("select(LafOlUrlAlias) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlUrlAlias> select(int maxResult) {
+    final List<LafOlUrlAlias> result = dao.select(maxResult);
+    logger.info("select(LafOlUrlAlias) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlUrlAlias> selectAll() {
-        final List<LafOlUrlAlias> results = dao.selectAll();
-        logger.info("selectAll(LafOlUrlAlias) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlUrlAlias> selectAll() {
+    final List<LafOlUrlAlias> results = dao.selectAll();
+    logger.info("selectAll(LafOlUrlAlias) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUrlAlias create(LafOlUrlAlias bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlUrlAlias={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUrlAlias create(LafOlUrlAlias bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlUrlAlias={}) - entered bean ");
 
-        final LafOlUrlAlias result = dao.create(bean);
+    final LafOlUrlAlias result = dao.create(bean);
 
-        logger.info("create(LafOlUrlAlias) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlUrlAlias) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUrlAlias update(LafOlUrlAlias bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlUrlAlias={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUrlAlias update(LafOlUrlAlias bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlUrlAlias={}) - entered bean ");
 
-        final LafOlUrlAlias result = dao.update(bean);
+    final LafOlUrlAlias result = dao.update(bean);
 
-        logger.info("update(LafOlUrlAlias) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlUrlAlias) - exited - return value={} result ");
+    return result;
+  }
 }

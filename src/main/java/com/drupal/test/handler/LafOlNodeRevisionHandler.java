@@ -16,55 +16,58 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlNodeRevision;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlNodeRevision;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlNodeRevisionHandler")
 public class LafOlNodeRevisionHandler extends DelimiterFileHandler<LafOlNodeRevision> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlNodeRevisionHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlNodeRevisionHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlNodeRevision parseLine(List<String> headers, List<String> tokens) {
+    LafOlNodeRevision record = new LafOlNodeRevision();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "nid":
+          record.setNid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "vid":
+          record.setVid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "revisionUid":
+          record.setRevisionUid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionTimestamp":
+          record.setRevisionTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionLog":
+          record.setRevisionLog(tokens.get(i));
+          break;
+
+        case "revisionDefault":
+          record.setRevisionDefault(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlNodeRevision parseLine(List<String> headers, List<String> tokens) {
-        LafOlNodeRevision record = new LafOlNodeRevision();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "nid":
-                    record.setNid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "vid":
-                    record.setVid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "revisionUid":
-                    record.setRevisionUid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionTimestamp":
-                    record.setRevisionTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionLog":
-                    record.setRevisionLog(tokens.get(i));
-                    break;
-
-                case "revisionDefault":
-                    record.setRevisionDefault(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

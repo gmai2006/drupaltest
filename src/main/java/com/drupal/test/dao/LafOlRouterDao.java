@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlRouter;
 import java.util.List;
+import com.drupal.test.entity.LafOlRouter;
 
 public interface LafOlRouterDao {
-    /**
-     * Retrieve all records LafOlRouter.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlRouter
-     */
-    public List<LafOlRouter> select(int maxResult);
+  /**
+   * Retrieve all records LafOlRouter.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlRouter
+   */
+  public List<LafOlRouter> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlRouter.
-     *
-     * @return A list of LafOlRouter
-     */
-    public List<LafOlRouter> selectAll();
+  /**
+   * Retrieve all records LafOlRouter.
+   *
+   * @return A list of LafOlRouter
+   */
+  public List<LafOlRouter> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlRouter id.
-     * @return The same LafOlRouter.
-     */
-    public LafOlRouter find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlRouter id.
+   * @return The same LafOlRouter.
+   */
+  public LafOlRouter find(java.lang.String id);
 
-    /**
-     * Create an LafOlRouter.
-     *
-     * @param e the LafOlRouter.
-     * @return The same LafOlRouter.
-     */
-    public LafOlRouter create(LafOlRouter e);
+  /**
+   * Create an LafOlRouter.
+   *
+   * @param e the LafOlRouter.
+   * @return The same LafOlRouter.
+   */
+  public LafOlRouter create(LafOlRouter e);
 
-    /**
-     * Update the LafOlRouter.
-     *
-     * @param e the LafOlRouter.
-     * @return The same LafOlRouter.
-     */
-    public LafOlRouter update(LafOlRouter e);
+  /**
+   * Update the LafOlRouter.
+   *
+   * @param e the LafOlRouter.
+   * @return The same LafOlRouter.
+   */
+  public LafOlRouter update(LafOlRouter e);
 }

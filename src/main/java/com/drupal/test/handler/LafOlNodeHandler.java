@@ -16,49 +16,52 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlNode;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlNode;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlNodeHandler")
 public class LafOlNodeHandler extends DelimiterFileHandler<LafOlNode> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlNodeHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlNodeHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlNode parseLine(List<String> headers, List<String> tokens) {
+    LafOlNode record = new LafOlNode();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "nid":
+          record.setNid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "vid":
+          record.setVid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "type":
+          record.setType(tokens.get(i));
+          break;
+
+        case "uuid":
+          record.setUuid(tokens.get(i));
+          break;
+
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlNode parseLine(List<String> headers, List<String> tokens) {
-        LafOlNode record = new LafOlNode();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "nid":
-                    record.setNid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "vid":
-                    record.setVid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "type":
-                    record.setType(tokens.get(i));
-                    break;
-
-                case "uuid":
-                    record.setUuid(tokens.get(i));
-                    break;
-
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

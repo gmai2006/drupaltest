@@ -16,57 +16,60 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCachetags;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlCachetags;
 
 @Stateless
 @Named("DefaultLafOlCachetagsDao")
 public class DefaultLafOlCachetagsDao implements LafOlCachetagsDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlCachetagsDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlCachetagsDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlCachetagsDao() {}
+  public DefaultLafOlCachetagsDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCachetags find(java.lang.String id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlCachetags.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCachetags find(java.lang.String id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlCachetags.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlCachetags> select(int max) {
-        return dao.select("select a from LafOlCachetags a", LafOlCachetags.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlCachetags> select(int max) {
+    return dao.select("select a from LafOlCachetags a", LafOlCachetags.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlCachetags> selectAll() {
-        return dao.selectAll("select a from LafOlCachetags a", LafOlCachetags.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlCachetags> selectAll() {
+    return dao.selectAll("select a from LafOlCachetags a", LafOlCachetags.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCachetags create(LafOlCachetags e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCachetags create(LafOlCachetags e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCachetags update(LafOlCachetags e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCachetags update(LafOlCachetags e) {
+    return dao.update(e);
+  }
 }

@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlCommentFieldData;
 import com.drupal.test.entity.LafOlCommentFieldDataId;
-import java.util.List;
 
 public interface LafOlCommentFieldDataDao {
-    /**
-     * Retrieve all records LafOlCommentFieldData.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCommentFieldData
-     */
-    public List<LafOlCommentFieldData> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCommentFieldData.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCommentFieldData
+   */
+  public List<LafOlCommentFieldData> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCommentFieldData.
-     *
-     * @return A list of LafOlCommentFieldData
-     */
-    public List<LafOlCommentFieldData> selectAll();
+  /**
+   * Retrieve all records LafOlCommentFieldData.
+   *
+   * @return A list of LafOlCommentFieldData
+   */
+  public List<LafOlCommentFieldData> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCommentFieldData id.
-     * @return The same LafOlCommentFieldData.
-     */
-    public LafOlCommentFieldData find(LafOlCommentFieldDataId id);
-    /**
-     * Create an LafOlCommentFieldData.
-     *
-     * @param e the LafOlCommentFieldData.
-     * @return The same LafOlCommentFieldData.
-     */
-    public LafOlCommentFieldData create(LafOlCommentFieldData e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCommentFieldData id.
+   * @return The same LafOlCommentFieldData.
+   */
+  public LafOlCommentFieldData find(LafOlCommentFieldDataId id);
+  /**
+   * Create an LafOlCommentFieldData.
+   *
+   * @param e the LafOlCommentFieldData.
+   * @return The same LafOlCommentFieldData.
+   */
+  public LafOlCommentFieldData create(LafOlCommentFieldData e);
 
-    /**
-     * Update the LafOlCommentFieldData.
-     *
-     * @param e the LafOlCommentFieldData.
-     * @return The same LafOlCommentFieldData.
-     */
-    public LafOlCommentFieldData update(LafOlCommentFieldData e);
+  /**
+   * Update the LafOlCommentFieldData.
+   *
+   * @param e the LafOlCommentFieldData.
+   * @return The same LafOlCommentFieldData.
+   */
+  public LafOlCommentFieldData update(LafOlCommentFieldData e);
 }

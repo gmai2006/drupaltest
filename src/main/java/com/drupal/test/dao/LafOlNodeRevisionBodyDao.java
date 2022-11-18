@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeRevisionBody;
 import com.drupal.test.entity.LafOlNodeRevisionBodyId;
-import java.util.List;
 
 public interface LafOlNodeRevisionBodyDao {
-    /**
-     * Retrieve all records LafOlNodeRevisionBody.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlNodeRevisionBody
-     */
-    public List<LafOlNodeRevisionBody> select(int maxResult);
+  /**
+   * Retrieve all records LafOlNodeRevisionBody.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlNodeRevisionBody
+   */
+  public List<LafOlNodeRevisionBody> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlNodeRevisionBody.
-     *
-     * @return A list of LafOlNodeRevisionBody
-     */
-    public List<LafOlNodeRevisionBody> selectAll();
+  /**
+   * Retrieve all records LafOlNodeRevisionBody.
+   *
+   * @return A list of LafOlNodeRevisionBody
+   */
+  public List<LafOlNodeRevisionBody> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlNodeRevisionBody id.
-     * @return The same LafOlNodeRevisionBody.
-     */
-    public LafOlNodeRevisionBody find(LafOlNodeRevisionBodyId id);
-    /**
-     * Create an LafOlNodeRevisionBody.
-     *
-     * @param e the LafOlNodeRevisionBody.
-     * @return The same LafOlNodeRevisionBody.
-     */
-    public LafOlNodeRevisionBody create(LafOlNodeRevisionBody e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlNodeRevisionBody id.
+   * @return The same LafOlNodeRevisionBody.
+   */
+  public LafOlNodeRevisionBody find(LafOlNodeRevisionBodyId id);
+  /**
+   * Create an LafOlNodeRevisionBody.
+   *
+   * @param e the LafOlNodeRevisionBody.
+   * @return The same LafOlNodeRevisionBody.
+   */
+  public LafOlNodeRevisionBody create(LafOlNodeRevisionBody e);
 
-    /**
-     * Update the LafOlNodeRevisionBody.
-     *
-     * @param e the LafOlNodeRevisionBody.
-     * @return The same LafOlNodeRevisionBody.
-     */
-    public LafOlNodeRevisionBody update(LafOlNodeRevisionBody e);
+  /**
+   * Update the LafOlNodeRevisionBody.
+   *
+   * @param e the LafOlNodeRevisionBody.
+   * @return The same LafOlNodeRevisionBody.
+   */
+  public LafOlNodeRevisionBody update(LafOlNodeRevisionBody e);
 }

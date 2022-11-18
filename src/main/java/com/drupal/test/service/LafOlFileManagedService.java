@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlFileManaged;
 import com.drupal.test.entity.LafOlFileManagedId;
-import java.util.List;
 
 public interface LafOlFileManagedService {
-    public LafOlFileManaged find(LafOlFileManagedId id);
-    /**
-     * Select a list of LafOlFileManaged based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlFileManaged records.
-     */
-    public List<LafOlFileManaged> select(int maxResult);
+  public LafOlFileManaged find(LafOlFileManagedId id);
+  /**
+   * Select a list of LafOlFileManaged based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlFileManaged records.
+   */
+  public List<LafOlFileManaged> select(int maxResult);
 
-    /**
-     * Select all LafOlFileManaged.
-     *
-     * @return all LafOlFileManaged records.
-     */
-    public List<LafOlFileManaged> selectAll();
+  /**
+   * Select all LafOlFileManaged.
+   *
+   * @return all LafOlFileManaged records.
+   */
+  public List<LafOlFileManaged> selectAll();
 
-    /**
-     * Create LafOlFileManaged.
-     *
-     * @param bean The LafOlFileManaged.
-     * @return The LafOlFileManaged.
-     */
-    public LafOlFileManaged create(LafOlFileManaged bean);
+  /**
+   * Create LafOlFileManaged.
+   *
+   * @param bean The LafOlFileManaged.
+   * @return The LafOlFileManaged.
+   */
+  public LafOlFileManaged create(LafOlFileManaged bean);
 
-    /**
-     * Update a LafOlFileManaged.
-     *
-     * @param bean - The LafOlFileManaged.
-     * @return LafOlFileManaged.
-     */
-    public LafOlFileManaged update(LafOlFileManaged bean);
+  /**
+   * Update a LafOlFileManaged.
+   *
+   * @param bean - The LafOlFileManaged.
+   * @return LafOlFileManaged.
+   */
+  public LafOlFileManaged update(LafOlFileManaged bean);
 }

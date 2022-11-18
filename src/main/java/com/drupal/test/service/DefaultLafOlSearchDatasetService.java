@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlSearchDatasetDao;
 import com.drupal.test.entity.LafOlSearchDataset;
 import com.drupal.test.entity.LafOlSearchDatasetId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlSearchDatasetService")
 public class DefaultLafOlSearchDatasetService implements LafOlSearchDatasetService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlSearchDatasetDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlSearchDatasetDao dao;
 
-    @Inject
-    @Named("DefaultLafOlSearchDatasetDao")
-    public DefaultLafOlSearchDatasetService(final LafOlSearchDatasetDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlSearchDatasetDao")
+  public DefaultLafOlSearchDatasetService(final LafOlSearchDatasetDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSearchDataset find(LafOlSearchDatasetId id) {
-        final LafOlSearchDataset result = dao.find(id);
-        logger.info("find(LafOlSearchDataset) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSearchDataset find(LafOlSearchDatasetId id) {
+    final LafOlSearchDataset result = dao.find(id);
+    logger.info("find(LafOlSearchDataset) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlSearchDataset> select(int maxResult) {
-        final List<LafOlSearchDataset> result = dao.select(maxResult);
-        logger.info("select(LafOlSearchDataset) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlSearchDataset> select(int maxResult) {
+    final List<LafOlSearchDataset> result = dao.select(maxResult);
+    logger.info("select(LafOlSearchDataset) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlSearchDataset> selectAll() {
-        final List<LafOlSearchDataset> results = dao.selectAll();
-        logger.info("selectAll(LafOlSearchDataset) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlSearchDataset> selectAll() {
+    final List<LafOlSearchDataset> results = dao.selectAll();
+    logger.info("selectAll(LafOlSearchDataset) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSearchDataset create(LafOlSearchDataset bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlSearchDataset={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSearchDataset create(LafOlSearchDataset bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlSearchDataset={}) - entered bean ");
 
-        final LafOlSearchDataset result = dao.create(bean);
+    final LafOlSearchDataset result = dao.create(bean);
 
-        logger.info("create(LafOlSearchDataset) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlSearchDataset) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSearchDataset update(LafOlSearchDataset bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlSearchDataset={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSearchDataset update(LafOlSearchDataset bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlSearchDataset={}) - entered bean ");
 
-        final LafOlSearchDataset result = dao.update(bean);
+    final LafOlSearchDataset result = dao.update(bean);
 
-        logger.info("update(LafOlSearchDataset) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlSearchDataset) - exited - return value={} result ");
+    return result;
+  }
 }

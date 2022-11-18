@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCacheConfig;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheConfig;
 
 public interface LafOlCacheConfigDao {
-    /**
-     * Retrieve all records LafOlCacheConfig.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCacheConfig
-     */
-    public List<LafOlCacheConfig> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCacheConfig.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCacheConfig
+   */
+  public List<LafOlCacheConfig> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCacheConfig.
-     *
-     * @return A list of LafOlCacheConfig
-     */
-    public List<LafOlCacheConfig> selectAll();
+  /**
+   * Retrieve all records LafOlCacheConfig.
+   *
+   * @return A list of LafOlCacheConfig
+   */
+  public List<LafOlCacheConfig> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCacheConfig id.
-     * @return The same LafOlCacheConfig.
-     */
-    public LafOlCacheConfig find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCacheConfig id.
+   * @return The same LafOlCacheConfig.
+   */
+  public LafOlCacheConfig find(java.lang.String id);
 
-    /**
-     * Create an LafOlCacheConfig.
-     *
-     * @param e the LafOlCacheConfig.
-     * @return The same LafOlCacheConfig.
-     */
-    public LafOlCacheConfig create(LafOlCacheConfig e);
+  /**
+   * Create an LafOlCacheConfig.
+   *
+   * @param e the LafOlCacheConfig.
+   * @return The same LafOlCacheConfig.
+   */
+  public LafOlCacheConfig create(LafOlCacheConfig e);
 
-    /**
-     * Update the LafOlCacheConfig.
-     *
-     * @param e the LafOlCacheConfig.
-     * @return The same LafOlCacheConfig.
-     */
-    public LafOlCacheConfig update(LafOlCacheConfig e);
+  /**
+   * Update the LafOlCacheConfig.
+   *
+   * @param e the LafOlCacheConfig.
+   * @return The same LafOlCacheConfig.
+   */
+  public LafOlCacheConfig update(LafOlCacheConfig e);
 }

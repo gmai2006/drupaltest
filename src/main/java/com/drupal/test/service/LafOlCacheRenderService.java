@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlCacheRender;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheRender;
 
 public interface LafOlCacheRenderService {
-    public LafOlCacheRender find(java.lang.String id);
+  public LafOlCacheRender find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlCacheRender based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCacheRender records.
-     */
-    public List<LafOlCacheRender> select(int maxResult);
+  /**
+   * Select a list of LafOlCacheRender based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCacheRender records.
+   */
+  public List<LafOlCacheRender> select(int maxResult);
 
-    /**
-     * Select all LafOlCacheRender.
-     *
-     * @return all LafOlCacheRender records.
-     */
-    public List<LafOlCacheRender> selectAll();
+  /**
+   * Select all LafOlCacheRender.
+   *
+   * @return all LafOlCacheRender records.
+   */
+  public List<LafOlCacheRender> selectAll();
 
-    /**
-     * Create LafOlCacheRender.
-     *
-     * @param bean The LafOlCacheRender.
-     * @return The LafOlCacheRender.
-     */
-    public LafOlCacheRender create(LafOlCacheRender bean);
+  /**
+   * Create LafOlCacheRender.
+   *
+   * @param bean The LafOlCacheRender.
+   * @return The LafOlCacheRender.
+   */
+  public LafOlCacheRender create(LafOlCacheRender bean);
 
-    /**
-     * Update a LafOlCacheRender.
-     *
-     * @param bean - The LafOlCacheRender.
-     * @return LafOlCacheRender.
-     */
-    public LafOlCacheRender update(LafOlCacheRender bean);
+  /**
+   * Update a LafOlCacheRender.
+   *
+   * @param bean - The LafOlCacheRender.
+   * @return LafOlCacheRender.
+   */
+  public LafOlCacheRender update(LafOlCacheRender bean);
 }

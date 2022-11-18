@@ -17,94 +17,72 @@
 package com.drupal.test.handler;
 
 import static org.junit.Assert.assertEquals;
-
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.dao.StandaloneJpaDao;
-import com.drupal.test.entity.LafOlFileUsage;
-import com.drupal.test.entity.LafOlFileUsageId;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import java.io.IOException;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import org.json.CDL;
 import org.json.JSONArray;
+import com.google.gson.Gson;
+import com.drupal.test.entity.LafOlFileUsage;
+import com.drupal.test.dao.JpaDao;
+import com.drupal.test.dao.StandaloneJpaDao;
+import com.drupal.test.dao.DefaultLafOlFileUsageDao;
+import com.drupal.test.utils.DelimiterParser;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
+
+import com.drupal.test.entity.LafOlFileUsageId;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.google.gson.GsonBuilder;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class LafOlFileUsageHandlerTestIt {
-    static final String inputFile = "LafOlFileUsage.json";
-    static LafOlFileUsageHandler handler;
-    private static JpaDao jpa;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlFileUsage[] records;
+  static final String inputFile = "LafOlFileUsage.json";
+  static LafOlFileUsageHandler handler;
+  private static JpaDao jpa;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlFileUsage[] records;
 
-    /** Run before the test. */
-    @BeforeClass
-    public static void before() {
-        final EntityManagerFactory factory =
-                Persistence.createEntityManagerFactory("testpersistence");
-        jpa = new StandaloneJpaDao(factory.createEntityManager());
-        handler = new LafOlFileUsageHandler(jpa);
-    }
+  /** Run before the test. */
+  @BeforeClass
+  public static void before() {
+    final EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    jpa = new StandaloneJpaDao(factory.createEntityManager());
+    handler = new LafOlFileUsageHandler(jpa);
+  }
 
-    @Test
-    public void testSelect() throws IOException {
-        final File tempFile =
-                createRecordInputStreamFromJsonFile(inputFile, Charset.defaultCharset());
-        final InputStream inputStream = new BufferedInputStream(new FileInputStream(tempFile));
-        int count = handler.process(inputStream);
-        String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-        records = gson.fromJson(json, LafOlFileUsage[].class);
-        assertEquals("match count", count, records.length);
-        final LafOlFileUsageId id =
-                new LafOlFileUsageId(
-                        this.records[0].getFid(),
-                        this.records[0].getModule(),
-                        this.records[0].getId(),
-                        this.records[0].getType());
-        LafOlFileUsage testResult = jpa.find(LafOlFileUsage.class, id);
-        org.junit.Assert.assertEquals(
-                "expect equals count ", this.records[0].getCount(), testResult.getCount());
+  @Test
+  public void testSelect() throws IOException {
+    final File tempFile = new File("./src/test/resources/LafOlFileUsage.csv");
+    final InputStream inputStream = new BufferedInputStream(new FileInputStream(tempFile));
+    int count = handler.process(inputStream);
+    String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+    records = gson.fromJson(json, LafOlFileUsage[].class);
+    assertEquals("match count", count, records.length);
+    final LafOlFileUsageId id =
+        new LafOlFileUsageId(
+            this.records[0].getFid(),
+            this.records[0].getModule(),
+            this.records[0].getId(),
+            this.records[0].getType());
+    LafOlFileUsage testResult = jpa.find(LafOlFileUsage.class, id);
+    org.junit.Assert.assertEquals(
+        "expect equals count ", this.records[0].getCount(), testResult.getCount());
 
-        // cleanup
-        inputStream.close();
-        json = null;
-        records = null;
-    }
-
-    /**
-     * Construct a delimiter file from a json file.
-     *
-     * @param inputFile the json file.
-     * @param charset default charset.
-     * @return
-     */
-    private File createRecordInputStreamFromJsonFile(String inputFile, Charset charset) {
-        try {
-            final File tempFile = File.createTempFile(inputFile, ".txt");
-            tempFile.deleteOnExit();
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            JSONArray docs = new JSONArray(json);
-            String csv = CDL.toString(docs);
-            org.apache.commons.io.FileUtils.writeStringToFile(
-                    tempFile, csv, Charset.defaultCharset());
-            return tempFile;
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-    }
+    // cleanup
+    inputStream.close();
+    json = null;
+    records = null;
+  }
 }

@@ -16,59 +16,61 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCommentFieldData;
-import com.drupal.test.entity.LafOlCommentFieldDataId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlCommentFieldData;
+import com.drupal.test.entity.LafOlCommentFieldDataId;
 
 @Stateless
 @Named("DefaultLafOlCommentFieldDataDao")
 public class DefaultLafOlCommentFieldDataDao implements LafOlCommentFieldDataDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlCommentFieldDataDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlCommentFieldDataDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlCommentFieldDataDao() {}
+  public DefaultLafOlCommentFieldDataDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCommentFieldData find(LafOlCommentFieldDataId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlCommentFieldData.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCommentFieldData find(LafOlCommentFieldDataId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlCommentFieldData.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlCommentFieldData> select(int max) {
-        return dao.select(
-                "select a from LafOlCommentFieldData a", LafOlCommentFieldData.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlCommentFieldData> select(int max) {
+    return dao.select("select a from LafOlCommentFieldData a", LafOlCommentFieldData.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlCommentFieldData> selectAll() {
-        return dao.selectAll("select a from LafOlCommentFieldData a", LafOlCommentFieldData.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlCommentFieldData> selectAll() {
+    return dao.selectAll("select a from LafOlCommentFieldData a", LafOlCommentFieldData.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCommentFieldData create(LafOlCommentFieldData e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCommentFieldData create(LafOlCommentFieldData e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCommentFieldData update(LafOlCommentFieldData e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCommentFieldData update(LafOlCommentFieldData e) {
+    return dao.update(e);
+  }
 }

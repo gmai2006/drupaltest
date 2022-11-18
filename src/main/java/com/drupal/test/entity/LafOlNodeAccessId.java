@@ -18,112 +18,113 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlNodeAccess. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlNodeAccess. generated on 11/17/2022 from a schema. */
 public class LafOlNodeAccessId implements Serializable {
-    private static final long serialVersionUID = 163445265062139061L;
+  private static final long serialVersionUID = 166875433038694058L;
 
-    @Column(name = "langcode")
-    private java.lang.String langcode;
+  @Column(name = "langcode")
+  private java.lang.String langcode;
 
-    @Column(name = "gid")
-    private java.lang.Integer gid;
+  @Column(name = "gid")
+  private java.lang.Integer gid;
 
-    @Column(name = "nid")
-    private java.lang.Integer nid;
+  @Column(name = "nid")
+  private java.lang.Integer nid;
 
-    @Column(name = "realm")
-    private java.lang.String realm;
+  @Column(name = "realm")
+  private java.lang.String realm;
 
-    /** Constructor: LafOlNodeAccessId. */
-    public LafOlNodeAccessId() {}
+  /** Constructor: LafOlNodeAccessId. */
+  public LafOlNodeAccessId() {}
 
-    /**
-     * Constructor: LafOlNodeAccessId.
-     *
-     * @param langcode - langcode.
-     * @param gid - gid.
-     * @param nid - nid.
-     * @param realm - realm.
-     */
-    public LafOlNodeAccessId(
-            java.lang.String langcode,
-            java.lang.Integer gid,
-            java.lang.Integer nid,
-            java.lang.String realm) {
-        this.langcode = langcode;
-        this.gid = gid;
-        this.nid = nid;
-        this.realm = realm;
-    }
+  /**
+   * Constructor: LafOlNodeAccessId.
+   *
+   * @param langcode - langcode.
+   * @param gid - gid.
+   * @param nid - nid.
+   * @param realm - realm.
+   */
+  public LafOlNodeAccessId(
+      java.lang.String langcode,
+      java.lang.Integer gid,
+      java.lang.Integer nid,
+      java.lang.String realm) {
+    this.langcode = langcode;
+    this.gid = gid;
+    this.nid = nid;
+    this.realm = realm;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.Integer getGid() {
-        return this.gid;
-    }
+  public java.lang.Integer getGid() {
+    return this.gid;
+  }
 
-    public java.lang.Integer getNid() {
-        return this.nid;
-    }
+  public java.lang.Integer getNid() {
+    return this.nid;
+  }
 
-    public java.lang.String getRealm() {
-        return this.realm;
-    }
+  public java.lang.String getRealm() {
+    return this.realm;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setGid(java.lang.Integer gid) {
-        this.gid = gid;
-    }
+  public void setGid(java.lang.Integer gid) {
+    this.gid = gid;
+  }
 
-    public void setNid(java.lang.Integer nid) {
-        this.nid = nid;
-    }
+  public void setNid(java.lang.Integer nid) {
+    this.nid = nid;
+  }
 
-    public void setRealm(java.lang.String realm) {
-        this.realm = realm;
-    }
+  public void setRealm(java.lang.String realm) {
+    this.realm = realm;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
-        result = prime * result + ((gid == null) ? 0 : gid.hashCode());
-        result = prime * result + ((nid == null) ? 0 : nid.hashCode());
-        result = prime * result + ((realm == null) ? 0 : realm.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
+    result = prime * result + ((gid == null) ? 0 : gid.hashCode());
+    result = prime * result + ((nid == null) ? 0 : nid.hashCode());
+    result = prime * result + ((realm == null) ? 0 : realm.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlNodeAccessId other = (LafOlNodeAccessId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlNodeAccessId other = (LafOlNodeAccessId) obj;
 
-        if (langcode == null) {
-            if (other.langcode != null) return false;
-        } else if (!langcode.equals(other.langcode)) return false;
+    if (langcode == null) {
+      if (other.langcode != null) return false;
+    } else if (!langcode.equals(other.langcode)) return false;
 
-        if (gid == null) {
-            if (other.gid != null) return false;
-        } else if (!gid.equals(other.gid)) return false;
+    if (gid == null) {
+      if (other.gid != null) return false;
+    } else if (!gid.equals(other.gid)) return false;
 
-        if (nid == null) {
-            if (other.nid != null) return false;
-        } else if (!nid.equals(other.nid)) return false;
+    if (nid == null) {
+      if (other.nid != null) return false;
+    } else if (!nid.equals(other.nid)) return false;
 
-        if (realm == null) {
-            if (other.realm != null) return false;
-        } else if (!realm.equals(other.realm)) return false;
+    if (realm == null) {
+      if (other.realm != null) return false;
+    } else if (!realm.equals(other.realm)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

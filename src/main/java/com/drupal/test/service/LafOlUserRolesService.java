@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlUserRoles;
 import com.drupal.test.entity.LafOlUserRolesId;
-import java.util.List;
 
 public interface LafOlUserRolesService {
-    public LafOlUserRoles find(LafOlUserRolesId id);
-    /**
-     * Select a list of LafOlUserRoles based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlUserRoles records.
-     */
-    public List<LafOlUserRoles> select(int maxResult);
+  public LafOlUserRoles find(LafOlUserRolesId id);
+  /**
+   * Select a list of LafOlUserRoles based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlUserRoles records.
+   */
+  public List<LafOlUserRoles> select(int maxResult);
 
-    /**
-     * Select all LafOlUserRoles.
-     *
-     * @return all LafOlUserRoles records.
-     */
-    public List<LafOlUserRoles> selectAll();
+  /**
+   * Select all LafOlUserRoles.
+   *
+   * @return all LafOlUserRoles records.
+   */
+  public List<LafOlUserRoles> selectAll();
 
-    /**
-     * Create LafOlUserRoles.
-     *
-     * @param bean The LafOlUserRoles.
-     * @return The LafOlUserRoles.
-     */
-    public LafOlUserRoles create(LafOlUserRoles bean);
+  /**
+   * Create LafOlUserRoles.
+   *
+   * @param bean The LafOlUserRoles.
+   * @return The LafOlUserRoles.
+   */
+  public LafOlUserRoles create(LafOlUserRoles bean);
 
-    /**
-     * Update a LafOlUserRoles.
-     *
-     * @param bean - The LafOlUserRoles.
-     * @return LafOlUserRoles.
-     */
-    public LafOlUserRoles update(LafOlUserRoles bean);
+  /**
+   * Update a LafOlUserRoles.
+   *
+   * @param bean - The LafOlUserRoles.
+   * @return LafOlUserRoles.
+   */
+  public LafOlUserRoles update(LafOlUserRoles bean);
 }

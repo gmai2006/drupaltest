@@ -18,112 +18,113 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlSearchIndex. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlSearchIndex. generated on 11/17/2022 from a schema. */
 public class LafOlSearchIndexId implements Serializable {
-    private static final long serialVersionUID = 163445265082168904L;
+  private static final long serialVersionUID = 166875433049838607L;
 
-    @Column(name = "langcode")
-    private java.lang.String langcode;
+  @Column(name = "langcode")
+  private java.lang.String langcode;
 
-    @Column(name = "type")
-    private java.lang.String type;
+  @Column(name = "type")
+  private java.lang.String type;
 
-    @Column(name = "word")
-    private java.lang.String word;
+  @Column(name = "word")
+  private java.lang.String word;
 
-    @Column(name = "sid")
-    private java.lang.Integer sid;
+  @Column(name = "sid")
+  private java.lang.Integer sid;
 
-    /** Constructor: LafOlSearchIndexId. */
-    public LafOlSearchIndexId() {}
+  /** Constructor: LafOlSearchIndexId. */
+  public LafOlSearchIndexId() {}
 
-    /**
-     * Constructor: LafOlSearchIndexId.
-     *
-     * @param langcode - langcode.
-     * @param type - type.
-     * @param word - word.
-     * @param sid - sid.
-     */
-    public LafOlSearchIndexId(
-            java.lang.String langcode,
-            java.lang.String type,
-            java.lang.String word,
-            java.lang.Integer sid) {
-        this.langcode = langcode;
-        this.type = type;
-        this.word = word;
-        this.sid = sid;
-    }
+  /**
+   * Constructor: LafOlSearchIndexId.
+   *
+   * @param langcode - langcode.
+   * @param type - type.
+   * @param word - word.
+   * @param sid - sid.
+   */
+  public LafOlSearchIndexId(
+      java.lang.String langcode,
+      java.lang.String type,
+      java.lang.String word,
+      java.lang.Integer sid) {
+    this.langcode = langcode;
+    this.type = type;
+    this.word = word;
+    this.sid = sid;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.String getType() {
-        return this.type;
-    }
+  public java.lang.String getType() {
+    return this.type;
+  }
 
-    public java.lang.String getWord() {
-        return this.word;
-    }
+  public java.lang.String getWord() {
+    return this.word;
+  }
 
-    public java.lang.Integer getSid() {
-        return this.sid;
-    }
+  public java.lang.Integer getSid() {
+    return this.sid;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setType(java.lang.String type) {
-        this.type = type;
-    }
+  public void setType(java.lang.String type) {
+    this.type = type;
+  }
 
-    public void setWord(java.lang.String word) {
-        this.word = word;
-    }
+  public void setWord(java.lang.String word) {
+    this.word = word;
+  }
 
-    public void setSid(java.lang.Integer sid) {
-        this.sid = sid;
-    }
+  public void setSid(java.lang.Integer sid) {
+    this.sid = sid;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
-        result = prime * result + ((type == null) ? 0 : type.hashCode());
-        result = prime * result + ((word == null) ? 0 : word.hashCode());
-        result = prime * result + ((sid == null) ? 0 : sid.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
+    result = prime * result + ((type == null) ? 0 : type.hashCode());
+    result = prime * result + ((word == null) ? 0 : word.hashCode());
+    result = prime * result + ((sid == null) ? 0 : sid.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlSearchIndexId other = (LafOlSearchIndexId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlSearchIndexId other = (LafOlSearchIndexId) obj;
 
-        if (langcode == null) {
-            if (other.langcode != null) return false;
-        } else if (!langcode.equals(other.langcode)) return false;
+    if (langcode == null) {
+      if (other.langcode != null) return false;
+    } else if (!langcode.equals(other.langcode)) return false;
 
-        if (type == null) {
-            if (other.type != null) return false;
-        } else if (!type.equals(other.type)) return false;
+    if (type == null) {
+      if (other.type != null) return false;
+    } else if (!type.equals(other.type)) return false;
 
-        if (word == null) {
-            if (other.word != null) return false;
-        } else if (!word.equals(other.word)) return false;
+    if (word == null) {
+      if (other.word != null) return false;
+    } else if (!word.equals(other.word)) return false;
 
-        if (sid == null) {
-            if (other.sid != null) return false;
-        } else if (!sid.equals(other.sid)) return false;
+    if (sid == null) {
+      if (other.sid != null) return false;
+    } else if (!sid.equals(other.sid)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

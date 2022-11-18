@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlBlockContent;
 import com.drupal.test.entity.LafOlBlockContentId;
-import java.util.List;
 
 public interface LafOlBlockContentDao {
-    /**
-     * Retrieve all records LafOlBlockContent.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlBlockContent
-     */
-    public List<LafOlBlockContent> select(int maxResult);
+  /**
+   * Retrieve all records LafOlBlockContent.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlBlockContent
+   */
+  public List<LafOlBlockContent> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlBlockContent.
-     *
-     * @return A list of LafOlBlockContent
-     */
-    public List<LafOlBlockContent> selectAll();
+  /**
+   * Retrieve all records LafOlBlockContent.
+   *
+   * @return A list of LafOlBlockContent
+   */
+  public List<LafOlBlockContent> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlBlockContent id.
-     * @return The same LafOlBlockContent.
-     */
-    public LafOlBlockContent find(LafOlBlockContentId id);
-    /**
-     * Create an LafOlBlockContent.
-     *
-     * @param e the LafOlBlockContent.
-     * @return The same LafOlBlockContent.
-     */
-    public LafOlBlockContent create(LafOlBlockContent e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlBlockContent id.
+   * @return The same LafOlBlockContent.
+   */
+  public LafOlBlockContent find(LafOlBlockContentId id);
+  /**
+   * Create an LafOlBlockContent.
+   *
+   * @param e the LafOlBlockContent.
+   * @return The same LafOlBlockContent.
+   */
+  public LafOlBlockContent create(LafOlBlockContent e);
 
-    /**
-     * Update the LafOlBlockContent.
-     *
-     * @param e the LafOlBlockContent.
-     * @return The same LafOlBlockContent.
-     */
-    public LafOlBlockContent update(LafOlBlockContent e);
+  /**
+   * Update the LafOlBlockContent.
+   *
+   * @param e the LafOlBlockContent.
+   * @return The same LafOlBlockContent.
+   */
+  public LafOlBlockContent update(LafOlBlockContent e);
 }

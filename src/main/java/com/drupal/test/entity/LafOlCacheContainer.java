@@ -16,107 +16,107 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @Table(name = "lafol_cache_container")
 public class LafOlCacheContainer implements Serializable {
-    private static final long serialVersionUID = 16344526500904363L;
+  private static final long serialVersionUID = 166875433007995391L;
 
-    /** Description: cid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "cid")
-    private java.lang.String cid;
+  /** Description: cid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "cid")
+  private java.lang.String cid;
 
-    /** Description: data. */
-    @Basic
-    @Column(name = "data", length = 0)
-    private java.lang.String data;
-    /** Description: expire. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "expire")
-    private java.lang.Integer expire;
-    /** Description: created. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "created")
-    private java.math.BigDecimal created;
-    /** Description: serialized. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "serialized")
-    private java.lang.Integer serialized;
-    /** Description: tags. */
-    @Basic
-    @Column(name = "tags", length = 0)
-    private java.lang.String tags;
-    /** Description: checksum. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "checksum", length = 255)
-    private java.lang.String checksum;
+  /** Description: data. */
+  @Basic
+  @Column(name = "data", length = 0)
+  private java.lang.String data;
+  /** Description: expire. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "expire")
+  private java.lang.Integer expire;
+  /** Description: created. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "created")
+  private java.math.BigDecimal created;
+  /** Description: serialized. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "serialized")
+  private java.lang.Integer serialized;
+  /** Description: tags. */
+  @Basic
+  @Column(name = "tags", length = 0)
+  private java.lang.String tags;
+  /** Description: checksum. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "checksum", length = 255)
+  private java.lang.String checksum;
 
-    public LafOlCacheContainer() {}
+  public LafOlCacheContainer() {}
 
-    public java.lang.String getCid() {
-        return this.cid;
-    }
+  public java.lang.String getCid() {
+    return this.cid;
+  }
 
-    public void setCid(java.lang.String cid) {
-        this.cid = cid;
-    }
+  public void setCid(java.lang.String cid) {
+    this.cid = cid;
+  }
 
-    public java.lang.String getData() {
-        return this.data;
-    }
+  public java.lang.String getData() {
+    return this.data;
+  }
 
-    public java.lang.Integer getExpire() {
-        return this.expire;
-    }
+  public java.lang.Integer getExpire() {
+    return this.expire;
+  }
 
-    public java.math.BigDecimal getCreated() {
-        return this.created;
-    }
+  public java.math.BigDecimal getCreated() {
+    return this.created;
+  }
 
-    public java.lang.Integer getSerialized() {
-        return this.serialized;
-    }
+  public java.lang.Integer getSerialized() {
+    return this.serialized;
+  }
 
-    public java.lang.String getTags() {
-        return this.tags;
-    }
+  public java.lang.String getTags() {
+    return this.tags;
+  }
 
-    public java.lang.String getChecksum() {
-        return this.checksum;
-    }
+  public java.lang.String getChecksum() {
+    return this.checksum;
+  }
 
-    public void setData(java.lang.String data) {
-        this.data = data;
-    }
+  public void setData(java.lang.String data) {
+    this.data = data;
+  }
 
-    public void setExpire(java.lang.Integer expire) {
-        this.expire = expire;
-    }
+  public void setExpire(java.lang.Integer expire) {
+    this.expire = expire;
+  }
 
-    public void setCreated(java.math.BigDecimal created) {
-        this.created = created;
-    }
+  public void setCreated(java.math.BigDecimal created) {
+    this.created = created;
+  }
 
-    public void setSerialized(java.lang.Integer serialized) {
-        this.serialized = serialized;
-    }
+  public void setSerialized(java.lang.Integer serialized) {
+    this.serialized = serialized;
+  }
 
-    public void setTags(java.lang.String tags) {
-        this.tags = tags;
-    }
+  public void setTags(java.lang.String tags) {
+    this.tags = tags;
+  }
 
-    public void setChecksum(java.lang.String checksum) {
-        this.checksum = checksum;
-    }
+  public void setChecksum(java.lang.String checksum) {
+    this.checksum = checksum;
+  }
 }

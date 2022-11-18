@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlCacheDynamicPageCache;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheDynamicPageCache;
 
 public interface LafOlCacheDynamicPageCacheService {
-    public LafOlCacheDynamicPageCache find(java.lang.String id);
+  public LafOlCacheDynamicPageCache find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlCacheDynamicPageCache based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCacheDynamicPageCache records.
-     */
-    public List<LafOlCacheDynamicPageCache> select(int maxResult);
+  /**
+   * Select a list of LafOlCacheDynamicPageCache based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCacheDynamicPageCache records.
+   */
+  public List<LafOlCacheDynamicPageCache> select(int maxResult);
 
-    /**
-     * Select all LafOlCacheDynamicPageCache.
-     *
-     * @return all LafOlCacheDynamicPageCache records.
-     */
-    public List<LafOlCacheDynamicPageCache> selectAll();
+  /**
+   * Select all LafOlCacheDynamicPageCache.
+   *
+   * @return all LafOlCacheDynamicPageCache records.
+   */
+  public List<LafOlCacheDynamicPageCache> selectAll();
 
-    /**
-     * Create LafOlCacheDynamicPageCache.
-     *
-     * @param bean The LafOlCacheDynamicPageCache.
-     * @return The LafOlCacheDynamicPageCache.
-     */
-    public LafOlCacheDynamicPageCache create(LafOlCacheDynamicPageCache bean);
+  /**
+   * Create LafOlCacheDynamicPageCache.
+   *
+   * @param bean The LafOlCacheDynamicPageCache.
+   * @return The LafOlCacheDynamicPageCache.
+   */
+  public LafOlCacheDynamicPageCache create(LafOlCacheDynamicPageCache bean);
 
-    /**
-     * Update a LafOlCacheDynamicPageCache.
-     *
-     * @param bean - The LafOlCacheDynamicPageCache.
-     * @return LafOlCacheDynamicPageCache.
-     */
-    public LafOlCacheDynamicPageCache update(LafOlCacheDynamicPageCache bean);
+  /**
+   * Update a LafOlCacheDynamicPageCache.
+   *
+   * @param bean - The LafOlCacheDynamicPageCache.
+   * @return LafOlCacheDynamicPageCache.
+   */
+  public LafOlCacheDynamicPageCache update(LafOlCacheDynamicPageCache bean);
 }

@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlBlockContentFieldRevision;
 import com.drupal.test.entity.LafOlBlockContentFieldRevisionId;
-import java.util.List;
 
 public interface LafOlBlockContentFieldRevisionDao {
-    /**
-     * Retrieve all records LafOlBlockContentFieldRevision.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlBlockContentFieldRevision
-     */
-    public List<LafOlBlockContentFieldRevision> select(int maxResult);
+  /**
+   * Retrieve all records LafOlBlockContentFieldRevision.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlBlockContentFieldRevision
+   */
+  public List<LafOlBlockContentFieldRevision> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlBlockContentFieldRevision.
-     *
-     * @return A list of LafOlBlockContentFieldRevision
-     */
-    public List<LafOlBlockContentFieldRevision> selectAll();
+  /**
+   * Retrieve all records LafOlBlockContentFieldRevision.
+   *
+   * @return A list of LafOlBlockContentFieldRevision
+   */
+  public List<LafOlBlockContentFieldRevision> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlBlockContentFieldRevision id.
-     * @return The same LafOlBlockContentFieldRevision.
-     */
-    public LafOlBlockContentFieldRevision find(LafOlBlockContentFieldRevisionId id);
-    /**
-     * Create an LafOlBlockContentFieldRevision.
-     *
-     * @param e the LafOlBlockContentFieldRevision.
-     * @return The same LafOlBlockContentFieldRevision.
-     */
-    public LafOlBlockContentFieldRevision create(LafOlBlockContentFieldRevision e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlBlockContentFieldRevision id.
+   * @return The same LafOlBlockContentFieldRevision.
+   */
+  public LafOlBlockContentFieldRevision find(LafOlBlockContentFieldRevisionId id);
+  /**
+   * Create an LafOlBlockContentFieldRevision.
+   *
+   * @param e the LafOlBlockContentFieldRevision.
+   * @return The same LafOlBlockContentFieldRevision.
+   */
+  public LafOlBlockContentFieldRevision create(LafOlBlockContentFieldRevision e);
 
-    /**
-     * Update the LafOlBlockContentFieldRevision.
-     *
-     * @param e the LafOlBlockContentFieldRevision.
-     * @return The same LafOlBlockContentFieldRevision.
-     */
-    public LafOlBlockContentFieldRevision update(LafOlBlockContentFieldRevision e);
+  /**
+   * Update the LafOlBlockContentFieldRevision.
+   *
+   * @param e the LafOlBlockContentFieldRevision.
+   * @return The same LafOlBlockContentFieldRevision.
+   */
+  public LafOlBlockContentFieldRevision update(LafOlBlockContentFieldRevision e);
 }

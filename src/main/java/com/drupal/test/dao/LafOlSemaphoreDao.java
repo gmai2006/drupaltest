@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlSemaphore;
 import java.util.List;
+import com.drupal.test.entity.LafOlSemaphore;
 
 public interface LafOlSemaphoreDao {
-    /**
-     * Retrieve all records LafOlSemaphore.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlSemaphore
-     */
-    public List<LafOlSemaphore> select(int maxResult);
+  /**
+   * Retrieve all records LafOlSemaphore.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlSemaphore
+   */
+  public List<LafOlSemaphore> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlSemaphore.
-     *
-     * @return A list of LafOlSemaphore
-     */
-    public List<LafOlSemaphore> selectAll();
+  /**
+   * Retrieve all records LafOlSemaphore.
+   *
+   * @return A list of LafOlSemaphore
+   */
+  public List<LafOlSemaphore> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlSemaphore id.
-     * @return The same LafOlSemaphore.
-     */
-    public LafOlSemaphore find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlSemaphore id.
+   * @return The same LafOlSemaphore.
+   */
+  public LafOlSemaphore find(java.lang.String id);
 
-    /**
-     * Create an LafOlSemaphore.
-     *
-     * @param e the LafOlSemaphore.
-     * @return The same LafOlSemaphore.
-     */
-    public LafOlSemaphore create(LafOlSemaphore e);
+  /**
+   * Create an LafOlSemaphore.
+   *
+   * @param e the LafOlSemaphore.
+   * @return The same LafOlSemaphore.
+   */
+  public LafOlSemaphore create(LafOlSemaphore e);
 
-    /**
-     * Update the LafOlSemaphore.
-     *
-     * @param e the LafOlSemaphore.
-     * @return The same LafOlSemaphore.
-     */
-    public LafOlSemaphore update(LafOlSemaphore e);
+  /**
+   * Update the LafOlSemaphore.
+   *
+   * @param e the LafOlSemaphore.
+   * @return The same LafOlSemaphore.
+   */
+  public LafOlSemaphore update(LafOlSemaphore e);
 }

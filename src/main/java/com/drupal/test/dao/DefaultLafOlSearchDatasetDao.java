@@ -16,58 +16,61 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlSearchDataset;
-import com.drupal.test.entity.LafOlSearchDatasetId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlSearchDataset;
+import com.drupal.test.entity.LafOlSearchDatasetId;
 
 @Stateless
 @Named("DefaultLafOlSearchDatasetDao")
 public class DefaultLafOlSearchDatasetDao implements LafOlSearchDatasetDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlSearchDatasetDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlSearchDatasetDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlSearchDatasetDao() {}
+  public DefaultLafOlSearchDatasetDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSearchDataset find(LafOlSearchDatasetId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlSearchDataset.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSearchDataset find(LafOlSearchDatasetId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlSearchDataset.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlSearchDataset> select(int max) {
-        return dao.select("select a from LafOlSearchDataset a", LafOlSearchDataset.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlSearchDataset> select(int max) {
+    return dao.select("select a from LafOlSearchDataset a", LafOlSearchDataset.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlSearchDataset> selectAll() {
-        return dao.selectAll("select a from LafOlSearchDataset a", LafOlSearchDataset.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlSearchDataset> selectAll() {
+    return dao.selectAll("select a from LafOlSearchDataset a", LafOlSearchDataset.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSearchDataset create(LafOlSearchDataset e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSearchDataset create(LafOlSearchDataset e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSearchDataset update(LafOlSearchDataset e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSearchDataset update(LafOlSearchDataset e) {
+    return dao.update(e);
+  }
 }

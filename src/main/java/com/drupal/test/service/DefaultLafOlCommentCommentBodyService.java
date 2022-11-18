@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlCommentCommentBodyDao;
 import com.drupal.test.entity.LafOlCommentCommentBody;
 import com.drupal.test.entity.LafOlCommentCommentBodyId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlCommentCommentBodyService")
 public class DefaultLafOlCommentCommentBodyService implements LafOlCommentCommentBodyService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlCommentCommentBodyDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlCommentCommentBodyDao dao;
 
-    @Inject
-    @Named("DefaultLafOlCommentCommentBodyDao")
-    public DefaultLafOlCommentCommentBodyService(final LafOlCommentCommentBodyDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlCommentCommentBodyDao")
+  public DefaultLafOlCommentCommentBodyService(final LafOlCommentCommentBodyDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCommentCommentBody find(LafOlCommentCommentBodyId id) {
-        final LafOlCommentCommentBody result = dao.find(id);
-        logger.info("find(LafOlCommentCommentBody) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCommentCommentBody find(LafOlCommentCommentBodyId id) {
+    final LafOlCommentCommentBody result = dao.find(id);
+    logger.info("find(LafOlCommentCommentBody) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCommentCommentBody> select(int maxResult) {
-        final List<LafOlCommentCommentBody> result = dao.select(maxResult);
-        logger.info("select(LafOlCommentCommentBody) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlCommentCommentBody> select(int maxResult) {
+    final List<LafOlCommentCommentBody> result = dao.select(maxResult);
+    logger.info("select(LafOlCommentCommentBody) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCommentCommentBody> selectAll() {
-        final List<LafOlCommentCommentBody> results = dao.selectAll();
-        logger.info("selectAll(LafOlCommentCommentBody) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlCommentCommentBody> selectAll() {
+    final List<LafOlCommentCommentBody> results = dao.selectAll();
+    logger.info("selectAll(LafOlCommentCommentBody) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCommentCommentBody create(LafOlCommentCommentBody bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlCommentCommentBody={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCommentCommentBody create(LafOlCommentCommentBody bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlCommentCommentBody={}) - entered bean ");
 
-        final LafOlCommentCommentBody result = dao.create(bean);
+    final LafOlCommentCommentBody result = dao.create(bean);
 
-        logger.info("create(LafOlCommentCommentBody) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlCommentCommentBody) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCommentCommentBody update(LafOlCommentCommentBody bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlCommentCommentBody={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCommentCommentBody update(LafOlCommentCommentBody bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlCommentCommentBody={}) - entered bean ");
 
-        final LafOlCommentCommentBody result = dao.update(bean);
+    final LafOlCommentCommentBody result = dao.update(bean);
 
-        logger.info("update(LafOlCommentCommentBody) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlCommentCommentBody) - exited - return value={} result ");
+    return result;
+  }
 }

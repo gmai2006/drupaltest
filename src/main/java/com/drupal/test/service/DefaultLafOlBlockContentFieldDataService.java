@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlBlockContentFieldDataDao;
 import com.drupal.test.entity.LafOlBlockContentFieldData;
 import com.drupal.test.entity.LafOlBlockContentFieldDataId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlBlockContentFieldDataService")
 public class DefaultLafOlBlockContentFieldDataService implements LafOlBlockContentFieldDataService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlBlockContentFieldDataDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlBlockContentFieldDataDao dao;
 
-    @Inject
-    @Named("DefaultLafOlBlockContentFieldDataDao")
-    public DefaultLafOlBlockContentFieldDataService(final LafOlBlockContentFieldDataDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlBlockContentFieldDataDao")
+  public DefaultLafOlBlockContentFieldDataService(final LafOlBlockContentFieldDataDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBlockContentFieldData find(LafOlBlockContentFieldDataId id) {
-        final LafOlBlockContentFieldData result = dao.find(id);
-        logger.info("find(LafOlBlockContentFieldData) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBlockContentFieldData find(LafOlBlockContentFieldDataId id) {
+    final LafOlBlockContentFieldData result = dao.find(id);
+    logger.info("find(LafOlBlockContentFieldData) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlBlockContentFieldData> select(int maxResult) {
-        final List<LafOlBlockContentFieldData> result = dao.select(maxResult);
-        logger.info("select(LafOlBlockContentFieldData) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlBlockContentFieldData> select(int maxResult) {
+    final List<LafOlBlockContentFieldData> result = dao.select(maxResult);
+    logger.info("select(LafOlBlockContentFieldData) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlBlockContentFieldData> selectAll() {
-        final List<LafOlBlockContentFieldData> results = dao.selectAll();
-        logger.info("selectAll(LafOlBlockContentFieldData) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlBlockContentFieldData> selectAll() {
+    final List<LafOlBlockContentFieldData> results = dao.selectAll();
+    logger.info("selectAll(LafOlBlockContentFieldData) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBlockContentFieldData create(LafOlBlockContentFieldData bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlBlockContentFieldData={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBlockContentFieldData create(LafOlBlockContentFieldData bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlBlockContentFieldData={}) - entered bean ");
 
-        final LafOlBlockContentFieldData result = dao.create(bean);
+    final LafOlBlockContentFieldData result = dao.create(bean);
 
-        logger.info("create(LafOlBlockContentFieldData) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlBlockContentFieldData) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBlockContentFieldData update(LafOlBlockContentFieldData bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlBlockContentFieldData={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBlockContentFieldData update(LafOlBlockContentFieldData bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlBlockContentFieldData={}) - entered bean ");
 
-        final LafOlBlockContentFieldData result = dao.update(bean);
+    final LafOlBlockContentFieldData result = dao.update(bean);
 
-        logger.info("update(LafOlBlockContentFieldData) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlBlockContentFieldData) - exited - return value={} result ");
+    return result;
+  }
 }

@@ -16,85 +16,85 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlFileUsageId.class)
 @Table(name = "lafol_file_usage")
 public class LafOlFileUsage implements Serializable {
-    private static final long serialVersionUID = 16344526503219972L;
+  private static final long serialVersionUID = 166875433020179237L;
 
-    /** Description: fid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "fid")
-    private java.lang.Integer fid;
-    /** Description: module. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "module")
-    private java.lang.String module;
-    /** Description: id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "id")
-    private java.lang.String id;
-    /** Description: type. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "type")
-    private java.lang.String type;
+  /** Description: fid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "fid")
+  private java.lang.Integer fid;
+  /** Description: module. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "module")
+  private java.lang.String module;
+  /** Description: id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "id")
+  private java.lang.String id;
+  /** Description: type. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "type")
+  private java.lang.String type;
 
-    /** Description: count. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "count")
-    private java.lang.Integer count;
+  /** Description: count. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "count")
+  private java.lang.Integer count;
 
-    public LafOlFileUsage() {}
+  public LafOlFileUsage() {}
 
-    public java.lang.Integer getFid() {
-        return this.fid;
-    }
+  public java.lang.Integer getFid() {
+    return this.fid;
+  }
 
-    public java.lang.String getModule() {
-        return this.module;
-    }
+  public java.lang.String getModule() {
+    return this.module;
+  }
 
-    public java.lang.String getId() {
-        return this.id;
-    }
+  public java.lang.String getId() {
+    return this.id;
+  }
 
-    public java.lang.String getType() {
-        return this.type;
-    }
+  public java.lang.String getType() {
+    return this.type;
+  }
 
-    public void setFid(java.lang.Integer fid) {
-        this.fid = fid;
-    }
+  public void setFid(java.lang.Integer fid) {
+    this.fid = fid;
+  }
 
-    public void setModule(java.lang.String module) {
-        this.module = module;
-    }
+  public void setModule(java.lang.String module) {
+    this.module = module;
+  }
 
-    public void setId(java.lang.String id) {
-        this.id = id;
-    }
+  public void setId(java.lang.String id) {
+    this.id = id;
+  }
 
-    public void setType(java.lang.String type) {
-        this.type = type;
-    }
+  public void setType(java.lang.String type) {
+    this.type = type;
+  }
 
-    public java.lang.Integer getCount() {
-        return this.count;
-    }
+  public java.lang.Integer getCount() {
+    return this.count;
+  }
 
-    public void setCount(java.lang.Integer count) {
-        this.count = count;
-    }
+  public void setCount(java.lang.Integer count) {
+    this.count = count;
+  }
 }

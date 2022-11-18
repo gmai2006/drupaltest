@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlCacheDiscoveryDao;
-import com.drupal.test.entity.LafOlCacheDiscovery;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlCacheDiscoveryDao;
+import com.drupal.test.entity.LafOlCacheDiscovery;
 
 @Stateless
 @Named("DefaultLafOlCacheDiscoveryService")
 public class DefaultLafOlCacheDiscoveryService implements LafOlCacheDiscoveryService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlCacheDiscoveryDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlCacheDiscoveryDao dao;
 
-    @Inject
-    @Named("DefaultLafOlCacheDiscoveryDao")
-    public DefaultLafOlCacheDiscoveryService(final LafOlCacheDiscoveryDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlCacheDiscoveryDao")
+  public DefaultLafOlCacheDiscoveryService(final LafOlCacheDiscoveryDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheDiscovery find(java.lang.String id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheDiscovery find(java.lang.String id) {
 
-        final LafOlCacheDiscovery result = dao.find(id);
-        logger.info("find(LafOlCacheDiscovery) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlCacheDiscovery result = dao.find(id);
+    logger.info("find(LafOlCacheDiscovery) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCacheDiscovery> select(int maxResult) {
-        final List<LafOlCacheDiscovery> result = dao.select(maxResult);
-        logger.info("select(LafOlCacheDiscovery) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlCacheDiscovery> select(int maxResult) {
+    final List<LafOlCacheDiscovery> result = dao.select(maxResult);
+    logger.info("select(LafOlCacheDiscovery) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCacheDiscovery> selectAll() {
-        final List<LafOlCacheDiscovery> results = dao.selectAll();
-        logger.info("selectAll(LafOlCacheDiscovery) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlCacheDiscovery> selectAll() {
+    final List<LafOlCacheDiscovery> results = dao.selectAll();
+    logger.info("selectAll(LafOlCacheDiscovery) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheDiscovery create(LafOlCacheDiscovery bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlCacheDiscovery={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheDiscovery create(LafOlCacheDiscovery bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlCacheDiscovery={}) - entered bean ");
 
-        final LafOlCacheDiscovery result = dao.create(bean);
+    final LafOlCacheDiscovery result = dao.create(bean);
 
-        logger.info("create(LafOlCacheDiscovery) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlCacheDiscovery) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheDiscovery update(LafOlCacheDiscovery bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlCacheDiscovery={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheDiscovery update(LafOlCacheDiscovery bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlCacheDiscovery={}) - entered bean ");
 
-        final LafOlCacheDiscovery result = dao.update(bean);
+    final LafOlCacheDiscovery result = dao.update(bean);
 
-        logger.info("update(LafOlCacheDiscovery) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlCacheDiscovery) - exited - return value={} result ");
+    return result;
+  }
 }

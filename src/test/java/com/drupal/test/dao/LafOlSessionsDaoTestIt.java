@@ -16,11 +16,11 @@
  */
 package com.drupal.test.dao;
 
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.io.IOException;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
-import com.drupal.test.entity.LafOlSessions;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.IOException;
@@ -32,56 +32,57 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import com.drupal.test.entity.LafOlSessions;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
 
 public class LafOlSessionsDaoTestIt {
-    static final String inputFile = "LafOlSessions.json";
-    static LafOlSessionsDao dao;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlSessions[] records;
+  static final String inputFile = "LafOlSessions.json";
+  static LafOlSessionsDao dao;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlSessions[] records;
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void beforeClass() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
-        JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
-        dao = new DefaultLafOlSessionsDao(jpa);
-    }
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void beforeClass() {
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
+    dao = new DefaultLafOlSessionsDao(jpa);
+  }
 
-    /** Run before the test. */
-    @Before
-    public void before() {
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlSessions[].class);
-            json = null;
-            Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+  /** Run before the test. */
+  @Before
+  public void before() {
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlSessions[].class);
+      json = null;
+      Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
+  }
 
-    @After
-    public void after() {
-        records = null;
-    }
+  @After
+  public void after() {
+    records = null;
+  }
 
-    @Test
-    public void testSelect() {
-        LafOlSessions testResult = dao.find(records[1].getSid());
-        assertNotNull("expect result", testResult);
-        org.junit.Assert.assertTrue(
-                "expect equals uid ", this.records[1].getUid() == testResult.getUid());
-        org.junit.Assert.assertEquals(
-                "expect equals hostname ", this.records[1].getHostname(), testResult.getHostname());
-        org.junit.Assert.assertTrue(
-                "expect equals timestamp ",
-                this.records[1].getTimestamp() == testResult.getTimestamp());
-        org.junit.Assert.assertEquals(
-                "expect equals session ", this.records[1].getSession(), testResult.getSession());
-    }
+  @Test
+  public void testSelect() {
+    LafOlSessions testResult = dao.find(records[1].getSid());
+    assertNotNull("expect result", testResult);
+    org.junit.Assert.assertTrue(
+        "expect equals uid ", this.records[1].getUid() == testResult.getUid());
+    org.junit.Assert.assertEquals(
+        "expect equals hostname ", this.records[1].getHostname(), testResult.getHostname());
+    org.junit.Assert.assertTrue(
+        "expect equals timestamp ", this.records[1].getTimestamp() == testResult.getTimestamp());
+    org.junit.Assert.assertEquals(
+        "expect equals session ", this.records[1].getSession(), testResult.getSession());
+  }
 }

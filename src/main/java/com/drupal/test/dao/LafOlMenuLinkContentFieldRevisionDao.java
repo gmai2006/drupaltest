@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlMenuLinkContentFieldRevision;
 import com.drupal.test.entity.LafOlMenuLinkContentFieldRevisionId;
-import java.util.List;
 
 public interface LafOlMenuLinkContentFieldRevisionDao {
-    /**
-     * Retrieve all records LafOlMenuLinkContentFieldRevision.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlMenuLinkContentFieldRevision
-     */
-    public List<LafOlMenuLinkContentFieldRevision> select(int maxResult);
+  /**
+   * Retrieve all records LafOlMenuLinkContentFieldRevision.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlMenuLinkContentFieldRevision
+   */
+  public List<LafOlMenuLinkContentFieldRevision> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlMenuLinkContentFieldRevision.
-     *
-     * @return A list of LafOlMenuLinkContentFieldRevision
-     */
-    public List<LafOlMenuLinkContentFieldRevision> selectAll();
+  /**
+   * Retrieve all records LafOlMenuLinkContentFieldRevision.
+   *
+   * @return A list of LafOlMenuLinkContentFieldRevision
+   */
+  public List<LafOlMenuLinkContentFieldRevision> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlMenuLinkContentFieldRevision id.
-     * @return The same LafOlMenuLinkContentFieldRevision.
-     */
-    public LafOlMenuLinkContentFieldRevision find(LafOlMenuLinkContentFieldRevisionId id);
-    /**
-     * Create an LafOlMenuLinkContentFieldRevision.
-     *
-     * @param e the LafOlMenuLinkContentFieldRevision.
-     * @return The same LafOlMenuLinkContentFieldRevision.
-     */
-    public LafOlMenuLinkContentFieldRevision create(LafOlMenuLinkContentFieldRevision e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlMenuLinkContentFieldRevision id.
+   * @return The same LafOlMenuLinkContentFieldRevision.
+   */
+  public LafOlMenuLinkContentFieldRevision find(LafOlMenuLinkContentFieldRevisionId id);
+  /**
+   * Create an LafOlMenuLinkContentFieldRevision.
+   *
+   * @param e the LafOlMenuLinkContentFieldRevision.
+   * @return The same LafOlMenuLinkContentFieldRevision.
+   */
+  public LafOlMenuLinkContentFieldRevision create(LafOlMenuLinkContentFieldRevision e);
 
-    /**
-     * Update the LafOlMenuLinkContentFieldRevision.
-     *
-     * @param e the LafOlMenuLinkContentFieldRevision.
-     * @return The same LafOlMenuLinkContentFieldRevision.
-     */
-    public LafOlMenuLinkContentFieldRevision update(LafOlMenuLinkContentFieldRevision e);
+  /**
+   * Update the LafOlMenuLinkContentFieldRevision.
+   *
+   * @param e the LafOlMenuLinkContentFieldRevision.
+   * @return The same LafOlMenuLinkContentFieldRevision.
+   */
+  public LafOlMenuLinkContentFieldRevision update(LafOlMenuLinkContentFieldRevision e);
 }

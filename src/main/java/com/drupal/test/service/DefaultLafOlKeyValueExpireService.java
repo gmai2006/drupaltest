@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlKeyValueExpireDao;
 import com.drupal.test.entity.LafOlKeyValueExpire;
 import com.drupal.test.entity.LafOlKeyValueExpireId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlKeyValueExpireService")
 public class DefaultLafOlKeyValueExpireService implements LafOlKeyValueExpireService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlKeyValueExpireDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlKeyValueExpireDao dao;
 
-    @Inject
-    @Named("DefaultLafOlKeyValueExpireDao")
-    public DefaultLafOlKeyValueExpireService(final LafOlKeyValueExpireDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlKeyValueExpireDao")
+  public DefaultLafOlKeyValueExpireService(final LafOlKeyValueExpireDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlKeyValueExpire find(LafOlKeyValueExpireId id) {
-        final LafOlKeyValueExpire result = dao.find(id);
-        logger.info("find(LafOlKeyValueExpire) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlKeyValueExpire find(LafOlKeyValueExpireId id) {
+    final LafOlKeyValueExpire result = dao.find(id);
+    logger.info("find(LafOlKeyValueExpire) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlKeyValueExpire> select(int maxResult) {
-        final List<LafOlKeyValueExpire> result = dao.select(maxResult);
-        logger.info("select(LafOlKeyValueExpire) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlKeyValueExpire> select(int maxResult) {
+    final List<LafOlKeyValueExpire> result = dao.select(maxResult);
+    logger.info("select(LafOlKeyValueExpire) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlKeyValueExpire> selectAll() {
-        final List<LafOlKeyValueExpire> results = dao.selectAll();
-        logger.info("selectAll(LafOlKeyValueExpire) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlKeyValueExpire> selectAll() {
+    final List<LafOlKeyValueExpire> results = dao.selectAll();
+    logger.info("selectAll(LafOlKeyValueExpire) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlKeyValueExpire create(LafOlKeyValueExpire bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlKeyValueExpire={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlKeyValueExpire create(LafOlKeyValueExpire bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlKeyValueExpire={}) - entered bean ");
 
-        final LafOlKeyValueExpire result = dao.create(bean);
+    final LafOlKeyValueExpire result = dao.create(bean);
 
-        logger.info("create(LafOlKeyValueExpire) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlKeyValueExpire) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlKeyValueExpire update(LafOlKeyValueExpire bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlKeyValueExpire={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlKeyValueExpire update(LafOlKeyValueExpire bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlKeyValueExpire={}) - entered bean ");
 
-        final LafOlKeyValueExpire result = dao.update(bean);
+    final LafOlKeyValueExpire result = dao.update(bean);
 
-        logger.info("update(LafOlKeyValueExpire) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlKeyValueExpire) - exited - return value={} result ");
+    return result;
+  }
 }

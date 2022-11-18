@@ -16,63 +16,63 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlBlockContentRevisionBody;
-import com.drupal.test.entity.LafOlBlockContentRevisionBodyId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlBlockContentRevisionBody;
+import com.drupal.test.entity.LafOlBlockContentRevisionBodyId;
 
 @Stateless
 @Named("DefaultLafOlBlockContentRevisionBodyDao")
 public class DefaultLafOlBlockContentRevisionBodyDao implements LafOlBlockContentRevisionBodyDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlBlockContentRevisionBodyDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlBlockContentRevisionBodyDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlBlockContentRevisionBodyDao() {}
+  public DefaultLafOlBlockContentRevisionBodyDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBlockContentRevisionBody find(LafOlBlockContentRevisionBodyId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlBlockContentRevisionBody.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBlockContentRevisionBody find(LafOlBlockContentRevisionBodyId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlBlockContentRevisionBody.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlBlockContentRevisionBody> select(int max) {
-        return dao.select(
-                "select a from LafOlBlockContentRevisionBody a",
-                LafOlBlockContentRevisionBody.class,
-                max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlBlockContentRevisionBody> select(int max) {
+    return dao.select(
+        "select a from LafOlBlockContentRevisionBody a", LafOlBlockContentRevisionBody.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlBlockContentRevisionBody> selectAll() {
-        return dao.selectAll(
-                "select a from LafOlBlockContentRevisionBody a",
-                LafOlBlockContentRevisionBody.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlBlockContentRevisionBody> selectAll() {
+    return dao.selectAll(
+        "select a from LafOlBlockContentRevisionBody a", LafOlBlockContentRevisionBody.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBlockContentRevisionBody create(LafOlBlockContentRevisionBody e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBlockContentRevisionBody create(LafOlBlockContentRevisionBody e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlBlockContentRevisionBody update(LafOlBlockContentRevisionBody e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlBlockContentRevisionBody update(LafOlBlockContentRevisionBody e) {
+    return dao.update(e);
+  }
 }

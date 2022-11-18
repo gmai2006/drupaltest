@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlUsersFieldData;
 import com.drupal.test.entity.LafOlUsersFieldDataId;
-import java.util.List;
 
 public interface LafOlUsersFieldDataService {
-    public LafOlUsersFieldData find(LafOlUsersFieldDataId id);
-    /**
-     * Select a list of LafOlUsersFieldData based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlUsersFieldData records.
-     */
-    public List<LafOlUsersFieldData> select(int maxResult);
+  public LafOlUsersFieldData find(LafOlUsersFieldDataId id);
+  /**
+   * Select a list of LafOlUsersFieldData based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlUsersFieldData records.
+   */
+  public List<LafOlUsersFieldData> select(int maxResult);
 
-    /**
-     * Select all LafOlUsersFieldData.
-     *
-     * @return all LafOlUsersFieldData records.
-     */
-    public List<LafOlUsersFieldData> selectAll();
+  /**
+   * Select all LafOlUsersFieldData.
+   *
+   * @return all LafOlUsersFieldData records.
+   */
+  public List<LafOlUsersFieldData> selectAll();
 
-    /**
-     * Create LafOlUsersFieldData.
-     *
-     * @param bean The LafOlUsersFieldData.
-     * @return The LafOlUsersFieldData.
-     */
-    public LafOlUsersFieldData create(LafOlUsersFieldData bean);
+  /**
+   * Create LafOlUsersFieldData.
+   *
+   * @param bean The LafOlUsersFieldData.
+   * @return The LafOlUsersFieldData.
+   */
+  public LafOlUsersFieldData create(LafOlUsersFieldData bean);
 
-    /**
-     * Update a LafOlUsersFieldData.
-     *
-     * @param bean - The LafOlUsersFieldData.
-     * @return LafOlUsersFieldData.
-     */
-    public LafOlUsersFieldData update(LafOlUsersFieldData bean);
+  /**
+   * Update a LafOlUsersFieldData.
+   *
+   * @param bean - The LafOlUsersFieldData.
+   * @return LafOlUsersFieldData.
+   */
+  public LafOlUsersFieldData update(LafOlUsersFieldData bean);
 }

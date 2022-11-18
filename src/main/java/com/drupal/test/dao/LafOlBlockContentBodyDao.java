@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlBlockContentBody;
 import com.drupal.test.entity.LafOlBlockContentBodyId;
-import java.util.List;
 
 public interface LafOlBlockContentBodyDao {
-    /**
-     * Retrieve all records LafOlBlockContentBody.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlBlockContentBody
-     */
-    public List<LafOlBlockContentBody> select(int maxResult);
+  /**
+   * Retrieve all records LafOlBlockContentBody.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlBlockContentBody
+   */
+  public List<LafOlBlockContentBody> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlBlockContentBody.
-     *
-     * @return A list of LafOlBlockContentBody
-     */
-    public List<LafOlBlockContentBody> selectAll();
+  /**
+   * Retrieve all records LafOlBlockContentBody.
+   *
+   * @return A list of LafOlBlockContentBody
+   */
+  public List<LafOlBlockContentBody> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlBlockContentBody id.
-     * @return The same LafOlBlockContentBody.
-     */
-    public LafOlBlockContentBody find(LafOlBlockContentBodyId id);
-    /**
-     * Create an LafOlBlockContentBody.
-     *
-     * @param e the LafOlBlockContentBody.
-     * @return The same LafOlBlockContentBody.
-     */
-    public LafOlBlockContentBody create(LafOlBlockContentBody e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlBlockContentBody id.
+   * @return The same LafOlBlockContentBody.
+   */
+  public LafOlBlockContentBody find(LafOlBlockContentBodyId id);
+  /**
+   * Create an LafOlBlockContentBody.
+   *
+   * @param e the LafOlBlockContentBody.
+   * @return The same LafOlBlockContentBody.
+   */
+  public LafOlBlockContentBody create(LafOlBlockContentBody e);
 
-    /**
-     * Update the LafOlBlockContentBody.
-     *
-     * @param e the LafOlBlockContentBody.
-     * @return The same LafOlBlockContentBody.
-     */
-    public LafOlBlockContentBody update(LafOlBlockContentBody e);
+  /**
+   * Update the LafOlBlockContentBody.
+   *
+   * @param e the LafOlBlockContentBody.
+   * @return The same LafOlBlockContentBody.
+   */
+  public LafOlBlockContentBody update(LafOlBlockContentBody e);
 }

@@ -16,50 +16,53 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlSearchDataset;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlSearchDataset;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlSearchDatasetHandler")
 public class LafOlSearchDatasetHandler extends DelimiterFileHandler<LafOlSearchDataset> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlSearchDatasetHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlSearchDatasetHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlSearchDataset parseLine(List<String> headers, List<String> tokens) {
+    LafOlSearchDataset record = new LafOlSearchDataset();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "sid":
+          record.setSid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "type":
+          record.setType(tokens.get(i));
+          break;
+
+        case "data":
+          record.setData(tokens.get(i));
+          break;
+
+        case "reindex":
+          record.setReindex(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlSearchDataset parseLine(List<String> headers, List<String> tokens) {
-        LafOlSearchDataset record = new LafOlSearchDataset();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "sid":
-                    record.setSid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "type":
-                    record.setType(tokens.get(i));
-                    break;
-
-                case "data":
-                    record.setData(tokens.get(i));
-                    break;
-
-                case "reindex":
-                    record.setReindex(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlBlockContentBody;
 import com.drupal.test.entity.LafOlBlockContentBodyId;
-import java.util.List;
 
 public interface LafOlBlockContentBodyService {
-    public LafOlBlockContentBody find(LafOlBlockContentBodyId id);
-    /**
-     * Select a list of LafOlBlockContentBody based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlBlockContentBody records.
-     */
-    public List<LafOlBlockContentBody> select(int maxResult);
+  public LafOlBlockContentBody find(LafOlBlockContentBodyId id);
+  /**
+   * Select a list of LafOlBlockContentBody based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlBlockContentBody records.
+   */
+  public List<LafOlBlockContentBody> select(int maxResult);
 
-    /**
-     * Select all LafOlBlockContentBody.
-     *
-     * @return all LafOlBlockContentBody records.
-     */
-    public List<LafOlBlockContentBody> selectAll();
+  /**
+   * Select all LafOlBlockContentBody.
+   *
+   * @return all LafOlBlockContentBody records.
+   */
+  public List<LafOlBlockContentBody> selectAll();
 
-    /**
-     * Create LafOlBlockContentBody.
-     *
-     * @param bean The LafOlBlockContentBody.
-     * @return The LafOlBlockContentBody.
-     */
-    public LafOlBlockContentBody create(LafOlBlockContentBody bean);
+  /**
+   * Create LafOlBlockContentBody.
+   *
+   * @param bean The LafOlBlockContentBody.
+   * @return The LafOlBlockContentBody.
+   */
+  public LafOlBlockContentBody create(LafOlBlockContentBody bean);
 
-    /**
-     * Update a LafOlBlockContentBody.
-     *
-     * @param bean - The LafOlBlockContentBody.
-     * @return LafOlBlockContentBody.
-     */
-    public LafOlBlockContentBody update(LafOlBlockContentBody bean);
+  /**
+   * Update a LafOlBlockContentBody.
+   *
+   * @param bean - The LafOlBlockContentBody.
+   * @return LafOlBlockContentBody.
+   */
+  public LafOlBlockContentBody update(LafOlBlockContentBody bean);
 }

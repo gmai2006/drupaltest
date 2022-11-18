@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlLocaleFile;
 import com.drupal.test.entity.LafOlLocaleFileId;
-import java.util.List;
 
 public interface LafOlLocaleFileService {
-    public LafOlLocaleFile find(LafOlLocaleFileId id);
-    /**
-     * Select a list of LafOlLocaleFile based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlLocaleFile records.
-     */
-    public List<LafOlLocaleFile> select(int maxResult);
+  public LafOlLocaleFile find(LafOlLocaleFileId id);
+  /**
+   * Select a list of LafOlLocaleFile based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlLocaleFile records.
+   */
+  public List<LafOlLocaleFile> select(int maxResult);
 
-    /**
-     * Select all LafOlLocaleFile.
-     *
-     * @return all LafOlLocaleFile records.
-     */
-    public List<LafOlLocaleFile> selectAll();
+  /**
+   * Select all LafOlLocaleFile.
+   *
+   * @return all LafOlLocaleFile records.
+   */
+  public List<LafOlLocaleFile> selectAll();
 
-    /**
-     * Create LafOlLocaleFile.
-     *
-     * @param bean The LafOlLocaleFile.
-     * @return The LafOlLocaleFile.
-     */
-    public LafOlLocaleFile create(LafOlLocaleFile bean);
+  /**
+   * Create LafOlLocaleFile.
+   *
+   * @param bean The LafOlLocaleFile.
+   * @return The LafOlLocaleFile.
+   */
+  public LafOlLocaleFile create(LafOlLocaleFile bean);
 
-    /**
-     * Update a LafOlLocaleFile.
-     *
-     * @param bean - The LafOlLocaleFile.
-     * @return LafOlLocaleFile.
-     */
-    public LafOlLocaleFile update(LafOlLocaleFile bean);
+  /**
+   * Update a LafOlLocaleFile.
+   *
+   * @param bean - The LafOlLocaleFile.
+   * @return LafOlLocaleFile.
+   */
+  public LafOlLocaleFile update(LafOlLocaleFile bean);
 }

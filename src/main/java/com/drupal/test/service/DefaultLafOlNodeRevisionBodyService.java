@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlNodeRevisionBodyDao;
 import com.drupal.test.entity.LafOlNodeRevisionBody;
 import com.drupal.test.entity.LafOlNodeRevisionBodyId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlNodeRevisionBodyService")
 public class DefaultLafOlNodeRevisionBodyService implements LafOlNodeRevisionBodyService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlNodeRevisionBodyDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlNodeRevisionBodyDao dao;
 
-    @Inject
-    @Named("DefaultLafOlNodeRevisionBodyDao")
-    public DefaultLafOlNodeRevisionBodyService(final LafOlNodeRevisionBodyDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlNodeRevisionBodyDao")
+  public DefaultLafOlNodeRevisionBodyService(final LafOlNodeRevisionBodyDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionBody find(LafOlNodeRevisionBodyId id) {
-        final LafOlNodeRevisionBody result = dao.find(id);
-        logger.info("find(LafOlNodeRevisionBody) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionBody find(LafOlNodeRevisionBodyId id) {
+    final LafOlNodeRevisionBody result = dao.find(id);
+    logger.info("find(LafOlNodeRevisionBody) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeRevisionBody> select(int maxResult) {
-        final List<LafOlNodeRevisionBody> result = dao.select(maxResult);
-        logger.info("select(LafOlNodeRevisionBody) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlNodeRevisionBody> select(int maxResult) {
+    final List<LafOlNodeRevisionBody> result = dao.select(maxResult);
+    logger.info("select(LafOlNodeRevisionBody) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlNodeRevisionBody> selectAll() {
-        final List<LafOlNodeRevisionBody> results = dao.selectAll();
-        logger.info("selectAll(LafOlNodeRevisionBody) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlNodeRevisionBody> selectAll() {
+    final List<LafOlNodeRevisionBody> results = dao.selectAll();
+    logger.info("selectAll(LafOlNodeRevisionBody) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionBody create(LafOlNodeRevisionBody bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlNodeRevisionBody={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionBody create(LafOlNodeRevisionBody bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlNodeRevisionBody={}) - entered bean ");
 
-        final LafOlNodeRevisionBody result = dao.create(bean);
+    final LafOlNodeRevisionBody result = dao.create(bean);
 
-        logger.info("create(LafOlNodeRevisionBody) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlNodeRevisionBody) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionBody update(LafOlNodeRevisionBody bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlNodeRevisionBody={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionBody update(LafOlNodeRevisionBody bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlNodeRevisionBody={}) - entered bean ");
 
-        final LafOlNodeRevisionBody result = dao.update(bean);
+    final LafOlNodeRevisionBody result = dao.update(bean);
 
-        logger.info("update(LafOlNodeRevisionBody) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlNodeRevisionBody) - exited - return value={} result ");
+    return result;
+  }
 }

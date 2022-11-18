@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlTaxonomyIndex;
 import com.drupal.test.entity.LafOlTaxonomyIndexId;
-import java.util.List;
 
 public interface LafOlTaxonomyIndexService {
-    public LafOlTaxonomyIndex find(LafOlTaxonomyIndexId id);
-    /**
-     * Select a list of LafOlTaxonomyIndex based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlTaxonomyIndex records.
-     */
-    public List<LafOlTaxonomyIndex> select(int maxResult);
+  public LafOlTaxonomyIndex find(LafOlTaxonomyIndexId id);
+  /**
+   * Select a list of LafOlTaxonomyIndex based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlTaxonomyIndex records.
+   */
+  public List<LafOlTaxonomyIndex> select(int maxResult);
 
-    /**
-     * Select all LafOlTaxonomyIndex.
-     *
-     * @return all LafOlTaxonomyIndex records.
-     */
-    public List<LafOlTaxonomyIndex> selectAll();
+  /**
+   * Select all LafOlTaxonomyIndex.
+   *
+   * @return all LafOlTaxonomyIndex records.
+   */
+  public List<LafOlTaxonomyIndex> selectAll();
 
-    /**
-     * Create LafOlTaxonomyIndex.
-     *
-     * @param bean The LafOlTaxonomyIndex.
-     * @return The LafOlTaxonomyIndex.
-     */
-    public LafOlTaxonomyIndex create(LafOlTaxonomyIndex bean);
+  /**
+   * Create LafOlTaxonomyIndex.
+   *
+   * @param bean The LafOlTaxonomyIndex.
+   * @return The LafOlTaxonomyIndex.
+   */
+  public LafOlTaxonomyIndex create(LafOlTaxonomyIndex bean);
 
-    /**
-     * Update a LafOlTaxonomyIndex.
-     *
-     * @param bean - The LafOlTaxonomyIndex.
-     * @return LafOlTaxonomyIndex.
-     */
-    public LafOlTaxonomyIndex update(LafOlTaxonomyIndex bean);
+  /**
+   * Update a LafOlTaxonomyIndex.
+   *
+   * @param bean - The LafOlTaxonomyIndex.
+   * @return LafOlTaxonomyIndex.
+   */
+  public LafOlTaxonomyIndex update(LafOlTaxonomyIndex bean);
 }

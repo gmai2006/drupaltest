@@ -16,58 +16,58 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlConfigId.class)
 @Table(name = "lafol_config")
 public class LafOlConfig implements Serializable {
-    private static final long serialVersionUID = 163445265028759159L;
+  private static final long serialVersionUID = 166875433018266241L;
 
-    /** Description: name. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "name")
-    private java.lang.String name;
-    /** Description: collection. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "collection")
-    private java.lang.String collection;
+  /** Description: name. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "name")
+  private java.lang.String name;
+  /** Description: collection. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "collection")
+  private java.lang.String collection;
 
-    /** Description: data. */
-    @Basic
-    @Column(name = "data", length = 0)
-    private java.lang.String data;
+  /** Description: data. */
+  @Basic
+  @Column(name = "data", length = 0)
+  private java.lang.String data;
 
-    public LafOlConfig() {}
+  public LafOlConfig() {}
 
-    public java.lang.String getName() {
-        return this.name;
-    }
+  public java.lang.String getName() {
+    return this.name;
+  }
 
-    public java.lang.String getCollection() {
-        return this.collection;
-    }
+  public java.lang.String getCollection() {
+    return this.collection;
+  }
 
-    public void setName(java.lang.String name) {
-        this.name = name;
-    }
+  public void setName(java.lang.String name) {
+    this.name = name;
+  }
 
-    public void setCollection(java.lang.String collection) {
-        this.collection = collection;
-    }
+  public void setCollection(java.lang.String collection) {
+    this.collection = collection;
+  }
 
-    public java.lang.String getData() {
-        return this.data;
-    }
+  public java.lang.String getData() {
+    return this.data;
+  }
 
-    public void setData(java.lang.String data) {
-        this.data = data;
-    }
+  public void setData(java.lang.String data) {
+    this.data = data;
+  }
 }

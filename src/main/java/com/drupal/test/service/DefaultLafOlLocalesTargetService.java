@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlLocalesTargetDao;
 import com.drupal.test.entity.LafOlLocalesTarget;
 import com.drupal.test.entity.LafOlLocalesTargetId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlLocalesTargetService")
 public class DefaultLafOlLocalesTargetService implements LafOlLocalesTargetService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlLocalesTargetDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlLocalesTargetDao dao;
 
-    @Inject
-    @Named("DefaultLafOlLocalesTargetDao")
-    public DefaultLafOlLocalesTargetService(final LafOlLocalesTargetDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlLocalesTargetDao")
+  public DefaultLafOlLocalesTargetService(final LafOlLocalesTargetDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlLocalesTarget find(LafOlLocalesTargetId id) {
-        final LafOlLocalesTarget result = dao.find(id);
-        logger.info("find(LafOlLocalesTarget) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlLocalesTarget find(LafOlLocalesTargetId id) {
+    final LafOlLocalesTarget result = dao.find(id);
+    logger.info("find(LafOlLocalesTarget) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlLocalesTarget> select(int maxResult) {
-        final List<LafOlLocalesTarget> result = dao.select(maxResult);
-        logger.info("select(LafOlLocalesTarget) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlLocalesTarget> select(int maxResult) {
+    final List<LafOlLocalesTarget> result = dao.select(maxResult);
+    logger.info("select(LafOlLocalesTarget) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlLocalesTarget> selectAll() {
-        final List<LafOlLocalesTarget> results = dao.selectAll();
-        logger.info("selectAll(LafOlLocalesTarget) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlLocalesTarget> selectAll() {
+    final List<LafOlLocalesTarget> results = dao.selectAll();
+    logger.info("selectAll(LafOlLocalesTarget) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlLocalesTarget create(LafOlLocalesTarget bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlLocalesTarget={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlLocalesTarget create(LafOlLocalesTarget bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlLocalesTarget={}) - entered bean ");
 
-        final LafOlLocalesTarget result = dao.create(bean);
+    final LafOlLocalesTarget result = dao.create(bean);
 
-        logger.info("create(LafOlLocalesTarget) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlLocalesTarget) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlLocalesTarget update(LafOlLocalesTarget bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlLocalesTarget={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlLocalesTarget update(LafOlLocalesTarget bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlLocalesTarget={}) - entered bean ");
 
-        final LafOlLocalesTarget result = dao.update(bean);
+    final LafOlLocalesTarget result = dao.update(bean);
 
-        logger.info("update(LafOlLocalesTarget) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlLocalesTarget) - exited - return value={} result ");
+    return result;
+  }
 }

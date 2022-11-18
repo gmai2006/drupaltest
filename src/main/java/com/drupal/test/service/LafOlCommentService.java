@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlComment;
 import com.drupal.test.entity.LafOlCommentId;
-import java.util.List;
 
 public interface LafOlCommentService {
-    public LafOlComment find(LafOlCommentId id);
-    /**
-     * Select a list of LafOlComment based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlComment records.
-     */
-    public List<LafOlComment> select(int maxResult);
+  public LafOlComment find(LafOlCommentId id);
+  /**
+   * Select a list of LafOlComment based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlComment records.
+   */
+  public List<LafOlComment> select(int maxResult);
 
-    /**
-     * Select all LafOlComment.
-     *
-     * @return all LafOlComment records.
-     */
-    public List<LafOlComment> selectAll();
+  /**
+   * Select all LafOlComment.
+   *
+   * @return all LafOlComment records.
+   */
+  public List<LafOlComment> selectAll();
 
-    /**
-     * Create LafOlComment.
-     *
-     * @param bean The LafOlComment.
-     * @return The LafOlComment.
-     */
-    public LafOlComment create(LafOlComment bean);
+  /**
+   * Create LafOlComment.
+   *
+   * @param bean The LafOlComment.
+   * @return The LafOlComment.
+   */
+  public LafOlComment create(LafOlComment bean);
 
-    /**
-     * Update a LafOlComment.
-     *
-     * @param bean - The LafOlComment.
-     * @return LafOlComment.
-     */
-    public LafOlComment update(LafOlComment bean);
+  /**
+   * Update a LafOlComment.
+   *
+   * @param bean - The LafOlComment.
+   * @return LafOlComment.
+   */
+  public LafOlComment update(LafOlComment bean);
 }

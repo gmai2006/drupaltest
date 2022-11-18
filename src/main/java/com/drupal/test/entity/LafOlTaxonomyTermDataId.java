@@ -18,91 +18,92 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlTaxonomyTermData. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlTaxonomyTermData. generated on 11/17/2022 from a schema. */
 public class LafOlTaxonomyTermDataId implements Serializable {
-    private static final long serialVersionUID = 163445265095166520L;
+  private static final long serialVersionUID = 166875433059823381L;
 
-    @Column(name = "uuid")
-    private java.lang.String uuid;
+  @Column(name = "uuid")
+  private java.lang.String uuid;
 
-    @Column(name = "tid")
-    private java.lang.Integer tid;
+  @Column(name = "tid")
+  private java.lang.Integer tid;
 
-    @Column(name = "revision_id")
-    private java.lang.Integer revisionId;
+  @Column(name = "revision_id")
+  private java.lang.Integer revisionId;
 
-    /** Constructor: LafOlTaxonomyTermDataId. */
-    public LafOlTaxonomyTermDataId() {}
+  /** Constructor: LafOlTaxonomyTermDataId. */
+  public LafOlTaxonomyTermDataId() {}
 
-    /**
-     * Constructor: LafOlTaxonomyTermDataId.
-     *
-     * @param uuid - uuid.
-     * @param tid - tid.
-     * @param revisionId - revisionId.
-     */
-    public LafOlTaxonomyTermDataId(
-            java.lang.String uuid, java.lang.Integer tid, java.lang.Integer revisionId) {
-        this.uuid = uuid;
-        this.tid = tid;
-        this.revisionId = revisionId;
-    }
+  /**
+   * Constructor: LafOlTaxonomyTermDataId.
+   *
+   * @param uuid - uuid.
+   * @param tid - tid.
+   * @param revisionId - revisionId.
+   */
+  public LafOlTaxonomyTermDataId(
+      java.lang.String uuid, java.lang.Integer tid, java.lang.Integer revisionId) {
+    this.uuid = uuid;
+    this.tid = tid;
+    this.revisionId = revisionId;
+  }
 
-    public java.lang.String getUuid() {
-        return this.uuid;
-    }
+  public java.lang.String getUuid() {
+    return this.uuid;
+  }
 
-    public java.lang.Integer getTid() {
-        return this.tid;
-    }
+  public java.lang.Integer getTid() {
+    return this.tid;
+  }
 
-    public java.lang.Integer getRevisionId() {
-        return this.revisionId;
-    }
+  public java.lang.Integer getRevisionId() {
+    return this.revisionId;
+  }
 
-    public void setUuid(java.lang.String uuid) {
-        this.uuid = uuid;
-    }
+  public void setUuid(java.lang.String uuid) {
+    this.uuid = uuid;
+  }
 
-    public void setTid(java.lang.Integer tid) {
-        this.tid = tid;
-    }
+  public void setTid(java.lang.Integer tid) {
+    this.tid = tid;
+  }
 
-    public void setRevisionId(java.lang.Integer revisionId) {
-        this.revisionId = revisionId;
-    }
+  public void setRevisionId(java.lang.Integer revisionId) {
+    this.revisionId = revisionId;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((uuid == null) ? 0 : uuid.hashCode());
-        result = prime * result + ((tid == null) ? 0 : tid.hashCode());
-        result = prime * result + ((revisionId == null) ? 0 : revisionId.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((uuid == null) ? 0 : uuid.hashCode());
+    result = prime * result + ((tid == null) ? 0 : tid.hashCode());
+    result = prime * result + ((revisionId == null) ? 0 : revisionId.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlTaxonomyTermDataId other = (LafOlTaxonomyTermDataId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlTaxonomyTermDataId other = (LafOlTaxonomyTermDataId) obj;
 
-        if (uuid == null) {
-            if (other.uuid != null) return false;
-        } else if (!uuid.equals(other.uuid)) return false;
+    if (uuid == null) {
+      if (other.uuid != null) return false;
+    } else if (!uuid.equals(other.uuid)) return false;
 
-        if (tid == null) {
-            if (other.tid != null) return false;
-        } else if (!tid.equals(other.tid)) return false;
+    if (tid == null) {
+      if (other.tid != null) return false;
+    } else if (!tid.equals(other.tid)) return false;
 
-        if (revisionId == null) {
-            if (other.revisionId != null) return false;
-        } else if (!revisionId.equals(other.revisionId)) return false;
+    if (revisionId == null) {
+      if (other.revisionId != null) return false;
+    } else if (!revisionId.equals(other.revisionId)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

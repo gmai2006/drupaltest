@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlCacheDynamicPageCacheDao;
-import com.drupal.test.entity.LafOlCacheDynamicPageCache;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlCacheDynamicPageCacheDao;
+import com.drupal.test.entity.LafOlCacheDynamicPageCache;
 
 @Stateless
 @Named("DefaultLafOlCacheDynamicPageCacheService")
 public class DefaultLafOlCacheDynamicPageCacheService implements LafOlCacheDynamicPageCacheService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlCacheDynamicPageCacheDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlCacheDynamicPageCacheDao dao;
 
-    @Inject
-    @Named("DefaultLafOlCacheDynamicPageCacheDao")
-    public DefaultLafOlCacheDynamicPageCacheService(final LafOlCacheDynamicPageCacheDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlCacheDynamicPageCacheDao")
+  public DefaultLafOlCacheDynamicPageCacheService(final LafOlCacheDynamicPageCacheDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheDynamicPageCache find(java.lang.String id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheDynamicPageCache find(java.lang.String id) {
 
-        final LafOlCacheDynamicPageCache result = dao.find(id);
-        logger.info("find(LafOlCacheDynamicPageCache) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlCacheDynamicPageCache result = dao.find(id);
+    logger.info("find(LafOlCacheDynamicPageCache) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCacheDynamicPageCache> select(int maxResult) {
-        final List<LafOlCacheDynamicPageCache> result = dao.select(maxResult);
-        logger.info("select(LafOlCacheDynamicPageCache) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlCacheDynamicPageCache> select(int maxResult) {
+    final List<LafOlCacheDynamicPageCache> result = dao.select(maxResult);
+    logger.info("select(LafOlCacheDynamicPageCache) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCacheDynamicPageCache> selectAll() {
-        final List<LafOlCacheDynamicPageCache> results = dao.selectAll();
-        logger.info("selectAll(LafOlCacheDynamicPageCache) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlCacheDynamicPageCache> selectAll() {
+    final List<LafOlCacheDynamicPageCache> results = dao.selectAll();
+    logger.info("selectAll(LafOlCacheDynamicPageCache) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheDynamicPageCache create(LafOlCacheDynamicPageCache bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlCacheDynamicPageCache={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheDynamicPageCache create(LafOlCacheDynamicPageCache bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlCacheDynamicPageCache={}) - entered bean ");
 
-        final LafOlCacheDynamicPageCache result = dao.create(bean);
+    final LafOlCacheDynamicPageCache result = dao.create(bean);
 
-        logger.info("create(LafOlCacheDynamicPageCache) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlCacheDynamicPageCache) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCacheDynamicPageCache update(LafOlCacheDynamicPageCache bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlCacheDynamicPageCache={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCacheDynamicPageCache update(LafOlCacheDynamicPageCache bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlCacheDynamicPageCache={}) - entered bean ");
 
-        final LafOlCacheDynamicPageCache result = dao.update(bean);
+    final LafOlCacheDynamicPageCache result = dao.update(bean);
 
-        logger.info("update(LafOlCacheDynamicPageCache) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlCacheDynamicPageCache) - exited - return value={} result ");
+    return result;
+  }
 }

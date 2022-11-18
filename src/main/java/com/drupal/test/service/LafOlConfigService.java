@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlConfig;
 import com.drupal.test.entity.LafOlConfigId;
-import java.util.List;
 
 public interface LafOlConfigService {
-    public LafOlConfig find(LafOlConfigId id);
-    /**
-     * Select a list of LafOlConfig based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlConfig records.
-     */
-    public List<LafOlConfig> select(int maxResult);
+  public LafOlConfig find(LafOlConfigId id);
+  /**
+   * Select a list of LafOlConfig based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlConfig records.
+   */
+  public List<LafOlConfig> select(int maxResult);
 
-    /**
-     * Select all LafOlConfig.
-     *
-     * @return all LafOlConfig records.
-     */
-    public List<LafOlConfig> selectAll();
+  /**
+   * Select all LafOlConfig.
+   *
+   * @return all LafOlConfig records.
+   */
+  public List<LafOlConfig> selectAll();
 
-    /**
-     * Create LafOlConfig.
-     *
-     * @param bean The LafOlConfig.
-     * @return The LafOlConfig.
-     */
-    public LafOlConfig create(LafOlConfig bean);
+  /**
+   * Create LafOlConfig.
+   *
+   * @param bean The LafOlConfig.
+   * @return The LafOlConfig.
+   */
+  public LafOlConfig create(LafOlConfig bean);
 
-    /**
-     * Update a LafOlConfig.
-     *
-     * @param bean - The LafOlConfig.
-     * @return LafOlConfig.
-     */
-    public LafOlConfig update(LafOlConfig bean);
+  /**
+   * Update a LafOlConfig.
+   *
+   * @param bean - The LafOlConfig.
+   * @return LafOlConfig.
+   */
+  public LafOlConfig update(LafOlConfig bean);
 }

@@ -16,58 +16,61 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlUsers;
-import com.drupal.test.entity.LafOlUsersId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlUsers;
+import com.drupal.test.entity.LafOlUsersId;
 
 @Stateless
 @Named("DefaultLafOlUsersDao")
 public class DefaultLafOlUsersDao implements LafOlUsersDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlUsersDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlUsersDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlUsersDao() {}
+  public DefaultLafOlUsersDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUsers find(LafOlUsersId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlUsers.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUsers find(LafOlUsersId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlUsers.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlUsers> select(int max) {
-        return dao.select("select a from LafOlUsers a", LafOlUsers.class, max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlUsers> select(int max) {
+    return dao.select("select a from LafOlUsers a", LafOlUsers.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlUsers> selectAll() {
-        return dao.selectAll("select a from LafOlUsers a", LafOlUsers.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlUsers> selectAll() {
+    return dao.selectAll("select a from LafOlUsers a", LafOlUsers.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUsers create(LafOlUsers e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUsers create(LafOlUsers e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlUsers update(LafOlUsers e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlUsers update(LafOlUsers e) {
+    return dao.update(e);
+  }
 }

@@ -16,41 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlTaxonomyTermParent;
 import com.drupal.test.entity.LafOlTaxonomyTermParentId;
-import java.util.List;
 
 public interface LafOlTaxonomyTermParentService {
-    public LafOlTaxonomyTermParent find(LafOlTaxonomyTermParentId id);
-    /**
-     * Select a list of LafOlTaxonomyTermParent based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlTaxonomyTermParent records.
-     */
-    public List<LafOlTaxonomyTermParent> select(int maxResult);
+  public LafOlTaxonomyTermParent find(LafOlTaxonomyTermParentId id);
+  /**
+   * Select a list of LafOlTaxonomyTermParent based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlTaxonomyTermParent records.
+   */
+  public List<LafOlTaxonomyTermParent> select(int maxResult);
 
-    /**
-     * Select all LafOlTaxonomyTermParent.
-     *
-     * @return all LafOlTaxonomyTermParent records.
-     */
-    public List<LafOlTaxonomyTermParent> selectAll();
+  /**
+   * Select all LafOlTaxonomyTermParent.
+   *
+   * @return all LafOlTaxonomyTermParent records.
+   */
+  public List<LafOlTaxonomyTermParent> selectAll();
 
-    /**
-     * Create LafOlTaxonomyTermParent.
-     *
-     * @param bean The LafOlTaxonomyTermParent.
-     * @return The LafOlTaxonomyTermParent.
-     */
-    public LafOlTaxonomyTermParent create(LafOlTaxonomyTermParent bean);
+  /**
+   * Create LafOlTaxonomyTermParent.
+   *
+   * @param bean The LafOlTaxonomyTermParent.
+   * @return The LafOlTaxonomyTermParent.
+   */
+  public LafOlTaxonomyTermParent create(LafOlTaxonomyTermParent bean);
 
-    /**
-     * Update a LafOlTaxonomyTermParent.
-     *
-     * @param bean - The LafOlTaxonomyTermParent.
-     * @return LafOlTaxonomyTermParent.
-     */
-    public LafOlTaxonomyTermParent update(LafOlTaxonomyTermParent bean);
+  /**
+   * Update a LafOlTaxonomyTermParent.
+   *
+   * @param bean - The LafOlTaxonomyTermParent.
+   * @return LafOlTaxonomyTermParent.
+   */
+  public LafOlTaxonomyTermParent update(LafOlTaxonomyTermParent bean);
 }

@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlSemaphore;
 import java.util.List;
+import com.drupal.test.entity.LafOlSemaphore;
 
 public interface LafOlSemaphoreService {
-    public LafOlSemaphore find(java.lang.String id);
+  public LafOlSemaphore find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlSemaphore based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlSemaphore records.
-     */
-    public List<LafOlSemaphore> select(int maxResult);
+  /**
+   * Select a list of LafOlSemaphore based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlSemaphore records.
+   */
+  public List<LafOlSemaphore> select(int maxResult);
 
-    /**
-     * Select all LafOlSemaphore.
-     *
-     * @return all LafOlSemaphore records.
-     */
-    public List<LafOlSemaphore> selectAll();
+  /**
+   * Select all LafOlSemaphore.
+   *
+   * @return all LafOlSemaphore records.
+   */
+  public List<LafOlSemaphore> selectAll();
 
-    /**
-     * Create LafOlSemaphore.
-     *
-     * @param bean The LafOlSemaphore.
-     * @return The LafOlSemaphore.
-     */
-    public LafOlSemaphore create(LafOlSemaphore bean);
+  /**
+   * Create LafOlSemaphore.
+   *
+   * @param bean The LafOlSemaphore.
+   * @return The LafOlSemaphore.
+   */
+  public LafOlSemaphore create(LafOlSemaphore bean);
 
-    /**
-     * Update a LafOlSemaphore.
-     *
-     * @param bean - The LafOlSemaphore.
-     * @return LafOlSemaphore.
-     */
-    public LafOlSemaphore update(LafOlSemaphore bean);
+  /**
+   * Update a LafOlSemaphore.
+   *
+   * @param bean - The LafOlSemaphore.
+   * @return LafOlSemaphore.
+   */
+  public LafOlSemaphore update(LafOlSemaphore bean);
 }

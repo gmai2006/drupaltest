@@ -16,57 +16,57 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @Table(name = "lafol_semaphore")
 public class LafOlSemaphore implements Serializable {
-    private static final long serialVersionUID = 16344526508652468L;
+  private static final long serialVersionUID = 166875433051566059L;
 
-    /** Description: name. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "name")
-    private java.lang.String name;
+  /** Description: name. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "name")
+  private java.lang.String name;
 
-    /** Description: value. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "value", length = 255)
-    private java.lang.String value;
-    /** Description: expire. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "expire")
-    private java.lang.Double expire;
+  /** Description: value. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "value", length = 255)
+  private java.lang.String value;
+  /** Description: expire. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "expire")
+  private java.lang.Double expire;
 
-    public LafOlSemaphore() {}
+  public LafOlSemaphore() {}
 
-    public java.lang.String getName() {
-        return this.name;
-    }
+  public java.lang.String getName() {
+    return this.name;
+  }
 
-    public void setName(java.lang.String name) {
-        this.name = name;
-    }
+  public void setName(java.lang.String name) {
+    this.name = name;
+  }
 
-    public java.lang.String getValue() {
-        return this.value;
-    }
+  public java.lang.String getValue() {
+    return this.value;
+  }
 
-    public java.lang.Double getExpire() {
-        return this.expire;
-    }
+  public java.lang.Double getExpire() {
+    return this.expire;
+  }
 
-    public void setValue(java.lang.String value) {
-        this.value = value;
-    }
+  public void setValue(java.lang.String value) {
+    this.value = value;
+  }
 
-    public void setExpire(java.lang.Double expire) {
-        this.expire = expire;
-    }
+  public void setExpire(java.lang.Double expire) {
+    this.expire = expire;
+  }
 }

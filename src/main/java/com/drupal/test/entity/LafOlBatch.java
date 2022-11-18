@@ -16,69 +16,69 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @Table(name = "lafol_batch")
 public class LafOlBatch implements Serializable {
-    private static final long serialVersionUID = 163445264985189928L;
+  private static final long serialVersionUID = 166875432998322386L;
 
-    /** Description: bid. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "bid")
-    private java.lang.Integer bid;
+  /** Description: bid. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "bid")
+  private java.lang.Integer bid;
 
-    /** Description: token. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "token", length = 64)
-    private java.lang.String token;
-    /** Description: timestamp. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "timestamp")
-    private java.lang.Integer timestamp;
-    /** Description: batch. */
-    @Basic
-    @Column(name = "batch", length = 0)
-    private java.lang.String batch;
+  /** Description: token. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "token", length = 64)
+  private java.lang.String token;
+  /** Description: timestamp. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "timestamp")
+  private java.lang.Integer timestamp;
+  /** Description: batch. */
+  @Basic
+  @Column(name = "batch", length = 0)
+  private java.lang.String batch;
 
-    public LafOlBatch() {}
+  public LafOlBatch() {}
 
-    public java.lang.Integer getBid() {
-        return this.bid;
-    }
+  public java.lang.Integer getBid() {
+    return this.bid;
+  }
 
-    public void setBid(java.lang.Integer bid) {
-        this.bid = bid;
-    }
+  public void setBid(java.lang.Integer bid) {
+    this.bid = bid;
+  }
 
-    public java.lang.String getToken() {
-        return this.token;
-    }
+  public java.lang.String getToken() {
+    return this.token;
+  }
 
-    public java.lang.Integer getTimestamp() {
-        return this.timestamp;
-    }
+  public java.lang.Integer getTimestamp() {
+    return this.timestamp;
+  }
 
-    public java.lang.String getBatch() {
-        return this.batch;
-    }
+  public java.lang.String getBatch() {
+    return this.batch;
+  }
 
-    public void setToken(java.lang.String token) {
-        this.token = token;
-    }
+  public void setToken(java.lang.String token) {
+    this.token = token;
+  }
 
-    public void setTimestamp(java.lang.Integer timestamp) {
-        this.timestamp = timestamp;
-    }
+  public void setTimestamp(java.lang.Integer timestamp) {
+    this.timestamp = timestamp;
+  }
 
-    public void setBatch(java.lang.String batch) {
-        this.batch = batch;
-    }
+  public void setBatch(java.lang.String batch) {
+    this.batch = batch;
+  }
 }

@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlShortcutFieldDataDao;
 import com.drupal.test.entity.LafOlShortcutFieldData;
 import com.drupal.test.entity.LafOlShortcutFieldDataId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlShortcutFieldDataService")
 public class DefaultLafOlShortcutFieldDataService implements LafOlShortcutFieldDataService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlShortcutFieldDataDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlShortcutFieldDataDao dao;
 
-    @Inject
-    @Named("DefaultLafOlShortcutFieldDataDao")
-    public DefaultLafOlShortcutFieldDataService(final LafOlShortcutFieldDataDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlShortcutFieldDataDao")
+  public DefaultLafOlShortcutFieldDataService(final LafOlShortcutFieldDataDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlShortcutFieldData find(LafOlShortcutFieldDataId id) {
-        final LafOlShortcutFieldData result = dao.find(id);
-        logger.info("find(LafOlShortcutFieldData) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlShortcutFieldData find(LafOlShortcutFieldDataId id) {
+    final LafOlShortcutFieldData result = dao.find(id);
+    logger.info("find(LafOlShortcutFieldData) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlShortcutFieldData> select(int maxResult) {
-        final List<LafOlShortcutFieldData> result = dao.select(maxResult);
-        logger.info("select(LafOlShortcutFieldData) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlShortcutFieldData> select(int maxResult) {
+    final List<LafOlShortcutFieldData> result = dao.select(maxResult);
+    logger.info("select(LafOlShortcutFieldData) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlShortcutFieldData> selectAll() {
-        final List<LafOlShortcutFieldData> results = dao.selectAll();
-        logger.info("selectAll(LafOlShortcutFieldData) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlShortcutFieldData> selectAll() {
+    final List<LafOlShortcutFieldData> results = dao.selectAll();
+    logger.info("selectAll(LafOlShortcutFieldData) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlShortcutFieldData create(LafOlShortcutFieldData bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlShortcutFieldData={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlShortcutFieldData create(LafOlShortcutFieldData bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlShortcutFieldData={}) - entered bean ");
 
-        final LafOlShortcutFieldData result = dao.create(bean);
+    final LafOlShortcutFieldData result = dao.create(bean);
 
-        logger.info("create(LafOlShortcutFieldData) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlShortcutFieldData) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlShortcutFieldData update(LafOlShortcutFieldData bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlShortcutFieldData={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlShortcutFieldData update(LafOlShortcutFieldData bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlShortcutFieldData={}) - entered bean ");
 
-        final LafOlShortcutFieldData result = dao.update(bean);
+    final LafOlShortcutFieldData result = dao.update(bean);
 
-        logger.info("update(LafOlShortcutFieldData) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlShortcutFieldData) - exited - return value={} result ");
+    return result;
+  }
 }

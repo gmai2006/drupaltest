@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlConfig;
 import com.drupal.test.entity.LafOlConfigId;
-import java.util.List;
 
 public interface LafOlConfigDao {
-    /**
-     * Retrieve all records LafOlConfig.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlConfig
-     */
-    public List<LafOlConfig> select(int maxResult);
+  /**
+   * Retrieve all records LafOlConfig.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlConfig
+   */
+  public List<LafOlConfig> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlConfig.
-     *
-     * @return A list of LafOlConfig
-     */
-    public List<LafOlConfig> selectAll();
+  /**
+   * Retrieve all records LafOlConfig.
+   *
+   * @return A list of LafOlConfig
+   */
+  public List<LafOlConfig> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlConfig id.
-     * @return The same LafOlConfig.
-     */
-    public LafOlConfig find(LafOlConfigId id);
-    /**
-     * Create an LafOlConfig.
-     *
-     * @param e the LafOlConfig.
-     * @return The same LafOlConfig.
-     */
-    public LafOlConfig create(LafOlConfig e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlConfig id.
+   * @return The same LafOlConfig.
+   */
+  public LafOlConfig find(LafOlConfigId id);
+  /**
+   * Create an LafOlConfig.
+   *
+   * @param e the LafOlConfig.
+   * @return The same LafOlConfig.
+   */
+  public LafOlConfig create(LafOlConfig e);
 
-    /**
-     * Update the LafOlConfig.
-     *
-     * @param e the LafOlConfig.
-     * @return The same LafOlConfig.
-     */
-    public LafOlConfig update(LafOlConfig e);
+  /**
+   * Update the LafOlConfig.
+   *
+   * @param e the LafOlConfig.
+   * @return The same LafOlConfig.
+   */
+  public LafOlConfig update(LafOlConfig e);
 }

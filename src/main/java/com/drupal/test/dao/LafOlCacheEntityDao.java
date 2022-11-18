@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCacheEntity;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheEntity;
 
 public interface LafOlCacheEntityDao {
-    /**
-     * Retrieve all records LafOlCacheEntity.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCacheEntity
-     */
-    public List<LafOlCacheEntity> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCacheEntity.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCacheEntity
+   */
+  public List<LafOlCacheEntity> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCacheEntity.
-     *
-     * @return A list of LafOlCacheEntity
-     */
-    public List<LafOlCacheEntity> selectAll();
+  /**
+   * Retrieve all records LafOlCacheEntity.
+   *
+   * @return A list of LafOlCacheEntity
+   */
+  public List<LafOlCacheEntity> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCacheEntity id.
-     * @return The same LafOlCacheEntity.
-     */
-    public LafOlCacheEntity find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCacheEntity id.
+   * @return The same LafOlCacheEntity.
+   */
+  public LafOlCacheEntity find(java.lang.String id);
 
-    /**
-     * Create an LafOlCacheEntity.
-     *
-     * @param e the LafOlCacheEntity.
-     * @return The same LafOlCacheEntity.
-     */
-    public LafOlCacheEntity create(LafOlCacheEntity e);
+  /**
+   * Create an LafOlCacheEntity.
+   *
+   * @param e the LafOlCacheEntity.
+   * @return The same LafOlCacheEntity.
+   */
+  public LafOlCacheEntity create(LafOlCacheEntity e);
 
-    /**
-     * Update the LafOlCacheEntity.
-     *
-     * @param e the LafOlCacheEntity.
-     * @return The same LafOlCacheEntity.
-     */
-    public LafOlCacheEntity update(LafOlCacheEntity e);
+  /**
+   * Update the LafOlCacheEntity.
+   *
+   * @param e the LafOlCacheEntity.
+   * @return The same LafOlCacheEntity.
+   */
+  public LafOlCacheEntity update(LafOlCacheEntity e);
 }

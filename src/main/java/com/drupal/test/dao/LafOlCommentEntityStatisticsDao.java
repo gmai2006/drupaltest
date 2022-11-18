@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlCommentEntityStatistics;
 import com.drupal.test.entity.LafOlCommentEntityStatisticsId;
-import java.util.List;
 
 public interface LafOlCommentEntityStatisticsDao {
-    /**
-     * Retrieve all records LafOlCommentEntityStatistics.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCommentEntityStatistics
-     */
-    public List<LafOlCommentEntityStatistics> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCommentEntityStatistics.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCommentEntityStatistics
+   */
+  public List<LafOlCommentEntityStatistics> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCommentEntityStatistics.
-     *
-     * @return A list of LafOlCommentEntityStatistics
-     */
-    public List<LafOlCommentEntityStatistics> selectAll();
+  /**
+   * Retrieve all records LafOlCommentEntityStatistics.
+   *
+   * @return A list of LafOlCommentEntityStatistics
+   */
+  public List<LafOlCommentEntityStatistics> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCommentEntityStatistics id.
-     * @return The same LafOlCommentEntityStatistics.
-     */
-    public LafOlCommentEntityStatistics find(LafOlCommentEntityStatisticsId id);
-    /**
-     * Create an LafOlCommentEntityStatistics.
-     *
-     * @param e the LafOlCommentEntityStatistics.
-     * @return The same LafOlCommentEntityStatistics.
-     */
-    public LafOlCommentEntityStatistics create(LafOlCommentEntityStatistics e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCommentEntityStatistics id.
+   * @return The same LafOlCommentEntityStatistics.
+   */
+  public LafOlCommentEntityStatistics find(LafOlCommentEntityStatisticsId id);
+  /**
+   * Create an LafOlCommentEntityStatistics.
+   *
+   * @param e the LafOlCommentEntityStatistics.
+   * @return The same LafOlCommentEntityStatistics.
+   */
+  public LafOlCommentEntityStatistics create(LafOlCommentEntityStatistics e);
 
-    /**
-     * Update the LafOlCommentEntityStatistics.
-     *
-     * @param e the LafOlCommentEntityStatistics.
-     * @return The same LafOlCommentEntityStatistics.
-     */
-    public LafOlCommentEntityStatistics update(LafOlCommentEntityStatistics e);
+  /**
+   * Update the LafOlCommentEntityStatistics.
+   *
+   * @param e the LafOlCommentEntityStatistics.
+   * @return The same LafOlCommentEntityStatistics.
+   */
+  public LafOlCommentEntityStatistics update(LafOlCommentEntityStatistics e);
 }

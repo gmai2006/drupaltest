@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlBlockContent;
 import com.drupal.test.entity.LafOlBlockContentId;
-import java.util.List;
 
 public interface LafOlBlockContentService {
-    public LafOlBlockContent find(LafOlBlockContentId id);
-    /**
-     * Select a list of LafOlBlockContent based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlBlockContent records.
-     */
-    public List<LafOlBlockContent> select(int maxResult);
+  public LafOlBlockContent find(LafOlBlockContentId id);
+  /**
+   * Select a list of LafOlBlockContent based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlBlockContent records.
+   */
+  public List<LafOlBlockContent> select(int maxResult);
 
-    /**
-     * Select all LafOlBlockContent.
-     *
-     * @return all LafOlBlockContent records.
-     */
-    public List<LafOlBlockContent> selectAll();
+  /**
+   * Select all LafOlBlockContent.
+   *
+   * @return all LafOlBlockContent records.
+   */
+  public List<LafOlBlockContent> selectAll();
 
-    /**
-     * Create LafOlBlockContent.
-     *
-     * @param bean The LafOlBlockContent.
-     * @return The LafOlBlockContent.
-     */
-    public LafOlBlockContent create(LafOlBlockContent bean);
+  /**
+   * Create LafOlBlockContent.
+   *
+   * @param bean The LafOlBlockContent.
+   * @return The LafOlBlockContent.
+   */
+  public LafOlBlockContent create(LafOlBlockContent bean);
 
-    /**
-     * Update a LafOlBlockContent.
-     *
-     * @param bean - The LafOlBlockContent.
-     * @return LafOlBlockContent.
-     */
-    public LafOlBlockContent update(LafOlBlockContent bean);
+  /**
+   * Update a LafOlBlockContent.
+   *
+   * @param bean - The LafOlBlockContent.
+   * @return LafOlBlockContent.
+   */
+  public LafOlBlockContent update(LafOlBlockContent bean);
 }

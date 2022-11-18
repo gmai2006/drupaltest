@@ -16,64 +16,67 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlBlockContentRevisionBody;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlBlockContentRevisionBody;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlBlockContentRevisionBodyHandler")
 public class LafOlBlockContentRevisionBodyHandler
-        extends DelimiterFileHandler<LafOlBlockContentRevisionBody> {
+    extends DelimiterFileHandler<LafOlBlockContentRevisionBody> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlBlockContentRevisionBodyHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlBlockContentRevisionBodyHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlBlockContentRevisionBody parseLine(List<String> headers, List<String> tokens) {
+    LafOlBlockContentRevisionBody record = new LafOlBlockContentRevisionBody();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "bundle":
+          record.setBundle(tokens.get(i));
+          break;
+
+        case "deleted":
+          record.setDeleted(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "entityId":
+          record.setEntityId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionId":
+          record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "delta":
+          record.setDelta(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "bodyValue":
+          record.setBodyValue(tokens.get(i));
+          break;
+
+        case "bodySummary":
+          record.setBodySummary(tokens.get(i));
+          break;
+
+        case "bodyFormat":
+          record.setBodyFormat(tokens.get(i));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlBlockContentRevisionBody parseLine(List<String> headers, List<String> tokens) {
-        LafOlBlockContentRevisionBody record = new LafOlBlockContentRevisionBody();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "bundle":
-                    record.setBundle(tokens.get(i));
-                    break;
-
-                case "deleted":
-                    record.setDeleted(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "entityId":
-                    record.setEntityId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionId":
-                    record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "delta":
-                    record.setDelta(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "bodyValue":
-                    record.setBodyValue(tokens.get(i));
-                    break;
-
-                case "bodySummary":
-                    record.setBodySummary(tokens.get(i));
-                    break;
-
-                case "bodyFormat":
-                    record.setBodyFormat(tokens.get(i));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

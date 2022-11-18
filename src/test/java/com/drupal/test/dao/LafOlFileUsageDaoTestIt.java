@@ -16,12 +16,11 @@
  */
 package com.drupal.test.dao;
 
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.io.IOException;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
-import com.drupal.test.entity.LafOlFileUsage;
-import com.drupal.test.entity.LafOlFileUsageId;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.IOException;
@@ -33,55 +32,58 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import com.drupal.test.entity.LafOlFileUsage;
+import com.drupal.test.entity.LafOlFileUsageId;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
 
 public class LafOlFileUsageDaoTestIt {
-    static final String inputFile = "LafOlFileUsage.json";
-    static LafOlFileUsageDao dao;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlFileUsage[] records;
+  static final String inputFile = "LafOlFileUsage.json";
+  static LafOlFileUsageDao dao;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlFileUsage[] records;
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void beforeClass() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
-        JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
-        dao = new DefaultLafOlFileUsageDao(jpa);
-    }
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void beforeClass() {
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
+    dao = new DefaultLafOlFileUsageDao(jpa);
+  }
 
-    /** Run before the test. */
-    @Before
-    public void before() {
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlFileUsage[].class);
-            json = null;
-            Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+  /** Run before the test. */
+  @Before
+  public void before() {
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlFileUsage[].class);
+      json = null;
+      Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
+  }
 
-    @After
-    public void after() {
-        records = null;
-    }
+  @After
+  public void after() {
+    records = null;
+  }
 
-    @Test
-    public void testSelect() {
-        final LafOlFileUsageId id =
-                new LafOlFileUsageId(
-                        this.records[1].getFid(),
-                        this.records[1].getModule(),
-                        this.records[1].getId(),
-                        this.records[1].getType());
-        LafOlFileUsage testResult = dao.find(id);
-        assertNotNull("expect result", testResult);
-        org.junit.Assert.assertTrue(
-                "expect equals count ", this.records[1].getCount() == testResult.getCount());
-    }
+  @Test
+  public void testSelect() {
+    final LafOlFileUsageId id =
+        new LafOlFileUsageId(
+            this.records[1].getFid(),
+            this.records[1].getModule(),
+            this.records[1].getId(),
+            this.records[1].getType());
+    LafOlFileUsage testResult = dao.find(id);
+    assertNotNull("expect result", testResult);
+    org.junit.Assert.assertTrue(
+        "expect equals count ", this.records[1].getCount() == testResult.getCount());
+  }
 }

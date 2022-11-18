@@ -16,49 +16,52 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlTaxonomyTermData;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlTaxonomyTermData;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlTaxonomyTermDataHandler")
 public class LafOlTaxonomyTermDataHandler extends DelimiterFileHandler<LafOlTaxonomyTermData> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlTaxonomyTermDataHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlTaxonomyTermDataHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlTaxonomyTermData parseLine(List<String> headers, List<String> tokens) {
+    LafOlTaxonomyTermData record = new LafOlTaxonomyTermData();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "tid":
+          record.setTid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionId":
+          record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "vid":
+          record.setVid(tokens.get(i));
+          break;
+
+        case "uuid":
+          record.setUuid(tokens.get(i));
+          break;
+
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlTaxonomyTermData parseLine(List<String> headers, List<String> tokens) {
-        LafOlTaxonomyTermData record = new LafOlTaxonomyTermData();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "tid":
-                    record.setTid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionId":
-                    record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "vid":
-                    record.setVid(tokens.get(i));
-                    break;
-
-                case "uuid":
-                    record.setUuid(tokens.get(i));
-                    break;
-
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

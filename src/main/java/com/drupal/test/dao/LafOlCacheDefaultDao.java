@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCacheDefault;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheDefault;
 
 public interface LafOlCacheDefaultDao {
-    /**
-     * Retrieve all records LafOlCacheDefault.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCacheDefault
-     */
-    public List<LafOlCacheDefault> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCacheDefault.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCacheDefault
+   */
+  public List<LafOlCacheDefault> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCacheDefault.
-     *
-     * @return A list of LafOlCacheDefault
-     */
-    public List<LafOlCacheDefault> selectAll();
+  /**
+   * Retrieve all records LafOlCacheDefault.
+   *
+   * @return A list of LafOlCacheDefault
+   */
+  public List<LafOlCacheDefault> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCacheDefault id.
-     * @return The same LafOlCacheDefault.
-     */
-    public LafOlCacheDefault find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCacheDefault id.
+   * @return The same LafOlCacheDefault.
+   */
+  public LafOlCacheDefault find(java.lang.String id);
 
-    /**
-     * Create an LafOlCacheDefault.
-     *
-     * @param e the LafOlCacheDefault.
-     * @return The same LafOlCacheDefault.
-     */
-    public LafOlCacheDefault create(LafOlCacheDefault e);
+  /**
+   * Create an LafOlCacheDefault.
+   *
+   * @param e the LafOlCacheDefault.
+   * @return The same LafOlCacheDefault.
+   */
+  public LafOlCacheDefault create(LafOlCacheDefault e);
 
-    /**
-     * Update the LafOlCacheDefault.
-     *
-     * @param e the LafOlCacheDefault.
-     * @return The same LafOlCacheDefault.
-     */
-    public LafOlCacheDefault update(LafOlCacheDefault e);
+  /**
+   * Update the LafOlCacheDefault.
+   *
+   * @param e the LafOlCacheDefault.
+   * @return The same LafOlCacheDefault.
+   */
+  public LafOlCacheDefault update(LafOlCacheDefault e);
 }

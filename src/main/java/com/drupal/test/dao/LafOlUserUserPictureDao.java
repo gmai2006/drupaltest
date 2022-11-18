@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlUserUserPicture;
 import com.drupal.test.entity.LafOlUserUserPictureId;
-import java.util.List;
 
 public interface LafOlUserUserPictureDao {
-    /**
-     * Retrieve all records LafOlUserUserPicture.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlUserUserPicture
-     */
-    public List<LafOlUserUserPicture> select(int maxResult);
+  /**
+   * Retrieve all records LafOlUserUserPicture.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlUserUserPicture
+   */
+  public List<LafOlUserUserPicture> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlUserUserPicture.
-     *
-     * @return A list of LafOlUserUserPicture
-     */
-    public List<LafOlUserUserPicture> selectAll();
+  /**
+   * Retrieve all records LafOlUserUserPicture.
+   *
+   * @return A list of LafOlUserUserPicture
+   */
+  public List<LafOlUserUserPicture> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlUserUserPicture id.
-     * @return The same LafOlUserUserPicture.
-     */
-    public LafOlUserUserPicture find(LafOlUserUserPictureId id);
-    /**
-     * Create an LafOlUserUserPicture.
-     *
-     * @param e the LafOlUserUserPicture.
-     * @return The same LafOlUserUserPicture.
-     */
-    public LafOlUserUserPicture create(LafOlUserUserPicture e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlUserUserPicture id.
+   * @return The same LafOlUserUserPicture.
+   */
+  public LafOlUserUserPicture find(LafOlUserUserPictureId id);
+  /**
+   * Create an LafOlUserUserPicture.
+   *
+   * @param e the LafOlUserUserPicture.
+   * @return The same LafOlUserUserPicture.
+   */
+  public LafOlUserUserPicture create(LafOlUserUserPicture e);
 
-    /**
-     * Update the LafOlUserUserPicture.
-     *
-     * @param e the LafOlUserUserPicture.
-     * @return The same LafOlUserUserPicture.
-     */
-    public LafOlUserUserPicture update(LafOlUserUserPicture e);
+  /**
+   * Update the LafOlUserUserPicture.
+   *
+   * @param e the LafOlUserUserPicture.
+   * @return The same LafOlUserUserPicture.
+   */
+  public LafOlUserUserPicture update(LafOlUserUserPicture e);
 }

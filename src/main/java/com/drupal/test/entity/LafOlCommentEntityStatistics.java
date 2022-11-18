@@ -16,123 +16,123 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @IdClass(LafOlCommentEntityStatisticsId.class)
 @Table(name = "lafol_comment_entity_statistics")
 public class LafOlCommentEntityStatistics implements Serializable {
-    private static final long serialVersionUID = 163445265024628116L;
+  private static final long serialVersionUID = 16687543301582350L;
 
-    /** Description: entity_type. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "entity_type")
-    private java.lang.String entityType;
-    /** Description: entity_id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "entity_id")
-    private java.lang.Integer entityId;
-    /** Description: field_name. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "field_name")
-    private java.lang.String fieldName;
+  /** Description: entity_type. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "entity_type")
+  private java.lang.String entityType;
+  /** Description: entity_id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "entity_id")
+  private java.lang.Integer entityId;
+  /** Description: field_name. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "field_name")
+  private java.lang.String fieldName;
 
-    /** Description: cid. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "cid")
-    private java.lang.Integer cid;
-    /** Description: last_comment_timestamp. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "last_comment_timestamp")
-    private java.lang.Integer lastCommentTimestamp;
-    /** Description: last_comment_name. */
-    @Basic
-    @Column(name = "last_comment_name", length = 60)
-    private java.lang.String lastCommentName;
-    /** Description: last_comment_uid. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "last_comment_uid")
-    private java.lang.Integer lastCommentUid;
-    /** Description: comment_count. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "comment_count")
-    private java.lang.Integer commentCount;
+  /** Description: cid. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "cid")
+  private java.lang.Integer cid;
+  /** Description: last_comment_timestamp. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "last_comment_timestamp")
+  private java.lang.Integer lastCommentTimestamp;
+  /** Description: last_comment_name. */
+  @Basic
+  @Column(name = "last_comment_name", length = 60)
+  private java.lang.String lastCommentName;
+  /** Description: last_comment_uid. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "last_comment_uid")
+  private java.lang.Integer lastCommentUid;
+  /** Description: comment_count. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "comment_count")
+  private java.lang.Integer commentCount;
 
-    public LafOlCommentEntityStatistics() {}
+  public LafOlCommentEntityStatistics() {}
 
-    public java.lang.String getEntityType() {
-        return this.entityType;
-    }
+  public java.lang.String getEntityType() {
+    return this.entityType;
+  }
 
-    public java.lang.Integer getEntityId() {
-        return this.entityId;
-    }
+  public java.lang.Integer getEntityId() {
+    return this.entityId;
+  }
 
-    public java.lang.String getFieldName() {
-        return this.fieldName;
-    }
+  public java.lang.String getFieldName() {
+    return this.fieldName;
+  }
 
-    public void setEntityType(java.lang.String entityType) {
-        this.entityType = entityType;
-    }
+  public void setEntityType(java.lang.String entityType) {
+    this.entityType = entityType;
+  }
 
-    public void setEntityId(java.lang.Integer entityId) {
-        this.entityId = entityId;
-    }
+  public void setEntityId(java.lang.Integer entityId) {
+    this.entityId = entityId;
+  }
 
-    public void setFieldName(java.lang.String fieldName) {
-        this.fieldName = fieldName;
-    }
+  public void setFieldName(java.lang.String fieldName) {
+    this.fieldName = fieldName;
+  }
 
-    public java.lang.Integer getCid() {
-        return this.cid;
-    }
+  public java.lang.Integer getCid() {
+    return this.cid;
+  }
 
-    public java.lang.Integer getLastCommentTimestamp() {
-        return this.lastCommentTimestamp;
-    }
+  public java.lang.Integer getLastCommentTimestamp() {
+    return this.lastCommentTimestamp;
+  }
 
-    public java.lang.String getLastCommentName() {
-        return this.lastCommentName;
-    }
+  public java.lang.String getLastCommentName() {
+    return this.lastCommentName;
+  }
 
-    public java.lang.Integer getLastCommentUid() {
-        return this.lastCommentUid;
-    }
+  public java.lang.Integer getLastCommentUid() {
+    return this.lastCommentUid;
+  }
 
-    public java.lang.Integer getCommentCount() {
-        return this.commentCount;
-    }
+  public java.lang.Integer getCommentCount() {
+    return this.commentCount;
+  }
 
-    public void setCid(java.lang.Integer cid) {
-        this.cid = cid;
-    }
+  public void setCid(java.lang.Integer cid) {
+    this.cid = cid;
+  }
 
-    public void setLastCommentTimestamp(java.lang.Integer lastCommentTimestamp) {
-        this.lastCommentTimestamp = lastCommentTimestamp;
-    }
+  public void setLastCommentTimestamp(java.lang.Integer lastCommentTimestamp) {
+    this.lastCommentTimestamp = lastCommentTimestamp;
+  }
 
-    public void setLastCommentName(java.lang.String lastCommentName) {
-        this.lastCommentName = lastCommentName;
-    }
+  public void setLastCommentName(java.lang.String lastCommentName) {
+    this.lastCommentName = lastCommentName;
+  }
 
-    public void setLastCommentUid(java.lang.Integer lastCommentUid) {
-        this.lastCommentUid = lastCommentUid;
-    }
+  public void setLastCommentUid(java.lang.Integer lastCommentUid) {
+    this.lastCommentUid = lastCommentUid;
+  }
 
-    public void setCommentCount(java.lang.Integer commentCount) {
-        this.commentCount = commentCount;
-    }
+  public void setCommentCount(java.lang.Integer commentCount) {
+    this.commentCount = commentCount;
+  }
 }

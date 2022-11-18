@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlConfigDao;
 import com.drupal.test.entity.LafOlConfig;
 import com.drupal.test.entity.LafOlConfigId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlConfigService")
 public class DefaultLafOlConfigService implements LafOlConfigService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlConfigDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlConfigDao dao;
 
-    @Inject
-    @Named("DefaultLafOlConfigDao")
-    public DefaultLafOlConfigService(final LafOlConfigDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlConfigDao")
+  public DefaultLafOlConfigService(final LafOlConfigDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlConfig find(LafOlConfigId id) {
-        final LafOlConfig result = dao.find(id);
-        logger.info("find(LafOlConfig) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlConfig find(LafOlConfigId id) {
+    final LafOlConfig result = dao.find(id);
+    logger.info("find(LafOlConfig) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlConfig> select(int maxResult) {
-        final List<LafOlConfig> result = dao.select(maxResult);
-        logger.info("select(LafOlConfig) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlConfig> select(int maxResult) {
+    final List<LafOlConfig> result = dao.select(maxResult);
+    logger.info("select(LafOlConfig) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlConfig> selectAll() {
-        final List<LafOlConfig> results = dao.selectAll();
-        logger.info("selectAll(LafOlConfig) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlConfig> selectAll() {
+    final List<LafOlConfig> results = dao.selectAll();
+    logger.info("selectAll(LafOlConfig) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlConfig create(LafOlConfig bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlConfig={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlConfig create(LafOlConfig bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlConfig={}) - entered bean ");
 
-        final LafOlConfig result = dao.create(bean);
+    final LafOlConfig result = dao.create(bean);
 
-        logger.info("create(LafOlConfig) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlConfig) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlConfig update(LafOlConfig bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlConfig={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlConfig update(LafOlConfig bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlConfig={}) - entered bean ");
 
-        final LafOlConfig result = dao.update(bean);
+    final LafOlConfig result = dao.update(bean);
 
-        logger.info("update(LafOlConfig) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlConfig) - exited - return value={} result ");
+    return result;
+  }
 }

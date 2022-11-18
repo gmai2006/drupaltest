@@ -16,49 +16,52 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlSessions;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlSessions;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlSessionsHandler")
 public class LafOlSessionsHandler extends DelimiterFileHandler<LafOlSessions> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlSessionsHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlSessionsHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlSessions parseLine(List<String> headers, List<String> tokens) {
+    LafOlSessions record = new LafOlSessions();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "uid":
+          record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "sid":
+          record.setSid(tokens.get(i));
+          break;
+
+        case "hostname":
+          record.setHostname(tokens.get(i));
+          break;
+
+        case "timestamp":
+          record.setTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "session":
+          record.setSession(tokens.get(i));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlSessions parseLine(List<String> headers, List<String> tokens) {
-        LafOlSessions record = new LafOlSessions();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "uid":
-                    record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "sid":
-                    record.setSid(tokens.get(i));
-                    break;
-
-                case "hostname":
-                    record.setHostname(tokens.get(i));
-                    break;
-
-                case "timestamp":
-                    record.setTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "session":
-                    record.setSession(tokens.get(i));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

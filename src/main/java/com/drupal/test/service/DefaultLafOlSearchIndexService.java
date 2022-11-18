@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
+import java.util.List;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.inject.Named;
 import com.drupal.test.dao.LafOlSearchIndexDao;
 import com.drupal.test.entity.LafOlSearchIndex;
 import com.drupal.test.entity.LafOlSearchIndexId;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Stateless
 @Named("DefaultLafOlSearchIndexService")
 public class DefaultLafOlSearchIndexService implements LafOlSearchIndexService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlSearchIndexDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlSearchIndexDao dao;
 
-    @Inject
-    @Named("DefaultLafOlSearchIndexDao")
-    public DefaultLafOlSearchIndexService(final LafOlSearchIndexDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlSearchIndexDao")
+  public DefaultLafOlSearchIndexService(final LafOlSearchIndexDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSearchIndex find(LafOlSearchIndexId id) {
-        final LafOlSearchIndex result = dao.find(id);
-        logger.info("find(LafOlSearchIndex) - exited - return value={} result ");
-        return result;
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSearchIndex find(LafOlSearchIndexId id) {
+    final LafOlSearchIndex result = dao.find(id);
+    logger.info("find(LafOlSearchIndex) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlSearchIndex> select(int maxResult) {
-        final List<LafOlSearchIndex> result = dao.select(maxResult);
-        logger.info("select(LafOlSearchIndex) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlSearchIndex> select(int maxResult) {
+    final List<LafOlSearchIndex> result = dao.select(maxResult);
+    logger.info("select(LafOlSearchIndex) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlSearchIndex> selectAll() {
-        final List<LafOlSearchIndex> results = dao.selectAll();
-        logger.info("selectAll(LafOlSearchIndex) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlSearchIndex> selectAll() {
+    final List<LafOlSearchIndex> results = dao.selectAll();
+    logger.info("selectAll(LafOlSearchIndex) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSearchIndex create(LafOlSearchIndex bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlSearchIndex={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSearchIndex create(LafOlSearchIndex bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlSearchIndex={}) - entered bean ");
 
-        final LafOlSearchIndex result = dao.create(bean);
+    final LafOlSearchIndex result = dao.create(bean);
 
-        logger.info("create(LafOlSearchIndex) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlSearchIndex) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlSearchIndex update(LafOlSearchIndex bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlSearchIndex={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlSearchIndex update(LafOlSearchIndex bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlSearchIndex={}) - entered bean ");
 
-        final LafOlSearchIndex result = dao.update(bean);
+    final LafOlSearchIndex result = dao.update(bean);
 
-        logger.info("update(LafOlSearchIndex) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlSearchIndex) - exited - return value={} result ");
+    return result;
+  }
 }

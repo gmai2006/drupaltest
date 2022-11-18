@@ -18,72 +18,73 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlCommentFieldData. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlCommentFieldData. generated on 11/17/2022 from a schema. */
 public class LafOlCommentFieldDataId implements Serializable {
-    private static final long serialVersionUID = 163445265025694508L;
+  private static final long serialVersionUID = 166875433016376439L;
 
-    @Column(name = "langcode")
-    private java.lang.String langcode;
+  @Column(name = "langcode")
+  private java.lang.String langcode;
 
-    @Column(name = "cid")
-    private java.lang.Integer cid;
+  @Column(name = "cid")
+  private java.lang.Integer cid;
 
-    /** Constructor: LafOlCommentFieldDataId. */
-    public LafOlCommentFieldDataId() {}
+  /** Constructor: LafOlCommentFieldDataId. */
+  public LafOlCommentFieldDataId() {}
 
-    /**
-     * Constructor: LafOlCommentFieldDataId.
-     *
-     * @param langcode - langcode.
-     * @param cid - cid.
-     */
-    public LafOlCommentFieldDataId(java.lang.String langcode, java.lang.Integer cid) {
-        this.langcode = langcode;
-        this.cid = cid;
-    }
+  /**
+   * Constructor: LafOlCommentFieldDataId.
+   *
+   * @param langcode - langcode.
+   * @param cid - cid.
+   */
+  public LafOlCommentFieldDataId(java.lang.String langcode, java.lang.Integer cid) {
+    this.langcode = langcode;
+    this.cid = cid;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.Integer getCid() {
-        return this.cid;
-    }
+  public java.lang.Integer getCid() {
+    return this.cid;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setCid(java.lang.Integer cid) {
-        this.cid = cid;
-    }
+  public void setCid(java.lang.Integer cid) {
+    this.cid = cid;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
-        result = prime * result + ((cid == null) ? 0 : cid.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
+    result = prime * result + ((cid == null) ? 0 : cid.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlCommentFieldDataId other = (LafOlCommentFieldDataId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlCommentFieldDataId other = (LafOlCommentFieldDataId) obj;
 
-        if (langcode == null) {
-            if (other.langcode != null) return false;
-        } else if (!langcode.equals(other.langcode)) return false;
+    if (langcode == null) {
+      if (other.langcode != null) return false;
+    } else if (!langcode.equals(other.langcode)) return false;
 
-        if (cid == null) {
-            if (other.cid != null) return false;
-        } else if (!cid.equals(other.cid)) return false;
+    if (cid == null) {
+      if (other.cid != null) return false;
+    } else if (!cid.equals(other.cid)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

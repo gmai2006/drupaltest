@@ -16,62 +16,63 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlNodeRevisionFieldTags;
-import com.drupal.test.entity.LafOlNodeRevisionFieldTagsId;
+import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import com.drupal.test.entity.LafOlNodeRevisionFieldTags;
+import com.drupal.test.entity.LafOlNodeRevisionFieldTagsId;
 
 @Stateless
 @Named("DefaultLafOlNodeRevisionFieldTagsDao")
 public class DefaultLafOlNodeRevisionFieldTagsDao implements LafOlNodeRevisionFieldTagsDao {
-    private static final int BATCH_SIZE = 50;
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private JpaDao dao;
+  private static final int BATCH_SIZE = 50;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private JpaDao dao;
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public DefaultLafOlNodeRevisionFieldTagsDao(JpaDao dao) {
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public DefaultLafOlNodeRevisionFieldTagsDao(JpaDao dao) {
+    this.dao = dao;
+  }
 
-    public DefaultLafOlNodeRevisionFieldTagsDao() {}
+  public DefaultLafOlNodeRevisionFieldTagsDao() {}
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionFieldTags find(LafOlNodeRevisionFieldTagsId id) {
-        final EntityManager em = dao.getEntityManager();
-        return em.find(LafOlNodeRevisionFieldTags.class, id);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionFieldTags find(LafOlNodeRevisionFieldTagsId id) {
+    final EntityManager em = dao.getEntityManager();
+    return em.find(LafOlNodeRevisionFieldTags.class, id);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlNodeRevisionFieldTags> select(int max) {
-        return dao.select(
-                "select a from LafOlNodeRevisionFieldTags a",
-                LafOlNodeRevisionFieldTags.class,
-                max);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlNodeRevisionFieldTags> select(int max) {
+    return dao.select(
+        "select a from LafOlNodeRevisionFieldTags a", LafOlNodeRevisionFieldTags.class, max);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public List<LafOlNodeRevisionFieldTags> selectAll() {
-        return dao.selectAll(
-                "select a from LafOlNodeRevisionFieldTags a", LafOlNodeRevisionFieldTags.class);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public List<LafOlNodeRevisionFieldTags> selectAll() {
+    return dao.selectAll(
+        "select a from LafOlNodeRevisionFieldTags a", LafOlNodeRevisionFieldTags.class);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionFieldTags create(LafOlNodeRevisionFieldTags e) {
-        return dao.create(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionFieldTags create(LafOlNodeRevisionFieldTags e) {
+    return dao.create(e);
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlNodeRevisionFieldTags update(LafOlNodeRevisionFieldTags e) {
-        return dao.update(e);
-    }
+  /** {@inheritDoc} */
+  @Override
+  public LafOlNodeRevisionFieldTags update(LafOlNodeRevisionFieldTags e) {
+    return dao.update(e);
+  }
 }

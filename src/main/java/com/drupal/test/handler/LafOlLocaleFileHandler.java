@@ -16,58 +16,61 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlLocaleFile;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlLocaleFile;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlLocaleFileHandler")
 public class LafOlLocaleFileHandler extends DelimiterFileHandler<LafOlLocaleFile> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlLocaleFileHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlLocaleFileHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlLocaleFile parseLine(List<String> headers, List<String> tokens) {
+    LafOlLocaleFile record = new LafOlLocaleFile();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "project":
+          record.setProject(tokens.get(i));
+          break;
+
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "filename":
+          record.setFilename(tokens.get(i));
+          break;
+
+        case "version":
+          record.setVersion(tokens.get(i));
+          break;
+
+        case "uri":
+          record.setUri(tokens.get(i));
+          break;
+
+        case "timestamp":
+          record.setTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "lastChecked":
+          record.setLastChecked(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlLocaleFile parseLine(List<String> headers, List<String> tokens) {
-        LafOlLocaleFile record = new LafOlLocaleFile();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "project":
-                    record.setProject(tokens.get(i));
-                    break;
-
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "filename":
-                    record.setFilename(tokens.get(i));
-                    break;
-
-                case "version":
-                    record.setVersion(tokens.get(i));
-                    break;
-
-                case "uri":
-                    record.setUri(tokens.get(i));
-                    break;
-
-                case "timestamp":
-                    record.setTimestamp(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "lastChecked":
-                    record.setLastChecked(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

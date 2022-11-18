@@ -18,91 +18,92 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlUsersFieldData. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlUsersFieldData. generated on 11/17/2022 from a schema. */
 public class LafOlUsersFieldDataId implements Serializable {
-    private static final long serialVersionUID = 163445265112261236L;
+  private static final long serialVersionUID = 1668754330720852L;
 
-    @Column(name = "uid")
-    private java.lang.Integer uid;
+  @Column(name = "uid")
+  private java.lang.Integer uid;
 
-    @Column(name = "langcode")
-    private java.lang.String langcode;
+  @Column(name = "langcode")
+  private java.lang.String langcode;
 
-    @Column(name = "name")
-    private java.lang.String name;
+  @Column(name = "name")
+  private java.lang.String name;
 
-    /** Constructor: LafOlUsersFieldDataId. */
-    public LafOlUsersFieldDataId() {}
+  /** Constructor: LafOlUsersFieldDataId. */
+  public LafOlUsersFieldDataId() {}
 
-    /**
-     * Constructor: LafOlUsersFieldDataId.
-     *
-     * @param uid - uid.
-     * @param langcode - langcode.
-     * @param name - name.
-     */
-    public LafOlUsersFieldDataId(
-            java.lang.Integer uid, java.lang.String langcode, java.lang.String name) {
-        this.uid = uid;
-        this.langcode = langcode;
-        this.name = name;
-    }
+  /**
+   * Constructor: LafOlUsersFieldDataId.
+   *
+   * @param uid - uid.
+   * @param langcode - langcode.
+   * @param name - name.
+   */
+  public LafOlUsersFieldDataId(
+      java.lang.Integer uid, java.lang.String langcode, java.lang.String name) {
+    this.uid = uid;
+    this.langcode = langcode;
+    this.name = name;
+  }
 
-    public java.lang.Integer getUid() {
-        return this.uid;
-    }
+  public java.lang.Integer getUid() {
+    return this.uid;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.String getName() {
-        return this.name;
-    }
+  public java.lang.String getName() {
+    return this.name;
+  }
 
-    public void setUid(java.lang.Integer uid) {
-        this.uid = uid;
-    }
+  public void setUid(java.lang.Integer uid) {
+    this.uid = uid;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setName(java.lang.String name) {
-        this.name = name;
-    }
+  public void setName(java.lang.String name) {
+    this.name = name;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((uid == null) ? 0 : uid.hashCode());
-        result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((uid == null) ? 0 : uid.hashCode());
+    result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlUsersFieldDataId other = (LafOlUsersFieldDataId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlUsersFieldDataId other = (LafOlUsersFieldDataId) obj;
 
-        if (uid == null) {
-            if (other.uid != null) return false;
-        } else if (!uid.equals(other.uid)) return false;
+    if (uid == null) {
+      if (other.uid != null) return false;
+    } else if (!uid.equals(other.uid)) return false;
 
-        if (langcode == null) {
-            if (other.langcode != null) return false;
-        } else if (!langcode.equals(other.langcode)) return false;
+    if (langcode == null) {
+      if (other.langcode != null) return false;
+    } else if (!langcode.equals(other.langcode)) return false;
 
-        if (name == null) {
-            if (other.name != null) return false;
-        } else if (!name.equals(other.name)) return false;
+    if (name == null) {
+      if (other.name != null) return false;
+    } else if (!name.equals(other.name)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

@@ -16,44 +16,44 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @Table(name = "lafol_cachetags")
 public class LafOlCachetags implements Serializable {
-    private static final long serialVersionUID = 163445265019815602L;
+  private static final long serialVersionUID = 16687543301277703L;
 
-    /** Description: tag. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "tag")
-    private java.lang.String tag;
+  /** Description: tag. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "tag")
+  private java.lang.String tag;
 
-    /** Description: invalidations. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "invalidations")
-    private java.lang.Integer invalidations;
+  /** Description: invalidations. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "invalidations")
+  private java.lang.Integer invalidations;
 
-    public LafOlCachetags() {}
+  public LafOlCachetags() {}
 
-    public java.lang.String getTag() {
-        return this.tag;
-    }
+  public java.lang.String getTag() {
+    return this.tag;
+  }
 
-    public void setTag(java.lang.String tag) {
-        this.tag = tag;
-    }
+  public void setTag(java.lang.String tag) {
+    this.tag = tag;
+  }
 
-    public java.lang.Integer getInvalidations() {
-        return this.invalidations;
-    }
+  public java.lang.Integer getInvalidations() {
+    return this.invalidations;
+  }
 
-    public void setInvalidations(java.lang.Integer invalidations) {
-        this.invalidations = invalidations;
-    }
+  public void setInvalidations(java.lang.Integer invalidations) {
+    this.invalidations = invalidations;
+  }
 }

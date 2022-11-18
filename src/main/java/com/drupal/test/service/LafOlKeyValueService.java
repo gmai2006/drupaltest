@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlKeyValue;
 import com.drupal.test.entity.LafOlKeyValueId;
-import java.util.List;
 
 public interface LafOlKeyValueService {
-    public LafOlKeyValue find(LafOlKeyValueId id);
-    /**
-     * Select a list of LafOlKeyValue based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlKeyValue records.
-     */
-    public List<LafOlKeyValue> select(int maxResult);
+  public LafOlKeyValue find(LafOlKeyValueId id);
+  /**
+   * Select a list of LafOlKeyValue based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlKeyValue records.
+   */
+  public List<LafOlKeyValue> select(int maxResult);
 
-    /**
-     * Select all LafOlKeyValue.
-     *
-     * @return all LafOlKeyValue records.
-     */
-    public List<LafOlKeyValue> selectAll();
+  /**
+   * Select all LafOlKeyValue.
+   *
+   * @return all LafOlKeyValue records.
+   */
+  public List<LafOlKeyValue> selectAll();
 
-    /**
-     * Create LafOlKeyValue.
-     *
-     * @param bean The LafOlKeyValue.
-     * @return The LafOlKeyValue.
-     */
-    public LafOlKeyValue create(LafOlKeyValue bean);
+  /**
+   * Create LafOlKeyValue.
+   *
+   * @param bean The LafOlKeyValue.
+   * @return The LafOlKeyValue.
+   */
+  public LafOlKeyValue create(LafOlKeyValue bean);
 
-    /**
-     * Update a LafOlKeyValue.
-     *
-     * @param bean - The LafOlKeyValue.
-     * @return LafOlKeyValue.
-     */
-    public LafOlKeyValue update(LafOlKeyValue bean);
+  /**
+   * Update a LafOlKeyValue.
+   *
+   * @param bean - The LafOlKeyValue.
+   * @return LafOlKeyValue.
+   */
+  public LafOlKeyValue update(LafOlKeyValue bean);
 }

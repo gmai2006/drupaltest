@@ -16,75 +16,77 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlNodeFieldData;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlNodeFieldData;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlNodeFieldDataHandler")
 public class LafOlNodeFieldDataHandler extends DelimiterFileHandler<LafOlNodeFieldData> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlNodeFieldDataHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlNodeFieldDataHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlNodeFieldData parseLine(List<String> headers, List<String> tokens) {
+    LafOlNodeFieldData record = new LafOlNodeFieldData();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "nid":
+          record.setNid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "vid":
+          record.setVid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "type":
+          record.setType(tokens.get(i));
+          break;
+
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "status":
+          record.setStatus(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "uid":
+          record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "title":
+          record.setTitle(tokens.get(i));
+          break;
+
+        case "created":
+          record.setCreated(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "changed":
+          record.setChanged(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "promote":
+          record.setPromote(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "sticky":
+          record.setSticky(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "defaultLangcode":
+          record.setDefaultLangcode(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionTranslationAffected":
+          record.setRevisionTranslationAffected(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlNodeFieldData parseLine(List<String> headers, List<String> tokens) {
-        LafOlNodeFieldData record = new LafOlNodeFieldData();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "nid":
-                    record.setNid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "vid":
-                    record.setVid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "type":
-                    record.setType(tokens.get(i));
-                    break;
-
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "status":
-                    record.setStatus(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "uid":
-                    record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "title":
-                    record.setTitle(tokens.get(i));
-                    break;
-
-                case "created":
-                    record.setCreated(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "changed":
-                    record.setChanged(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "promote":
-                    record.setPromote(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "sticky":
-                    record.setSticky(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "defaultLangcode":
-                    record.setDefaultLangcode(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionTranslationAffected":
-                    record.setRevisionTranslationAffected(
-                            java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

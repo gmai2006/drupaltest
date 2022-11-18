@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlSequences;
 import java.util.List;
+import com.drupal.test.entity.LafOlSequences;
 
 public interface LafOlSequencesDao {
-    /**
-     * Retrieve all records LafOlSequences.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlSequences
-     */
-    public List<LafOlSequences> select(int maxResult);
+  /**
+   * Retrieve all records LafOlSequences.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlSequences
+   */
+  public List<LafOlSequences> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlSequences.
-     *
-     * @return A list of LafOlSequences
-     */
-    public List<LafOlSequences> selectAll();
+  /**
+   * Retrieve all records LafOlSequences.
+   *
+   * @return A list of LafOlSequences
+   */
+  public List<LafOlSequences> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlSequences id.
-     * @return The same LafOlSequences.
-     */
-    public LafOlSequences find(java.lang.Integer id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlSequences id.
+   * @return The same LafOlSequences.
+   */
+  public LafOlSequences find(java.lang.Integer id);
 
-    /**
-     * Create an LafOlSequences.
-     *
-     * @param e the LafOlSequences.
-     * @return The same LafOlSequences.
-     */
-    public LafOlSequences create(LafOlSequences e);
+  /**
+   * Create an LafOlSequences.
+   *
+   * @param e the LafOlSequences.
+   * @return The same LafOlSequences.
+   */
+  public LafOlSequences create(LafOlSequences e);
 
-    /**
-     * Update the LafOlSequences.
-     *
-     * @param e the LafOlSequences.
-     * @return The same LafOlSequences.
-     */
-    public LafOlSequences update(LafOlSequences e);
+  /**
+   * Update the LafOlSequences.
+   *
+   * @param e the LafOlSequences.
+   * @return The same LafOlSequences.
+   */
+  public LafOlSequences update(LafOlSequences e);
 }

@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlTaxonomyTermData;
 import com.drupal.test.entity.LafOlTaxonomyTermDataId;
-import java.util.List;
 
 public interface LafOlTaxonomyTermDataDao {
-    /**
-     * Retrieve all records LafOlTaxonomyTermData.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlTaxonomyTermData
-     */
-    public List<LafOlTaxonomyTermData> select(int maxResult);
+  /**
+   * Retrieve all records LafOlTaxonomyTermData.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlTaxonomyTermData
+   */
+  public List<LafOlTaxonomyTermData> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlTaxonomyTermData.
-     *
-     * @return A list of LafOlTaxonomyTermData
-     */
-    public List<LafOlTaxonomyTermData> selectAll();
+  /**
+   * Retrieve all records LafOlTaxonomyTermData.
+   *
+   * @return A list of LafOlTaxonomyTermData
+   */
+  public List<LafOlTaxonomyTermData> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlTaxonomyTermData id.
-     * @return The same LafOlTaxonomyTermData.
-     */
-    public LafOlTaxonomyTermData find(LafOlTaxonomyTermDataId id);
-    /**
-     * Create an LafOlTaxonomyTermData.
-     *
-     * @param e the LafOlTaxonomyTermData.
-     * @return The same LafOlTaxonomyTermData.
-     */
-    public LafOlTaxonomyTermData create(LafOlTaxonomyTermData e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlTaxonomyTermData id.
+   * @return The same LafOlTaxonomyTermData.
+   */
+  public LafOlTaxonomyTermData find(LafOlTaxonomyTermDataId id);
+  /**
+   * Create an LafOlTaxonomyTermData.
+   *
+   * @param e the LafOlTaxonomyTermData.
+   * @return The same LafOlTaxonomyTermData.
+   */
+  public LafOlTaxonomyTermData create(LafOlTaxonomyTermData e);
 
-    /**
-     * Update the LafOlTaxonomyTermData.
-     *
-     * @param e the LafOlTaxonomyTermData.
-     * @return The same LafOlTaxonomyTermData.
-     */
-    public LafOlTaxonomyTermData update(LafOlTaxonomyTermData e);
+  /**
+   * Update the LafOlTaxonomyTermData.
+   *
+   * @param e the LafOlTaxonomyTermData.
+   * @return The same LafOlTaxonomyTermData.
+   */
+  public LafOlTaxonomyTermData update(LafOlTaxonomyTermData e);
 }

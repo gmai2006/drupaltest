@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlShortcut;
 import com.drupal.test.entity.LafOlShortcutId;
-import java.util.List;
 
 public interface LafOlShortcutService {
-    public LafOlShortcut find(LafOlShortcutId id);
-    /**
-     * Select a list of LafOlShortcut based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlShortcut records.
-     */
-    public List<LafOlShortcut> select(int maxResult);
+  public LafOlShortcut find(LafOlShortcutId id);
+  /**
+   * Select a list of LafOlShortcut based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlShortcut records.
+   */
+  public List<LafOlShortcut> select(int maxResult);
 
-    /**
-     * Select all LafOlShortcut.
-     *
-     * @return all LafOlShortcut records.
-     */
-    public List<LafOlShortcut> selectAll();
+  /**
+   * Select all LafOlShortcut.
+   *
+   * @return all LafOlShortcut records.
+   */
+  public List<LafOlShortcut> selectAll();
 
-    /**
-     * Create LafOlShortcut.
-     *
-     * @param bean The LafOlShortcut.
-     * @return The LafOlShortcut.
-     */
-    public LafOlShortcut create(LafOlShortcut bean);
+  /**
+   * Create LafOlShortcut.
+   *
+   * @param bean The LafOlShortcut.
+   * @return The LafOlShortcut.
+   */
+  public LafOlShortcut create(LafOlShortcut bean);
 
-    /**
-     * Update a LafOlShortcut.
-     *
-     * @param bean - The LafOlShortcut.
-     * @return LafOlShortcut.
-     */
-    public LafOlShortcut update(LafOlShortcut bean);
+  /**
+   * Update a LafOlShortcut.
+   *
+   * @param bean - The LafOlShortcut.
+   * @return LafOlShortcut.
+   */
+  public LafOlShortcut update(LafOlShortcut bean);
 }

@@ -16,43 +16,46 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlSemaphore;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlSemaphore;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlSemaphoreHandler")
 public class LafOlSemaphoreHandler extends DelimiterFileHandler<LafOlSemaphore> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlSemaphoreHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlSemaphoreHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlSemaphore parseLine(List<String> headers, List<String> tokens) {
+    LafOlSemaphore record = new LafOlSemaphore();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "name":
+          record.setName(tokens.get(i));
+          break;
+
+        case "value":
+          record.setValue(tokens.get(i));
+          break;
+
+        case "expire":
+          record.setExpire(java.lang.Double.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlSemaphore parseLine(List<String> headers, List<String> tokens) {
-        LafOlSemaphore record = new LafOlSemaphore();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "name":
-                    record.setName(tokens.get(i));
-                    break;
-
-                case "value":
-                    record.setValue(tokens.get(i));
-                    break;
-
-                case "expire":
-                    record.setExpire(java.lang.Double.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

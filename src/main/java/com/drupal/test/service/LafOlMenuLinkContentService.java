@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlMenuLinkContent;
 import com.drupal.test.entity.LafOlMenuLinkContentId;
-import java.util.List;
 
 public interface LafOlMenuLinkContentService {
-    public LafOlMenuLinkContent find(LafOlMenuLinkContentId id);
-    /**
-     * Select a list of LafOlMenuLinkContent based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlMenuLinkContent records.
-     */
-    public List<LafOlMenuLinkContent> select(int maxResult);
+  public LafOlMenuLinkContent find(LafOlMenuLinkContentId id);
+  /**
+   * Select a list of LafOlMenuLinkContent based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlMenuLinkContent records.
+   */
+  public List<LafOlMenuLinkContent> select(int maxResult);
 
-    /**
-     * Select all LafOlMenuLinkContent.
-     *
-     * @return all LafOlMenuLinkContent records.
-     */
-    public List<LafOlMenuLinkContent> selectAll();
+  /**
+   * Select all LafOlMenuLinkContent.
+   *
+   * @return all LafOlMenuLinkContent records.
+   */
+  public List<LafOlMenuLinkContent> selectAll();
 
-    /**
-     * Create LafOlMenuLinkContent.
-     *
-     * @param bean The LafOlMenuLinkContent.
-     * @return The LafOlMenuLinkContent.
-     */
-    public LafOlMenuLinkContent create(LafOlMenuLinkContent bean);
+  /**
+   * Create LafOlMenuLinkContent.
+   *
+   * @param bean The LafOlMenuLinkContent.
+   * @return The LafOlMenuLinkContent.
+   */
+  public LafOlMenuLinkContent create(LafOlMenuLinkContent bean);
 
-    /**
-     * Update a LafOlMenuLinkContent.
-     *
-     * @param bean - The LafOlMenuLinkContent.
-     * @return LafOlMenuLinkContent.
-     */
-    public LafOlMenuLinkContent update(LafOlMenuLinkContent bean);
+  /**
+   * Update a LafOlMenuLinkContent.
+   *
+   * @param bean - The LafOlMenuLinkContent.
+   * @return LafOlMenuLinkContent.
+   */
+  public LafOlMenuLinkContent update(LafOlMenuLinkContent bean);
 }

@@ -16,12 +16,11 @@
  */
 package com.drupal.test.dao;
 
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.io.IOException;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
-import com.drupal.test.entity.LafOlNodeFieldImage;
-import com.drupal.test.entity.LafOlNodeFieldImageId;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.IOException;
@@ -33,75 +32,77 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import com.drupal.test.entity.LafOlNodeFieldImage;
+import com.drupal.test.entity.LafOlNodeFieldImageId;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
 
 public class LafOlNodeFieldImageDaoTestIt {
-    static final String inputFile = "LafOlNodeFieldImage.json";
-    static LafOlNodeFieldImageDao dao;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlNodeFieldImage[] records;
+  static final String inputFile = "LafOlNodeFieldImage.json";
+  static LafOlNodeFieldImageDao dao;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlNodeFieldImage[] records;
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void beforeClass() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
-        JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
-        dao = new DefaultLafOlNodeFieldImageDao(jpa);
-    }
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void beforeClass() {
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
+    dao = new DefaultLafOlNodeFieldImageDao(jpa);
+  }
 
-    /** Run before the test. */
-    @Before
-    public void before() {
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlNodeFieldImage[].class);
-            json = null;
-            Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+  /** Run before the test. */
+  @Before
+  public void before() {
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlNodeFieldImage[].class);
+      json = null;
+      Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
+  }
 
-    @After
-    public void after() {
-        records = null;
-    }
+  @After
+  public void after() {
+    records = null;
+  }
 
-    @Test
-    public void testSelect() {
-        final LafOlNodeFieldImageId id =
-                new LafOlNodeFieldImageId(
-                        this.records[1].getLangcode(),
-                        this.records[1].getDeleted(),
-                        this.records[1].getDelta(),
-                        this.records[1].getEntityId());
-        LafOlNodeFieldImage testResult = dao.find(id);
-        assertNotNull("expect result", testResult);
-        org.junit.Assert.assertEquals(
-                "expect equals bundle ", this.records[1].getBundle(), testResult.getBundle());
-        org.junit.Assert.assertTrue(
-                "expect equals revisionId ",
-                this.records[1].getRevisionId() == testResult.getRevisionId());
-        org.junit.Assert.assertTrue(
-                "expect equals fieldImageTargetId ",
-                this.records[1].getFieldImageTargetId() == testResult.getFieldImageTargetId());
-        org.junit.Assert.assertEquals(
-                "expect equals fieldImageAlt ",
-                this.records[1].getFieldImageAlt(),
-                testResult.getFieldImageAlt());
-        org.junit.Assert.assertEquals(
-                "expect equals fieldImageTitle ",
-                this.records[1].getFieldImageTitle(),
-                testResult.getFieldImageTitle());
-        org.junit.Assert.assertTrue(
-                "expect equals fieldImageWidth ",
-                this.records[1].getFieldImageWidth() == testResult.getFieldImageWidth());
-        org.junit.Assert.assertTrue(
-                "expect equals fieldImageHeight ",
-                this.records[1].getFieldImageHeight() == testResult.getFieldImageHeight());
-    }
+  @Test
+  public void testSelect() {
+    final LafOlNodeFieldImageId id =
+        new LafOlNodeFieldImageId(
+            this.records[1].getLangcode(),
+            this.records[1].getDeleted(),
+            this.records[1].getDelta(),
+            this.records[1].getEntityId());
+    LafOlNodeFieldImage testResult = dao.find(id);
+    assertNotNull("expect result", testResult);
+    org.junit.Assert.assertEquals(
+        "expect equals bundle ", this.records[1].getBundle(), testResult.getBundle());
+    org.junit.Assert.assertTrue(
+        "expect equals revisionId ", this.records[1].getRevisionId() == testResult.getRevisionId());
+    org.junit.Assert.assertTrue(
+        "expect equals fieldImageTargetId ",
+        this.records[1].getFieldImageTargetId() == testResult.getFieldImageTargetId());
+    org.junit.Assert.assertEquals(
+        "expect equals fieldImageAlt ",
+        this.records[1].getFieldImageAlt(),
+        testResult.getFieldImageAlt());
+    org.junit.Assert.assertEquals(
+        "expect equals fieldImageTitle ",
+        this.records[1].getFieldImageTitle(),
+        testResult.getFieldImageTitle());
+    org.junit.Assert.assertTrue(
+        "expect equals fieldImageWidth ",
+        this.records[1].getFieldImageWidth() == testResult.getFieldImageWidth());
+    org.junit.Assert.assertTrue(
+        "expect equals fieldImageHeight ",
+        this.records[1].getFieldImageHeight() == testResult.getFieldImageHeight());
+  }
 }

@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlMenuTree;
 import com.drupal.test.entity.LafOlMenuTreeId;
-import java.util.List;
 
 public interface LafOlMenuTreeDao {
-    /**
-     * Retrieve all records LafOlMenuTree.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlMenuTree
-     */
-    public List<LafOlMenuTree> select(int maxResult);
+  /**
+   * Retrieve all records LafOlMenuTree.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlMenuTree
+   */
+  public List<LafOlMenuTree> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlMenuTree.
-     *
-     * @return A list of LafOlMenuTree
-     */
-    public List<LafOlMenuTree> selectAll();
+  /**
+   * Retrieve all records LafOlMenuTree.
+   *
+   * @return A list of LafOlMenuTree
+   */
+  public List<LafOlMenuTree> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlMenuTree id.
-     * @return The same LafOlMenuTree.
-     */
-    public LafOlMenuTree find(LafOlMenuTreeId id);
-    /**
-     * Create an LafOlMenuTree.
-     *
-     * @param e the LafOlMenuTree.
-     * @return The same LafOlMenuTree.
-     */
-    public LafOlMenuTree create(LafOlMenuTree e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlMenuTree id.
+   * @return The same LafOlMenuTree.
+   */
+  public LafOlMenuTree find(LafOlMenuTreeId id);
+  /**
+   * Create an LafOlMenuTree.
+   *
+   * @param e the LafOlMenuTree.
+   * @return The same LafOlMenuTree.
+   */
+  public LafOlMenuTree create(LafOlMenuTree e);
 
-    /**
-     * Update the LafOlMenuTree.
-     *
-     * @param e the LafOlMenuTree.
-     * @return The same LafOlMenuTree.
-     */
-    public LafOlMenuTree update(LafOlMenuTree e);
+  /**
+   * Update the LafOlMenuTree.
+   *
+   * @param e the LafOlMenuTree.
+   * @return The same LafOlMenuTree.
+   */
+  public LafOlMenuTree update(LafOlMenuTree e);
 }

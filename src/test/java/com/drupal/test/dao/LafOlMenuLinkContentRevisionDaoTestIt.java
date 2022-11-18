@@ -16,11 +16,11 @@
  */
 package com.drupal.test.dao;
 
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.io.IOException;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
-import com.drupal.test.entity.LafOlMenuLinkContentRevision;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.IOException;
@@ -32,64 +32,65 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import com.drupal.test.entity.LafOlMenuLinkContentRevision;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
 
 public class LafOlMenuLinkContentRevisionDaoTestIt {
-    static final String inputFile = "LafOlMenuLinkContentRevision.json";
-    static LafOlMenuLinkContentRevisionDao dao;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlMenuLinkContentRevision[] records;
+  static final String inputFile = "LafOlMenuLinkContentRevision.json";
+  static LafOlMenuLinkContentRevisionDao dao;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlMenuLinkContentRevision[] records;
 
-    /** Run when the class is loaded. */
-    @BeforeClass
-    public static void beforeClass() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
-        JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
-        dao = new DefaultLafOlMenuLinkContentRevisionDao(jpa);
-    }
+  /** Run when the class is loaded. */
+  @BeforeClass
+  public static void beforeClass() {
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    JpaDao jpa = new StandaloneJpaDao(factory.createEntityManager());
+    dao = new DefaultLafOlMenuLinkContentRevisionDao(jpa);
+  }
 
-    /** Run before the test. */
-    @Before
-    public void before() {
-        try {
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            records = gson.fromJson(json, LafOlMenuLinkContentRevision[].class);
-            json = null;
-            Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+  /** Run before the test. */
+  @Before
+  public void before() {
+    try {
+      String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+      records = gson.fromJson(json, LafOlMenuLinkContentRevision[].class);
+      json = null;
+      Arrays.stream(records).skip(1).forEach(o -> dao.create(o));
+    } catch (IOException ex) {
+      ex.printStackTrace();
     }
+  }
 
-    @After
-    public void after() {
-        records = null;
-    }
+  @After
+  public void after() {
+    records = null;
+  }
 
-    @Test
-    public void testSelect() {
-        LafOlMenuLinkContentRevision testResult = dao.find(records[1].getRevisionId());
-        assertNotNull("expect result", testResult);
-        org.junit.Assert.assertTrue(
-                "expect equals id ", this.records[1].getId() == testResult.getId());
-        org.junit.Assert.assertEquals(
-                "expect equals langcode ", this.records[1].getLangcode(), testResult.getLangcode());
-        org.junit.Assert.assertTrue(
-                "expect equals revisionUser ",
-                this.records[1].getRevisionUser() == testResult.getRevisionUser());
-        org.junit.Assert.assertTrue(
-                "expect equals revisionCreated ",
-                this.records[1].getRevisionCreated() == testResult.getRevisionCreated());
-        org.junit.Assert.assertEquals(
-                "expect equals revisionLogMessage ",
-                this.records[1].getRevisionLogMessage(),
-                testResult.getRevisionLogMessage());
-        org.junit.Assert.assertTrue(
-                "expect equals revisionDefault ",
-                this.records[1].getRevisionDefault() == testResult.getRevisionDefault());
-    }
+  @Test
+  public void testSelect() {
+    LafOlMenuLinkContentRevision testResult = dao.find(records[1].getRevisionId());
+    assertNotNull("expect result", testResult);
+    org.junit.Assert.assertTrue("expect equals id ", this.records[1].getId() == testResult.getId());
+    org.junit.Assert.assertEquals(
+        "expect equals langcode ", this.records[1].getLangcode(), testResult.getLangcode());
+    org.junit.Assert.assertTrue(
+        "expect equals revisionUser ",
+        this.records[1].getRevisionUser() == testResult.getRevisionUser());
+    org.junit.Assert.assertTrue(
+        "expect equals revisionCreated ",
+        this.records[1].getRevisionCreated() == testResult.getRevisionCreated());
+    org.junit.Assert.assertEquals(
+        "expect equals revisionLogMessage ",
+        this.records[1].getRevisionLogMessage(),
+        testResult.getRevisionLogMessage());
+    org.junit.Assert.assertTrue(
+        "expect equals revisionDefault ",
+        this.records[1].getRevisionDefault() == testResult.getRevisionDefault());
+  }
 }

@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlBlockContentFieldData;
 import com.drupal.test.entity.LafOlBlockContentFieldDataId;
-import java.util.List;
 
 public interface LafOlBlockContentFieldDataService {
-    public LafOlBlockContentFieldData find(LafOlBlockContentFieldDataId id);
-    /**
-     * Select a list of LafOlBlockContentFieldData based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlBlockContentFieldData records.
-     */
-    public List<LafOlBlockContentFieldData> select(int maxResult);
+  public LafOlBlockContentFieldData find(LafOlBlockContentFieldDataId id);
+  /**
+   * Select a list of LafOlBlockContentFieldData based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlBlockContentFieldData records.
+   */
+  public List<LafOlBlockContentFieldData> select(int maxResult);
 
-    /**
-     * Select all LafOlBlockContentFieldData.
-     *
-     * @return all LafOlBlockContentFieldData records.
-     */
-    public List<LafOlBlockContentFieldData> selectAll();
+  /**
+   * Select all LafOlBlockContentFieldData.
+   *
+   * @return all LafOlBlockContentFieldData records.
+   */
+  public List<LafOlBlockContentFieldData> selectAll();
 
-    /**
-     * Create LafOlBlockContentFieldData.
-     *
-     * @param bean The LafOlBlockContentFieldData.
-     * @return The LafOlBlockContentFieldData.
-     */
-    public LafOlBlockContentFieldData create(LafOlBlockContentFieldData bean);
+  /**
+   * Create LafOlBlockContentFieldData.
+   *
+   * @param bean The LafOlBlockContentFieldData.
+   * @return The LafOlBlockContentFieldData.
+   */
+  public LafOlBlockContentFieldData create(LafOlBlockContentFieldData bean);
 
-    /**
-     * Update a LafOlBlockContentFieldData.
-     *
-     * @param bean - The LafOlBlockContentFieldData.
-     * @return LafOlBlockContentFieldData.
-     */
-    public LafOlBlockContentFieldData update(LafOlBlockContentFieldData bean);
+  /**
+   * Update a LafOlBlockContentFieldData.
+   *
+   * @param bean - The LafOlBlockContentFieldData.
+   * @return LafOlBlockContentFieldData.
+   */
+  public LafOlBlockContentFieldData update(LafOlBlockContentFieldData bean);
 }

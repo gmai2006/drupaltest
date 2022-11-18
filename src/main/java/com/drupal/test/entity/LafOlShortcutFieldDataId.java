@@ -18,72 +18,73 @@ package com.drupal.test.entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-/** embeddable class Id for LafOlShortcutFieldData. generated on 10/16/2021 from a schema. */
+/** embeddable class Id for LafOlShortcutFieldData. generated on 11/17/2022 from a schema. */
 public class LafOlShortcutFieldDataId implements Serializable {
-    private static final long serialVersionUID = 163445265089640162L;
+  private static final long serialVersionUID = 166875433055425399L;
 
-    @Column(name = "langcode")
-    private java.lang.String langcode;
+  @Column(name = "langcode")
+  private java.lang.String langcode;
 
-    @Column(name = "id")
-    private java.lang.Integer id;
+  @Column(name = "id")
+  private java.lang.Integer id;
 
-    /** Constructor: LafOlShortcutFieldDataId. */
-    public LafOlShortcutFieldDataId() {}
+  /** Constructor: LafOlShortcutFieldDataId. */
+  public LafOlShortcutFieldDataId() {}
 
-    /**
-     * Constructor: LafOlShortcutFieldDataId.
-     *
-     * @param langcode - langcode.
-     * @param id - id.
-     */
-    public LafOlShortcutFieldDataId(java.lang.String langcode, java.lang.Integer id) {
-        this.langcode = langcode;
-        this.id = id;
-    }
+  /**
+   * Constructor: LafOlShortcutFieldDataId.
+   *
+   * @param langcode - langcode.
+   * @param id - id.
+   */
+  public LafOlShortcutFieldDataId(java.lang.String langcode, java.lang.Integer id) {
+    this.langcode = langcode;
+    this.id = id;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.Integer getId() {
-        return this.id;
-    }
+  public java.lang.Integer getId() {
+    return this.id;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setId(java.lang.Integer id) {
-        this.id = id;
-    }
+  public void setId(java.lang.Integer id) {
+    this.id = id;
+  }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
-        result = prime * result + ((id == null) ? 0 : id.hashCode());
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((langcode == null) ? 0 : langcode.hashCode());
+    result = prime * result + ((id == null) ? 0 : id.hashCode());
 
-        return result;
-    }
+    return result;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        LafOlShortcutFieldDataId other = (LafOlShortcutFieldDataId) obj;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    LafOlShortcutFieldDataId other = (LafOlShortcutFieldDataId) obj;
 
-        if (langcode == null) {
-            if (other.langcode != null) return false;
-        } else if (!langcode.equals(other.langcode)) return false;
+    if (langcode == null) {
+      if (other.langcode != null) return false;
+    } else if (!langcode.equals(other.langcode)) return false;
 
-        if (id == null) {
-            if (other.id != null) return false;
-        } else if (!id.equals(other.id)) return false;
+    if (id == null) {
+      if (other.id != null) return false;
+    } else if (!id.equals(other.id)) return false;
 
-        return true;
-    }
+    return true;
+  }
 }

@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlWatchdogDao;
-import com.drupal.test.entity.LafOlWatchdog;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlWatchdogDao;
+import com.drupal.test.entity.LafOlWatchdog;
 
 @Stateless
 @Named("DefaultLafOlWatchdogService")
 public class DefaultLafOlWatchdogService implements LafOlWatchdogService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlWatchdogDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlWatchdogDao dao;
 
-    @Inject
-    @Named("DefaultLafOlWatchdogDao")
-    public DefaultLafOlWatchdogService(final LafOlWatchdogDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlWatchdogDao")
+  public DefaultLafOlWatchdogService(final LafOlWatchdogDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlWatchdog find(java.lang.Integer id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlWatchdog find(java.lang.Integer id) {
 
-        final LafOlWatchdog result = dao.find(id);
-        logger.info("find(LafOlWatchdog) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlWatchdog result = dao.find(id);
+    logger.info("find(LafOlWatchdog) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlWatchdog> select(int maxResult) {
-        final List<LafOlWatchdog> result = dao.select(maxResult);
-        logger.info("select(LafOlWatchdog) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlWatchdog> select(int maxResult) {
+    final List<LafOlWatchdog> result = dao.select(maxResult);
+    logger.info("select(LafOlWatchdog) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlWatchdog> selectAll() {
-        final List<LafOlWatchdog> results = dao.selectAll();
-        logger.info("selectAll(LafOlWatchdog) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlWatchdog> selectAll() {
+    final List<LafOlWatchdog> results = dao.selectAll();
+    logger.info("selectAll(LafOlWatchdog) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlWatchdog create(LafOlWatchdog bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlWatchdog={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlWatchdog create(LafOlWatchdog bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlWatchdog={}) - entered bean ");
 
-        final LafOlWatchdog result = dao.create(bean);
+    final LafOlWatchdog result = dao.create(bean);
 
-        logger.info("create(LafOlWatchdog) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlWatchdog) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlWatchdog update(LafOlWatchdog bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlWatchdog={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlWatchdog update(LafOlWatchdog bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlWatchdog={}) - entered bean ");
 
-        final LafOlWatchdog result = dao.update(bean);
+    final LafOlWatchdog result = dao.update(bean);
 
-        logger.info("update(LafOlWatchdog) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlWatchdog) - exited - return value={} result ");
+    return result;
+  }
 }

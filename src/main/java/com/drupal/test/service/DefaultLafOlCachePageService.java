@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlCachePageDao;
-import com.drupal.test.entity.LafOlCachePage;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlCachePageDao;
+import com.drupal.test.entity.LafOlCachePage;
 
 @Stateless
 @Named("DefaultLafOlCachePageService")
 public class DefaultLafOlCachePageService implements LafOlCachePageService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlCachePageDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlCachePageDao dao;
 
-    @Inject
-    @Named("DefaultLafOlCachePageDao")
-    public DefaultLafOlCachePageService(final LafOlCachePageDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlCachePageDao")
+  public DefaultLafOlCachePageService(final LafOlCachePageDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCachePage find(java.lang.String id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCachePage find(java.lang.String id) {
 
-        final LafOlCachePage result = dao.find(id);
-        logger.info("find(LafOlCachePage) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlCachePage result = dao.find(id);
+    logger.info("find(LafOlCachePage) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCachePage> select(int maxResult) {
-        final List<LafOlCachePage> result = dao.select(maxResult);
-        logger.info("select(LafOlCachePage) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlCachePage> select(int maxResult) {
+    final List<LafOlCachePage> result = dao.select(maxResult);
+    logger.info("select(LafOlCachePage) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlCachePage> selectAll() {
-        final List<LafOlCachePage> results = dao.selectAll();
-        logger.info("selectAll(LafOlCachePage) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlCachePage> selectAll() {
+    final List<LafOlCachePage> results = dao.selectAll();
+    logger.info("selectAll(LafOlCachePage) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCachePage create(LafOlCachePage bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlCachePage={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCachePage create(LafOlCachePage bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlCachePage={}) - entered bean ");
 
-        final LafOlCachePage result = dao.create(bean);
+    final LafOlCachePage result = dao.create(bean);
 
-        logger.info("create(LafOlCachePage) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlCachePage) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlCachePage update(LafOlCachePage bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlCachePage={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlCachePage update(LafOlCachePage bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlCachePage={}) - entered bean ");
 
-        final LafOlCachePage result = dao.update(bean);
+    final LafOlCachePage result = dao.update(bean);
 
-        logger.info("update(LafOlCachePage) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlCachePage) - exited - return value={} result ");
+    return result;
+  }
 }

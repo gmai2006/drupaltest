@@ -16,41 +16,41 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlBlockContentFieldRevision;
 import com.drupal.test.entity.LafOlBlockContentFieldRevisionId;
-import java.util.List;
 
 public interface LafOlBlockContentFieldRevisionService {
-    public LafOlBlockContentFieldRevision find(LafOlBlockContentFieldRevisionId id);
-    /**
-     * Select a list of LafOlBlockContentFieldRevision based on a given maximum number of returning
-     * records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlBlockContentFieldRevision records.
-     */
-    public List<LafOlBlockContentFieldRevision> select(int maxResult);
+  public LafOlBlockContentFieldRevision find(LafOlBlockContentFieldRevisionId id);
+  /**
+   * Select a list of LafOlBlockContentFieldRevision based on a given maximum number of returning
+   * records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlBlockContentFieldRevision records.
+   */
+  public List<LafOlBlockContentFieldRevision> select(int maxResult);
 
-    /**
-     * Select all LafOlBlockContentFieldRevision.
-     *
-     * @return all LafOlBlockContentFieldRevision records.
-     */
-    public List<LafOlBlockContentFieldRevision> selectAll();
+  /**
+   * Select all LafOlBlockContentFieldRevision.
+   *
+   * @return all LafOlBlockContentFieldRevision records.
+   */
+  public List<LafOlBlockContentFieldRevision> selectAll();
 
-    /**
-     * Create LafOlBlockContentFieldRevision.
-     *
-     * @param bean The LafOlBlockContentFieldRevision.
-     * @return The LafOlBlockContentFieldRevision.
-     */
-    public LafOlBlockContentFieldRevision create(LafOlBlockContentFieldRevision bean);
+  /**
+   * Create LafOlBlockContentFieldRevision.
+   *
+   * @param bean The LafOlBlockContentFieldRevision.
+   * @return The LafOlBlockContentFieldRevision.
+   */
+  public LafOlBlockContentFieldRevision create(LafOlBlockContentFieldRevision bean);
 
-    /**
-     * Update a LafOlBlockContentFieldRevision.
-     *
-     * @param bean - The LafOlBlockContentFieldRevision.
-     * @return LafOlBlockContentFieldRevision.
-     */
-    public LafOlBlockContentFieldRevision update(LafOlBlockContentFieldRevision bean);
+  /**
+   * Update a LafOlBlockContentFieldRevision.
+   *
+   * @param bean - The LafOlBlockContentFieldRevision.
+   * @return LafOlBlockContentFieldRevision.
+   */
+  public LafOlBlockContentFieldRevision update(LafOlBlockContentFieldRevision bean);
 }

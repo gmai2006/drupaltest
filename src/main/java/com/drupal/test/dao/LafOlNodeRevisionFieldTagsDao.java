@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeRevisionFieldTags;
 import com.drupal.test.entity.LafOlNodeRevisionFieldTagsId;
-import java.util.List;
 
 public interface LafOlNodeRevisionFieldTagsDao {
-    /**
-     * Retrieve all records LafOlNodeRevisionFieldTags.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlNodeRevisionFieldTags
-     */
-    public List<LafOlNodeRevisionFieldTags> select(int maxResult);
+  /**
+   * Retrieve all records LafOlNodeRevisionFieldTags.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlNodeRevisionFieldTags
+   */
+  public List<LafOlNodeRevisionFieldTags> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlNodeRevisionFieldTags.
-     *
-     * @return A list of LafOlNodeRevisionFieldTags
-     */
-    public List<LafOlNodeRevisionFieldTags> selectAll();
+  /**
+   * Retrieve all records LafOlNodeRevisionFieldTags.
+   *
+   * @return A list of LafOlNodeRevisionFieldTags
+   */
+  public List<LafOlNodeRevisionFieldTags> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlNodeRevisionFieldTags id.
-     * @return The same LafOlNodeRevisionFieldTags.
-     */
-    public LafOlNodeRevisionFieldTags find(LafOlNodeRevisionFieldTagsId id);
-    /**
-     * Create an LafOlNodeRevisionFieldTags.
-     *
-     * @param e the LafOlNodeRevisionFieldTags.
-     * @return The same LafOlNodeRevisionFieldTags.
-     */
-    public LafOlNodeRevisionFieldTags create(LafOlNodeRevisionFieldTags e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlNodeRevisionFieldTags id.
+   * @return The same LafOlNodeRevisionFieldTags.
+   */
+  public LafOlNodeRevisionFieldTags find(LafOlNodeRevisionFieldTagsId id);
+  /**
+   * Create an LafOlNodeRevisionFieldTags.
+   *
+   * @param e the LafOlNodeRevisionFieldTags.
+   * @return The same LafOlNodeRevisionFieldTags.
+   */
+  public LafOlNodeRevisionFieldTags create(LafOlNodeRevisionFieldTags e);
 
-    /**
-     * Update the LafOlNodeRevisionFieldTags.
-     *
-     * @param e the LafOlNodeRevisionFieldTags.
-     * @return The same LafOlNodeRevisionFieldTags.
-     */
-    public LafOlNodeRevisionFieldTags update(LafOlNodeRevisionFieldTags e);
+  /**
+   * Update the LafOlNodeRevisionFieldTags.
+   *
+   * @param e the LafOlNodeRevisionFieldTags.
+   * @return The same LafOlNodeRevisionFieldTags.
+   */
+  public LafOlNodeRevisionFieldTags update(LafOlNodeRevisionFieldTags e);
 }

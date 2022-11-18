@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCacheData;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheData;
 
 public interface LafOlCacheDataDao {
-    /**
-     * Retrieve all records LafOlCacheData.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCacheData
-     */
-    public List<LafOlCacheData> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCacheData.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCacheData
+   */
+  public List<LafOlCacheData> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCacheData.
-     *
-     * @return A list of LafOlCacheData
-     */
-    public List<LafOlCacheData> selectAll();
+  /**
+   * Retrieve all records LafOlCacheData.
+   *
+   * @return A list of LafOlCacheData
+   */
+  public List<LafOlCacheData> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCacheData id.
-     * @return The same LafOlCacheData.
-     */
-    public LafOlCacheData find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCacheData id.
+   * @return The same LafOlCacheData.
+   */
+  public LafOlCacheData find(java.lang.String id);
 
-    /**
-     * Create an LafOlCacheData.
-     *
-     * @param e the LafOlCacheData.
-     * @return The same LafOlCacheData.
-     */
-    public LafOlCacheData create(LafOlCacheData e);
+  /**
+   * Create an LafOlCacheData.
+   *
+   * @param e the LafOlCacheData.
+   * @return The same LafOlCacheData.
+   */
+  public LafOlCacheData create(LafOlCacheData e);
 
-    /**
-     * Update the LafOlCacheData.
-     *
-     * @param e the LafOlCacheData.
-     * @return The same LafOlCacheData.
-     */
-    public LafOlCacheData update(LafOlCacheData e);
+  /**
+   * Update the LafOlCacheData.
+   *
+   * @param e the LafOlCacheData.
+   * @return The same LafOlCacheData.
+   */
+  public LafOlCacheData update(LafOlCacheData e);
 }

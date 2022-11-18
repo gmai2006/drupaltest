@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeBody;
 import com.drupal.test.entity.LafOlNodeBodyId;
-import java.util.List;
 
 public interface LafOlNodeBodyService {
-    public LafOlNodeBody find(LafOlNodeBodyId id);
-    /**
-     * Select a list of LafOlNodeBody based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlNodeBody records.
-     */
-    public List<LafOlNodeBody> select(int maxResult);
+  public LafOlNodeBody find(LafOlNodeBodyId id);
+  /**
+   * Select a list of LafOlNodeBody based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlNodeBody records.
+   */
+  public List<LafOlNodeBody> select(int maxResult);
 
-    /**
-     * Select all LafOlNodeBody.
-     *
-     * @return all LafOlNodeBody records.
-     */
-    public List<LafOlNodeBody> selectAll();
+  /**
+   * Select all LafOlNodeBody.
+   *
+   * @return all LafOlNodeBody records.
+   */
+  public List<LafOlNodeBody> selectAll();
 
-    /**
-     * Create LafOlNodeBody.
-     *
-     * @param bean The LafOlNodeBody.
-     * @return The LafOlNodeBody.
-     */
-    public LafOlNodeBody create(LafOlNodeBody bean);
+  /**
+   * Create LafOlNodeBody.
+   *
+   * @param bean The LafOlNodeBody.
+   * @return The LafOlNodeBody.
+   */
+  public LafOlNodeBody create(LafOlNodeBody bean);
 
-    /**
-     * Update a LafOlNodeBody.
-     *
-     * @param bean - The LafOlNodeBody.
-     * @return LafOlNodeBody.
-     */
-    public LafOlNodeBody update(LafOlNodeBody bean);
+  /**
+   * Update a LafOlNodeBody.
+   *
+   * @param bean - The LafOlNodeBody.
+   * @return LafOlNodeBody.
+   */
+  public LafOlNodeBody update(LafOlNodeBody bean);
 }

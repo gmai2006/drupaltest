@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlKeyValue;
 import com.drupal.test.entity.LafOlKeyValueId;
-import java.util.List;
 
 public interface LafOlKeyValueDao {
-    /**
-     * Retrieve all records LafOlKeyValue.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlKeyValue
-     */
-    public List<LafOlKeyValue> select(int maxResult);
+  /**
+   * Retrieve all records LafOlKeyValue.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlKeyValue
+   */
+  public List<LafOlKeyValue> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlKeyValue.
-     *
-     * @return A list of LafOlKeyValue
-     */
-    public List<LafOlKeyValue> selectAll();
+  /**
+   * Retrieve all records LafOlKeyValue.
+   *
+   * @return A list of LafOlKeyValue
+   */
+  public List<LafOlKeyValue> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlKeyValue id.
-     * @return The same LafOlKeyValue.
-     */
-    public LafOlKeyValue find(LafOlKeyValueId id);
-    /**
-     * Create an LafOlKeyValue.
-     *
-     * @param e the LafOlKeyValue.
-     * @return The same LafOlKeyValue.
-     */
-    public LafOlKeyValue create(LafOlKeyValue e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlKeyValue id.
+   * @return The same LafOlKeyValue.
+   */
+  public LafOlKeyValue find(LafOlKeyValueId id);
+  /**
+   * Create an LafOlKeyValue.
+   *
+   * @param e the LafOlKeyValue.
+   * @return The same LafOlKeyValue.
+   */
+  public LafOlKeyValue create(LafOlKeyValue e);
 
-    /**
-     * Update the LafOlKeyValue.
-     *
-     * @param e the LafOlKeyValue.
-     * @return The same LafOlKeyValue.
-     */
-    public LafOlKeyValue update(LafOlKeyValue e);
+  /**
+   * Update the LafOlKeyValue.
+   *
+   * @param e the LafOlKeyValue.
+   * @return The same LafOlKeyValue.
+   */
+  public LafOlKeyValue update(LafOlKeyValue e);
 }

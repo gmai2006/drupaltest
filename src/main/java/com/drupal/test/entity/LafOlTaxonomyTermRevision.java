@@ -16,105 +16,105 @@
  */
 package com.drupal.test.entity;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
+import javax.persistence.Basic;
 
 @Entity
 @Table(name = "lafol_taxonomy_term_revision")
 public class LafOlTaxonomyTermRevision implements Serializable {
-    private static final long serialVersionUID = 163445265101228114L;
+  private static final long serialVersionUID = 166875433064073441L;
 
-    /** Description: revision_id. */
-    @javax.validation.constraints.NotNull
-    @javax.persistence.Id
-    @Column(name = "revision_id")
-    private java.lang.Integer revisionId;
+  /** Description: revision_id. */
+  @javax.validation.constraints.NotNull
+  @javax.persistence.Id
+  @Column(name = "revision_id")
+  private java.lang.Integer revisionId;
 
-    /** Description: tid. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "tid")
-    private java.lang.Integer tid;
-    /** Description: langcode. */
-    @javax.validation.constraints.NotNull
-    @Basic
-    @Column(name = "langcode", length = 12)
-    private java.lang.String langcode;
-    /** Description: revision_user. */
-    @Basic
-    @Column(name = "revision_user")
-    private java.lang.Integer revisionUser;
-    /** Description: revision_created. */
-    @Basic
-    @Column(name = "revision_created")
-    private java.lang.Integer revisionCreated;
-    /** Description: revision_log_message. */
-    @Basic
-    @Column(name = "revision_log_message", length = 0)
-    private java.lang.String revisionLogMessage;
-    /** Description: revision_default. */
-    @Basic
-    @Column(name = "revision_default")
-    private java.lang.Integer revisionDefault;
+  /** Description: tid. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "tid")
+  private java.lang.Integer tid;
+  /** Description: langcode. */
+  @javax.validation.constraints.NotNull
+  @Basic
+  @Column(name = "langcode", length = 12)
+  private java.lang.String langcode;
+  /** Description: revision_user. */
+  @Basic
+  @Column(name = "revision_user")
+  private java.lang.Integer revisionUser;
+  /** Description: revision_created. */
+  @Basic
+  @Column(name = "revision_created")
+  private java.lang.Integer revisionCreated;
+  /** Description: revision_log_message. */
+  @Basic
+  @Column(name = "revision_log_message", length = 0)
+  private java.lang.String revisionLogMessage;
+  /** Description: revision_default. */
+  @Basic
+  @Column(name = "revision_default")
+  private java.lang.Integer revisionDefault;
 
-    public LafOlTaxonomyTermRevision() {}
+  public LafOlTaxonomyTermRevision() {}
 
-    public java.lang.Integer getRevisionId() {
-        return this.revisionId;
-    }
+  public java.lang.Integer getRevisionId() {
+    return this.revisionId;
+  }
 
-    public void setRevisionId(java.lang.Integer revisionId) {
-        this.revisionId = revisionId;
-    }
+  public void setRevisionId(java.lang.Integer revisionId) {
+    this.revisionId = revisionId;
+  }
 
-    public java.lang.Integer getTid() {
-        return this.tid;
-    }
+  public java.lang.Integer getTid() {
+    return this.tid;
+  }
 
-    public java.lang.String getLangcode() {
-        return this.langcode;
-    }
+  public java.lang.String getLangcode() {
+    return this.langcode;
+  }
 
-    public java.lang.Integer getRevisionUser() {
-        return this.revisionUser;
-    }
+  public java.lang.Integer getRevisionUser() {
+    return this.revisionUser;
+  }
 
-    public java.lang.Integer getRevisionCreated() {
-        return this.revisionCreated;
-    }
+  public java.lang.Integer getRevisionCreated() {
+    return this.revisionCreated;
+  }
 
-    public java.lang.String getRevisionLogMessage() {
-        return this.revisionLogMessage;
-    }
+  public java.lang.String getRevisionLogMessage() {
+    return this.revisionLogMessage;
+  }
 
-    public java.lang.Integer getRevisionDefault() {
-        return this.revisionDefault;
-    }
+  public java.lang.Integer getRevisionDefault() {
+    return this.revisionDefault;
+  }
 
-    public void setTid(java.lang.Integer tid) {
-        this.tid = tid;
-    }
+  public void setTid(java.lang.Integer tid) {
+    this.tid = tid;
+  }
 
-    public void setLangcode(java.lang.String langcode) {
-        this.langcode = langcode;
-    }
+  public void setLangcode(java.lang.String langcode) {
+    this.langcode = langcode;
+  }
 
-    public void setRevisionUser(java.lang.Integer revisionUser) {
-        this.revisionUser = revisionUser;
-    }
+  public void setRevisionUser(java.lang.Integer revisionUser) {
+    this.revisionUser = revisionUser;
+  }
 
-    public void setRevisionCreated(java.lang.Integer revisionCreated) {
-        this.revisionCreated = revisionCreated;
-    }
+  public void setRevisionCreated(java.lang.Integer revisionCreated) {
+    this.revisionCreated = revisionCreated;
+  }
 
-    public void setRevisionLogMessage(java.lang.String revisionLogMessage) {
-        this.revisionLogMessage = revisionLogMessage;
-    }
+  public void setRevisionLogMessage(java.lang.String revisionLogMessage) {
+    this.revisionLogMessage = revisionLogMessage;
+  }
 
-    public void setRevisionDefault(java.lang.Integer revisionDefault) {
-        this.revisionDefault = revisionDefault;
-    }
+  public void setRevisionDefault(java.lang.Integer revisionDefault) {
+    this.revisionDefault = revisionDefault;
+  }
 }

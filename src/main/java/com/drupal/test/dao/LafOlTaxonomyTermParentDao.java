@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlTaxonomyTermParent;
 import com.drupal.test.entity.LafOlTaxonomyTermParentId;
-import java.util.List;
 
 public interface LafOlTaxonomyTermParentDao {
-    /**
-     * Retrieve all records LafOlTaxonomyTermParent.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlTaxonomyTermParent
-     */
-    public List<LafOlTaxonomyTermParent> select(int maxResult);
+  /**
+   * Retrieve all records LafOlTaxonomyTermParent.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlTaxonomyTermParent
+   */
+  public List<LafOlTaxonomyTermParent> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlTaxonomyTermParent.
-     *
-     * @return A list of LafOlTaxonomyTermParent
-     */
-    public List<LafOlTaxonomyTermParent> selectAll();
+  /**
+   * Retrieve all records LafOlTaxonomyTermParent.
+   *
+   * @return A list of LafOlTaxonomyTermParent
+   */
+  public List<LafOlTaxonomyTermParent> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlTaxonomyTermParent id.
-     * @return The same LafOlTaxonomyTermParent.
-     */
-    public LafOlTaxonomyTermParent find(LafOlTaxonomyTermParentId id);
-    /**
-     * Create an LafOlTaxonomyTermParent.
-     *
-     * @param e the LafOlTaxonomyTermParent.
-     * @return The same LafOlTaxonomyTermParent.
-     */
-    public LafOlTaxonomyTermParent create(LafOlTaxonomyTermParent e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlTaxonomyTermParent id.
+   * @return The same LafOlTaxonomyTermParent.
+   */
+  public LafOlTaxonomyTermParent find(LafOlTaxonomyTermParentId id);
+  /**
+   * Create an LafOlTaxonomyTermParent.
+   *
+   * @param e the LafOlTaxonomyTermParent.
+   * @return The same LafOlTaxonomyTermParent.
+   */
+  public LafOlTaxonomyTermParent create(LafOlTaxonomyTermParent e);
 
-    /**
-     * Update the LafOlTaxonomyTermParent.
-     *
-     * @param e the LafOlTaxonomyTermParent.
-     * @return The same LafOlTaxonomyTermParent.
-     */
-    public LafOlTaxonomyTermParent update(LafOlTaxonomyTermParent e);
+  /**
+   * Update the LafOlTaxonomyTermParent.
+   *
+   * @param e the LafOlTaxonomyTermParent.
+   * @return The same LafOlTaxonomyTermParent.
+   */
+  public LafOlTaxonomyTermParent update(LafOlTaxonomyTermParent e);
 }

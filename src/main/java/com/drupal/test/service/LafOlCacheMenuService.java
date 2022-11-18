@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlCacheMenu;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheMenu;
 
 public interface LafOlCacheMenuService {
-    public LafOlCacheMenu find(java.lang.String id);
+  public LafOlCacheMenu find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlCacheMenu based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCacheMenu records.
-     */
-    public List<LafOlCacheMenu> select(int maxResult);
+  /**
+   * Select a list of LafOlCacheMenu based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCacheMenu records.
+   */
+  public List<LafOlCacheMenu> select(int maxResult);
 
-    /**
-     * Select all LafOlCacheMenu.
-     *
-     * @return all LafOlCacheMenu records.
-     */
-    public List<LafOlCacheMenu> selectAll();
+  /**
+   * Select all LafOlCacheMenu.
+   *
+   * @return all LafOlCacheMenu records.
+   */
+  public List<LafOlCacheMenu> selectAll();
 
-    /**
-     * Create LafOlCacheMenu.
-     *
-     * @param bean The LafOlCacheMenu.
-     * @return The LafOlCacheMenu.
-     */
-    public LafOlCacheMenu create(LafOlCacheMenu bean);
+  /**
+   * Create LafOlCacheMenu.
+   *
+   * @param bean The LafOlCacheMenu.
+   * @return The LafOlCacheMenu.
+   */
+  public LafOlCacheMenu create(LafOlCacheMenu bean);
 
-    /**
-     * Update a LafOlCacheMenu.
-     *
-     * @param bean - The LafOlCacheMenu.
-     * @return LafOlCacheMenu.
-     */
-    public LafOlCacheMenu update(LafOlCacheMenu bean);
+  /**
+   * Update a LafOlCacheMenu.
+   *
+   * @param bean - The LafOlCacheMenu.
+   * @return LafOlCacheMenu.
+   */
+  public LafOlCacheMenu update(LafOlCacheMenu bean);
 }

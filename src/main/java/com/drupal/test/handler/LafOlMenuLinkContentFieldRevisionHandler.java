@@ -16,80 +16,81 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlMenuLinkContentFieldRevision;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlMenuLinkContentFieldRevision;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlMenuLinkContentFieldRevisionHandler")
 public class LafOlMenuLinkContentFieldRevisionHandler
-        extends DelimiterFileHandler<LafOlMenuLinkContentFieldRevision> {
+    extends DelimiterFileHandler<LafOlMenuLinkContentFieldRevision> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlMenuLinkContentFieldRevisionHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlMenuLinkContentFieldRevisionHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlMenuLinkContentFieldRevision parseLine(List<String> headers, List<String> tokens) {
+    LafOlMenuLinkContentFieldRevision record = new LafOlMenuLinkContentFieldRevision();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "id":
+          record.setId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionId":
+          record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "enabled":
+          record.setEnabled(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "title":
+          record.setTitle(tokens.get(i));
+          break;
+
+        case "description":
+          record.setDescription(tokens.get(i));
+          break;
+
+        case "linkUri":
+          record.setLinkUri(tokens.get(i));
+          break;
+
+        case "linkTitle":
+          record.setLinkTitle(tokens.get(i));
+          break;
+
+        case "linkOptions":
+          record.setLinkOptions(tokens.get(i));
+          break;
+
+        case "external":
+          record.setExternal(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "changed":
+          record.setChanged(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "defaultLangcode":
+          record.setDefaultLangcode(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionTranslationAffected":
+          record.setRevisionTranslationAffected(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlMenuLinkContentFieldRevision parseLine(
-            List<String> headers, List<String> tokens) {
-        LafOlMenuLinkContentFieldRevision record = new LafOlMenuLinkContentFieldRevision();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "id":
-                    record.setId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionId":
-                    record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "enabled":
-                    record.setEnabled(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "title":
-                    record.setTitle(tokens.get(i));
-                    break;
-
-                case "description":
-                    record.setDescription(tokens.get(i));
-                    break;
-
-                case "linkUri":
-                    record.setLinkUri(tokens.get(i));
-                    break;
-
-                case "linkTitle":
-                    record.setLinkTitle(tokens.get(i));
-                    break;
-
-                case "linkOptions":
-                    record.setLinkOptions(tokens.get(i));
-                    break;
-
-                case "external":
-                    record.setExternal(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "changed":
-                    record.setChanged(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "defaultLangcode":
-                    record.setDefaultLangcode(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionTranslationAffected":
-                    record.setRevisionTranslationAffected(
-                            java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

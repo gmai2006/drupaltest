@@ -16,54 +16,57 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlRouter;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlRouter;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlRouterHandler")
 public class LafOlRouterHandler extends DelimiterFileHandler<LafOlRouter> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlRouterHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlRouterHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlRouter parseLine(List<String> headers, List<String> tokens) {
+    LafOlRouter record = new LafOlRouter();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "name":
+          record.setName(tokens.get(i));
+          break;
+
+        case "path":
+          record.setPath(tokens.get(i));
+          break;
+
+        case "patternOutline":
+          record.setPatternOutline(tokens.get(i));
+          break;
+
+        case "fit":
+          record.setFit(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "route":
+          record.setRoute(tokens.get(i));
+          break;
+
+        case "numberParts":
+          record.setNumberParts(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlRouter parseLine(List<String> headers, List<String> tokens) {
-        LafOlRouter record = new LafOlRouter();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "name":
-                    record.setName(tokens.get(i));
-                    break;
-
-                case "path":
-                    record.setPath(tokens.get(i));
-                    break;
-
-                case "patternOutline":
-                    record.setPatternOutline(tokens.get(i));
-                    break;
-
-                case "fit":
-                    record.setFit(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "route":
-                    record.setRoute(tokens.get(i));
-                    break;
-
-                case "numberParts":
-                    record.setNumberParts(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

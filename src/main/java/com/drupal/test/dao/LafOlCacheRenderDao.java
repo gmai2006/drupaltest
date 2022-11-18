@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlCacheRender;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheRender;
 
 public interface LafOlCacheRenderDao {
-    /**
-     * Retrieve all records LafOlCacheRender.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlCacheRender
-     */
-    public List<LafOlCacheRender> select(int maxResult);
+  /**
+   * Retrieve all records LafOlCacheRender.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlCacheRender
+   */
+  public List<LafOlCacheRender> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlCacheRender.
-     *
-     * @return A list of LafOlCacheRender
-     */
-    public List<LafOlCacheRender> selectAll();
+  /**
+   * Retrieve all records LafOlCacheRender.
+   *
+   * @return A list of LafOlCacheRender
+   */
+  public List<LafOlCacheRender> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlCacheRender id.
-     * @return The same LafOlCacheRender.
-     */
-    public LafOlCacheRender find(java.lang.String id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlCacheRender id.
+   * @return The same LafOlCacheRender.
+   */
+  public LafOlCacheRender find(java.lang.String id);
 
-    /**
-     * Create an LafOlCacheRender.
-     *
-     * @param e the LafOlCacheRender.
-     * @return The same LafOlCacheRender.
-     */
-    public LafOlCacheRender create(LafOlCacheRender e);
+  /**
+   * Create an LafOlCacheRender.
+   *
+   * @param e the LafOlCacheRender.
+   * @return The same LafOlCacheRender.
+   */
+  public LafOlCacheRender create(LafOlCacheRender e);
 
-    /**
-     * Update the LafOlCacheRender.
-     *
-     * @param e the LafOlCacheRender.
-     * @return The same LafOlCacheRender.
-     */
-    public LafOlCacheRender update(LafOlCacheRender e);
+  /**
+   * Update the LafOlCacheRender.
+   *
+   * @param e the LafOlCacheRender.
+   * @return The same LafOlCacheRender.
+   */
+  public LafOlCacheRender update(LafOlCacheRender e);
 }

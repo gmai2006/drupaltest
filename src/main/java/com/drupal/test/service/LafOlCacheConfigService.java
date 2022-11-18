@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlCacheConfig;
 import java.util.List;
+import com.drupal.test.entity.LafOlCacheConfig;
 
 public interface LafOlCacheConfigService {
-    public LafOlCacheConfig find(java.lang.String id);
+  public LafOlCacheConfig find(java.lang.String id);
 
-    /**
-     * Select a list of LafOlCacheConfig based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlCacheConfig records.
-     */
-    public List<LafOlCacheConfig> select(int maxResult);
+  /**
+   * Select a list of LafOlCacheConfig based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlCacheConfig records.
+   */
+  public List<LafOlCacheConfig> select(int maxResult);
 
-    /**
-     * Select all LafOlCacheConfig.
-     *
-     * @return all LafOlCacheConfig records.
-     */
-    public List<LafOlCacheConfig> selectAll();
+  /**
+   * Select all LafOlCacheConfig.
+   *
+   * @return all LafOlCacheConfig records.
+   */
+  public List<LafOlCacheConfig> selectAll();
 
-    /**
-     * Create LafOlCacheConfig.
-     *
-     * @param bean The LafOlCacheConfig.
-     * @return The LafOlCacheConfig.
-     */
-    public LafOlCacheConfig create(LafOlCacheConfig bean);
+  /**
+   * Create LafOlCacheConfig.
+   *
+   * @param bean The LafOlCacheConfig.
+   * @return The LafOlCacheConfig.
+   */
+  public LafOlCacheConfig create(LafOlCacheConfig bean);
 
-    /**
-     * Update a LafOlCacheConfig.
-     *
-     * @param bean - The LafOlCacheConfig.
-     * @return LafOlCacheConfig.
-     */
-    public LafOlCacheConfig update(LafOlCacheConfig bean);
+  /**
+   * Update a LafOlCacheConfig.
+   *
+   * @param bean - The LafOlCacheConfig.
+   * @return LafOlCacheConfig.
+   */
+  public LafOlCacheConfig update(LafOlCacheConfig bean);
 }

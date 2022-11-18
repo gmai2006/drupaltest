@@ -17,113 +17,90 @@
 package com.drupal.test.handler;
 
 import static org.junit.Assert.assertEquals;
-
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.dao.StandaloneJpaDao;
-import com.drupal.test.entity.LafOlTaxonomyTermFieldRevision;
-import com.drupal.test.entity.LafOlTaxonomyTermFieldRevisionId;
-import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
-import com.drupal.test.utils.FileUtils;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import java.io.IOException;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import org.json.CDL;
 import org.json.JSONArray;
+import com.google.gson.Gson;
+import com.drupal.test.entity.LafOlTaxonomyTermFieldRevision;
+import com.drupal.test.dao.JpaDao;
+import com.drupal.test.dao.StandaloneJpaDao;
+import com.drupal.test.dao.DefaultLafOlTaxonomyTermFieldRevisionDao;
+import com.drupal.test.utils.DelimiterParser;
+import com.drupal.test.utils.FileUtils;
+import com.drupal.test.utils.ByteArrayToBase64TypeAdapter;
+
+import com.drupal.test.entity.LafOlTaxonomyTermFieldRevisionId;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.google.gson.GsonBuilder;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class LafOlTaxonomyTermFieldRevisionHandlerTestIt {
-    static final String inputFile = "LafOlTaxonomyTermFieldRevision.json";
-    static LafOlTaxonomyTermFieldRevisionHandler handler;
-    private static JpaDao jpa;
-    static Gson gson =
-            new GsonBuilder()
-                    .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
-                    .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
-                    .create();
-    private LafOlTaxonomyTermFieldRevision[] records;
+  static final String inputFile = "LafOlTaxonomyTermFieldRevision.json";
+  static LafOlTaxonomyTermFieldRevisionHandler handler;
+  private static JpaDao jpa;
+  static Gson gson =
+      new GsonBuilder()
+          .registerTypeHierarchyAdapter(byte[].class, new ByteArrayToBase64TypeAdapter())
+          .setDateFormat("yyyy-MM-dd HH:mm:ss.S")
+          .create();
+  private LafOlTaxonomyTermFieldRevision[] records;
 
-    /** Run before the test. */
-    @BeforeClass
-    public static void before() {
-        final EntityManagerFactory factory =
-                Persistence.createEntityManagerFactory("testpersistence");
-        jpa = new StandaloneJpaDao(factory.createEntityManager());
-        handler = new LafOlTaxonomyTermFieldRevisionHandler(jpa);
-    }
+  /** Run before the test. */
+  @BeforeClass
+  public static void before() {
+    final EntityManagerFactory factory = Persistence.createEntityManagerFactory("testpersistence");
+    jpa = new StandaloneJpaDao(factory.createEntityManager());
+    handler = new LafOlTaxonomyTermFieldRevisionHandler(jpa);
+  }
 
-    @Test
-    public void testSelect() throws IOException {
-        final File tempFile =
-                createRecordInputStreamFromJsonFile(inputFile, Charset.defaultCharset());
-        final InputStream inputStream = new BufferedInputStream(new FileInputStream(tempFile));
-        int count = handler.process(inputStream);
-        String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-        records = gson.fromJson(json, LafOlTaxonomyTermFieldRevision[].class);
-        assertEquals("match count", count, records.length);
-        final LafOlTaxonomyTermFieldRevisionId id =
-                new LafOlTaxonomyTermFieldRevisionId(
-                        this.records[0].getLangcode(), this.records[0].getRevisionId());
-        LafOlTaxonomyTermFieldRevision testResult =
-                jpa.find(LafOlTaxonomyTermFieldRevision.class, id);
-        org.junit.Assert.assertEquals(
-                "expect equals tid ", this.records[0].getTid(), testResult.getTid());
-        org.junit.Assert.assertEquals(
-                "expect equals status ", this.records[0].getStatus(), testResult.getStatus());
-        assertEquals("expect equals name ", this.records[0].getName(), testResult.getName());
-        assertEquals(
-                "expect equals descriptionValue ",
-                this.records[0].getDescriptionValue(),
-                testResult.getDescriptionValue());
-        assertEquals(
-                "expect equals descriptionFormat ",
-                this.records[0].getDescriptionFormat(),
-                testResult.getDescriptionFormat());
-        org.junit.Assert.assertEquals(
-                "expect equals changed ", this.records[0].getChanged(), testResult.getChanged());
-        org.junit.Assert.assertEquals(
-                "expect equals defaultLangcode ",
-                this.records[0].getDefaultLangcode(),
-                testResult.getDefaultLangcode());
-        org.junit.Assert.assertEquals(
-                "expect equals revisionTranslationAffected ",
-                this.records[0].getRevisionTranslationAffected(),
-                testResult.getRevisionTranslationAffected());
+  @Test
+  public void testSelect() throws IOException {
+    final File tempFile = new File("./src/test/resources/LafOlTaxonomyTermFieldRevision.csv");
+    final InputStream inputStream = new BufferedInputStream(new FileInputStream(tempFile));
+    int count = handler.process(inputStream);
+    String json = FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
+    records = gson.fromJson(json, LafOlTaxonomyTermFieldRevision[].class);
+    assertEquals("match count", count, records.length);
+    final LafOlTaxonomyTermFieldRevisionId id =
+        new LafOlTaxonomyTermFieldRevisionId(
+            this.records[0].getLangcode(), this.records[0].getRevisionId());
+    LafOlTaxonomyTermFieldRevision testResult = jpa.find(LafOlTaxonomyTermFieldRevision.class, id);
+    org.junit.Assert.assertEquals(
+        "expect equals tid ", this.records[0].getTid(), testResult.getTid());
+    org.junit.Assert.assertEquals(
+        "expect equals status ", this.records[0].getStatus(), testResult.getStatus());
+    assertEquals("expect equals name ", this.records[0].getName(), testResult.getName());
+    assertEquals(
+        "expect equals descriptionValue ",
+        this.records[0].getDescriptionValue(),
+        testResult.getDescriptionValue());
+    assertEquals(
+        "expect equals descriptionFormat ",
+        this.records[0].getDescriptionFormat(),
+        testResult.getDescriptionFormat());
+    org.junit.Assert.assertEquals(
+        "expect equals changed ", this.records[0].getChanged(), testResult.getChanged());
+    org.junit.Assert.assertEquals(
+        "expect equals defaultLangcode ",
+        this.records[0].getDefaultLangcode(),
+        testResult.getDefaultLangcode());
+    org.junit.Assert.assertEquals(
+        "expect equals revisionTranslationAffected ",
+        this.records[0].getRevisionTranslationAffected(),
+        testResult.getRevisionTranslationAffected());
 
-        // cleanup
-        inputStream.close();
-        json = null;
-        records = null;
-    }
-
-    /**
-     * Construct a delimiter file from a json file.
-     *
-     * @param inputFile the json file.
-     * @param charset default charset.
-     * @return
-     */
-    private File createRecordInputStreamFromJsonFile(String inputFile, Charset charset) {
-        try {
-            final File tempFile = File.createTempFile(inputFile, ".txt");
-            tempFile.deleteOnExit();
-            String json =
-                    FileUtils.readFileFromResource2String(inputFile, Charset.defaultCharset());
-            JSONArray docs = new JSONArray(json);
-            String csv = CDL.toString(docs);
-            org.apache.commons.io.FileUtils.writeStringToFile(
-                    tempFile, csv, Charset.defaultCharset());
-            return tempFile;
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-    }
+    // cleanup
+    inputStream.close();
+    json = null;
+    records = null;
+  }
 }

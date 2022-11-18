@@ -16,46 +16,49 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlShortcut;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlShortcut;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlShortcutHandler")
 public class LafOlShortcutHandler extends DelimiterFileHandler<LafOlShortcut> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlShortcutHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlShortcutHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlShortcut parseLine(List<String> headers, List<String> tokens) {
+    LafOlShortcut record = new LafOlShortcut();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "id":
+          record.setId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "shortcutSet":
+          record.setShortcutSet(tokens.get(i));
+          break;
+
+        case "uuid":
+          record.setUuid(tokens.get(i));
+          break;
+
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlShortcut parseLine(List<String> headers, List<String> tokens) {
-        LafOlShortcut record = new LafOlShortcut();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "id":
-                    record.setId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "shortcutSet":
-                    record.setShortcutSet(tokens.get(i));
-                    break;
-
-                case "uuid":
-                    record.setUuid(tokens.get(i));
-                    break;
-
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

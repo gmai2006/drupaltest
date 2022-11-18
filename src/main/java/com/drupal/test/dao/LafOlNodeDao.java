@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNode;
 import com.drupal.test.entity.LafOlNodeId;
-import java.util.List;
 
 public interface LafOlNodeDao {
-    /**
-     * Retrieve all records LafOlNode.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlNode
-     */
-    public List<LafOlNode> select(int maxResult);
+  /**
+   * Retrieve all records LafOlNode.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlNode
+   */
+  public List<LafOlNode> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlNode.
-     *
-     * @return A list of LafOlNode
-     */
-    public List<LafOlNode> selectAll();
+  /**
+   * Retrieve all records LafOlNode.
+   *
+   * @return A list of LafOlNode
+   */
+  public List<LafOlNode> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlNode id.
-     * @return The same LafOlNode.
-     */
-    public LafOlNode find(LafOlNodeId id);
-    /**
-     * Create an LafOlNode.
-     *
-     * @param e the LafOlNode.
-     * @return The same LafOlNode.
-     */
-    public LafOlNode create(LafOlNode e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlNode id.
+   * @return The same LafOlNode.
+   */
+  public LafOlNode find(LafOlNodeId id);
+  /**
+   * Create an LafOlNode.
+   *
+   * @param e the LafOlNode.
+   * @return The same LafOlNode.
+   */
+  public LafOlNode create(LafOlNode e);
 
-    /**
-     * Update the LafOlNode.
-     *
-     * @param e the LafOlNode.
-     * @return The same LafOlNode.
-     */
-    public LafOlNode update(LafOlNode e);
+  /**
+   * Update the LafOlNode.
+   *
+   * @param e the LafOlNode.
+   * @return The same LafOlNode.
+   */
+  public LafOlNode update(LafOlNode e);
 }

@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlQueueDao;
-import com.drupal.test.entity.LafOlQueue;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlQueueDao;
+import com.drupal.test.entity.LafOlQueue;
 
 @Stateless
 @Named("DefaultLafOlQueueService")
 public class DefaultLafOlQueueService implements LafOlQueueService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlQueueDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlQueueDao dao;
 
-    @Inject
-    @Named("DefaultLafOlQueueDao")
-    public DefaultLafOlQueueService(final LafOlQueueDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlQueueDao")
+  public DefaultLafOlQueueService(final LafOlQueueDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlQueue find(java.lang.Integer id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlQueue find(java.lang.Integer id) {
 
-        final LafOlQueue result = dao.find(id);
-        logger.info("find(LafOlQueue) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlQueue result = dao.find(id);
+    logger.info("find(LafOlQueue) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlQueue> select(int maxResult) {
-        final List<LafOlQueue> result = dao.select(maxResult);
-        logger.info("select(LafOlQueue) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlQueue> select(int maxResult) {
+    final List<LafOlQueue> result = dao.select(maxResult);
+    logger.info("select(LafOlQueue) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlQueue> selectAll() {
-        final List<LafOlQueue> results = dao.selectAll();
-        logger.info("selectAll(LafOlQueue) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlQueue> selectAll() {
+    final List<LafOlQueue> results = dao.selectAll();
+    logger.info("selectAll(LafOlQueue) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlQueue create(LafOlQueue bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlQueue={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlQueue create(LafOlQueue bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlQueue={}) - entered bean ");
 
-        final LafOlQueue result = dao.create(bean);
+    final LafOlQueue result = dao.create(bean);
 
-        logger.info("create(LafOlQueue) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlQueue) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlQueue update(LafOlQueue bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlQueue={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlQueue update(LafOlQueue bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlQueue={}) - entered bean ");
 
-        final LafOlQueue result = dao.update(bean);
+    final LafOlQueue result = dao.update(bean);
 
-        logger.info("update(LafOlQueue) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlQueue) - exited - return value={} result ");
+    return result;
+  }
 }

@@ -17,73 +17,72 @@
 package com.drupal.test.service;
 
 import static java.util.Objects.requireNonNull;
-
-import com.drupal.test.dao.LafOlLocalesLocationDao;
-import com.drupal.test.entity.LafOlLocalesLocation;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.inject.Named;
+import com.drupal.test.dao.LafOlLocalesLocationDao;
+import com.drupal.test.entity.LafOlLocalesLocation;
 
 @Stateless
 @Named("DefaultLafOlLocalesLocationService")
 public class DefaultLafOlLocalesLocationService implements LafOlLocalesLocationService {
-    private final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final LafOlLocalesLocationDao dao;
+  private final Logger logger = Logger.getLogger(this.getClass().getName());
+  private final LafOlLocalesLocationDao dao;
 
-    @Inject
-    @Named("DefaultLafOlLocalesLocationDao")
-    public DefaultLafOlLocalesLocationService(final LafOlLocalesLocationDao dao) {
-        requireNonNull(dao);
-        this.dao = dao;
-    }
+  @Inject
+  @Named("DefaultLafOlLocalesLocationDao")
+  public DefaultLafOlLocalesLocationService(final LafOlLocalesLocationDao dao) {
+    requireNonNull(dao);
+    this.dao = dao;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlLocalesLocation find(java.lang.Integer id) {
+  /** {@inheritDoc} */
+  @Override
+  public LafOlLocalesLocation find(java.lang.Integer id) {
 
-        final LafOlLocalesLocation result = dao.find(id);
-        logger.info("find(LafOlLocalesLocation) - exited - return value={} result ");
-        return result;
-    }
+    final LafOlLocalesLocation result = dao.find(id);
+    logger.info("find(LafOlLocalesLocation) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlLocalesLocation> select(int maxResult) {
-        final List<LafOlLocalesLocation> result = dao.select(maxResult);
-        logger.info("select(LafOlLocalesLocation) - exited - return value={} result ");
+  /** {@inheritDoc} */
+  public List<LafOlLocalesLocation> select(int maxResult) {
+    final List<LafOlLocalesLocation> result = dao.select(maxResult);
+    logger.info("select(LafOlLocalesLocation) - exited - return value={} result ");
 
-        return result;
-    }
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    public List<LafOlLocalesLocation> selectAll() {
-        final List<LafOlLocalesLocation> results = dao.selectAll();
-        logger.info("selectAll(LafOlLocalesLocation) - exited - return value={} result ");
-        return results;
-    }
+  /** {@inheritDoc} */
+  public List<LafOlLocalesLocation> selectAll() {
+    final List<LafOlLocalesLocation> results = dao.selectAll();
+    logger.info("selectAll(LafOlLocalesLocation) - exited - return value={} result ");
+    return results;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlLocalesLocation create(LafOlLocalesLocation bean) {
-        requireNonNull(bean);
-        logger.info("create(LafOlLocalesLocation={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlLocalesLocation create(LafOlLocalesLocation bean) {
+    requireNonNull(bean);
+    logger.info("create(LafOlLocalesLocation={}) - entered bean ");
 
-        final LafOlLocalesLocation result = dao.create(bean);
+    final LafOlLocalesLocation result = dao.create(bean);
 
-        logger.info("create(LafOlLocalesLocation) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("create(LafOlLocalesLocation) - exited - return value={} result ");
+    return result;
+  }
 
-    /** {@inheritDoc} */
-    @Override
-    public LafOlLocalesLocation update(LafOlLocalesLocation bean) {
-        requireNonNull(bean);
-        logger.info("update(LafOlLocalesLocation={}) - entered bean ");
+  /** {@inheritDoc} */
+  @Override
+  public LafOlLocalesLocation update(LafOlLocalesLocation bean) {
+    requireNonNull(bean);
+    logger.info("update(LafOlLocalesLocation={}) - entered bean ");
 
-        final LafOlLocalesLocation result = dao.update(bean);
+    final LafOlLocalesLocation result = dao.update(bean);
 
-        logger.info("update(LafOlLocalesLocation) - exited - return value={} result ");
-        return result;
-    }
+    logger.info("update(LafOlLocalesLocation) - exited - return value={} result ");
+    return result;
+  }
 }

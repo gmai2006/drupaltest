@@ -16,56 +16,59 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlTaxonomyTermRevisionParent;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlTaxonomyTermRevisionParent;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlTaxonomyTermRevisionParentHandler")
 public class LafOlTaxonomyTermRevisionParentHandler
-        extends DelimiterFileHandler<LafOlTaxonomyTermRevisionParent> {
+    extends DelimiterFileHandler<LafOlTaxonomyTermRevisionParent> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlTaxonomyTermRevisionParentHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlTaxonomyTermRevisionParentHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlTaxonomyTermRevisionParent parseLine(List<String> headers, List<String> tokens) {
+    LafOlTaxonomyTermRevisionParent record = new LafOlTaxonomyTermRevisionParent();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "bundle":
+          record.setBundle(tokens.get(i));
+          break;
+
+        case "deleted":
+          record.setDeleted(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "entityId":
+          record.setEntityId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "revisionId":
+          record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "delta":
+          record.setDelta(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "parentTargetId":
+          record.setParentTargetId(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlTaxonomyTermRevisionParent parseLine(List<String> headers, List<String> tokens) {
-        LafOlTaxonomyTermRevisionParent record = new LafOlTaxonomyTermRevisionParent();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "bundle":
-                    record.setBundle(tokens.get(i));
-                    break;
-
-                case "deleted":
-                    record.setDeleted(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "entityId":
-                    record.setEntityId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "revisionId":
-                    record.setRevisionId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "delta":
-                    record.setDelta(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "parentTargetId":
-                    record.setParentTargetId(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

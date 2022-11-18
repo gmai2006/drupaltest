@@ -16,50 +16,53 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlSearchIndex;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlSearchIndex;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlSearchIndexHandler")
 public class LafOlSearchIndexHandler extends DelimiterFileHandler<LafOlSearchIndex> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlSearchIndexHandler(final JpaDao dao) {
-        super(dao);
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlSearchIndexHandler(final JpaDao dao) {
+    super(dao);
+  }
+
+  @Override
+  protected LafOlSearchIndex parseLine(List<String> headers, List<String> tokens) {
+    LafOlSearchIndex record = new LafOlSearchIndex();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "word":
+          record.setWord(tokens.get(i));
+          break;
+
+        case "sid":
+          record.setSid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "langcode":
+          record.setLangcode(tokens.get(i));
+          break;
+
+        case "type":
+          record.setType(tokens.get(i));
+          break;
+
+        case "score":
+          record.setScore(java.lang.Float.valueOf((tokens.get(i))));
+          break;
+
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
-
-    @Override
-    protected LafOlSearchIndex parseLine(List<String> headers, List<String> tokens) {
-        LafOlSearchIndex record = new LafOlSearchIndex();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "word":
-                    record.setWord(tokens.get(i));
-                    break;
-
-                case "sid":
-                    record.setSid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "langcode":
-                    record.setLangcode(tokens.get(i));
-                    break;
-
-                case "type":
-                    record.setType(tokens.get(i));
-                    break;
-
-                case "score":
-                    record.setScore(java.lang.Float.valueOf((tokens.get(i))));
-                    break;
-
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
-    }
+    return record;
+  }
 }

@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlNodeRevisionFieldImage;
 import com.drupal.test.entity.LafOlNodeRevisionFieldImageId;
-import java.util.List;
 
 public interface LafOlNodeRevisionFieldImageDao {
-    /**
-     * Retrieve all records LafOlNodeRevisionFieldImage.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlNodeRevisionFieldImage
-     */
-    public List<LafOlNodeRevisionFieldImage> select(int maxResult);
+  /**
+   * Retrieve all records LafOlNodeRevisionFieldImage.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlNodeRevisionFieldImage
+   */
+  public List<LafOlNodeRevisionFieldImage> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlNodeRevisionFieldImage.
-     *
-     * @return A list of LafOlNodeRevisionFieldImage
-     */
-    public List<LafOlNodeRevisionFieldImage> selectAll();
+  /**
+   * Retrieve all records LafOlNodeRevisionFieldImage.
+   *
+   * @return A list of LafOlNodeRevisionFieldImage
+   */
+  public List<LafOlNodeRevisionFieldImage> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlNodeRevisionFieldImage id.
-     * @return The same LafOlNodeRevisionFieldImage.
-     */
-    public LafOlNodeRevisionFieldImage find(LafOlNodeRevisionFieldImageId id);
-    /**
-     * Create an LafOlNodeRevisionFieldImage.
-     *
-     * @param e the LafOlNodeRevisionFieldImage.
-     * @return The same LafOlNodeRevisionFieldImage.
-     */
-    public LafOlNodeRevisionFieldImage create(LafOlNodeRevisionFieldImage e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlNodeRevisionFieldImage id.
+   * @return The same LafOlNodeRevisionFieldImage.
+   */
+  public LafOlNodeRevisionFieldImage find(LafOlNodeRevisionFieldImageId id);
+  /**
+   * Create an LafOlNodeRevisionFieldImage.
+   *
+   * @param e the LafOlNodeRevisionFieldImage.
+   * @return The same LafOlNodeRevisionFieldImage.
+   */
+  public LafOlNodeRevisionFieldImage create(LafOlNodeRevisionFieldImage e);
 
-    /**
-     * Update the LafOlNodeRevisionFieldImage.
-     *
-     * @param e the LafOlNodeRevisionFieldImage.
-     * @return The same LafOlNodeRevisionFieldImage.
-     */
-    public LafOlNodeRevisionFieldImage update(LafOlNodeRevisionFieldImage e);
+  /**
+   * Update the LafOlNodeRevisionFieldImage.
+   *
+   * @param e the LafOlNodeRevisionFieldImage.
+   * @return The same LafOlNodeRevisionFieldImage.
+   */
+  public LafOlNodeRevisionFieldImage update(LafOlNodeRevisionFieldImage e);
 }

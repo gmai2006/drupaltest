@@ -17,7 +17,7 @@
 package com.drupal.test.entity;
 
 public enum Loadingstatus {
-    LOADING,
-    LOADED,
-    NEW
+  LOADING,
+  LOADED,
+  NEW
 }

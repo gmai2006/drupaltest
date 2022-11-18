@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlLocalesTarget;
 import com.drupal.test.entity.LafOlLocalesTargetId;
-import java.util.List;
 
 public interface LafOlLocalesTargetService {
-    public LafOlLocalesTarget find(LafOlLocalesTargetId id);
-    /**
-     * Select a list of LafOlLocalesTarget based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlLocalesTarget records.
-     */
-    public List<LafOlLocalesTarget> select(int maxResult);
+  public LafOlLocalesTarget find(LafOlLocalesTargetId id);
+  /**
+   * Select a list of LafOlLocalesTarget based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlLocalesTarget records.
+   */
+  public List<LafOlLocalesTarget> select(int maxResult);
 
-    /**
-     * Select all LafOlLocalesTarget.
-     *
-     * @return all LafOlLocalesTarget records.
-     */
-    public List<LafOlLocalesTarget> selectAll();
+  /**
+   * Select all LafOlLocalesTarget.
+   *
+   * @return all LafOlLocalesTarget records.
+   */
+  public List<LafOlLocalesTarget> selectAll();
 
-    /**
-     * Create LafOlLocalesTarget.
-     *
-     * @param bean The LafOlLocalesTarget.
-     * @return The LafOlLocalesTarget.
-     */
-    public LafOlLocalesTarget create(LafOlLocalesTarget bean);
+  /**
+   * Create LafOlLocalesTarget.
+   *
+   * @param bean The LafOlLocalesTarget.
+   * @return The LafOlLocalesTarget.
+   */
+  public LafOlLocalesTarget create(LafOlLocalesTarget bean);
 
-    /**
-     * Update a LafOlLocalesTarget.
-     *
-     * @param bean - The LafOlLocalesTarget.
-     * @return LafOlLocalesTarget.
-     */
-    public LafOlLocalesTarget update(LafOlLocalesTarget bean);
+  /**
+   * Update a LafOlLocalesTarget.
+   *
+   * @param bean - The LafOlLocalesTarget.
+   * @return LafOlLocalesTarget.
+   */
+  public LafOlLocalesTarget update(LafOlLocalesTarget bean);
 }

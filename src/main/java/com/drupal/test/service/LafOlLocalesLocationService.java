@@ -16,40 +16,40 @@
  */
 package com.drupal.test.service;
 
-import com.drupal.test.entity.LafOlLocalesLocation;
 import java.util.List;
+import com.drupal.test.entity.LafOlLocalesLocation;
 
 public interface LafOlLocalesLocationService {
-    public LafOlLocalesLocation find(java.lang.Integer id);
+  public LafOlLocalesLocation find(java.lang.Integer id);
 
-    /**
-     * Select a list of LafOlLocalesLocation based on a given maximum number of returning records.
-     *
-     * @param maxResult : a specified maximum number of returned records.
-     * @return LafOlLocalesLocation records.
-     */
-    public List<LafOlLocalesLocation> select(int maxResult);
+  /**
+   * Select a list of LafOlLocalesLocation based on a given maximum number of returning records.
+   *
+   * @param maxResult : a specified maximum number of returned records.
+   * @return LafOlLocalesLocation records.
+   */
+  public List<LafOlLocalesLocation> select(int maxResult);
 
-    /**
-     * Select all LafOlLocalesLocation.
-     *
-     * @return all LafOlLocalesLocation records.
-     */
-    public List<LafOlLocalesLocation> selectAll();
+  /**
+   * Select all LafOlLocalesLocation.
+   *
+   * @return all LafOlLocalesLocation records.
+   */
+  public List<LafOlLocalesLocation> selectAll();
 
-    /**
-     * Create LafOlLocalesLocation.
-     *
-     * @param bean The LafOlLocalesLocation.
-     * @return The LafOlLocalesLocation.
-     */
-    public LafOlLocalesLocation create(LafOlLocalesLocation bean);
+  /**
+   * Create LafOlLocalesLocation.
+   *
+   * @param bean The LafOlLocalesLocation.
+   * @return The LafOlLocalesLocation.
+   */
+  public LafOlLocalesLocation create(LafOlLocalesLocation bean);
 
-    /**
-     * Update a LafOlLocalesLocation.
-     *
-     * @param bean - The LafOlLocalesLocation.
-     * @return LafOlLocalesLocation.
-     */
-    public LafOlLocalesLocation update(LafOlLocalesLocation bean);
+  /**
+   * Update a LafOlLocalesLocation.
+   *
+   * @param bean - The LafOlLocalesLocation.
+   * @return LafOlLocalesLocation.
+   */
+  public LafOlLocalesLocation update(LafOlLocalesLocation bean);
 }

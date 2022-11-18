@@ -16,38 +16,41 @@
  */
 package com.drupal.test.handler;
 
-import com.drupal.test.dao.JpaDao;
-import com.drupal.test.entity.LafOlShortcutSetUsers;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.nio.charset.StandardCharsets;
+import com.drupal.test.entity.LafOlShortcutSetUsers;
+import com.drupal.test.dao.JpaDao;
+
+import com.drupal.test.utils.DelimiterParser;
 
 // @Stateless
 @Named("LafOlShortcutSetUsersHandler")
 public class LafOlShortcutSetUsersHandler extends DelimiterFileHandler<LafOlShortcutSetUsers> {
 
-    @Inject
-    @Named("DefaultJpaDao")
-    public LafOlShortcutSetUsersHandler(final JpaDao dao) {
-        super(dao);
-    }
+  @Inject
+  @Named("DefaultJpaDao")
+  public LafOlShortcutSetUsersHandler(final JpaDao dao) {
+    super(dao);
+  }
 
-    @Override
-    protected LafOlShortcutSetUsers parseLine(List<String> headers, List<String> tokens) {
-        LafOlShortcutSetUsers record = new LafOlShortcutSetUsers();
-        for (int i = 0; i < tokens.size(); i++) {
-            switch (headers.get(i)) {
-                case "uid":
-                    record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
-                    break;
-                case "setName":
-                    record.setSetName(tokens.get(i));
-                    break;
+  @Override
+  protected LafOlShortcutSetUsers parseLine(List<String> headers, List<String> tokens) {
+    LafOlShortcutSetUsers record = new LafOlShortcutSetUsers();
+    for (int i = 0; i < tokens.size(); i++) {
+      switch (headers.get(i)) {
+        case "uid":
+          record.setUid(java.lang.Integer.valueOf((tokens.get(i))));
+          break;
+        case "setName":
+          record.setSetName(tokens.get(i));
+          break;
 
-                default:
-                    logger.severe("Unknown col " + headers.get(i));
-            }
-        }
-        return record;
+        default:
+          logger.severe("Unknown col " + headers.get(i));
+      }
     }
+    return record;
+  }
 }

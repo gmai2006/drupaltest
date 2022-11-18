@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
+import java.util.List;
 import com.drupal.test.entity.LafOlTaxonomyTermFieldData;
 import com.drupal.test.entity.LafOlTaxonomyTermFieldDataId;
-import java.util.List;
 
 public interface LafOlTaxonomyTermFieldDataDao {
-    /**
-     * Retrieve all records LafOlTaxonomyTermFieldData.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlTaxonomyTermFieldData
-     */
-    public List<LafOlTaxonomyTermFieldData> select(int maxResult);
+  /**
+   * Retrieve all records LafOlTaxonomyTermFieldData.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlTaxonomyTermFieldData
+   */
+  public List<LafOlTaxonomyTermFieldData> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlTaxonomyTermFieldData.
-     *
-     * @return A list of LafOlTaxonomyTermFieldData
-     */
-    public List<LafOlTaxonomyTermFieldData> selectAll();
+  /**
+   * Retrieve all records LafOlTaxonomyTermFieldData.
+   *
+   * @return A list of LafOlTaxonomyTermFieldData
+   */
+  public List<LafOlTaxonomyTermFieldData> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlTaxonomyTermFieldData id.
-     * @return The same LafOlTaxonomyTermFieldData.
-     */
-    public LafOlTaxonomyTermFieldData find(LafOlTaxonomyTermFieldDataId id);
-    /**
-     * Create an LafOlTaxonomyTermFieldData.
-     *
-     * @param e the LafOlTaxonomyTermFieldData.
-     * @return The same LafOlTaxonomyTermFieldData.
-     */
-    public LafOlTaxonomyTermFieldData create(LafOlTaxonomyTermFieldData e);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlTaxonomyTermFieldData id.
+   * @return The same LafOlTaxonomyTermFieldData.
+   */
+  public LafOlTaxonomyTermFieldData find(LafOlTaxonomyTermFieldDataId id);
+  /**
+   * Create an LafOlTaxonomyTermFieldData.
+   *
+   * @param e the LafOlTaxonomyTermFieldData.
+   * @return The same LafOlTaxonomyTermFieldData.
+   */
+  public LafOlTaxonomyTermFieldData create(LafOlTaxonomyTermFieldData e);
 
-    /**
-     * Update the LafOlTaxonomyTermFieldData.
-     *
-     * @param e the LafOlTaxonomyTermFieldData.
-     * @return The same LafOlTaxonomyTermFieldData.
-     */
-    public LafOlTaxonomyTermFieldData update(LafOlTaxonomyTermFieldData e);
+  /**
+   * Update the LafOlTaxonomyTermFieldData.
+   *
+   * @param e the LafOlTaxonomyTermFieldData.
+   * @return The same LafOlTaxonomyTermFieldData.
+   */
+  public LafOlTaxonomyTermFieldData update(LafOlTaxonomyTermFieldData e);
 }

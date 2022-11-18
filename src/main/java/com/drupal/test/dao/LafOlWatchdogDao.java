@@ -16,46 +16,46 @@
  */
 package com.drupal.test.dao;
 
-import com.drupal.test.entity.LafOlWatchdog;
 import java.util.List;
+import com.drupal.test.entity.LafOlWatchdog;
 
 public interface LafOlWatchdogDao {
-    /**
-     * Retrieve all records LafOlWatchdog.
-     *
-     * @param maxResult a maximum number of returned records.
-     * @return A list of LafOlWatchdog
-     */
-    public List<LafOlWatchdog> select(int maxResult);
+  /**
+   * Retrieve all records LafOlWatchdog.
+   *
+   * @param maxResult a maximum number of returned records.
+   * @return A list of LafOlWatchdog
+   */
+  public List<LafOlWatchdog> select(int maxResult);
 
-    /**
-     * Retrieve all records LafOlWatchdog.
-     *
-     * @return A list of LafOlWatchdog
-     */
-    public List<LafOlWatchdog> selectAll();
+  /**
+   * Retrieve all records LafOlWatchdog.
+   *
+   * @return A list of LafOlWatchdog
+   */
+  public List<LafOlWatchdog> selectAll();
 
-    /**
-     * Find an entity.
-     *
-     * @param id An LafOlWatchdog id.
-     * @return The same LafOlWatchdog.
-     */
-    public LafOlWatchdog find(java.lang.Integer id);
+  /**
+   * Find an entity.
+   *
+   * @param id An LafOlWatchdog id.
+   * @return The same LafOlWatchdog.
+   */
+  public LafOlWatchdog find(java.lang.Integer id);
 
-    /**
-     * Create an LafOlWatchdog.
-     *
-     * @param e the LafOlWatchdog.
-     * @return The same LafOlWatchdog.
-     */
-    public LafOlWatchdog create(LafOlWatchdog e);
+  /**
+   * Create an LafOlWatchdog.
+   *
+   * @param e the LafOlWatchdog.
+   * @return The same LafOlWatchdog.
+   */
+  public LafOlWatchdog create(LafOlWatchdog e);
 
-    /**
-     * Update the LafOlWatchdog.
-     *
-     * @param e the LafOlWatchdog.
-     * @return The same LafOlWatchdog.
-     */
-    public LafOlWatchdog update(LafOlWatchdog e);
+  /**
+   * Update the LafOlWatchdog.
+   *
+   * @param e the LafOlWatchdog.
+   * @return The same LafOlWatchdog.
+   */
+  public LafOlWatchdog update(LafOlWatchdog e);
 }
